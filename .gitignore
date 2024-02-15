@@ -19,3 +19,11 @@ package-lock.json
 
 # Misc
 assets/js/dist
+
+# Post
+_posts/2023-11-01-swe-appl-prepare.md
+_posts/2023-10-01-mousepaw-dev-planning.md
+_posts/2016-04-13-development-on-embedded-platforms.md
+_posts/2022-11-29-The Art of Crafting MacOS Shellcodes.md
+_posts/2022-11-29-OSMR-Offensive-Security-macOS-Researcher-(EXP-312).md
+_posts/2023-11-26-power-management-battery-operated-devices.md
