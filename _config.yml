@@ -76,8 +76,8 @@ theme_mode: # [light | dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: "https://dede.dev/assets"
-# img_cdn: "https://chirpy-img.netlify.app"
+# img_cdn: "https://dede.dev/assets"
+img_cdn: "https://ik.imagekit.io/dclnpmnjj2/"
 
 # the avatar on sidebar, support local or CORS resources
 avatar: https://avatars.githubusercontent.com/u/20543154?v=4
