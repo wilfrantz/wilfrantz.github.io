@@ -19,7 +19,7 @@ title: Wilfrantz Dede # the main title
 tagline: Systems Software Engineer. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Wilfrantz Dede: Discover Documentation Hub.
+  Wilfrantz Dede: Personal Documentation Hub.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -31,20 +31,20 @@ github:
 twitter:
   username: byteASM # change to your twitter username
 
-linkedIn:
-  username: wilfrantz-dede-9b9020276 # change to your linkedin username
+# linkedIn:
+#   username: wilfrantz-dede-9b9020276 # change to your linkedin username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Wilfrantz Dede
-  email: wilfrantz@dede.dev # change to your email address
+  email: contact@dede.dev # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/byteASM # change to your twitter homepage
     - https://github.com/wilfrantz # change to your github homepage
-    - https://www.linkedin.com/in/wilfrantz-dede-9b9020276/
     # Uncomment below to add more social links
+    # - https://www.linkedin.com/in/wilfrantz-dede-9b9020276/
     # - https://www.facebook.com/username
 
 google_site_verification: # fill in to your verification string
@@ -76,7 +76,6 @@ theme_mode: # [light | dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-# img_cdn: "https://dede.dev/assets"
 img_cdn: "https://ik.imagekit.io/dclnpmnjj2/"
 
 # the avatar on sidebar, support local or CORS resources
