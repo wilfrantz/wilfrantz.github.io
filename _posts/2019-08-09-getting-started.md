@@ -6,7 +6,7 @@ categories: [Blogging, Tutorial]
 tags: [getting started]
 pin: false 
 image: 
-  path: /images/gettingStarted.png
+  path: gettingStarted.png
   alt: Getting started.
 ---
 
