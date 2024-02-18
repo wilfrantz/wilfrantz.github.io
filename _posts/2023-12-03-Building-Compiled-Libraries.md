@@ -15,7 +15,7 @@ When working on large `C/C++` projects or creating reusable code, building compi
 
 In this blog post, we'll walk you through the process of building a compiled library in `C/C++` and show you how to prepare a `CMakeLists.txt` file to manage the build process.
 
-<u>Table of Contents</u>
+Table of Contents
 
 - [Building a Compiled Library](#building-a-compiled-library)
   - [Step 1: Write Your Library Code](#step-1-write-your-library-code)

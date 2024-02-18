@@ -3,15 +3,15 @@ title: EasyJsonCpp - Seamless JSON Configuration Integration for C++
 date: 2023-05-15 11:33:00 +0800
 categories: [Blogging, Tutorial]
 tags: [C++, Api, Json]
-pin: false 
+pin: true
 math: true
 mermaid: true
 image: 
   path: config-file.png
-  alt: config file, info section. 
+  alt: someProject_config.json
 ---
 
-As a Backend Engineer, ensuring confidentiality and security is paramount in my work, especially when handling sensitive data like `API key` and private configuration elements that require strict confidentiality.
+As a Backend Engineer, ensuring confidentiality and security is paramount in my work, especially when handling sensitive data like API key and private configuration elements that require strict confidentiality.
 
 While I strive to contribute to the open-source community, I am mindful of safeguarding my own privacy and security by avoiding any inadvertent disclosure of sensitive information. Consequently, I have adopted a simple technique which consists of loading configuration data from a JSON config file into a map or multiple maps (Or any data structure of choice) to enable seamless and efficient data retrieval only when and where needed.
 
@@ -35,13 +35,13 @@ EasyJsonCPP/
 <ins>Table of content</ins>
 
 - [Configuration File Structure](#configuration-file-structure)
-- [Efficient Configuration Data Loading](#efficient-configuration-data-loading)
+- [Load Configuration Data Efficiently](#load-configuration-data-efficiently)
   - [Iterates over the key-value pairs](#iterates-over-the-key-value-pairs)
-  - [Process by value type](#process-by-value-type)
-    - [If the value is an array](#if-the-value-is-an-array)
+  - [Process value by type](#process-value-by-type)
+    - [- If the value is an array](#--if-the-value-is-an-array)
     - [If the value is a string](#if-the-value-is-a-string)
 - [Retrieve data from a map](#retrieve-data-from-a-map)
-- [Summary](#summary)
+- [Conclusion](#conclusion)
 
 ### Configuration File Structure
 
@@ -85,7 +85,7 @@ In particular, all of my project config files include an "info" section where es
 - version
 - filename
 - author
-- concise description.
+- description.
 - etc ...
   
 ```json
@@ -125,15 +125,13 @@ This section would contain all the necessary properties and configurations relat
 
 By structuring the config file in this manner, it becomes flexible and adaptable to accommodate different project requirements and integrate with various external services or APIs.
 
-### Efficient Configuration Data Loading
+### Load Configuration Data Efficiently
 
 The configuration data is structured as a `JSON array of objects` within the JSON file. This approach offers enhanced flexibility, as new components can be added without requiring any modifications to the program itself.
 
 The config file becomes a scalable solution, enabling easy expansion and incorporation of additional components as needed. This design choice promotes agility and simplifies the process of adapting the program to evolving requirements without disrupting its core functionality.
 
 The `loadConfig()` method serves the purpose of fetching the configuration data from the designated configuration file. It initiates by performing preliminary checks to determine whether the `_configFile` variable is empty. In which case, the program logs an error message and terminates promptly.
-
-Next, it proceeds to load the configuration file using an input file stream. If the file fails to open, a runtime error is thrown.
 
 The method then parses the `JSON` content of the file, ensuring it is in the form of a `JSON array of objects` as emntioned in the [configuration file structure section.](#configuration-file-structure)
 
@@ -158,13 +156,13 @@ for (const auto &object : root)
 }
 ```
 
-#### Process by value type
+#### Process value by type
 
-`loadConfig()` processes string values and array values (specifically, an array of objects with string key-value pairs).
+`loadConfig()` processes string and array values (specifically, an array of objects with string key-value pairs).
 
-##### <ins>If the value is an array</ins>
+##### - If the value is an array
 
-The code processes data array values and adds them to corresponding config map. For example, in a `Twitter` class, a `_configMap` map stores Twitter API data, and in a `TikTok` class, another `_configMap` map stores TikTok API data. This improves efficiency and allows easy access to the necessary API information for each class.
+The code processes the data from the arrays and adds it to the corresponding config map. For example, in a `Twitter` class, a `_configMap` map stores Twitter API data, and in a `TikTok` class, another `_configMap` map stores TikTok API data. This improves efficiency and allows easy access to the necessary API information for each class.
 
 Further, using a `vector` containing a list of target keys allows seamless iteration and efficient loading of the corresponding map.
 
@@ -325,7 +323,7 @@ It enhances code readability and maintainability by encapsulating the logic for 
     }
 ```
 
-### Summary
+### Conclusion
 
 These practices leverage object-oriented programming (OOP) features like encapsulation, confidentiality and security. The encapsulation principle ensures that sensitive information, such as API keys and private configuration elements, is encapsulated within the appropriate classes, preventing direct access and inadvertent exposure.
 

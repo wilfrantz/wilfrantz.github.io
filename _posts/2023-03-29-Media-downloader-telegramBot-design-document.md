@@ -2,7 +2,7 @@
 title: Social Media Downloader Bot using C++ and Telegram API [Draft]
 date: 2023-05-18 11:33:00 +0800
 categories: [Blogging, Doc, Draft]
-tags: [Telegram, Twitter, Instagram, YouTube, Facebook, TikTok]
+tags: [telegram, twitter, instagram, youTube, facebook, tikTok]
 pin: true
 math: true
 mermaid: true
@@ -51,7 +51,7 @@ This document outlines the design and structure of the program, including its ma
 
 ### Program Flow
 
-![Program Flow](/images/Sipeto-flowchart.png)
+![Program Flow](Sipeto-flowchart.png)
 
 The user sends a link either via the `Telegram bot` or through the [web application](https://sipeto.com){:target="_blank"}. The program conducts an automatic detection process to identify the social media platform associated with the link, including platforms such as `Twitter`, `Facebook`, `TikTok`, or `Instagram`.
 
