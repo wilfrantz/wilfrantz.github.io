@@ -3,7 +3,7 @@ title: GDB and CGDB Cheat Sheet
 date: 2021-03-17 11:33:00 +0800
 categories: [Blog]
 tags: [SWE, GDB]
-pin: true 
+pin: false
 math: true
 mermaid: true
 image:

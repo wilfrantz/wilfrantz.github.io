@@ -1,8 +1,8 @@
 ---
-title: EasyJsonCpp - Seamless JSON Configuration Integration for C++ 
+title: Seamless JSON config files integration with EasyJsonCpp
 date: 2023-05-15 11:33:00 +0800
 categories: [Blogging, Tutorial]
-tags: [C++, Api, Json]
+tags: [C++, RESTApi, Json]
 pin: true
 math: true
 mermaid: true
