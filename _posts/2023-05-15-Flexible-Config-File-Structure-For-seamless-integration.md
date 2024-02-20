@@ -32,7 +32,7 @@ EasyJsonCPP/
 └── CMakeLists.txt (or another build script)
 ```
 
-<ins>Table of content</ins>
+Table of content
 
 - [Configuration File Structure](#configuration-file-structure)
 - [Load Configuration Data Efficiently](#load-configuration-data-efficiently)
@@ -133,7 +133,7 @@ The config file becomes a scalable solution, enabling easy expansion and incorpo
 
 The `loadConfig()` method serves the purpose of fetching the configuration data from the designated configuration file. It initiates by performing preliminary checks to determine whether the `_configFile` variable is empty. In which case, the program logs an error message and terminates promptly.
 
-The method then parses the `JSON` content of the file, ensuring it is in the form of a `JSON array of objects` as emntioned in the [configuration file structure section.](#configuration-file-structure)
+The method then parses the `JSON` content of the file, ensuring it is in the form of a `JSON array of objects` as emntioned in the [configuration file structure](#configuration-file-structure) section.
 
 It iterates over each object within the array, validating their format and follow these important steps:
 
@@ -252,7 +252,7 @@ void SomeClass::ProcessTargetKeys(const Json::Value &configValue, const std::str
 }
 ```
 
-##### <ins>If the value is a string</ins>
+##### If the value is a string
 
 It converts numeric values to string and adds the key-value pair to a main `_config` map in a base class or main routine. Any invalid value types encountered result in appropriate error handling and exceptions being thrown.
 
