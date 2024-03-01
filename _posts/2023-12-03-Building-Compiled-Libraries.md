@@ -2,13 +2,11 @@
 title: Mastering C/C++ Library Development and Build Management with CMake
 date: 2020-06-05 11:33:00 +0800
 categories: [Blog]
-tags: [Apple, Systems, SWE]
+tags: [Library, C++, SWE]
 pin: false
 math: true
 mermaid: true
 image: 
-  path: compiled_lib.png
-  alt: 
 ---
 
 When working on large `C/C++` projects or creating reusable code, building compiled libraries is a common practice. Compiled libraries allow you to encapsulate functionality and data structures into reusable modules that can be easily linked into other programs.
