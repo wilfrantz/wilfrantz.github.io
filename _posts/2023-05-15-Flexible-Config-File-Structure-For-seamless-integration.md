@@ -52,7 +52,7 @@ This format allows compact organization and easy data retrieval, with simple Jso
 ```json
 [
   {
-    "key": "some string",
+    "info": "some string",
     "Item1": [
       {
         "api": "data",
@@ -79,7 +79,7 @@ This format allows compact organization and easy data retrieval, with simple Jso
 ]
 ```
 
-In particular, all of my project config files include an "info" section where essential project details are stored. This section contains information such as
+ In particular, all of my project config files include an `"info"` section where I store essential project details. This section contains information such as:
 
 - run level mode (debug, off, warn, info, error, critical)
 - version
@@ -103,7 +103,7 @@ In particular, all of my project config files include an "info" section where es
 }
 ```
 
-Additional sections can be added as needed, depending on the specific needs of the project. For instance, if the project involves retrieving data from the `Twitter API`, a dedicated "twitter" section can be created within the config file.
+Additional sections can be added as needed, depending on the specific needs of the project. For instance, if the project involves retrieving data from the `Twitter API`, a dedicated `"twitter"` section can be created within the config file.
 
 This section would contain all the necessary properties and configurations related to interacting with the `Twitter API`.
 
@@ -129,7 +129,7 @@ By structuring the config file in this manner, it becomes flexible and adaptable
 
 The configuration data is structured as a `JSON array of objects` within the JSON file. This approach offers enhanced flexibility, as new components can be added without requiring any modifications to the program itself.
 
-The config file becomes a scalable solution, enabling easy expansion and incorporation of additional components as needed. This design choice promotes agility and simplifies the process of adapting the program to evolving requirements without disrupting its core functionality.
+<u>The config file becomes a scalable solution, enabling easy expansion and incorporation of additional components as needed</u>. This design choice promotes agility and simplifies the process of adapting the program to evolving requirements without disrupting its core functionality.
 
 The `loadConfig()` method serves the purpose of fetching the configuration data from the designated configuration file. It initiates by performing preliminary checks to determine whether the `_configFile` variable is empty. In which case, the program logs an error message and terminates promptly.
 
