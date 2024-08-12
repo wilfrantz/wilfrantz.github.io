@@ -3,10 +3,12 @@ title: MySQL Cheat Sheet
 date: 2024-08-09 11:33:00 +0800
 categories: [Blog, Tutorial]
 tags: [SQL, MySQL, SWE]
-pin: false 
+pin: true 
 math: true
 mermaid: true
 image: 
+  path: sqlCheatsheet.png
+  alt: Stored Procedures and Functions
 ---
 
 MySQL is one of the most popular relational database management systems (RDBMS) in the world. Whether you’re just starting out or you’re a seasoned developer, this cheat sheet will help you navigate MySQL more efficiently. This guide covers a broad spectrum of MySQL commands, functions, and tips that are essential for day-to-day database management.

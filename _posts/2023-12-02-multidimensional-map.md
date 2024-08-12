@@ -7,8 +7,6 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: Data Structures and Algorithms.png
-  alt: Data Structures and Algorithms
 ---
 
 

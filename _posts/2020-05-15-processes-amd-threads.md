@@ -7,10 +7,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: Data Structures and Algorithms.png
-  alt: Processes & Threads.
 ---
-
 
 In the world of modern computing, multitasking is a fundamental concept. Whether you're running a complex server application, a video game, or a simple utility, your software often needs to perform multiple tasks simultaneously. To achieve this, C++ provides powerful tools for managing processes and threads. In this blog post, we'll delve into advanced techniques for handling processes and threads in C++.
 

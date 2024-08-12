@@ -7,8 +7,6 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: Data Structures and Algorithms.png
-  alt: Data Structures and Algorithms
 ---
 
 Data structures and algorithms are fundamental concepts in computer science that form the building blocks of efficient and organized software development. They play a crucial role in solving complex problems and optimizing the performance of software applications.
