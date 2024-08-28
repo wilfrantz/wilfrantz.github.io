@@ -11,155 +11,9 @@ image:
   alt: Stored Procedures and Functions
 ---
 
-MySQL is one of the most popular relational database management systems (RDBMS) in the world. Whether you’re just starting out or you’re a seasoned developer, this cheat sheet will help you navigate MySQL more efficiently. This guide covers a broad spectrum of MySQL commands, functions, and tips that are essential for day-to-day database management.
+`MySQL` is one of the most popular relational database management systems (`RDBMS`) in the world. Whether you’re just starting out or you’re a seasoned developer, this cheat sheet will help you navigate MySQL more efficiently. This guide covers a broad spectrum of MySQL commands, functions, and tips that are essential for day-to-day database management.
 
-Table of Content
-
-- [1. **Setting Up MySQL**](#1-setting-up-mysql)
-  - [Installing MySQL](#installing-mysql)
-  - [Starting MySQL](#starting-mysql)
-  - [Accessing MySQL](#accessing-mysql)
-- [2. **Basic MySQL Commands**](#2-basic-mysql-commands)
-  - [Create a Database](#create-a-database)
-  - [Select a Database](#select-a-database)
-  - [Show Databases](#show-databases)
-  - [Drop a Database](#drop-a-database)
-  - [Show Tables in a Database](#show-tables-in-a-database)
-  - [Describe the Structure of a Table](#describe-the-structure-of-a-table)
-- [3. **Table Operations**](#3-table-operations)
-  - [Create a Table](#create-a-table)
-  - [Show the Table Schema](#show-the-table-schema)
-  - [Drop a Table](#drop-a-table)
-  - [Rename a Table](#rename-a-table)
-  - [Alter a Table](#alter-a-table)
-  - [Truncate a Table](#truncate-a-table)
-- [4. **CRUD Operations**](#4-crud-operations)
-  - [Insert Data](#insert-data)
-  - [Insert Multiple Rows](#insert-multiple-rows)
-  - [Select Data](#select-data)
-  - [Update Data](#update-data)
-  - [Delete Data](#delete-data)
-- [5. **Querying Data**](#5-querying-data)
-  - [WHERE Clause](#where-clause)
-  - [AND, OR, NOT](#and-or-not)
-  - [ORDER BY Clause](#order-by-clause)
-  - [LIMIT Clause](#limit-clause)
-  - [BETWEEN Clause](#between-clause)
-  - [LIKE and Wildcards](#like-and-wildcards)
-  - [IN Clause](#in-clause)
-  - [DISTINCT Clause](#distinct-clause)
-- [6. **Advanced MySQL Queries**](#6-advanced-mysql-queries)
-  - [JOINS](#joins)
-  - [GROUP BY](#group-by)
-  - [HAVING Clause](#having-clause)
-  - [Subqueries](#subqueries)
-  - [UNION](#union)
-- [7. **Indexes and Keys**](#7-indexes-and-keys)
-  - [Create an Index](#create-an-index)
-  - [Drop an Index](#drop-an-index)
-  - [Unique Index](#unique-index)
-  - [Primary Key](#primary-key)
-  - [Foreign Key](#foreign-key)
-- [8. **Transactions**](#8-transactions)
-  - [Start a Transaction](#start-a-transaction)
-  - [Commit a Transaction](#commit-a-transaction)
-  - [Rollback a Transaction](#rollback-a-transaction)
-  - [Savepoints](#savepoints)
-- [9. **User Management and Security**](#9-user-management-and-security)
-  - [Create a User](#create-a-user)
-  - [Grant Privileges](#grant-privileges)
-  - [Show Grants](#show-grants)
-  - [Revoke Privileges](#revoke-privileges)
-  - [Drop a User](#drop-a-user)
-  - [Change User Password](#change-user-password)
-- [10. **Backup and Restore**](#10-backup-and-restore)
-  - [Backup a Database](#backup-a-database)
-  - [Restore a Database](#restore-a-database)
-  - [Backup Specific Tables](#backup-specific-tables)
-  - [Backup All Databases](#backup-all-databases)
-- [11. **Optimization and Maintenance**](#11-optimization-and-maintenance)
-  - [Check Table for Errors](#check-table-for-errors)
-  - [Repair a Table](#repair-a-table)
-  - [Optimize a Table](#optimize-a-table)
-  - [Analyze a Table](#analyze-a-table)
-  - [Viewing Server Status](#viewing-server-status)
-  - [Show Current Users](#show-current-users)
-- [12. **MySQL Functions**](#12-mysql-functions)
-  - [String Functions](#string-functions)
-  - [Date Functions](#date-functions)
-  - [Aggregate Functions](#aggregate-functions)
-- [13. **Stored Procedures and Functions**](#13-stored-procedures-and-functions)
-  - [Creating a Stored Procedure](#creating-a-stored-procedure)
-  - [Executing a Stored Procedure](#executing-a-stored-procedure)
-  - [Dropping a Stored Procedure](#dropping-a-stored-procedure)
-  - [Creating a Stored Function](#creating-a-stored-function)
-  - [Dropping a Stored Function](#dropping-a-stored-function)
-- [14. **Triggers**](#14-triggers)
-  - [Creating a Trigger](#creating-a-trigger)
-  - [Dropping a Trigger](#dropping-a-trigger)
-- [15. **Views**](#15-views)
-  - [Creating a View](#creating-a-view)
-  - [Selecting from a View](#selecting-from-a-view)
-  - [Dropping a View](#dropping-a-view)
-- [16. **Replication and High Availability**](#16-replication-and-high-availability)
-  - [Setting Up Master-Slave Replication](#setting-up-master-slave-replication)
-  - [Checking Replication Status](#checking-replication-status)
-  - [Stopping and Starting Replication](#stopping-and-starting-replication)
-- [17. **MySQL Best Practices**](#17-mysql-best-practices)
-  - [Use Consistent Naming Conventions](#use-consistent-naming-conventions)
-  - [Normalize Your Database](#normalize-your-database)
-  - [Backup Regularly](#backup-regularly)
-  - [Monitor Performance](#monitor-performance)
-  - [Secure Your MySQL Installation](#secure-your-mysql-installation)
-  - [Index Appropriately](#index-appropriately)
-  - [Regularly Update MySQL](#regularly-update-mysql)
-- [Conclusion](#conclusion)
-
-## 1. **Setting Up MySQL**
-
-### Installing MySQL
-
-- **On Ubuntu:**
-
-  ```bash
-  sudo apt-get update
-  sudo apt-get install mysql-server
-  ```
-
-- **On CentOS:**
-
-  ```bash
-  sudo yum update
-  sudo yum install mysql-server
-  ```
-
-- **On macOS:**
-
-  ```bash
-  brew install mysql
-  ```
-
-### Starting MySQL
-
-- **Start MySQL:**
-
-  ```bash
-  sudo systemctl start mysql
-  ```
-
-- **Enable MySQL to start on boot:**
-
-  ```bash
-  sudo systemctl enable mysql
-  ```
-
-### Accessing MySQL
-
-```bash
-mysql -u root -p
-```
-
-## 2. **Basic MySQL Commands**
+## **Basic MySQL Commands**
 
 ### Create a Database
 
@@ -194,15 +48,15 @@ SHOW TABLES;
 ### Describe the Structure of a Table
 
 ```sql
-DESCRIBE table_name;
+DESCRIBE tableName;
 ```
 
-## 3. **Table Operations**
+## **Table Operations**
 
 ### Create a Table
 
 ```sql
-CREATE TABLE table_name (
+CREATE TABLE tableName (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100),
     age INT,
@@ -213,19 +67,19 @@ CREATE TABLE table_name (
 ### Show the Table Schema
 
 ```sql
-SHOW CREATE TABLE table_name;
+SHOW CREATE TABLE tableName;
 ```
 
 ### Drop a Table
 
 ```sql
-DROP TABLE table_name;
+DROP TABLE tableName;
 ```
 
 ### Rename a Table
 
 ```sql
-RENAME TABLE old_table_name TO new_table_name;
+RENAME TABLE old_tableName TO newTableName;
 ```
 
 ### Alter a Table
@@ -233,41 +87,47 @@ RENAME TABLE old_table_name TO new_table_name;
 - **Add a column:**
 
   ```sql
-  ALTER TABLE table_name ADD COLUMN column_name data_type;
+  ALTER TABLE tableName ADD COLUMN columnName data_type;
+  ```
+
+- **Rename a column:**
+
+  ```sql
+  ALTER TABLE tableName RENAME COLUMN oldcolumnName TO newcolumnName;
   ```
 
 - **Modify a column:**
 
   ```sql
-  ALTER TABLE table_name MODIFY COLUMN column_name new_data_type;
+  ALTER TABLE tableName MODIFY COLUMN columnName new_data_type;
   ```
 
 - **Drop a column:**
 
   ```sql
-  ALTER TABLE table_name DROP COLUMN column_name;
+  ALTER TABLE tableName DROP COLUMN columnName;
   ```
 
 ### Truncate a Table
 
 ```sql
-TRUNCATE TABLE table_name;
+TRUNCATE TABLE tableName;
 ```
 
-## 4. **CRUD Operations**
+## **CRUD Operations**
 
  > create, read, update and delete.
 
 ### Insert Data
 
 ```sql
-INSERT INTO table_name (column1, column2, column3) VALUES (value1, value2, value3);
+INSERT INTO tableName (column1, column2, column3) VALUES (value1, value2, value3);
 ```
 
 ### Insert Multiple Rows
 
 ```sql
-INSERT INTO table_name (column1, column2) VALUES 
+INSERT INTO tableName (column1, column2) VALUES 
 (value1_1, value2_1),
 (value1_2, value2_2),
 (value1_3, value2_3);
@@ -278,58 +138,58 @@ INSERT INTO table_name (column1, column2) VALUES
 - **Select all columns:**
 
   ```sql
-  SELECT * FROM table_name;
+  SELECT * FROM tableName;
   ```
 
 - **Select specific columns:**
 
   ```sql
-  SELECT column1, column2 FROM table_name;
+  SELECT column1, column2 FROM tableName;
   ```
 
 ### Update Data
 
 ```sql
-UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;
+UPDATE tableName SET column1 = value1, column2 = value2 WHERE condition;
 ```
 
 ### Delete Data
 
 ```sql
-DELETE FROM table_name WHERE condition;
+DELETE FROM tableName WHERE condition;
 ```
 
-## 5. **Querying Data**
+## **Querying Data**
 
 ### WHERE Clause
 
 ```sql
-SELECT * FROM table_name WHERE column_name = value;
+SELECT * FROM tableName WHERE columnName = value;
 ```
 
 ### AND, OR, NOT
 
 ```sql
-SELECT * FROM table_name WHERE column1 = value1 AND (column2 = value2 OR column3 = value3);
+SELECT * FROM tableName WHERE column1 = value1 AND (column2 = value2 OR column3 = value3);
 ```
 
 ### ORDER BY Clause
 
 ```sql
-SELECT * FROM table_name ORDER BY column_name ASC;
-SELECT * FROM table_name ORDER BY column_name DESC;
+SELECT * FROM tableName ORDER BY columnName ASC;
+SELECT * FROM tableName ORDER BY columnName DESC;
 ```
 
 ### LIMIT Clause
 
 ```sql
-SELECT * FROM table_name LIMIT number_of_rows;
+SELECT * FROM tableName LIMIT number_of_rows;
 ```
 
 ### BETWEEN Clause
 
 ```sql
-SELECT * FROM table_name WHERE column_name BETWEEN value1 AND value2;
+SELECT * FROM tableName WHERE columnName BETWEEN value1 AND value2;
 ```
 
 ### LIKE and Wildcards
@@ -337,34 +197,34 @@ SELECT * FROM table_name WHERE column_name BETWEEN value1 AND value2;
 - **Find values that start with 'a':**
 
   ```sql
-  SELECT * FROM table_name WHERE column_name LIKE 'a%';
+  SELECT * FROM tableName WHERE columnName LIKE 'a%';
   ```
 
 - **Find values that end with 'a':**
 
   ```sql
-  SELECT * FROM table_name WHERE column_name LIKE '%a';
+  SELECT * FROM tableName WHERE columnName LIKE '%a';
   ```
 
 - **Find values that contain 'a':**
 
   ```sql
-  SELECT * FROM table_name WHERE column_name LIKE '%a%';
+  SELECT * FROM tableName WHERE columnName LIKE '%a%';
   ```
 
 ### IN Clause
 
 ```sql
-SELECT * FROM table_name WHERE column_name IN (value1, value2, value3);
+SELECT * FROM tableName WHERE columnName IN (value1, value2, value3);
 ```
 
 ### DISTINCT Clause
 
 ```sql
-SELECT DISTINCT column_name FROM table_name;
+SELECT DISTINCT columnName FROM tableName;
 ```
 
-## 6. **Advanced MySQL Queries**
+## **Advanced MySQL Queries**
 
 ### JOINS
 
@@ -392,15 +252,15 @@ SELECT DISTINCT column_name FROM table_name;
 ### GROUP BY
 
 ```sql
-SELECT column_name, COUNT(*) FROM table_name
-GROUP BY column_name;
+SELECT columnName, COUNT(*) FROM tableName
+GROUP BY columnName;
 ```
 
 ### HAVING Clause
 
 ```sql
-SELECT column_name, COUNT(*) FROM table_name
-GROUP BY column_name
+SELECT columnName, COUNT(*) FROM tableName
+GROUP BY columnName
 HAVING COUNT(*) > 1;
 ```
 
@@ -409,59 +269,59 @@ HAVING COUNT(*) > 1;
 - **Subquery in SELECT:**
 
   ```sql
-  SELECT column_name, (SELECT COUNT(*) FROM another_table WHERE condition) 
-  FROM table_name;
+  SELECT columnName, (SELECT COUNT(*) FROM another_table WHERE condition) 
+  FROM tableName;
   ```
 
 - **Subquery in WHERE:**
 
   ```sql
-  SELECT column_name FROM table_name
-  WHERE column_name IN (SELECT column_name FROM another_table WHERE condition);
+  SELECT columnName FROM tableName
+  WHERE columnName IN (SELECT columnName FROM another_table WHERE condition);
   ```
 
 ### UNION
 
 ```sql
-SELECT column_name FROM table1
+SELECT columnName FROM table1
 UNION
-SELECT column_name FROM table2;
+SELECT columnName FROM table2;
 ```
 
-## 7. **Indexes and Keys**
+## **Indexes and Keys**
 
 ### Create an Index
 
 ```sql
-CREATE INDEX index_name ON table_name (column_name);
+CREATE INDEX index_name ON tableName (columnName);
 ```
 
 ### Drop an Index
 
 ```sql
-DROP INDEX index_name ON table_name;
+DROP INDEX index_name ON tableName;
 ```
 
 ### Unique Index
 
 ```sql
-CREATE UNIQUE INDEX index_name ON table_name (column_name);
+CREATE UNIQUE INDEX index_name ON tableName (columnName);
 ```
 
 ### Primary Key
 
 ```sql
-ALTER TABLE table_name ADD PRIMARY KEY (column_name);
+ALTER TABLE tableName ADD PRIMARY KEY (columnName);
 ```
 
 ### Foreign Key
 
 ```sql
-ALTER TABLE table_name
-ADD CONSTRAINT fk_name FOREIGN KEY (column_name) REFERENCES other_table(column_name);
+ALTER TABLE tableName
+ADD CONSTRAINT fk_name FOREIGN KEY (columnName) REFERENCES other_table(columnName);
 ```
 
-## 8. **Transactions**
+## **Transactions**
 
 ### Start a Transaction
 
@@ -488,7 +348,7 @@ SAVEPOINT savepoint_name;
 ROLLBACK TO savepoint_name;
 ```
 
-## 9. **User Management and Security**
+## **User Management and Security**
 
 ### Create a User
 
@@ -526,7 +386,7 @@ DROP USER 'username'@'host';
 ALTER USER 'username'@'host' IDENTIFIED BY 'new_password';
 ```
 
-## 10. **Backup and Restore**
+## **Backup and Restore**
 
 ### Backup a Database
 
@@ -552,30 +412,30 @@ mysqldump -u username -p database_name table1 table2 > backup.sql
 mysqldump -u username -p --all-databases > all_databases_backup.sql
 ```
 
-## 11. **Optimization and Maintenance**
+## **Optimization and Maintenance**
 
 ### Check Table for Errors
 
 ```sql
-CHECK TABLE table_name;
+CHECK TABLE tableName;
 ```
 
 ### Repair a Table
 
 ```sql
-REPAIR TABLE table_name;
+REPAIR TABLE tableName;
 ```
 
 ### Optimize a Table
 
 ```sql
-OPTIMIZE TABLE table_name;
+OPTIMIZE TABLE tableName;
 ```
 
 ### Analyze a Table
 
 ```sql
-ANALYZE TABLE table_name;
+ANALYZE TABLE tableName;
 ```
 
 ### Viewing Server Status
@@ -590,7 +450,7 @@ SHOW STATUS;
 SELECT user, host FROM mysql.user;
 ```
 
-## 12. **MySQL Functions**
+## **MySQL Functions**
 
 ### String Functions
 
@@ -637,40 +497,40 @@ SELECT user, host FROM mysql.user;
 - **COUNT:**
 
   ```sql
-  SELECT COUNT(*) FROM table_name;
+  SELECT COUNT(*) FROM tableName;
   ```
 
 - **SUM:**
 
   ```sql
-  SELECT SUM(column_name)
+  SELECT SUM(columnName)
   ```
 
   Continuing from where we left off:
 
 ```sql
-SELECT SUM(column_name) FROM table_name;
+SELECT SUM(columnName) FROM tableName;
 ```
 
 - **AVG:**
 
   ```sql
-  SELECT AVG(column_name) FROM table_name;
+  SELECT AVG(columnName) FROM tableName;
   ```
 
 - **MIN:**
 
   ```sql
-  SELECT MIN(column_name) FROM table_name;
+  SELECT MIN(columnName) FROM tableName;
   ```
 
 - **MAX:**
 
   ```sql
-  SELECT MAX(column_name) FROM table_name;
+  SELECT MAX(columnName) FROM tableName;
   ```
 
-## 13. **Stored Procedures and Functions**
+## **Stored Procedures and Functions**
 
 ### Creating a Stored Procedure
 
@@ -679,7 +539,7 @@ DELIMITER //
 CREATE PROCEDURE procedure_name (IN param1 datatype, OUT param2 datatype)
 BEGIN
     -- SQL statements
-    SELECT column_name INTO param2 FROM table_name WHERE condition;
+    SELECT columnName INTO param2 FROM tableName WHERE condition;
 END //
 DELIMITER ;
 ```
@@ -715,14 +575,14 @@ DELIMITER ;
 DROP FUNCTION function_name;
 ```
 
-## 14. **Triggers**
+## **Triggers**
 
 ### Creating a Trigger
 
 ```sql
 CREATE TRIGGER trigger_name
 BEFORE/AFTER INSERT/UPDATE/DELETE
-ON table_name FOR EACH ROW
+ON tableName FOR EACH ROW
 BEGIN
     -- SQL statements
 END;
@@ -734,13 +594,13 @@ END;
 DROP TRIGGER trigger_name;
 ```
 
-## 15. **Views**
+## **Views**
 
 ### Creating a View
 
 ```sql
 CREATE VIEW view_name AS
-SELECT columns FROM table_name WHERE condition;
+SELECT columns FROM tableName WHERE condition;
 ```
 
 ### Selecting from a View
@@ -755,7 +615,7 @@ SELECT * FROM view_name;
 DROP VIEW view_name;
 ```
 
-## 16. **Replication and High Availability**
+## **Replication and High Availability**
 
 ### Setting Up Master-Slave Replication
 
@@ -838,7 +698,7 @@ SHOW SLAVE STATUS\G;
   START SLAVE;
   ```
 
-## 17. **MySQL Best Practices**
+## **MySQL Best Practices**
 
 ### Use Consistent Naming Conventions
 
@@ -854,7 +714,7 @@ SHOW SLAVE STATUS\G;
 
 ### Monitor Performance
 
-- Use tools like `mysqltuner` to monitor and optimize the performance of your MySQL database.
+- Use tools like `mysqltuner` to monitor and optimize the performance of `MySQL` database.
 
 ### Secure Your MySQL Installation
 
@@ -866,7 +726,7 @@ SHOW SLAVE STATUS\G;
 
 ### Regularly Update MySQL
 
-- Keep your MySQL version up to date with the latest security patches and performance improvements.
+- Keep `MySQL` version up to date with the latest security patches and performance improvements.
 
 ## Conclusion
 

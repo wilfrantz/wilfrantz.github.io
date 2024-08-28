@@ -25,7 +25,7 @@ When it comes to developing software, especially in C and C++ programming langua
 | **Compatibility Issues**| Possible                             | Less likely                      |
 | **Compilation Time**   | Low                                  | Moderate (May increase)          |
 
-table of content
+Table of content
 
 - [Comparison between Compiled Libraries and Header Libraries](#comparison-between-compiled-libraries-and-header-libraries)
 - [Compiled Libraries](#compiled-libraries)
