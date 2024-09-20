@@ -160,5 +160,3 @@ INSERT INTO domains (
 - **Normalization**: The design above normalizes the data by splitting it into multiple related tables. This avoids data redundancy.
 - **Indexes**: The creation of indexes on frequently queried columns will insure better performance.
 - **Foreign Keys**: The use of foreign keys ensures data integrity between the related tables.
-
-This schema provides a foundation for storing and querying the data you've provided. Depending on your specific use case, you may need to adjust the design or add additional tables/columns.
