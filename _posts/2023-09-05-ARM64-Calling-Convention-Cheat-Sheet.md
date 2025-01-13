@@ -1,8 +1,8 @@
 ---
-title: ARM64 Calling Convention Cheat Sheet
+title: ARM64 (MacOS) Calling Convention Cheat Sheet
 date: 2023-09-05 11:33:00 +0800
 categories: [Blogging, Doc]
-tags: [ARM64, OSMR, ASM, Assembly]
+tags: [ARM64, macOS, ASM, Assembly]
 pin: false
 math: true
 mermaid: true
@@ -11,7 +11,7 @@ image:
   alt: ARM64
 ---
 
-`ARM64`, also known as `AArch64`, is the 64-bit execution state introduced in the `ARMv8` architecture. If you're diving into `ARM64`` assembly, understanding the calling convention is crucial. It helps in ensuring interoperability between function calls, making your code more readable, maintainable, and efficient. Here's a cheat sheet for the standard ARM64 calling convention:
+`ARM64`, also known as `AArch64`, is the 64-bit execution state introduced in the `ARMv8` architecture. If you're diving into `ARM64` assembly on macOS, understanding the calling convention is crucial. It helps in ensuring interoperability between function calls, making your code more readable, maintainable, and efficient. Here's a cheat sheet for the standard ARM64 calling convention on macOS:
 
 ***Table of contents***
 
@@ -98,10 +98,10 @@ For functions with a variable number of arguments:
 
 - **Arguments**: `X0` to `X7`.
   
-- **System call number**: In `X8`.
+- **System call number**: In `X16`.
 
 ---
 
 ## Conclusion
 
-When coding in `ARM64` assembly or dealing with debugging and reverse engineering, understanding the calling convention can be invaluable. It helps in tracking the flow of data between functions, deciphering the purpose of various registers at different points in time, and making sense of the machine code in front of you.
+When coding in `ARM64` assembly on macOS or dealing with debugging and reverse engineering, understanding the calling convention can be invaluable. It helps in tracking the flow of data between functions, deciphering the purpose of various registers at different points in time, and making sense of the machine code in front of you.
