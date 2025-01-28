@@ -1,5 +1,5 @@
 ---
-title: ARM64 (ARMv8-A) Calling Convention Cheat Sheet
+title: ARM64 Calling Convention Cheat Sheet (MacOS)
 date: 2023-09-05 11:33:00 +0800
 categories: [Blogging, Doc]
 tags: [ARM64, macOS, ASM, Assembly, ARMv8-A]
@@ -35,6 +35,7 @@ image:
   - [Handling Variadic Functions](#handling-variadic-functions)
   - [System Calls Overview](#system-calls-overview)
 - [Conclusion](#conclusion)
+- [Ressources](#ressources)
 
 ## General-Purpose Registers
 
@@ -347,3 +348,7 @@ Understanding the calling conventions and the role of each register is crucial f
 ## Conclusion
 
 When coding in `ARM64` assembly on macOS or dealing with debugging and reverse engineering, understanding the calling convention can be invaluable. It helps in tracking the flow of data between functions, deciphering the purpose of various registers at different points in time, and making sense of the machine code in front of you.
+
+## Ressources
+
+- [AArch64/ARM64 Tutorial](https://mariokartwii.com/armv8/ch5.html){:target="_blank"}

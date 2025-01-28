@@ -9,7 +9,6 @@ mermaid: true
 image:
 ---
 
-
 ## GDB (GNU Debugger)
 
 GDB is a powerful tool for debugging applications written in C, C++, and other languages. Here's a quick reference to some commonly used commands:
@@ -36,6 +35,44 @@ GDB is a powerful tool for debugging applications written in C, C++, and other l
 - `set variable [var]=[value]` - Set a variable to a new value.
 - `disassemble [function]` - Show assembly code for the function.
 - `catch [event]` - Break on specific events like `throw` or `catch`.
+- `info registers` - Display the contents of CPU registers.
+- `info threads` - List all threads.
+- `thread [number]` - Switch to a specific thread.
+- `thread apply all [command]` - Apply a command to all threads.
+- `set logging on` - Enable logging of GDB session to a file.
+- `set follow-fork-mode [mode]` - Control whether GDB follows the parent or child process after a fork.
+
+### Tips and Tricks
+
+- **Conditional Breakpoints**: Set breakpoints that only trigger when a condition is met.
+
+    ```sh
+    break [location] if [condition]
+    ```
+
+- **Command Lists**: Execute a list of commands when a breakpoint is hit.
+
+    ```sh
+    break [location]
+    commands
+    [command1]
+    [command2]
+    end
+    ```
+
+- **Pretty Printing**: Enable pretty printing for complex data structures.
+
+    ```sh
+    set print pretty on
+    ```
+
+- **Reverse Debugging**: Step backwards in the program execution (requires GDB to be configured with reverse debugging support).
+
+    ```sh
+    target record
+    reverse-step
+    reverse-continue
+    ```
 
 ## CGDB (Curses-based interface to the GNU Debugger)
 
@@ -60,3 +97,25 @@ CGDB provides a more user-friendly interface to GDB. It includes split views sho
 
 - CGDB remembers the history of GDB commands; use the arrow keys to navigate through past commands.
 - The split screen allows simultaneous viewing of source code and real-time debugging output, enhancing the debugging experience.
+- **Custom Key Bindings**: Customize key bindings in CGDB by editing the `.cgdb/cgdbrc` file.
+
+    ```sh
+    bind key [key] [command]
+    ```
+
+- **Macros**: Define macros in CGDB to automate repetitive tasks.
+
+    ```sh
+    define [macro-name]
+    [command1]
+    [command2]
+    end
+    ```
+
+- **Color Schemes**: Customize the color scheme of CGDB by editing the `.cgdb/cgdb.conf` file.
+
+    ```sh
+    set color [element] [color]
+    ```
+
+By leveraging these advanced commands and tips, you can significantly enhance your debugging efficiency and effectiveness with GDB and CGDB.
