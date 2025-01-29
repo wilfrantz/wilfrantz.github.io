@@ -21,6 +21,7 @@ LLDB is the debugger that comes with Xcode and is part of the LLVM project. It i
 - [Memory Inspection](#memory-inspection)
 - [Expressions](#expressions)
 - [Advanced Commands](#advanced-commands)
+- [Register Commands](#register-commands)
 - [Scripting](#scripting)
 - [Tips and Tricks](#tips-and-tricks)
 - [Conclusion](#conclusion)
@@ -233,6 +234,38 @@ LLDB is the debugger that comes with Xcode and is part of the LLVM project. It i
 
     ```sh
     trace stop
+    ```
+
+## Register Commands
+
+1. **View all registers**
+
+    ```sh
+    register read
+    ```
+
+2. **View a specific register**
+
+    ```sh
+    register read <register-name>
+    ```
+
+3. **Modify a register value**
+
+    ```sh
+    register write <register-name> <value>
+    ```
+
+4. **Save register state to a file**
+
+    ```sh
+    register save <file>
+    ```
+
+5. **Restore register state from a file**
+
+    ```sh
+    register restore <file>
     ```
 
 ## Scripting
