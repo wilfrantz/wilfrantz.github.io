@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LLDB on DEDE</title><link>https://dede.dev/tags/lldb/</link><description>Recent content in LLDB on DEDE</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 05 Sep 2023 11:33:00 +0800</lastBuildDate><atom:link href="https://dede.dev/tags/lldb/index.xml" rel="self" type="application/rss+xml"/><item><title>LLDB Cheat Sheet</title><link>https://dede.dev/posts/2023-09-05-lldb-cheat-sheet/</link><pubDate>Tue, 05 Sep 2023 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2023-09-05-lldb-cheat-sheet/</guid><description>&lt;p>LLDB is the debugger that comes with Xcode and is part of the LLVM project. It is used for debugging programs written in C, C++, Objective-C, and Swift. Here’s a cheat sheet to help you get started with LLDB:&lt;/p>
+&lt;p>&lt;em>&lt;strong>Table of contents&lt;/strong>&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="#starting-lldb">Starting LLDB&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#basic-commands">Basic Commands&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#breakpoints">Breakpoints&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#stepping">Stepping&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#examining-state">Examining State&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#memory-inspection">Memory Inspection&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#expressions">Expressions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#advanced-commands">Advanced Commands&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#register-commands">Register Commands&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#scripting">Scripting&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#tips-and-tricks">Tips and Tricks&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#conclusion">Conclusion&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="starting-lldb">Starting LLDB&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Start LLDB and load a program&lt;/strong>&lt;/p></description></item></channel></rss>
