@@ -1,50 +1,80 @@
-# Chirpy Starter
+Here's the fixed and improved version of your markdown content. I've corrected syntax errors, improved formatting consistency, and enhanced readability while preserving the original structure:
 
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+# **Wilfrantz's Blog - Hugo Coder**
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
+[![GitHub license](https://img.shields.io/github/license/wilfrantz/wilfrantz.github.io?color=blue)](LICENSE)
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+This repository hosts my personal blog, built with **Hugo** and the **Hugo-Coder** theme. The site is deployed on **GitHub Pages** and available at **[dede.dev](https://dede.dev/)**.
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+---
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+## **🚀 Features**
+- 🔥 **Built with Hugo** - A fast, lightweight static site generator
+- 🎨 **Hugo-Coder Theme** - A clean, developer-friendly theme
+- 🌍 **Custom Domain** - Hosted at **dede.dev**
+- 📌 **GitHub Pages Deployment** - Uses `gh-pages` branch
+- 🛠 **Continuous Deployment** - Auto-deploys on every push
+
+---
+
+## **📌 Prerequisites**
+To run this project locally, you need:
+- **Hugo** ([Install Hugo](https://gohugo.io/getting-started/installing/))
+- **Git** ([Install Git](https://git-scm.com/))
+
+---
+
+## **💡 Installation & Setup**
+
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/wilfrantz/wilfrantz.github.io.git
+cd wilfrantz.github.io
 ```
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
-
-## Prerequisites
-
-the basic environment. [Git](https://git-scm.com/) also needs to be installed.
-
-## Installation
-
-Sign in to GitHub and [**use this template**][use-template] to generate a brand new repository and name it
-`USERNAME.github.io`, where `USERNAME` represents your GitHub username.
-
-Then clone it to your local machine and run:
-
-```console
-$ bundle
+### **2️⃣ Install Hugo**
+On Ubuntu:
+```sh
+sudo apt install hugo
 ```
 
-## Usage
+On macOS (Homebrew):
+  ```sh
+     brew install hugo
+     ```
 
+### **3️⃣ Run the Site Locally**
+     ```sh
+     hugo server --bind 0.0.0.0 --baseURL http://localhost:1313/
+     ```
+     Your site should be available at `http://localhost:1313/`.
 
-## License
+     ---
 
-This work is published under [MIT][mit] License.
+## **📤 Deploy to GitHub Pages**
 
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+### **1️⃣ Build the Static Site**
+     ```sh
+     hugo --minify
+     ```
+     This generates the site inside the `public/` directory.
+
+### **2️⃣ Commit and Push to GitHub Pages**
+     ```sh
+     git add -f public
+     git commit -m "Deploy Hugo site"
+     git push origin `git subtree split --prefix public hugo-migration`:gh-pages --force
+     ```
+     This will deploy the `public/` folder to the `gh-pages` branch.
+
+### **3️⃣ Configure GitHub Pages**
+     1. Go to GitHub → Repository → Settings → Pages
+     2. Configure:
+     - Branch: `gh-pages`
+     - Custom Domain: `dede.dev`
+     - Enforce HTTPS: ✅ Checked
+
+     ---
+
+## **📄 License**
+     This project is licensed under the [MIT License](LICENSE).
