@@ -1,5 +1,3 @@
-Here's the fixed and improved version of your markdown content. I've corrected syntax errors, improved formatting consistency, and enhanced readability while preserving the original structure:
-
 # **Wilfrantz's Blog - Hugo Coder**
 
 [![GitHub license](https://img.shields.io/github/license/wilfrantz/wilfrantz.github.io?color=blue)](LICENSE)
