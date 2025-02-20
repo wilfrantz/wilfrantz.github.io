@@ -1,5 +1,5 @@
 ---
-title: Mastering C/C++ Library Development and Build Management with CMake
+title: Library Build Management with CMake
 date: 2020-06-05 11:33:00 +0800
 categories: [Blog]
 tags: [Library, C++, SWE]
