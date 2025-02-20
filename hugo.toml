@@ -14,7 +14,7 @@ defaultContentLanguage = "en"
   author = "Wilfrantz DEDE"  # Your name
   info = "Systems software engineer."  # Customized for you; adjust as needed
   description = "Wilfrantz DEDE's personal website"  # Your description
-  keywords = "blog, developer, hugo, personal"  # Adjusted keywords
+  keywords = "blog, developer, personal"  # Adjusted keywords
   # avatarURL = "/avatar.jpg"  # Matches your earlier config (adjust if filename differs)
   gravatar = "contact@dede.dev"  # Uncomment and add your email if you prefer Gravatar
 
@@ -22,7 +22,7 @@ defaultContentLanguage = "en"
   favicon_32 = "/favicon-32x32.png"  # Matches your earlier config
   favicon_16 = "/favicon-16x16.png"  # Matches your earlier config
 
-  since = 2021  # Assuming you started recently; adjust to your start year
+  since = 2020  # Assuming you started recently; adjust to your start year
 
   enableTwemoji = true
 
