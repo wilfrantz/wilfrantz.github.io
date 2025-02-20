@@ -22,116 +22,7 @@
  &lt;span class="sr-only">Link to heading&lt;/span>
  &lt;/a>
 &lt;/h3>
-&lt;p>Here’s how the tables in MySQL could be define:&lt;/p></description></item><item><title>MySQL Cheat Sheet</title><link>https://dede.dev/posts/2024-08-09-sql-cheatsheet/</link><pubDate>Fri, 09 Aug 2024 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2024-08-09-sql-cheatsheet/</guid><description>&lt;p>&lt;code>MySQL&lt;/code> is one of the most popular relational database management systems (&lt;code>RDBMS&lt;/code>) in the world. Whether you’re just starting out or you’re a seasoned developer, this cheat sheet will help you navigate MySQL more efficiently. This guide covers a broad spectrum of MySQL commands, functions, and tips that are essential for day-to-day database management.&lt;/p>
-&lt;h2 id="basic-mysql-commands">
- &lt;strong>Basic MySQL Commands&lt;/strong>
- &lt;a class="heading-link" href="#basic-mysql-commands">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;h3 id="create-a-database">
- Create a Database
- &lt;a class="heading-link" href="#create-a-database">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">CREATE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">DATABASE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>db_name;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="select-a-database">
- Select a Database
- &lt;a class="heading-link" href="#select-a-database">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>USE&lt;span style="color:#6e7681"> &lt;/span>db_name;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="show-databases">
- Show Databases
- &lt;a class="heading-link" href="#show-databases">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">SHOW&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>DATABASES;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="drop-a-database">
- Drop a Database
- &lt;a class="heading-link" href="#drop-a-database">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">DROP&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">DATABASE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>db_name;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="show-tables-in-a-database">
- Show Tables in a Database
- &lt;a class="heading-link" href="#show-tables-in-a-database">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">SHOW&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>TABLES;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="describe-the-structure-of-a-table">
- Describe the Structure of a Table
- &lt;a class="heading-link" href="#describe-the-structure-of-a-table">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">DESCRIBE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>tableName;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="table-operations">
- &lt;strong>Table Operations&lt;/strong>
- &lt;a class="heading-link" href="#table-operations">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;h3 id="create-a-table">
- Create a Table
- &lt;a class="heading-link" href="#create-a-table">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">CREATE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">TABLE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>tableName&lt;span style="color:#6e7681"> &lt;/span>(&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6e7681"> &lt;/span>id&lt;span style="color:#6e7681"> &lt;/span>INT&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">PRIMARY&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">KEY&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>AUTO_INCREMENT,&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6e7681"> &lt;/span>name&lt;span style="color:#6e7681"> &lt;/span>VARCHAR(&lt;span style="color:#a5d6ff">100&lt;/span>),&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6e7681"> &lt;/span>age&lt;span style="color:#6e7681"> &lt;/span>INT,&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6e7681"> &lt;/span>email&lt;span style="color:#6e7681"> &lt;/span>VARCHAR(&lt;span style="color:#a5d6ff">100&lt;/span>)&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6e7681">&lt;/span>);&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="show-the-table-schema">
- Show the Table Schema
- &lt;a class="heading-link" href="#show-the-table-schema">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">SHOW&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">CREATE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">TABLE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>tableName;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="drop-a-table">
- Drop a Table
- &lt;a class="heading-link" href="#drop-a-table">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">DROP&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">TABLE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>tableName;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="rename-a-table">
- Rename a Table
- &lt;a class="heading-link" href="#rename-a-table">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">RENAME&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">TABLE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>old_tableName&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">TO&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>newTableName;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="alter-a-table">
- Alter a Table
- &lt;a class="heading-link" href="#alter-a-table">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>Add a column:&lt;/strong>&lt;/p></description></item><item><title>LLDB Cheat Sheet</title><link>https://dede.dev/posts/2023-09-05-lldb-cheat-sheet/</link><pubDate>Tue, 05 Sep 2023 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2023-09-05-lldb-cheat-sheet/</guid><description>&lt;p>LLDB is the debugger that comes with Xcode and is part of the LLVM project. It is used for debugging programs written in C, C++, Objective-C, and Swift. Here’s a cheat sheet to help you get started with LLDB:&lt;/p>
+&lt;p>Here’s how the tables in MySQL could be defined:&lt;/p></description></item><item><title>LLDB Cheat Sheet</title><link>https://dede.dev/posts/2023-09-05-lldb-cheat-sheet/</link><pubDate>Tue, 05 Sep 2023 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2023-09-05-lldb-cheat-sheet/</guid><description>&lt;p>LLDB is the debugger that comes with Xcode and is part of the LLVM project. It is used for debugging programs written in C, C++, Objective-C, and Swift. Here’s a cheat sheet to help you get started with LLDB:&lt;/p>
 &lt;p>&lt;em>&lt;strong>Table of contents&lt;/strong>&lt;/em>&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="#starting-lldb" >Starting LLDB&lt;/a>&lt;/li>
@@ -156,7 +47,46 @@
 &lt;/h2>
 &lt;ol>
 &lt;li>
-&lt;p>&lt;strong>Start LLDB and load a program&lt;/strong>&lt;/p></description></item><item><title>ZSH and PowerLevel10K for Beauty and Speed on MacOS &amp; Debian Systems</title><link>https://dede.dev/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</link><pubDate>Mon, 22 May 2023 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</guid><description>&lt;p>In this comprehensive tutorial, I&amp;rsquo;ll guide you through the process of installing/configuring &lt;code>ZSH&lt;/code> shell both on &lt;code>MacOS&lt;/code> and &lt;code>Debian&lt;/code> systems, personalize it with the &lt;code>ohmyzsh&lt;/code> framework and elevate your experience with the stunning &lt;code>PowerLeve10K&lt;/code> theme.&lt;/p>
+&lt;p>&lt;strong>Start LLDB and load a program&lt;/strong>&lt;/p></description></item><item><title>Crontab: A Practical Guide with Examples</title><link>https://dede.dev/posts/2023-06-11-crontab-cheat-sheet/</link><pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate><guid>https://dede.dev/posts/2023-06-11-crontab-cheat-sheet/</guid><description>&lt;h2 id="introduction">
+ Introduction
+ &lt;a class="heading-link" href="#introduction">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Crontab is a powerful utility in Unix-like operating systems that allows you to schedule and automate tasks at predefined intervals. It uses a cron daemon to execute commands or scripts according to a specified schedule. This cheat sheet provides an overview of crontab syntax and demonstrates practical examples to help you effectively schedule recurring tasks.&lt;/p>
+&lt;p>Table of Contents&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="#introduction" >Introduction&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#difference-between-cron-crontab-and-cron-job" >Difference between Cron, Crontab, and Cron Job&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#cron" >Cron&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#crontab" >Crontab&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#cron-job" >Cron Job&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#crontab-syntax" >Crontab Syntax&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#practical-examples" >Practical Examples&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#example-1-running-a-script-every-hour" >Example 1: Running a Script Every Hour&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-2-running-a-script-every-day-at-a-specific-time" >Example 2: Running a Script Every Day at a Specific Time&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-3-running-a-script-on-specific-days-of-the-week" >Example 3: Running a Script on Specific Days of the Week&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-4-running-a-script-every-month" >Example 4: Running a Script Every Month&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-5-running-a-script-at-regular-intervals" >Example 5: Running a Script at Regular Intervals&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#managing-crontab-entries" >Managing Crontab Entries&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#conclusion" >Conclusion&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#resource" >Resource&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="difference-between-cron-crontab-and-cron-job">
+ Difference between Cron, Crontab, and Cron Job
+ &lt;a class="heading-link" href="#difference-between-cron-crontab-and-cron-job">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>The provided table illustrates the key elements related to scheduling tasks using cron in Linux systems.&lt;/p></description></item><item><title>ZSH and PowerLevel10K for Beauty and Speed on MacOS &amp; Debian Systems</title><link>https://dede.dev/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</link><pubDate>Mon, 22 May 2023 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</guid><description>&lt;p>In this comprehensive tutorial, I&amp;rsquo;ll guide you through the process of installing/configuring &lt;code>ZSH&lt;/code> shell both on &lt;code>MacOS&lt;/code> and &lt;code>Debian&lt;/code> systems, personalize it with the &lt;code>ohmyzsh&lt;/code> framework and elevate your experience with the stunning &lt;code>PowerLeve10K&lt;/code> theme.&lt;/p>
 &lt;p>Before proceeding with the installation, please ensure that &lt;code>Git&lt;/code> is installed on your system. To install &lt;code>Git&lt;/code> using &lt;a href="https://brew.sh" class="external-link" target="_blank" rel="noopener">homebrew&lt;/a>{: target=&amp;quot;_blank&amp;quot;} on &lt;code>macOS&lt;/code>, run the following command:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>brew install git
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Linux users, you can install Git with homebrew or your Linux distro&amp;rsquo;s default package manager, on debian systems simply run the following command:&lt;/p></description></item><item><title>Docker Cheat Sheet Tutorial</title><link>https://dede.dev/posts/2023-05-18-docker-cheatsheet/</link><pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2023-05-18-docker-cheatsheet/</guid><description>&lt;h3 id="basic-commands">

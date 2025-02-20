@@ -1,10 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on DEDE</title><link>https://dede.dev/tags/hugo/</link><description>Recent content in Hugo on DEDE</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dede.dev/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>MachXplorer: Mach-O binary analyzer.</title><link>https://dede.dev/projects/machxplore/</link><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><guid>https://dede.dev/projects/machxplore/</guid><description>&lt;p>&lt;a href="https://github.com/wilfrantz/MachXplorer" class="external-link" target="_blank" rel="noopener">machXplorer&lt;/a> MachXplorer is a command-line tool built for analyzing Mach-O binaries on macOS, with a focus on ARM64 architecture. Designed for reverse engineers, security researchers, and developers, MachXplorer helps uncover hidden details within binaries—whether it’s headers, segments, symbols, or obfuscation patterns.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on DEDE</title><link>https://dede.dev/tags/hugo/</link><description>Recent content in Hugo on DEDE</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dede.dev/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>MachXplorer: A Powerful Mach-O Binary Analyzer for macOS</title><link>https://dede.dev/projects/machxplore/</link><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><guid>https://dede.dev/projects/machxplore/</guid><description>&lt;p>&lt;strong>MachXplorer&lt;/strong> is a command-line tool built for analyzing &lt;strong>Mach-O binaries&lt;/strong> on macOS, with a focus on &lt;strong>ARM64 architecture&lt;/strong>. Designed for reverse engineers, security researchers, and developers, MachXplorer helps uncover hidden details within binaries—whether it&amp;rsquo;s headers, segments, symbols, or obfuscation patterns.&lt;/p>
 &lt;p>This tool is tailored for those diving deep into macOS internals, providing clear insights into executable structures and potential security threats.&lt;/p>
-&lt;h2 id="features">
- Features
- &lt;a class="heading-link" href="#features">
+&lt;hr>
+&lt;h2 id="-key-features">
+ ⚙️ Key Features
+ &lt;a class="heading-link" href="#-key-features">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
  &lt;span class="sr-only">Link to heading&lt;/span>
  &lt;/a>
 &lt;/h2>
-&lt;p>The tool offers a comprehensive set of features for Mach-O binary analysis, including:&lt;/p></description></item></channel></rss>
+&lt;ul>
+&lt;li>&lt;strong>Header Analysis&lt;/strong> (&lt;code>-h, --header&lt;/code>): Extract and display Mach-O headers, load commands, and entry points.&lt;/li>
+&lt;li>&lt;strong>Segment Analysis&lt;/strong> (&lt;code>-s, --segment&lt;/code>): Inspect memory layouts, permissions, and unusual flags.&lt;/li>
+&lt;li>&lt;strong>Symbol Analysis&lt;/strong> (&lt;code>-y, --symbol&lt;/code>): Detect hidden functions, stripped symbols, or obfuscated strings.&lt;/li>
+&lt;li>&lt;strong>Disassembly&lt;/strong> (&lt;code>-d, --disassembly&lt;/code>): Extract and analyze executable sections.&lt;/li>
+&lt;li>&lt;strong>Obfuscation Detection&lt;/strong> (&lt;code>-o, --obfuscation&lt;/code>): Uncover common obfuscation patterns or suspicious modifications.&lt;/li>
+&lt;li>&lt;strong>Hex Dump &amp;amp; String Extraction&lt;/strong> (&lt;code>-x, --hex&lt;/code>): Visualize binary content in a structured hex format with readable strings.&lt;/li>
+&lt;li>&lt;strong>Binary Comparison&lt;/strong> (&lt;code>-c, --compare&lt;/code>): Compare two binaries for integrity verification.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="-getting-started">
+ 🚀 Getting Started
+ &lt;a class="heading-link" href="#-getting-started">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h3 id="prerequisites">
+ Prerequisites
+ &lt;a class="heading-link" href="#prerequisites">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;p>To build and run MachXplorer, you&amp;rsquo;ll need:&lt;/p></description></item></channel></rss>
