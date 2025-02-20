@@ -12,7 +12,6 @@ image:
 
 ## Prerequisites
 
-Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of the basic environment. [Git](https://git-scm.com/) also needs to be installed.
 
 ## Installation
 
@@ -29,7 +28,6 @@ Sign in to GitHub and browse to [**Chirpy Starter**][starter], click the button 
 
 #### Option 2. GitHub Fork
 
-Sign in to GitHub to [fork **Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), and then rename it to `USERNAME.github.io` (`USERNAME` means your username).
 
 Next, clone your site to local machine. In order to build JavaScript files later, we need to install [Node.js][nodejs], and then run the tool:
 
@@ -70,7 +68,6 @@ Update the variables of `_config.yml`{: .filepath} as needed. Some of them are t
 
 If you need to customize the stylesheet, copy the theme's `assets/css/style.scss`{: .filepath} to the same path on your Jekyll site, and then add the custom style at the end of it.
 
-Starting with version `4.1.0`, if you want to overwrite the SASS variables defined in `_sass/addon/variables.scss`{: .filepath}, copy the main sass file `_sass/jekyll-theme-chirpy.scss`{: .filepath} into the `_sass`{: .filepath} directory in your site's source, then create a new file `_sass/variables-hook.scss`{: .filepath} and assign new value.
 
 ### Customing Static Assets
 
@@ -83,16 +80,12 @@ Also, if you'd like to self-host the static assets, please refer to the [_chirpy
 You may want to preview the site contents before publishing, so just run it by:
 
 ```console
-$ bundle exec jekyll s
 ```
 
 Or run the site on Docker with the following command:
 
 ```console
 $ docker run -it --rm \
-    --volume="$PWD:/srv/jekyll" \
-    -p 4000:4000 jekyll/jekyll \
-    jekyll serve
 ```
 
 After a few seconds, the local service will be published at _<http://127.0.0.1:4000>_.
@@ -129,7 +122,6 @@ On self-hosted servers, you cannot enjoy the convenience of **GitHub Actions**. 
 Go to the root of the source project, and build your site as follows:
 
 ```console
-$ JEKYLL_ENV=production bundle exec jekyll b
 ```
 
 Or build the site on Docker:
@@ -137,9 +129,6 @@ Or build the site on Docker:
 ```console
 $ docker run -it --rm \
     --env JEKYLL_ENV=production \
-    --volume="$PWD:/srv/jekyll" \
-    jekyll/jekyll \
-    jekyll build
 ```
 
 Unless you specified the output path, the generated site files will be placed in folder `_site`{: .filepath} of the project's root directory. Now you should upload those files to the target server.
@@ -147,4 +136,3 @@ Unless you specified the output path, the generated site files will be placed in
 [nodejs]: https://nodejs.org/
 [starter]: https://github.com/cotes2020/chirpy-starter
 [pages-workflow-src]: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow
-[latest-tag]: https://github.com/cotes2020/jekyll-theme-chirpy/tags

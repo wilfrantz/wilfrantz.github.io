@@ -12,7 +12,6 @@ image:
   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
-This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/){:target="_blank"}, you can also use it as an example of writing and a MarkDown cheat sheet.
 
 This cheat sheet covers some commonly used Markdown syntax, but there are many more features and extensions available. For detailed information, refer to the [official Markdown documentation](https://daringfireball.net/projects/markdown/){:target="_blank"}.
 
@@ -398,14 +397,12 @@ fi;<br>
   "colors/dark-typography";
 ```
 
-{: file='_sass/jekyll-theme-chirpy.scss'}
 
 > \`\`\`sass<br>
 @import<br>
   "colors/light-typography",<br>
   "colors/dark-typography";<br>
 \`\`\`<br>
-{: file='_sass/jekyll-theme-chirpy.scss'}
 {: .prompt-tip }
 
 ## Mathematics
