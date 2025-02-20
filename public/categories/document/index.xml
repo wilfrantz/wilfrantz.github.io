@@ -1,47 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Document on DEDE</title>
-    <link>http://10.152.2.2:1313/categories/document/</link>
-    <description>Recent content in Document on DEDE</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 18 May 2023 11:33:00 +0800</lastBuildDate>
-    <atom:link href="http://10.152.2.2:1313/categories/document/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>IPConverter application design document [Draft]</title>
-      <link>http://10.152.2.2:1313/posts/2023-03-19-ipconverter-application-design-document/</link>
-      <pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate>
-      <guid>http://10.152.2.2:1313/posts/2023-03-19-ipconverter-application-design-document/</guid>
-      <description>&lt;h2 id=&#34;table-of-contents&#34;&gt;&#xA;  Table of Contents&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#table-of-contents&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#table-of-contents&#34; &gt;Table of Contents&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#overview&#34; &gt;Overview&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#features&#34; &gt;Features&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#monetization-strategies&#34; &gt;Monetization Strategies&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#freemium-model&#34; &gt;Freemium Model&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#api-access&#34; &gt;API Access&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#browser-extension-monetization&#34; &gt;Browser Extension Monetization&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#ad-based-revenue&#34; &gt;Ad-Based Revenue&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#white-labeling-and-licensing&#34; &gt;White-Labeling and Licensing&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#data-analytics-and-reports&#34; &gt;Data Analytics and Reports&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#architecture&#34; &gt;Architecture&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#core-classes&#34; &gt;Core Classes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#conclusion&#34; &gt;Conclusion&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;&#xA;  Overview&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#overview&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The IPConverter program is a comprehensive software application designed to provide users with a variety of powerful tools and features related to IP addresses. Built primarily in C++, it will leverage external libraries and APIs where necessary to expand its capabilities. This application will serve as a go-to tool for developers, network administrators, marketers, and cybersecurity professionals.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My Dotfiles and Shell Environment Documentation [Draft]</title>
-      <link>http://10.152.2.2:1313/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</link>
-      <pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate>
-      <guid>http://10.152.2.2:1313/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;⚠️ &lt;strong&gt;This document is still a draft. Please note that there might be mistakes or inaccuracies.&lt;/strong&gt;&#xA;{: .prompt-warning }&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;This documentation provides an overview and detailed information about the my dotfiles  shell environment. The dotfiles repository contains a collection of configuration files and scripts used to customize and personalize my development environment over the years.&lt;/p&gt;&#xA;&lt;p&gt;By utilizing these dotfiles, you can quickly set up and synchronize your preferred settings across different machines.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>How to Merge Git Branches to Avoid Conflicts</title>
-      <link>http://10.152.2.2:1313/posts/2022-08-17-merge-git-branches-to-avoid-conflicts/</link>
-      <pubDate>Wed, 17 Aug 2022 01:33:00 +0800</pubDate>
-      <guid>http://10.152.2.2:1313/posts/2022-08-17-merge-git-branches-to-avoid-conflicts/</guid>
-      <description>&lt;p&gt;When working with &lt;code&gt;Git&lt;/code&gt;, merging branches is a common task to combine changes from different branches into one. However, conflicts can arise when Git detects conflicting changes in the code. In this step-by-step guide, we will explore how to merge branches in &lt;code&gt;Git&lt;/code&gt; while minimizing conflicts.&lt;/p&gt;&#xA;&lt;p&gt;Table of contents&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#ensure-your-branch-is-up-to-date&#34; &gt;Ensure Your Branch is Up to Date&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#synchronizing-with-git-pull-to-ensure-up-to-date-merging&#34; &gt;Synchronizing with &lt;code&gt;git pull&lt;/code&gt; to Ensure Up-to-Date Merging&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#fetching-and-merging-in-a-single-step&#34; &gt;Fetching and Merging in a Single Step&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#benefits-of-keeping-branches-in-sync&#34; &gt;Benefits of Keeping Branches in Sync&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#handling-potential-conflicts&#34; &gt;Handling Potential Conflicts&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#common-types-of-conflicts&#34; &gt;Common Types of Conflicts&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#resolve-conflicts-locally&#34; &gt;Resolve Conflicts Locally&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#manually-modify-the-code-to-resolve-the-conflict&#34; &gt;Manually modify the code to resolve the conflict&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#test-your-changes&#34; &gt;Test Your Changes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#commit-the-merged-changes&#34; &gt;Commit the Merged Changes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#push-your-changes&#34; &gt;Push Your Changes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#verify-the-merge&#34; &gt;Verify the Merge&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#conclusion&#34; &gt;Conclusion&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;ensure-your-branch-is-up-to-date&#34;&gt;&#xA;  Ensure Your Branch is Up to Date&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#ensure-your-branch-is-up-to-date&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Before merging, ensure that your current branch is up to date with the latest changes from the target branch. Execute the following commands:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>C&#43;&#43; Domain Names Backorder Application</title>
-      <link>http://10.152.2.2:1313/posts/2015-07-15-domain-names-backorder-program/</link>
-      <pubDate>Sun, 09 Oct 2016 11:33:00 +0800</pubDate>
-      <guid>http://10.152.2.2:1313/posts/2015-07-15-domain-names-backorder-program/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;code&gt;domainEngine&lt;/code&gt; application designed to perform daily scanning of expired domains using Estibot&amp;rsquo;s API. It employs simple algorithms and &lt;code&gt;RESTful API&lt;/code&gt; requests to retrieve and process data from both &lt;code&gt;CSV&lt;/code&gt; and &lt;code&gt;JSON&lt;/code&gt; formats.&lt;/p&gt;&#xA;&lt;p&gt;Implemented in C++, the &lt;code&gt;domainEngine&lt;/code&gt; application guarantees high performance and efficient processing of large volumes of data. It offers a robust and reliable solution for managing and optimizing domain acquisition in the dynamic domain market.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DomainEngine - CMake Configuration</title>
-      <link>http://10.152.2.2:1313/posts/2015-07-15-domainengine-cmake-configuration/</link>
-      <pubDate>Wed, 15 Jul 2015 11:33:00 +0800</pubDate>
-      <guid>http://10.152.2.2:1313/posts/2015-07-15-domainengine-cmake-configuration/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This document outlines the CMake configuration for the &lt;code&gt;domainEngine&lt;/code&gt; project, which is version 1.0.2. The project is implemented in C++ and relies on various libraries and packages. The document provides an overview of the CMake configuration, including minimum required versions, project details, package dependencies, compilation options, and target linkage.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cmake-configuration-details&#34;&gt;&#xA;  CMake Configuration Details&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#cmake-configuration-details&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The following sections provide a breakdown of the CMake configuration based on the provided code snippet.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Document on DEDE</title><link>https://wilfrantz.github.io/categories/document/</link><description>Recent content in Document on DEDE</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 18 May 2023 11:33:00 +0800</lastBuildDate><atom:link href="https://wilfrantz.github.io/categories/document/index.xml" rel="self" type="application/rss+xml"/><item><title>IPConverter application design document [Draft]</title><link>https://wilfrantz.github.io/posts/2023-03-19-ipconverter-application-design-document/</link><pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate><guid>https://wilfrantz.github.io/posts/2023-03-19-ipconverter-application-design-document/</guid><description>&lt;h2 id="table-of-contents">Table of Contents&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="#table-of-contents">Table of Contents&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#overview">Overview&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#features">Features&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#monetization-strategies">Monetization Strategies&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#freemium-model">Freemium Model&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#api-access">API Access&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#browser-extension-monetization">Browser Extension Monetization&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#ad-based-revenue">Ad-Based Revenue&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#white-labeling-and-licensing">White-Labeling and Licensing&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#data-analytics-and-reports">Data Analytics and Reports&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#architecture">Architecture&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#core-classes">Core Classes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#conclusion">Conclusion&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The IPConverter program is a comprehensive software application designed to provide users with a variety of powerful tools and features related to IP addresses. Built primarily in C++, it will leverage external libraries and APIs where necessary to expand its capabilities. This application will serve as a go-to tool for developers, network administrators, marketers, and cybersecurity professionals.&lt;/p></description></item><item><title>My Dotfiles and Shell Environment Documentation [Draft]</title><link>https://wilfrantz.github.io/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</link><pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate><guid>https://wilfrantz.github.io/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</guid><description>&lt;blockquote>
+&lt;p>⚠️ &lt;strong>This document is still a draft. Please note that there might be mistakes or inaccuracies.&lt;/strong>
+{: .prompt-warning }&lt;/p>&lt;/blockquote>
+&lt;p>This documentation provides an overview and detailed information about the my dotfiles shell environment. The dotfiles repository contains a collection of configuration files and scripts used to customize and personalize my development environment over the years.&lt;/p>
+&lt;p>By utilizing these dotfiles, you can quickly set up and synchronize your preferred settings across different machines.&lt;/p></description></item><item><title>How to Merge Git Branches to Avoid Conflicts</title><link>https://wilfrantz.github.io/posts/2022-08-17-merge-git-branches-to-avoid-conflicts/</link><pubDate>Wed, 17 Aug 2022 01:33:00 +0800</pubDate><guid>https://wilfrantz.github.io/posts/2022-08-17-merge-git-branches-to-avoid-conflicts/</guid><description>&lt;p>When working with &lt;code>Git&lt;/code>, merging branches is a common task to combine changes from different branches into one. However, conflicts can arise when Git detects conflicting changes in the code. In this step-by-step guide, we will explore how to merge branches in &lt;code>Git&lt;/code> while minimizing conflicts.&lt;/p>
+&lt;p>Table of contents&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="#ensure-your-branch-is-up-to-date">Ensure Your Branch is Up to Date&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#synchronizing-with-git-pull-to-ensure-up-to-date-merging">Synchronizing with &lt;code>git pull&lt;/code> to Ensure Up-to-Date Merging&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#fetching-and-merging-in-a-single-step">Fetching and Merging in a Single Step&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#benefits-of-keeping-branches-in-sync">Benefits of Keeping Branches in Sync&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#handling-potential-conflicts">Handling Potential Conflicts&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#common-types-of-conflicts">Common Types of Conflicts&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#resolve-conflicts-locally">Resolve Conflicts Locally&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#manually-modify-the-code-to-resolve-the-conflict">Manually modify the code to resolve the conflict&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#test-your-changes">Test Your Changes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#commit-the-merged-changes">Commit the Merged Changes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#push-your-changes">Push Your Changes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#verify-the-merge">Verify the Merge&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#conclusion">Conclusion&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="ensure-your-branch-is-up-to-date">Ensure Your Branch is Up to Date&lt;/h2>
+&lt;p>Before merging, ensure that your current branch is up to date with the latest changes from the target branch. Execute the following commands:&lt;/p></description></item><item><title>C++ Domain Names Backorder Application</title><link>https://wilfrantz.github.io/posts/2015-07-15-domain-names-backorder-program/</link><pubDate>Sun, 09 Oct 2016 11:33:00 +0800</pubDate><guid>https://wilfrantz.github.io/posts/2015-07-15-domain-names-backorder-program/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>The &lt;code>domainEngine&lt;/code> application designed to perform daily scanning of expired domains using Estibot&amp;rsquo;s API. It employs simple algorithms and &lt;code>RESTful API&lt;/code> requests to retrieve and process data from both &lt;code>CSV&lt;/code> and &lt;code>JSON&lt;/code> formats.&lt;/p>
+&lt;p>Implemented in C++, the &lt;code>domainEngine&lt;/code> application guarantees high performance and efficient processing of large volumes of data. It offers a robust and reliable solution for managing and optimizing domain acquisition in the dynamic domain market.&lt;/p>
+&lt;p>The application applies intelligent classification techniques to assess domain names based on factors such as &lt;code>keyword length&lt;/code>, &lt;code>SEO strength&lt;/code>, and &lt;code>extension taken&lt;/code>. It automatically places backorders on various registrars(dropCatch, SnapNames), ensuring the timely acquisition of valuable expired domains and maximizing opportunities for users.&lt;/p></description></item><item><title>DomainEngine - CMake Configuration</title><link>https://wilfrantz.github.io/posts/2015-07-15-domainengine-cmake-configuration/</link><pubDate>Wed, 15 Jul 2015 11:33:00 +0800</pubDate><guid>https://wilfrantz.github.io/posts/2015-07-15-domainengine-cmake-configuration/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This document outlines the CMake configuration for the &lt;code>domainEngine&lt;/code> project, which is version 1.0.2. The project is implemented in C++ and relies on various libraries and packages. The document provides an overview of the CMake configuration, including minimum required versions, project details, package dependencies, compilation options, and target linkage.&lt;/p>
+&lt;h2 id="cmake-configuration-details">CMake Configuration Details&lt;/h2>
+&lt;p>The following sections provide a breakdown of the CMake configuration based on the provided code snippet.&lt;/p>
+&lt;h3 id="minimum-required-version">Minimum Required Version&lt;/h3>
+&lt;p>The CMake configuration specifies the minimum required version of CMake to be between 3.10 and 3.20.&lt;/p></description></item></channel></rss>

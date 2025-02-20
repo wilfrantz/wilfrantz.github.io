@@ -1,19 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Ubuntu on DEDE</title>
-    <link>http://10.152.2.2:1313/tags/ubuntu/</link>
-    <description>Recent content in Ubuntu on DEDE</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 10 Mar 2021 11:33:00 +0800</lastBuildDate>
-    <atom:link href="http://10.152.2.2:1313/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Creating a Bootable ISO from a Live Linux System</title>
-      <link>http://10.152.2.2:1313/posts/2021-03-10-create-bootable-iso-from-live-system/</link>
-      <pubDate>Wed, 10 Mar 2021 11:33:00 +0800</pubDate>
-      <guid>http://10.152.2.2:1313/posts/2021-03-10-create-bootable-iso-from-live-system/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;⚠️ This document is still a draft. Please note that there might be mistakes or inaccuracies.&#xA;{: .prompt-warning }&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Creating a bootable ISO from a live Linux system can be a bit complex. However, if you follow the steps carefully, you can achieve your goal. Here&amp;rsquo;s a step-by-step guide:&lt;/p&gt;&#xA;&lt;p&gt;Table of Contents&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#prerequisites&#34; &gt;Prerequisites&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#steps&#34; &gt;Steps&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#install-required-packages&#34; &gt;Install Required Packages&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#backup-your-data&#34; &gt;Backup your data&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#prepare-the-workspace&#34; &gt;Prepare the Workspace&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#copy-necessary-files&#34; &gt;Copy Necessary Files&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#prepare-the-squashfs-filesystem&#34; &gt;Prepare the SquashFS Filesystem&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#create-iso-directory-structure&#34; &gt;Create ISO Directory Structure&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#move-the-squashfs-filesystem-to-the-iso-directory&#34; &gt;Move the SquashFS Filesystem to the ISO Directory&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#copy-bootloader-information&#34; &gt;Copy Bootloader Information&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#modify-grub-configuration-if-necessary&#34; &gt;Modify GRUB Configuration** (if necessary)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#create-the-iso-file&#34; &gt;Create the ISO File&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#cleanup&#34; &gt;Cleanup&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#test-the-iso&#34; &gt;Test the ISO&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;&#xA;  Prerequisites&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#prerequisites&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A live system running Ubuntu or its derivative.&lt;/li&gt;&#xA;&lt;li&gt;Enough storage space to hold the contents of the live system and some additional tools.&lt;/li&gt;&#xA;&lt;li&gt;Root access or &lt;code&gt;sudo&lt;/code&gt; privileges.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;steps&#34;&gt;&#xA;  Steps&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#steps&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;install-required-packages&#34;&gt;&#xA;  Install Required Packages&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#install-required-packages&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Open a terminal and install the required packages:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ubuntu on DEDE</title><link>https://wilfrantz.github.io/tags/ubuntu/</link><description>Recent content in Ubuntu on DEDE</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 10 Mar 2021 11:33:00 +0800</lastBuildDate><atom:link href="https://wilfrantz.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating a Bootable ISO from a Live Linux System</title><link>https://wilfrantz.github.io/posts/2021-03-10-create-bootable-iso-from-live-system/</link><pubDate>Wed, 10 Mar 2021 11:33:00 +0800</pubDate><guid>https://wilfrantz.github.io/posts/2021-03-10-create-bootable-iso-from-live-system/</guid><description>&lt;blockquote>
+&lt;p>⚠️ This document is still a draft. Please note that there might be mistakes or inaccuracies.
+{: .prompt-warning }&lt;/p>&lt;/blockquote>
+&lt;p>Creating a bootable ISO from a live Linux system can be a bit complex. However, if you follow the steps carefully, you can achieve your goal. Here&amp;rsquo;s a step-by-step guide:&lt;/p>
+&lt;p>Table of Contents&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="#prerequisites">Prerequisites&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#steps">Steps&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#install-required-packages">Install Required Packages&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#backup-your-data">Backup your data&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#prepare-the-workspace">Prepare the Workspace&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#copy-necessary-files">Copy Necessary Files&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#prepare-the-squashfs-filesystem">Prepare the SquashFS Filesystem&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#create-iso-directory-structure">Create ISO Directory Structure&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#move-the-squashfs-filesystem-to-the-iso-directory">Move the SquashFS Filesystem to the ISO Directory&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#copy-bootloader-information">Copy Bootloader Information&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#modify-grub-configuration-if-necessary">Modify GRUB Configuration** (if necessary)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#create-the-iso-file">Create the ISO File&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#cleanup">Cleanup&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#test-the-iso">Test the ISO&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;ul>
+&lt;li>A live system running Ubuntu or its derivative.&lt;/li>
+&lt;li>Enough storage space to hold the contents of the live system and some additional tools.&lt;/li>
+&lt;li>Root access or &lt;code>sudo&lt;/code> privileges.&lt;/li>
+&lt;/ul>
+&lt;h2 id="steps">Steps&lt;/h2>
+&lt;h3 id="install-required-packages">Install Required Packages&lt;/h3>
+&lt;p>Open a terminal and install the required packages:&lt;/p></description></item></channel></rss>

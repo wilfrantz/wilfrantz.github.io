@@ -1,47 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Cli on DEDE</title>
-    <link>http://10.152.2.2:1313/tags/cli/</link>
-    <description>Recent content in Cli on DEDE</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 11 Jun 2023 12:00:00 +0000</lastBuildDate>
-    <atom:link href="http://10.152.2.2:1313/tags/cli/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Crontab Cheat Sheet - A Practical Guide with Examples</title>
-      <link>http://10.152.2.2:1313/posts/2023-06-11-crontab-cheat-sheet/</link>
-      <pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate>
-      <guid>http://10.152.2.2:1313/posts/2023-06-11-crontab-cheat-sheet/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Crontab is a powerful utility in Unix-like operating systems that allows you to schedule and automate tasks at predefined intervals. It uses a cron daemon to execute commands or scripts according to a specified schedule. This cheat sheet provides an overview of crontab syntax and demonstrates practical examples to help you effectively schedule recurring tasks.&lt;/p&gt;&#xA;&lt;p&gt;Table of Contents&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#introduction&#34; &gt;Introduction&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#difference-between-cron-crontab-and-cron-job&#34; &gt;Difference between Cron, Crontab, and Cron Job&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#cron&#34; &gt;Cron&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#crontab&#34; &gt;Crontab&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#cron-job&#34; &gt;Cron Job&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#crontab-syntax&#34; &gt;Crontab Syntax&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#practical-examples&#34; &gt;Practical Examples&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#example-1-running-a-script-every-hour&#34; &gt;Example 1: Running a Script Every Hour&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#example-2-running-a-script-every-day-at-a-specific-time&#34; &gt;Example 2: Running a Script Every Day at a Specific Time&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#example-3-running-a-script-on-specific-days-of-the-week&#34; &gt;Example 3: Running a Script on Specific Days of the Week&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#example-4-running-a-script-every-month&#34; &gt;Example 4: Running a Script Every Month&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#example-5-running-a-script-at-regular-intervals&#34; &gt;Example 5: Running a Script at Regular Intervals&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#managing-crontab-entries&#34; &gt;Managing Crontab Entries&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#conclusion&#34; &gt;Conclusion&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#resource&#34; &gt;Resource&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;difference-between-cron-crontab-and-cron-job&#34;&gt;&#xA;  Difference between Cron, Crontab, and Cron Job&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#difference-between-cron-crontab-and-cron-job&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The provided table illustrates the key elements related to scheduling tasks using cron in Linux systems.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Master the Power of Text Objects in Vim</title>
-      <link>http://10.152.2.2:1313/posts/2023-06-03-mastering-vim-power-of-text-objects/</link>
-      <pubDate>Sat, 03 Jun 2023 11:33:00 +0800</pubDate>
-      <guid>http://10.152.2.2:1313/posts/2023-06-03-mastering-vim-power-of-text-objects/</guid>
-      <description>&lt;p&gt;&lt;code&gt;Vim&lt;/code&gt;, the popular text editor known for its efficiency and versatility, offers a multitude of features that can significantly speed up your editing workflow. One such feature is the clever utilization of text objects.&lt;/p&gt;&#xA;&lt;p&gt;By leveraging text objects, you can manipulate text inside surrounding characters, making editing tasks a breeze. In this blog post, we&amp;rsquo;ll explore the concept of &lt;code&gt;text objects&lt;/code&gt; and their associated mnemonics, unlocking the true potential of Vim&amp;rsquo;s efficiency.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ZSH and PowerLevel10K for Beauty and Speed on MacOS &amp; Debian Systems</title>
-      <link>http://10.152.2.2:1313/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</link>
-      <pubDate>Mon, 22 May 2023 11:33:00 +0800</pubDate>
-      <guid>http://10.152.2.2:1313/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</guid>
-      <description>&lt;p&gt;In this comprehensive tutorial, I&amp;rsquo;ll guide you through the process of installing/configuring &lt;code&gt;ZSH&lt;/code&gt; shell both on &lt;code&gt;MacOS&lt;/code&gt; and &lt;code&gt;Debian&lt;/code&gt; systems, personalize it with the &lt;code&gt;ohmyzsh&lt;/code&gt; framework and elevate your experience with the stunning &lt;code&gt;PowerLeve10K&lt;/code&gt; theme.&lt;/p&gt;&#xA;&lt;p&gt;Before proceeding with the installation, please ensure that &lt;code&gt;Git&lt;/code&gt; is installed on your system. To install &lt;code&gt;Git&lt;/code&gt; using &lt;a href=&#34;https://brew.sh&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;homebrew&lt;/a&gt;{: target=&amp;quot;_blank&amp;quot;} on &lt;code&gt;macOS&lt;/code&gt;, run the following command:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Linux users, you can install Git with homebrew or your Linux distro&amp;rsquo;s default package manager, on debian systems simply run the following command:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My Dotfiles and Shell Environment Documentation [Draft]</title>
-      <link>http://10.152.2.2:1313/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</link>
-      <pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate>
-      <guid>http://10.152.2.2:1313/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;⚠️ &lt;strong&gt;This document is still a draft. Please note that there might be mistakes or inaccuracies.&lt;/strong&gt;&#xA;{: .prompt-warning }&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;This documentation provides an overview and detailed information about the my dotfiles  shell environment. The dotfiles repository contains a collection of configuration files and scripts used to customize and personalize my development environment over the years.&lt;/p&gt;&#xA;&lt;p&gt;By utilizing these dotfiles, you can quickly set up and synchronize your preferred settings across different machines.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Practical Guide to Linux System Hardening</title>
-      <link>http://10.152.2.2:1313/posts/2023-05-20-linux-system-hardening/</link>
-      <pubDate>Fri, 20 May 2022 11:33:00 +0800</pubDate>
-      <guid>http://10.152.2.2:1313/posts/2023-05-20-linux-system-hardening/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;This document is still a draft. Please note that there might be mistakes or inaccuracies.&lt;/strong&gt;&#xA;{: .prompt-warning }&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;In an era of rising cyber threats, securing your Linux system is crucial to protect sensitive data and prevent unauthorized access. This comprehensive guide focuses on Debian-based systems and offers practical insights and best practices to fortify your system&amp;rsquo;s defenses.&lt;/p&gt;&#xA;&lt;p&gt;From secure authentication and user privilege management to firewall configuration and system log monitoring, this guide provides the knowledge and tools necessary to effectively harden your Linux environment.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cli on DEDE</title><link>https://wilfrantz.github.io/tags/cli/</link><description>Recent content in Cli on DEDE</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 11 Jun 2023 12:00:00 +0000</lastBuildDate><atom:link href="https://wilfrantz.github.io/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>Crontab Cheat Sheet - A Practical Guide with Examples</title><link>https://wilfrantz.github.io/posts/2023-06-11-crontab-cheat-sheet/</link><pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate><guid>https://wilfrantz.github.io/posts/2023-06-11-crontab-cheat-sheet/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Crontab is a powerful utility in Unix-like operating systems that allows you to schedule and automate tasks at predefined intervals. It uses a cron daemon to execute commands or scripts according to a specified schedule. This cheat sheet provides an overview of crontab syntax and demonstrates practical examples to help you effectively schedule recurring tasks.&lt;/p>
+&lt;p>Table of Contents&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="#introduction">Introduction&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#difference-between-cron-crontab-and-cron-job">Difference between Cron, Crontab, and Cron Job&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#cron">Cron&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#crontab">Crontab&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#cron-job">Cron Job&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#crontab-syntax">Crontab Syntax&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#practical-examples">Practical Examples&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#example-1-running-a-script-every-hour">Example 1: Running a Script Every Hour&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-2-running-a-script-every-day-at-a-specific-time">Example 2: Running a Script Every Day at a Specific Time&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-3-running-a-script-on-specific-days-of-the-week">Example 3: Running a Script on Specific Days of the Week&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-4-running-a-script-every-month">Example 4: Running a Script Every Month&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-5-running-a-script-at-regular-intervals">Example 5: Running a Script at Regular Intervals&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#managing-crontab-entries">Managing Crontab Entries&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#conclusion">Conclusion&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#resource">Resource&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="difference-between-cron-crontab-and-cron-job">Difference between Cron, Crontab, and Cron Job&lt;/h2>
+&lt;p>The provided table illustrates the key elements related to scheduling tasks using cron in Linux systems.&lt;/p></description></item><item><title>Master the Power of Text Objects in Vim</title><link>https://wilfrantz.github.io/posts/2023-06-03-mastering-vim-power-of-text-objects/</link><pubDate>Sat, 03 Jun 2023 11:33:00 +0800</pubDate><guid>https://wilfrantz.github.io/posts/2023-06-03-mastering-vim-power-of-text-objects/</guid><description>&lt;p>&lt;code>Vim&lt;/code>, the popular text editor known for its efficiency and versatility, offers a multitude of features that can significantly speed up your editing workflow. One such feature is the clever utilization of text objects.&lt;/p>
+&lt;p>By leveraging text objects, you can manipulate text inside surrounding characters, making editing tasks a breeze. In this blog post, we&amp;rsquo;ll explore the concept of &lt;code>text objects&lt;/code> and their associated mnemonics, unlocking the true potential of Vim&amp;rsquo;s efficiency.&lt;/p></description></item><item><title>ZSH and PowerLevel10K for Beauty and Speed on MacOS &amp; Debian Systems</title><link>https://wilfrantz.github.io/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</link><pubDate>Mon, 22 May 2023 11:33:00 +0800</pubDate><guid>https://wilfrantz.github.io/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</guid><description>&lt;p>In this comprehensive tutorial, I&amp;rsquo;ll guide you through the process of installing/configuring &lt;code>ZSH&lt;/code> shell both on &lt;code>MacOS&lt;/code> and &lt;code>Debian&lt;/code> systems, personalize it with the &lt;code>ohmyzsh&lt;/code> framework and elevate your experience with the stunning &lt;code>PowerLeve10K&lt;/code> theme.&lt;/p>
+&lt;p>Before proceeding with the installation, please ensure that &lt;code>Git&lt;/code> is installed on your system. To install &lt;code>Git&lt;/code> using &lt;a href="https://brew.sh">homebrew&lt;/a>{: target=&amp;quot;_blank&amp;quot;} on &lt;code>macOS&lt;/code>, run the following command:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>brew install git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For Linux users, you can install Git with homebrew or your Linux distro&amp;rsquo;s default package manager, on debian systems simply run the following command:&lt;/p></description></item><item><title>My Dotfiles and Shell Environment Documentation [Draft]</title><link>https://wilfrantz.github.io/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</link><pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate><guid>https://wilfrantz.github.io/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</guid><description>&lt;blockquote>
+&lt;p>⚠️ &lt;strong>This document is still a draft. Please note that there might be mistakes or inaccuracies.&lt;/strong>
+{: .prompt-warning }&lt;/p>&lt;/blockquote>
+&lt;p>This documentation provides an overview and detailed information about the my dotfiles shell environment. The dotfiles repository contains a collection of configuration files and scripts used to customize and personalize my development environment over the years.&lt;/p>
+&lt;p>By utilizing these dotfiles, you can quickly set up and synchronize your preferred settings across different machines.&lt;/p></description></item><item><title>Practical Guide to Linux System Hardening</title><link>https://wilfrantz.github.io/posts/2023-05-20-linux-system-hardening/</link><pubDate>Fri, 20 May 2022 11:33:00 +0800</pubDate><guid>https://wilfrantz.github.io/posts/2023-05-20-linux-system-hardening/</guid><description>&lt;blockquote>
+&lt;p>&lt;strong>This document is still a draft. Please note that there might be mistakes or inaccuracies.&lt;/strong>
+{: .prompt-warning }&lt;/p>&lt;/blockquote>
+&lt;p>In an era of rising cyber threats, securing your Linux system is crucial to protect sensitive data and prevent unauthorized access. This comprehensive guide focuses on Debian-based systems and offers practical insights and best practices to fortify your system&amp;rsquo;s defenses.&lt;/p>
+&lt;p>From secure authentication and user privilege management to firewall configuration and system log monitoring, this guide provides the knowledge and tools necessary to effectively harden your Linux environment.&lt;/p></description></item></channel></rss>
