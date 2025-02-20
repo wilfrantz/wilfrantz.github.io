@@ -1,9 +1,9 @@
 ---
-title: MySQL Cheat Sheet 
-date: 2024-08-09 11:33:00 +0800
-categories: [Blog, Tutorial]
-tags: [SQL, MySQL, SWE]
-pin: true 
+title: "MySQL Cheat Sheet"
+date: 2024-08-09T11:33:00+08:00
+categories: ["Blog", "Tutorial"]
+tags: ["SQL", "MySQL", "SWE"]
+draft: true
 math: true
 mermaid: true
 image: 

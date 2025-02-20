@@ -1,13 +1,9 @@
----
-title: Domain Engine SQL Database schema 
-date: 2024-08-18 11:33:00 +0800
-categories: [Blogging, Tutorial]
-tags: [C++, MySQL, SWE]
-pin: false 
-math: true
-mermaid: true
-image: 
----
++++
+title= "Domain Engine SQL Database schema"
+date= "2024-08-18T11:33:00+08:00"
+categories= ["Blogging", "Tutorial"]
+tags= ["C++", "MySQL", "SWE"]
++++
 
 ### 1. **Database Schema Design**
 
@@ -23,7 +19,7 @@ Create several tables to handle the different components of the JSON data. The m
 
 ### 2. **Table Definitions**
 
-Here’s how the tables in MySQL could be define:
+Here’s how the tables in MySQL could be defined:
 
 #### **`domains` Table**
 
@@ -158,5 +154,5 @@ INSERT INTO domains (
 ### 4. **Considerations**
 
 - **Normalization**: The design above normalizes the data by splitting it into multiple related tables. This avoids data redundancy.
-- **Indexes**: The creation of indexes on frequently queried columns will insure better performance.
+- **Indexes**: The creation of indexes on frequently queried columns will ensure better performance.
 - **Foreign Keys**: The use of foreign keys ensures data integrity between the related tables.

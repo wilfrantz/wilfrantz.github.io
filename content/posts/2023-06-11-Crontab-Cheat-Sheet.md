@@ -1,15 +1,9 @@
----
-title: Crontab Cheat Sheet - A Practical Guide with Examples
-date: 2023-06-11T12:00:00Z
-categories: [Blogging, Doc]
-tags: [Linux, Cli, Crontab]
-pin: false
-math: true
-mermaid: true
-image: 
-  path: crontab.png
-  alt: crontab 
----
++++
+title= "Crontab: A Practical Guide with Examples"
+date= "2023-06-11"
+categories= ["Tutorial"]
+tags= ["Linux", "Crontab"]
++++
 
 ## Introduction
 
@@ -169,5 +163,5 @@ Crontab is a valuable tool for automating recurring tasks in Unix-like systems. 
 
 ## Resource
 
-- [The Ultimate Crontab Cheatsheet](https://www.codementor.io/@akul08/the-ultimate-crontab-cheatsheet-5op0f7o4r){:target="_blank"}
-- [Understanding Crontab in Linux With Examples](https://linuxhandbook.com/crontab/){:target="_blank"}
+- [The Ultimate Crontab Cheatsheet](https://www.codementor.io/@akul08/the-ultimate-crontab-cheatsheet-5op0f7o4r)
+- [Understanding Crontab in Linux With Examples](https://linuxhandbook.com/crontab/)

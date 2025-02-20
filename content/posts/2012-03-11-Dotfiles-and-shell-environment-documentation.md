@@ -1,18 +1,16 @@
 ---
-title: My Dotfiles and Shell Environment Documentation [Draft]
-date: 2023-05-18 11:33:00 +0800
-categories: [Blogging, Document]
-tags: [Linux, Shell, cli, Zsh, vim]
-pin: false 
+title: "My Dotfiles and Shell Environment Documentation [Draft]"
+date: 2023-05-18T11:33:00+08:00
+categories: ["Blogging", "Document"]
+tags: ["Linux", "Shell", "cli", "Zsh", "vim"]
+draft: true
 math: true
 mermaid: true
-image: 
 ---
 
-> ⚠️ **This document is still a draft. Please note that there might be mistakes or inaccuracies.**
-{: .prompt-warning }
+> **This document is still a draft. Please note that there might be mistakes or inaccuracies.**
 
-This documentation provides an overview and detailed information about the my dotfiles  shell environment. The dotfiles repository contains a collection of configuration files and scripts used to customize and personalize my development environment over the years.
+This documentation provides an overview and detailed information about the my dotfiles shell environment. The dotfiles repository contains a collection of configuration files and scripts used to customize and personalize my development environment over the years.
 
 By utilizing these dotfiles, you can quickly set up and synchronize your preferred settings across different machines.
 
@@ -31,7 +29,7 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
 
 ## Introduction
 
-Dotfiles are configuration files that define settings and preferences for various applications and tools. I forked the project from [Nick Nisi](https://github.com/nicknisi/dotfiles){:target="_blank"} a while back. These files are typically hidden files in the user's home directory and are named with a dot (e.g., `.bashrc`, `.vimrc`). Managing dotfiles in a centralized repository offers several benefits:
+Dotfiles are configuration files that define settings and preferences for various applications and tools. I forked the project from [Nick Nisi](https://github.com/nicknisi/dotfiles) a while back. These files are typically hidden files in the user's home directory and are named with a dot (e.g., `.bashrc`, `.vimrc`). Managing dotfiles in a centralized repository offers several benefits:
 
 - **Consistency**: With dotfiles stored in a repository, you can easily maintain a consistent configuration across multiple machines.
 - **Version Control**: Git version control enables tracking changes to dotfiles over time, allowing for easy rollback or reference.
@@ -117,9 +115,7 @@ This command will create backups, set up symlinks, and configure Git.
 
 ## Customization
 
-You can customize the dotfiles project to suit your specific requirements and preferences
-
-. Here are a few ways to do so:
+You can customize the dotfiles project to suit your specific requirements and preferences. Here are a few ways to do so:
 
 - Modify the configuration files in the `config` directory to reflect your desired settings.
 - Add or remove dotfiles according to your needs by modifying the `get_linkables` function in the installation script.
