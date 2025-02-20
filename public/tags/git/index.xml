@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on DEDE</title>
+    <link>https://wilfrantz.github.io/tags/git/</link>
+    <description>Recent content in Git on DEDE</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Aug 2022 01:33:00 +0800</lastBuildDate>
+    <atom:link href="https://wilfrantz.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Merge Git Branches to Avoid Conflicts</title>
+      <link>https://wilfrantz.github.io/posts/2022-08-17-merge-git-branches-to-avoid-conflicts/</link>
+      <pubDate>Wed, 17 Aug 2022 01:33:00 +0800</pubDate>
+      <guid>https://wilfrantz.github.io/posts/2022-08-17-merge-git-branches-to-avoid-conflicts/</guid>
+      <description>&lt;p&gt;When working with &lt;code&gt;Git&lt;/code&gt;, merging branches is a common task to combine changes from different branches into one. However, conflicts can arise when Git detects conflicting changes in the code. In this step-by-step guide, we will explore how to merge branches in &lt;code&gt;Git&lt;/code&gt; while minimizing conflicts.&lt;/p&gt;&#xA;&lt;p&gt;Table of contents&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#ensure-your-branch-is-up-to-date&#34; &gt;Ensure Your Branch is Up to Date&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#synchronizing-with-git-pull-to-ensure-up-to-date-merging&#34; &gt;Synchronizing with &lt;code&gt;git pull&lt;/code&gt; to Ensure Up-to-Date Merging&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#fetching-and-merging-in-a-single-step&#34; &gt;Fetching and Merging in a Single Step&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#benefits-of-keeping-branches-in-sync&#34; &gt;Benefits of Keeping Branches in Sync&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#handling-potential-conflicts&#34; &gt;Handling Potential Conflicts&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#common-types-of-conflicts&#34; &gt;Common Types of Conflicts&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#resolve-conflicts-locally&#34; &gt;Resolve Conflicts Locally&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#manually-modify-the-code-to-resolve-the-conflict&#34; &gt;Manually modify the code to resolve the conflict&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#test-your-changes&#34; &gt;Test Your Changes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#commit-the-merged-changes&#34; &gt;Commit the Merged Changes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#push-your-changes&#34; &gt;Push Your Changes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#verify-the-merge&#34; &gt;Verify the Merge&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#conclusion&#34; &gt;Conclusion&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;ensure-your-branch-is-up-to-date&#34;&gt;&#xA;  Ensure Your Branch is Up to Date&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#ensure-your-branch-is-up-to-date&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Before merging, ensure that your current branch is up to date with the latest changes from the target branch. Execute the following commands:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

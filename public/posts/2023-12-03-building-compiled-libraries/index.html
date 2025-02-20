@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Mastering C/C&#43;&#43; Library Development and Build Management with CMake · DEDE
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Wilfrantz DEDE">
+<meta name="description" content="When working on large C/C&#43;&#43; projects or creating reusable code, building compiled libraries is a common practice. Compiled libraries allow you to encapsulate functionality and data structures into reusable modules that can be easily linked into other programs.
+In this blog post, we&rsquo;ll walk you through the process of building a compiled library in C/C&#43;&#43; and show you how to prepare a CMakeLists.txt file to manage the build process.
+Table of Contents">
+<meta name="keywords" content="[blog hugo developer]">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mastering C/C&#43;&#43; Library Development and Build Management with CMake">
+  <meta name="twitter:description" content="When working on large C/C&#43;&#43; projects or creating reusable code, building compiled libraries is a common practice. Compiled libraries allow you to encapsulate functionality and data structures into reusable modules that can be easily linked into other programs.
+In this blog post, we’ll walk you through the process of building a compiled library in C/C&#43;&#43; and show you how to prepare a CMakeLists.txt file to manage the build process.
+Table of Contents">
+
+<meta property="og:url" content="https://wilfrantz.github.io/posts/2023-12-03-building-compiled-libraries/">
+  <meta property="og:site_name" content="DEDE">
+  <meta property="og:title" content="Mastering C/C&#43;&#43; Library Development and Build Management with CMake">
+  <meta property="og:description" content="When working on large C/C&#43;&#43; projects or creating reusable code, building compiled libraries is a common practice. Compiled libraries allow you to encapsulate functionality and data structures into reusable modules that can be easily linked into other programs.
+In this blog post, we’ll walk you through the process of building a compiled library in C/C&#43;&#43; and show you how to prepare a CMakeLists.txt file to manage the build process.
+Table of Contents">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-06-05T11:33:00+08:00">
+    <meta property="article:modified_time" content="2020-06-05T11:33:00+08:00">
+    <meta property="article:tag" content="Library">
+    <meta property="article:tag" content="C&#43;&#43;">
+    <meta property="article:tag" content="SWE">
+
+
+
+
+<link rel="canonical" href="https://wilfrantz.github.io/posts/2023-12-03-building-compiled-libraries/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://wilfrantz.github.io/">
+      DEDE
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/">Home</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://wilfrantz.github.io/posts/2023-12-03-building-compiled-libraries/">
+              Mastering C/C&#43;&#43; Library Development and Build Management with CMake
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2020-06-05T11:33:00&#43;08:00">
+                June 5, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              7-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/blog/">Blog</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/library/">Library</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/swe/">SWE</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>When working on large <code>C/C++</code> projects or creating reusable code, building compiled libraries is a common practice. Compiled libraries allow you to encapsulate functionality and data structures into reusable modules that can be easily linked into other programs.</p>
+<p>In this blog post, we&rsquo;ll walk you through the process of building a compiled library in <code>C/C++</code> and show you how to prepare a <code>CMakeLists.txt</code> file to manage the build process.</p>
+<p>Table of Contents</p>
+<ul>
+<li><a href="#building-a-compiled-library" >Building a Compiled Library</a>
+<ul>
+<li><a href="#step-1-write-your-library-code" >Step 1: Write Your Library Code</a></li>
+<li><a href="#step-2-compile-source-files" >Step 2: Compile Source Files</a></li>
+<li><a href="#step-3-create-the-library" >Step 3: Create the Library</a></li>
+<li><a href="#step-4-install-the-library-optional" >Step 4: Install the Library (Optional)</a>
+<ul>
+<li><a href="#manual-installation-recommended" >Manual installation (recommended)</a>
+<ul>
+<li><a href="#update-the-linker-configuration" >Update the Linker Configuration</a></li>
+<li><a href="#linking-against-the-static-library" >Linking Against the Static Library</a></li>
+<li><a href="#including-headers" >Including Headers</a></li>
+</ul>
+</li>
+<li><a href="#using-a-package-manager" >Using a Package Manager</a>
+<ul>
+<li><a href="#create-a-package" >Create a Package</a></li>
+<li><a href="#build-the-deb-package" >Build the <code>.deb</code> package</a></li>
+<li><a href="#install-the-package" >Install the Package</a></li>
+<li><a href="#linking-against-the-static-library-1" >Linking Against the Static Library</a></li>
+<li><a href="#include-the-header-files" >Include the header files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#preparing-a-cmakeliststxt-file" >Preparing a CMakeLists.txt File</a>
+<ul>
+<li><a href="#step-1-create-a-cmakeliststxt-file" >Step 1: Create a CMakeLists.txt File</a></li>
+<li><a href="#step-2-set-minimum-cmake-version" >Step 2: Set Minimum CMake Version</a></li>
+<li><a href="#step-3-define-your-project" >Step 3: Define Your Project</a></li>
+<li><a href="#step-4-specify-source-files" >Step 4: Specify Source Files</a></li>
+<li><a href="#step-5-specify-header-files" >Step 5: Specify Header Files</a></li>
+<li><a href="#step-6-install-headers-optional" >Step 6: Install Headers (Optional)</a></li>
+<li><a href="#step-7-install-the-library-optional" >Step 7: Install the Library (Optional)</a></li>
+<li><a href="#step-8-export-the-library-optional" >Step 8: Export the Library (Optional)</a></li>
+<li><a href="#step-9-generate-build-files" >Step 9: Generate Build Files</a></li>
+<li><a href="#step-10-build-your-library" >Step 10: Build Your Library</a></li>
+</ul>
+</li>
+<li><a href="#conclusion" >Conclusion</a></li>
+</ul>
+<h2 id="building-a-compiled-library">
+  Building a Compiled Library
+  <a class="heading-link" href="#building-a-compiled-library">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<hr>
+<h3 id="step-1-write-your-library-code">
+  Step 1: Write Your Library Code
+  <a class="heading-link" href="#step-1-write-your-library-code">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Start by writing the code for your library. This can include functions, classes, or any code you want to reuse in multiple programs. Organize your code into source files (.c or .cpp) and header files (.h) for clear separation of interface and implementation.</p>
+<h3 id="step-2-compile-source-files">
+  Step 2: Compile Source Files
+  <a class="heading-link" href="#step-2-compile-source-files">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Compile your source files into object files (.o or .obj). You can do this using a <code>C/C++</code> compiler. For example, if you have two source files, <code>file1.cpp</code> and <code>file2.cpp</code>, you can compile them as follows:</p>
+<p>For C++ code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>g++ -c file1.cpp file2.cpp -o mylibrary.o
+</span></span></code></pre></div><p>This will create separate object files for each source file.</p>
+<h3 id="step-3-create-the-library">
+  Step 3: Create the Library
+  <a class="heading-link" href="#step-3-create-the-library">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>To create a library file, you can use the <code>ar</code> (Archive) tool for static libraries (.a on Unix-based systems) or the compiler to create shared libraries (.so or .dll on Unix-based and Windows systems, respectively).</p>
+<p>For a static library (Unix):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ar rcs libmylibrary.a mylibrary.o
+</span></span></code></pre></div><p>For a shared library (Unix):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>g++ -shared -o libmylibrary.so mylibrary.o
+</span></span></code></pre></div><p>For a shared library (Windows):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>g++ -shared -o mylibrary.dll mylibrary.o
+</span></span></code></pre></div><h3 id="step-4-install-the-library-optional">
+  Step 4: Install the Library (Optional)
+  <a class="heading-link" href="#step-4-install-the-library-optional">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>If you want to make your library available system-wide, you can install it using platform-specific package management tools or by manually copying it to system directories.</p>
+<h4 id="manual-installation-recommended">
+  Manual installation (recommended)
+  <a class="heading-link" href="#manual-installation-recommended">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li>To manually make the library available system-wide, you need to copy it to a standard location where the linker can find it, such as <code>/usr/local/lib</code> or <code>/usr/lib</code>. It&rsquo;s generally recommended to use <code>/usr/local/lib</code> for libraries that are not managed by the system&rsquo;s package manager.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo cp libmylib.a /usr/local/lib
+</span></span></code></pre></div><h5 id="update-the-linker-configuration">
+  Update the Linker Configuration
+  <a class="heading-link" href="#update-the-linker-configuration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>After copying the library, you need to inform the linker about the new library path. This is done by adding the path to the <code>/etc/ld.so.conf</code> file or a new file in the <code>/etc/ld.so.conf.d/</code> directory.</p>
+<p>Create a new file named <code>mylib.conf</code> in <code>/etc/ld.so.conf.d/</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;/usr/local/lib&#34;</span> | sudo tee /etc/ld.so.conf.d/mylib.conf
+</span></span></code></pre></div><p>Then, run <code>ldconfig</code> (<code>ld</code> on macOS) to update the linker cache:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo ldconfig
+</span></span></code></pre></div><p>on MacOS, Consult the ld man page (<code>man ld</code>) for detailed information.</p>
+<h5 id="linking-against-the-static-library">
+  Linking Against the Static Library
+  <a class="heading-link" href="#linking-against-the-static-library">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>Now that your static library is available system-wide, you can link against it when compiling your programs. Use the <code>-l</code> option with the <code>gcc</code> or <code>g++</code> command, omitting the lib prefix and the <code>.a</code> suffix from the library name. For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gcc -o myprogram myprogram.c -lmylib
+</span></span></code></pre></div><h5 id="including-headers">
+  Including Headers
+  <a class="heading-link" href="#including-headers">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>If your static library comes with header files, you should also place these in a standard location, like <code>/usr/local/include</code>, so that they can be easily included in programs that use your library.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo cp mylib.h /usr/local/include
+</span></span></code></pre></div><h4 id="using-a-package-manager">
+  Using a Package Manager
+  <a class="heading-link" href="#using-a-package-manager">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<h5 id="create-a-package">
+  Create a Package
+  <a class="heading-link" href="#create-a-package">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>The next step is to package your static library. Different Linux distributions use different package managers (like <code>apt</code> for Debian-based systems, <code>yum</code> or <code>dnf</code> for Red Hat-based systems, etc.), and each has its own packaging format (<code>.deb</code>, <code>.rpm</code>, etc.). We&rsquo;ll use Debian&rsquo;s <code>.deb</code> format as an example.</p>
+<p>Create a directory structure for your package:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p mylib-package/DEBIAN
+</span></span><span style="display:flex;"><span>mkdir -p mylib-package/usr/local/lib
+</span></span><span style="display:flex;"><span>mkdir -p mylib-package/usr/local/include
+</span></span></code></pre></div><p>Copy your library and header files to the respective directories:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp libmylib.a mylib-package/usr/local/lib/
+</span></span><span style="display:flex;"><span>cp mylib.h mylib-package/usr/local/include/
+</span></span></code></pre></div><p>Create a control file inside the DEBIAN directory with necessary package information:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Package: mylib\nVersion: 1.0\nSection: custom\nPriority: optional\nArchitecture: all\nEssential: no\nInstalled-Size: 1024\nMaintainer: Your Name\nDescription: My custom static library&#34;</span> &gt; mylib-package/DEBIAN/control
+</span></span></code></pre></div><h5 id="build-the-deb-package">
+  Build the <code>.deb</code> package
+  <a class="heading-link" href="#build-the-deb-package">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dpkg-deb --build mylib-package
+</span></span></code></pre></div><h5 id="install-the-package">
+  Install the Package
+  <a class="heading-link" href="#install-the-package">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dpkg -i mylib-package.deb
+</span></span></code></pre></div><p>Alternatively, if you wish to distribute your library, you can host it on a repository or share the <code>.deb</code> file for others to download and install.</p>
+<h5 id="linking-against-the-static-library-1">
+  Linking Against the Static Library
+  <a class="heading-link" href="#linking-against-the-static-library-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>After installation, link against your static library when compiling programs:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gcc -o myprogram myprogram.c -L/usr/local/lib -lmylib
+</span></span></code></pre></div><h5 id="include-the-header-files">
+  Include the header files
+  <a class="heading-link" href="#include-the-header-files">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;mylib.h&gt;</span><span style="color:#75715e">
+</span></span></span></code></pre></div><h2 id="preparing-a-cmakeliststxt-file">
+  Preparing a CMakeLists.txt File
+  <a class="heading-link" href="#preparing-a-cmakeliststxt-file">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<hr>
+<p>CMake is a powerful tool for managing the build process of C/C++ projects, including compiled libraries. Here&rsquo;s how to prepare a <code>CMakeLists.txt</code> file for your library:</p>
+<h3 id="step-1-create-a-cmakeliststxt-file">
+  Step 1: Create a CMakeLists.txt File
+  <a class="heading-link" href="#step-1-create-a-cmakeliststxt-file">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>In your library&rsquo;s project directory, create a <code>CMakeLists.txt</code> file. This file will contain instructions for CMake on how to build your library.</p>
+<h3 id="step-2-set-minimum-cmake-version">
+  Step 2: Set Minimum CMake Version
+  <a class="heading-link" href="#step-2-set-minimum-cmake-version">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Start your CMakeLists.txt file by specifying the minimum required CMake version. This ensures that users with older versions of CMake are aware of the compatibility requirements.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>cmake_minimum_required(<span style="color:#e6db74">VERSION</span> <span style="color:#e6db74">3.0</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="step-3-define-your-project">
+  Step 3: Define Your Project
+  <a class="heading-link" href="#step-3-define-your-project">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Define your project with a name and version.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>project(<span style="color:#e6db74">mylibrary</span> <span style="color:#e6db74">VERSION</span> <span style="color:#e6db74">1.0</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="step-4-specify-source-files">
+  Step 4: Specify Source Files
+  <a class="heading-link" href="#step-4-specify-source-files">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>List the source files for your library. You can use the add_library command to create the library from these source files.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>add_library(<span style="color:#e6db74">mylibrary</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">file1.cpp</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">file2.cpp</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="step-5-specify-header-files">
+  Step 5: Specify Header Files
+  <a class="heading-link" href="#step-5-specify-header-files">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Specify the header files that are part of your library. This helps CMake organize your project and allows users of your library to find and include the headers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>target_include_directories(<span style="color:#e6db74">mylibrary</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">PUBLIC</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">${</span>CMAKE_CURRENT_SOURCE_DIR<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="step-6-install-headers-optional">
+  Step 6: Install Headers (Optional)
+  <a class="heading-link" href="#step-6-install-headers-optional">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>If you want to make the header files of your library available to other projects, you can install them.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>install(<span style="color:#e6db74">FILES</span> <span style="color:#e6db74">file1.h</span> <span style="color:#e6db74">file2.h</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">DESTINATION</span> <span style="color:#e6db74">include/mylibrary</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="step-7-install-the-library-optional">
+  Step 7: Install the Library (Optional)
+  <a class="heading-link" href="#step-7-install-the-library-optional">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>If you want to install your library along with the header files, you can do so with the following command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>install(<span style="color:#e6db74">TARGETS</span> <span style="color:#e6db74">mylibrary</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">DESTINATION</span> <span style="color:#e6db74">lib</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="step-8-export-the-library-optional">
+  Step 8: Export the Library (Optional)
+  <a class="heading-link" href="#step-8-export-the-library-optional">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>If your library is intended to be used as a dependency in other CMake projects, you can export it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>export(<span style="color:#e6db74">TARGETS</span> <span style="color:#e6db74">mylibrary</span> <span style="color:#e6db74">FILE</span> <span style="color:#e6db74">MyLibraryConfig.cmake</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>With this, other CMake projects can easily find and link against your library.</p>
+<h3 id="step-9-generate-build-files">
+  Step 9: Generate Build Files
+  <a class="heading-link" href="#step-9-generate-build-files">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Now that your CMakeLists.txt file is ready, you can generate the build files using the cmake command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir build
+</span></span><span style="display:flex;"><span>cd build
+</span></span><span style="display:flex;"><span>cmake ..
+</span></span></code></pre></div><p>This will generate the appropriate build files for your platform and build system.</p>
+<h3 id="step-10-build-your-library">
+  Step 10: Build Your Library
+  <a class="heading-link" href="#step-10-build-your-library">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Finally, build your library using your chosen build system. For example, if you&rsquo;re on a Unix-based system with Makefiles generated by CMake, run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make
+</span></span></code></pre></div><p>Your compiled library will be created in the build directory.</p>
+<h2 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Building a compiled library in C/C++ allows you to create reusable code that can be easily incorporated into other projects. By preparing a CMakeLists.txt file, you can effectively manage the build process and make your library accessible to other developers. With these steps, you&rsquo;re well on your way to creating and sharing powerful C/C++ libraries. Happy coding!</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Wilfrantz DEDE 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

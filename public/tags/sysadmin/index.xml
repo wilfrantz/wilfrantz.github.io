@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SysAdmin on DEDE</title>
+    <link>https://wilfrantz.github.io/tags/sysadmin/</link>
+    <description>Recent content in SysAdmin on DEDE</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 May 2022 11:33:00 +0800</lastBuildDate>
+    <atom:link href="https://wilfrantz.github.io/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Practical Guide to Linux System Hardening</title>
+      <link>https://wilfrantz.github.io/posts/2023-05-20-linux-system-hardening/</link>
+      <pubDate>Fri, 20 May 2022 11:33:00 +0800</pubDate>
+      <guid>https://wilfrantz.github.io/posts/2023-05-20-linux-system-hardening/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;This document is still a draft. Please note that there might be mistakes or inaccuracies.&lt;/strong&gt;&#xA;{: .prompt-warning }&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;In an era of rising cyber threats, securing your Linux system is crucial to protect sensitive data and prevent unauthorized access. This comprehensive guide focuses on Debian-based systems and offers practical insights and best practices to fortify your system&amp;rsquo;s defenses.&lt;/p&gt;&#xA;&lt;p&gt;From secure authentication and user privilege management to firewall configuration and system log monitoring, this guide provides the knowledge and tools necessary to effectively harden your Linux environment.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

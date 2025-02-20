@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debian on DEDE</title>
+    <link>https://wilfrantz.github.io/tags/debian/</link>
+    <description>Recent content in Debian on DEDE</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 May 2023 11:33:00 +0800</lastBuildDate>
+    <atom:link href="https://wilfrantz.github.io/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ZSH and PowerLevel10K for Beauty and Speed on MacOS &amp; Debian Systems</title>
+      <link>https://wilfrantz.github.io/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</link>
+      <pubDate>Mon, 22 May 2023 11:33:00 +0800</pubDate>
+      <guid>https://wilfrantz.github.io/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</guid>
+      <description>&lt;p&gt;In this comprehensive tutorial, I&amp;rsquo;ll guide you through the process of installing/configuring &lt;code&gt;ZSH&lt;/code&gt; shell both on &lt;code&gt;MacOS&lt;/code&gt; and &lt;code&gt;Debian&lt;/code&gt; systems, personalize it with the &lt;code&gt;ohmyzsh&lt;/code&gt; framework and elevate your experience with the stunning &lt;code&gt;PowerLeve10K&lt;/code&gt; theme.&lt;/p&gt;&#xA;&lt;p&gt;Before proceeding with the installation, please ensure that &lt;code&gt;Git&lt;/code&gt; is installed on your system. To install &lt;code&gt;Git&lt;/code&gt; using &lt;a href=&#34;https://brew.sh&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;homebrew&lt;/a&gt;{: target=&amp;quot;_blank&amp;quot;} on &lt;code&gt;macOS&lt;/code&gt;, run the following command:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Linux users, you can install Git with homebrew or your Linux distro&amp;rsquo;s default package manager, on debian systems simply run the following command:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

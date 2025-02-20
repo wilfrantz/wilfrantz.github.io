@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  How to Merge Git Branches to Avoid Conflicts · DEDE
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Wilfrantz DEDE">
+<meta name="description" content="When working with Git, merging branches is a common task to combine changes from different branches into one. However, conflicts can arise when Git detects conflicting changes in the code. In this step-by-step guide, we will explore how to merge branches in Git while minimizing conflicts.
+Table of contents
+
+Ensure Your Branch is Up to Date
+Synchronizing with git pull to Ensure Up-to-Date Merging
+
+Fetching and Merging in a Single Step
+Benefits of Keeping Branches in Sync
+
+
+Handling Potential Conflicts
+
+Common Types of Conflicts
+Resolve Conflicts Locally
+Manually modify the code to resolve the conflict
+
+
+Test Your Changes
+Commit the Merged Changes
+Push Your Changes
+Verify the Merge
+Conclusion
+
+
+  Ensure Your Branch is Up to Date
+  
+    
+    Link to heading
+  
+
+Before merging, ensure that your current branch is up to date with the latest changes from the target branch. Execute the following commands:">
+<meta name="keywords" content="[blog hugo developer]">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to Merge Git Branches to Avoid Conflicts">
+  <meta name="twitter:description" content="When working with Git, merging branches is a common task to combine changes from different branches into one. However, conflicts can arise when Git detects conflicting changes in the code. In this step-by-step guide, we will explore how to merge branches in Git while minimizing conflicts.
+Table of contents
+Ensure Your Branch is Up to Date Synchronizing with git pull to Ensure Up-to-Date Merging Fetching and Merging in a Single Step Benefits of Keeping Branches in Sync Handling Potential Conflicts Common Types of Conflicts Resolve Conflicts Locally Manually modify the code to resolve the conflict Test Your Changes Commit the Merged Changes Push Your Changes Verify the Merge Conclusion Ensure Your Branch is Up to Date Link to heading Before merging, ensure that your current branch is up to date with the latest changes from the target branch. Execute the following commands:">
+
+<meta property="og:url" content="https://wilfrantz.github.io/posts/2022-08-17-merge-git-branches-to-avoid-conflicts/">
+  <meta property="og:site_name" content="DEDE">
+  <meta property="og:title" content="How to Merge Git Branches to Avoid Conflicts">
+  <meta property="og:description" content="When working with Git, merging branches is a common task to combine changes from different branches into one. However, conflicts can arise when Git detects conflicting changes in the code. In this step-by-step guide, we will explore how to merge branches in Git while minimizing conflicts.
+Table of contents
+Ensure Your Branch is Up to Date Synchronizing with git pull to Ensure Up-to-Date Merging Fetching and Merging in a Single Step Benefits of Keeping Branches in Sync Handling Potential Conflicts Common Types of Conflicts Resolve Conflicts Locally Manually modify the code to resolve the conflict Test Your Changes Commit the Merged Changes Push Your Changes Verify the Merge Conclusion Ensure Your Branch is Up to Date Link to heading Before merging, ensure that your current branch is up to date with the latest changes from the target branch. Execute the following commands:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-08-17T01:33:00+08:00">
+    <meta property="article:modified_time" content="2022-08-17T01:33:00+08:00">
+    <meta property="article:tag" content="Git">
+
+
+
+
+<link rel="canonical" href="https://wilfrantz.github.io/posts/2022-08-17-merge-git-branches-to-avoid-conflicts/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://wilfrantz.github.io/">
+      DEDE
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/">Home</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://wilfrantz.github.io/posts/2022-08-17-merge-git-branches-to-avoid-conflicts/">
+              How to Merge Git Branches to Avoid Conflicts
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2022-08-17T01:33:00&#43;08:00">
+                August 17, 2022
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              7-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/blogging/">Blogging</a>
+      <span class="separator">•</span>
+    <a href="/categories/document/">Document</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/git/">Git</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>When working with <code>Git</code>, merging branches is a common task to combine changes from different branches into one. However, conflicts can arise when Git detects conflicting changes in the code. In this step-by-step guide, we will explore how to merge branches in <code>Git</code> while minimizing conflicts.</p>
+<p>Table of contents</p>
+<ul>
+<li><a href="#ensure-your-branch-is-up-to-date" >Ensure Your Branch is Up to Date</a></li>
+<li><a href="#synchronizing-with-git-pull-to-ensure-up-to-date-merging" >Synchronizing with <code>git pull</code> to Ensure Up-to-Date Merging</a>
+<ul>
+<li><a href="#fetching-and-merging-in-a-single-step" >Fetching and Merging in a Single Step</a></li>
+<li><a href="#benefits-of-keeping-branches-in-sync" >Benefits of Keeping Branches in Sync</a></li>
+</ul>
+</li>
+<li><a href="#handling-potential-conflicts" >Handling Potential Conflicts</a>
+<ul>
+<li><a href="#common-types-of-conflicts" >Common Types of Conflicts</a></li>
+<li><a href="#resolve-conflicts-locally" >Resolve Conflicts Locally</a></li>
+<li><a href="#manually-modify-the-code-to-resolve-the-conflict" >Manually modify the code to resolve the conflict</a></li>
+</ul>
+</li>
+<li><a href="#test-your-changes" >Test Your Changes</a></li>
+<li><a href="#commit-the-merged-changes" >Commit the Merged Changes</a></li>
+<li><a href="#push-your-changes" >Push Your Changes</a></li>
+<li><a href="#verify-the-merge" >Verify the Merge</a></li>
+<li><a href="#conclusion" >Conclusion</a></li>
+</ul>
+<h2 id="ensure-your-branch-is-up-to-date">
+  Ensure Your Branch is Up to Date
+  <a class="heading-link" href="#ensure-your-branch-is-up-to-date">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Before merging, ensure that your current branch is up to date with the latest changes from the target branch. Execute the following commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git pull <span style="color:#75715e"># on your current branch</span>
+</span></span><span style="display:flex;"><span>git checkout target_branch or git switch target_branch
+</span></span><span style="display:flex;"><span>git pull origin target_branch
+</span></span><span style="display:flex;"><span>git checkout your_branch
+</span></span></code></pre></div><p>These commands switch to the target branch, pull the latest changes from the remote repository, and switch back to your branch locally.</p>
+<blockquote>
+<p>In the given example, the <code>target branch</code> refers to the branch from which you want to merge changes, while the <code>your branch</code> refers to the branch where you want to incorporate those changes.
+{: .prompt-tip}</p></blockquote>
+<h2 id="synchronizing-with-git-pull-to-ensure-up-to-date-merging">
+  Synchronizing with <code>git pull</code> to Ensure Up-to-Date Merging
+  <a class="heading-link" href="#synchronizing-with-git-pull-to-ensure-up-to-date-merging">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>You can use <code>git pull origin target_branch</code> from <code>your_branch</code> when you want to fetch and merge the latest changes from the <code>target_branch</code> into your current branch (<code>your_branch</code>). This can be useful in scenarios where you want to ensure that your branch is up to date with the latest changes from the <code>target_branch</code> before merging them.</p>
+<h3 id="fetching-and-merging-in-a-single-step">
+  Fetching and Merging in a Single Step
+  <a class="heading-link" href="#fetching-and-merging-in-a-single-step">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Using <code>git pull origin target_branch</code> from <code>your_branch</code> performs two actions:</p>
+<ol>
+<li>It fetches the latest commits and updates the remote-tracking branch (<code>origin/target_branch</code>) with any new changes from the remote repository (<code>origin</code>).</li>
+<li>It merges the changes from <code>origin/target_branch</code> into your current branch (<code>your_branch</code>).</li>
+</ol>
+<p>This sequence of commands combines the <code>git fetch</code> and <code>git merge</code> operations into a single step.</p>
+<h3 id="benefits-of-keeping-branches-in-sync">
+  Benefits of Keeping Branches in Sync
+  <a class="heading-link" href="#benefits-of-keeping-branches-in-sync">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>By executing <code>git pull origin target_branch</code> from <code>your_branch</code>, you ensure that your local branch is synchronized with the latest changes from the <code>target_branch</code>. This helps prevent any conflicts that may arise due to diverging code paths and allows you to have an up-to-date starting point for further development or merging.</p>
+<h2 id="handling-potential-conflicts">
+  Handling Potential Conflicts
+  <a class="heading-link" href="#handling-potential-conflicts">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>It&rsquo;s important to note that when using <code>git pull</code>, there is a possibility of conflicts occurring during the merge operation. If conflicts arise, you will need to resolve them manually following the usual conflict resolution steps.</p>
+<p>Therefore, it&rsquo;s recommended to carefully review the changes and test your code after executing <code>git pull</code> to ensure a smooth merge process.</p>
+<h3 id="common-types-of-conflicts">
+  Common Types of Conflicts
+  <a class="heading-link" href="#common-types-of-conflicts">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Git conflicts can occur when merging or rebasing branches with conflicting changes. Here are some common types of conflicts that can arise:</p>
+<p><strong><code>Content Conflict</code></strong>: This is the most typical type of conflict where Git identifies conflicting changes to the content of a file. It occurs when different branches have made modifications to the same lines of code.</p>
+<p><strong><code>Rename/Move Conflict</code></strong>: When one branch renames or moves a file, while another branch modifies the same file, a conflict can arise due to the conflicting operations.</p>
+<p><strong><code>Delete/Modify Conflict</code></strong>: If one branch deletes a file or a specific line of code, while another branch modifies the same file or line, Git may encounter a conflict.</p>
+<p><strong><code>Branch/Commit Conflict</code></strong>: When two branches have diverged and there are conflicting commits between them, Git will need to reconcile these differences during a merge operation.</p>
+<p><strong><code>Binary File Conflict</code></strong>: Conflicts can also occur with binary files, such as images or compiled binaries, when both branches attempt to modify the same file. Git may not be able to automatically resolve these conflicts, requiring manual intervention.</p>
+<p><strong><code>Whitespace Conflict</code></strong>: Git can flag conflicts due to whitespace changes, such as tabs vs. spaces or trailing whitespace, if these changes occur on the same lines in conflicting branches.</p>
+<p>These are just a few examples of common conflicts encountered in Git. The specific conflicts you encounter may vary depending on the nature of the changes and the branching workflow being used.</p>
+<h3 id="resolve-conflicts-locally">
+  Resolve Conflicts Locally
+  <a class="heading-link" href="#resolve-conflicts-locally">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>If conflicts occur during the merge, Git will mark the conflicting areas in your code. Open the affected files in a text editor and locate the conflict markers (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>). These markers indicate the conflicting sections.</p>
+<p>To list all conflicts in a Git repository, you can use the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git diff --name-only --diff-filter<span style="color:#f92672">=</span>U
+</span></span></code></pre></div><p>This command will display the names of all files that have conflicts in the repository. The <code>--name-only</code> option ensures that only the filenames are shown, and the <code>--diff-filter=U</code> option filters the output to only display files with unresolved conflicts.</p>
+<p>Running this command will provide you with a list of files that require conflict resolution. You can then proceed to address each conflict individually by editing the files, resolving the conflicting sections, and committing the changes.</p>
+<p>For example, let&rsquo;s say you have a conflict in <code>file.cpp</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#f92672">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Your changes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> myVariable <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">=======</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Target branch changes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> myVariable <span style="color:#f92672">=</span> <span style="color:#ae81ff">24</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> target_branch
+</span></span></code></pre></div><p>The code snippet demonstrates a common conflict resolution scenario in Git.</p>
+<ul>
+<li>
+<p><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>: This marker indicates the beginning of the conflicting code block that exists in the current branch (<code>HEAD</code> represents the latest commit in the current branch). The code between <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> and <code>=======</code> represents your changes in the current branch.</p>
+</li>
+<li>
+<p><code>// Your changes</code>
+<code>int myVariable = 42;</code>: This section contains the code that you introduced or modified in the conflicting file. In this case, it sets the <code>myVariable</code> variable to the value <code>42</code>.</p>
+</li>
+<li>
+<p><code>=======</code>: This marker separates the conflicting code sections.</p>
+</li>
+<li>
+<p><code>// Target branch changes</code>
+<code>int myVariable = 24;</code>: This section contains the conflicting code from the target branch (<code>target_branch</code> in this example). It sets the <code>myVariable</code> variable to the value <code>24</code>.</p>
+</li>
+<li>
+<p><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; target_branch</code>: This marker indicates the end of the conflicting code block from the target branch.</p>
+</li>
+</ul>
+<p>During a Git merge or rebase operation, if conflicting changes are detected in the same section of a file, Git inserts these conflict markers to highlight the conflicting sections. It&rsquo;s your responsibility to manually resolve the conflict by choosing which changes to keep or modifying the code accordingly.</p>
+<h3 id="manually-modify-the-code-to-resolve-the-conflict">
+  Manually modify the code to resolve the conflict
+  <a class="heading-link" href="#manually-modify-the-code-to-resolve-the-conflict">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>To resolve this conflict, you would typically edit the code manually, removing the conflict markers (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; target_branch</code>), and making the necessary adjustments based on your desired outcome.</p>
+<p>In this case, you might choose to either keep your changes (<code>int myVariable = 42;</code>) or use the target branch&rsquo;s changes (<code>int myVariable = 24;</code>), depending on your specific requirements and intentions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Resolved conflict
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> myVariable <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>;
+</span></span></code></pre></div><p>After resolving the conflict, you would save the changes, commit them, and continue with the merging or rebasing process in Git. Make sure to carefully review the changes to preserve the intended functionality.</p>
+<h2 id="test-your-changes">
+  Test Your Changes
+  <a class="heading-link" href="#test-your-changes">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>After resolving conflicts, it&rsquo;s crucial to test your changes to ensure they work as expected. Run unit tests, execute the code, and perform any necessary manual testing. Confirm that the merged code behaves correctly and doesn&rsquo;t introduce new issues.</p>
+<h2 id="commit-the-merged-changes">
+  Commit the Merged Changes
+  <a class="heading-link" href="#commit-the-merged-changes">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Once you have resolved conflicts and tested your changes, it&rsquo;s time to commit the merged code. Use the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git commit -am <span style="color:#e6db74">&#34;Merge target_branch into your_branch&#34;</span>
+</span></span></code></pre></div><p>Provide a meaningful commit message describing the merge operation. Be sure to mention the branches being merged for clarity.</p>
+<h2 id="push-your-changes">
+  Push Your Changes
+  <a class="heading-link" href="#push-your-changes">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>To make the merged code available to others, push your changes to the remote repository. Use the command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git push origin your_branch
+</span></span></code></pre></div><p>This will push your merged branch to the remote repository, allowing other team members to access and review the changes.</p>
+<h2 id="verify-the-merge">
+  Verify the Merge
+  <a class="heading-link" href="#verify-the-merge">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Once your changes are pushed, it&rsquo;s a good practice to verify that the merge was successful. Review the merged code in the remote repository, inspect the commit history, and consider conducting additional tests to ensure the intended changes are properly reflected.</p>
+<p>For example, you can check the commit history using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git log
+</span></span></code></pre></div><h2 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Merging Git branches while avoiding conflicts is an essential skill for effective collaboration in software development. By following the steps outlined in this guide, you can successfully merge branches, resolve conflicts, and maintain a clean and stable codebase.</p>
+<p>Remember to update your branch, resolve conflicts locally, test your changes, commit the merged code with a descriptive message, push the changes to the remote repository, and verify the merge. Following these steps will help you minimize conflicts and streamline your Git workflow.</p>
+<p>Happy merging!</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Wilfrantz DEDE 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

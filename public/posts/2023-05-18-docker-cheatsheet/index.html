@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Docker Cheat Sheet Tutorial · DEDE
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Wilfrantz DEDE">
+<meta name="description" content="
+  Basic Commands
+  
+    
+    Link to heading
+  
+
+
+
+Check Docker Version
+docker --version
+
+
+Get Docker Info
+docker info
+
+
+List Docker Images
+docker images
+
+
+List Docker Containers
+docker ps          # Running containers
+docker ps -a       # All containers, including stopped ones
+
+
+Run a Docker Container
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+
+Start a Docker Container
+docker start CONTAINER_ID
+
+
+Stop a Docker Container
+docker stop CONTAINER_ID
+
+
+Remove a Docker Container">
+<meta name="keywords" content="[blog hugo developer]">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Docker Cheat Sheet Tutorial">
+  <meta name="twitter:description" content="Basic Commands Link to heading Check Docker Version
+docker --version Get Docker Info
+docker info List Docker Images
+docker images List Docker Containers
+docker ps # Running containers docker ps -a # All containers, including stopped ones Run a Docker Container
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...] Start a Docker Container
+docker start CONTAINER_ID Stop a Docker Container
+docker stop CONTAINER_ID Remove a Docker Container">
+
+<meta property="og:url" content="https://wilfrantz.github.io/posts/2023-05-18-docker-cheatsheet/">
+  <meta property="og:site_name" content="DEDE">
+  <meta property="og:title" content="Docker Cheat Sheet Tutorial">
+  <meta property="og:description" content="Basic Commands Link to heading Check Docker Version
+docker --version Get Docker Info
+docker info List Docker Images
+docker images List Docker Containers
+docker ps # Running containers docker ps -a # All containers, including stopped ones Run a Docker Container
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...] Start a Docker Container
+docker start CONTAINER_ID Stop a Docker Container
+docker stop CONTAINER_ID Remove a Docker Container">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-05-18T11:33:00+08:00">
+    <meta property="article:modified_time" content="2023-05-18T11:33:00+08:00">
+    <meta property="article:tag" content="Docker">
+
+
+
+
+<link rel="canonical" href="https://wilfrantz.github.io/posts/2023-05-18-docker-cheatsheet/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://wilfrantz.github.io/">
+      DEDE
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/">Home</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://wilfrantz.github.io/posts/2023-05-18-docker-cheatsheet/">
+              Docker Cheat Sheet Tutorial
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-05-18T11:33:00&#43;08:00">
+                May 18, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/blogging/">Blogging</a>
+      <span class="separator">•</span>
+    <a href="/categories/tutorial/">Tutorial</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/docker/">Docker</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h3 id="basic-commands">
+  <strong>Basic Commands</strong>
+  <a class="heading-link" href="#basic-commands">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><strong>Check Docker Version</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker --version
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Get Docker Info</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker info
+</span></span></code></pre></div></li>
+<li>
+<p><strong>List Docker Images</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker images
+</span></span></code></pre></div></li>
+<li>
+<p><strong>List Docker Containers</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps          <span style="color:#75715e"># Running containers</span>
+</span></span><span style="display:flex;"><span>docker ps -a       <span style="color:#75715e"># All containers, including stopped ones</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Run a Docker Container</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> IMAGE <span style="color:#f92672">[</span>COMMAND<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>ARG...<span style="color:#f92672">]</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Start a Docker Container</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker start CONTAINER_ID
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Stop a Docker Container</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker stop CONTAINER_ID
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Remove a Docker Container</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker rm CONTAINER_ID
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Remove a Docker Image</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker rmi IMAGE_ID
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="building-and-managing-images">
+  <strong>Building and Managing Images</strong>
+  <a class="heading-link" href="#building-and-managing-images">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><strong>Build a Docker Image</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker build -t IMAGE_NAME:TAG .
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Tag a Docker Image</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker tag IMAGE_ID REPOSITORY:TAG
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Push an Image to a Repository</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker push REPOSITORY:TAG
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Pull an Image from a Repository</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker pull REPOSITORY:TAG
+</span></span></code></pre></div></li>
+<li>
+<p><strong>View Dockerfile History</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker history IMAGE_NAME
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="container-operations">
+  <strong>Container Operations</strong>
+  <a class="heading-link" href="#container-operations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><strong>Execute a Command in a Running Container</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker exec <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> CONTAINER_ID COMMAND <span style="color:#f92672">[</span>ARG...<span style="color:#f92672">]</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Get Interactive Shell in a Container</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker exec -it CONTAINER_ID /bin/bash
+</span></span></code></pre></div></li>
+<li>
+<p><strong>View Container Logs</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker logs CONTAINER_ID
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Check Container Resource Usage</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker stats
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Inspect Container Details</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker inspect CONTAINER_ID
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="networking">
+  <strong>Networking</strong>
+  <a class="heading-link" href="#networking">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><strong>List Docker Networks</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network ls
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Create a New Docker Network</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network create NETWORK_NAME
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Connect a Container to a Network</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network connect NETWORK_NAME CONTAINER_ID
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Disconnect a Container from a Network</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network disconnect NETWORK_NAME CONTAINER_ID
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Inspect a Network</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network inspect NETWORK_NAME
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="volumes">
+  <strong>Volumes</strong>
+  <a class="heading-link" href="#volumes">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><strong>List Docker Volumes</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume ls
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Create a Docker Volume</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume create VOLUME_NAME
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Inspect a Volume</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume inspect VOLUME_NAME
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Remove a Docker Volume</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume rm VOLUME_NAME
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="docker-compose">
+  <strong>Docker Compose</strong>
+  <a class="heading-link" href="#docker-compose">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><strong>Install Docker Compose</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Follow official installation instructions: https://docs.docker.com/compose/install/</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Start Services Defined in docker-compose.yml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose up
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Start Services in Detached Mode</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose up -d
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Stop Services</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose down
+</span></span></code></pre></div></li>
+<li>
+<p><strong>View Logs for Services</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose logs
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Execute Command in a Service Container</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose exec SERVICE_NAME COMMAND
+</span></span></code></pre></div></li>
+<li>
+<p><strong>List All Docker Compose Services</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose ps
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="advanced-commands">
+  <strong>Advanced Commands</strong>
+  <a class="heading-link" href="#advanced-commands">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><strong>Build and Run Docker Image in One Command</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker build -t IMAGE_NAME:TAG . <span style="color:#f92672">&amp;&amp;</span> docker run IMAGE_NAME:TAG
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Save a Docker Image to a Tar File</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker save -o IMAGE_NAME.tar IMAGE_NAME:TAG
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Load a Docker Image from a Tar File</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker load -i IMAGE_NAME.tar
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Export a Docker Container to a Tar File</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker export CONTAINER_ID -o CONTAINER_NAME.tar
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Import a Docker Container from a Tar File</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker import CONTAINER_NAME.tar
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Remove All Stopped Containers</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container prune
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Remove All Unused Images</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image prune -a
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Remove All Unused Volumes</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume prune
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Remove All Unused Networks</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network prune
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="helpful-tips">
+  <strong>Helpful Tips</strong>
+  <a class="heading-link" href="#helpful-tips">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><strong>View Docker Command Help</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker COMMAND --help
+</span></span></code></pre></div></li>
+<li>
+<p><strong>View Docker Compose Command Help</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose COMMAND --help
+</span></span></code></pre></div></li>
+</ul>
+<p>This cheatsheet should cover most of the essential Docker commands and operations you&rsquo;ll need for everyday tasks and advanced use cases.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Wilfrantz DEDE 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

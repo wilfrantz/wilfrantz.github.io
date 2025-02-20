@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Favicon on DEDE</title>
+    <link>https://wilfrantz.github.io/tags/favicon/</link>
+    <description>Recent content in Favicon on DEDE</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Aug 2019 00:34:00 +0800</lastBuildDate>
+    <atom:link href="https://wilfrantz.github.io/tags/favicon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Customize the Favicon</title>
+      <link>https://wilfrantz.github.io/posts/2019-08-11-customize-the-favicon/</link>
+      <pubDate>Sun, 11 Aug 2019 00:34:00 +0800</pubDate>
+      <guid>https://wilfrantz.github.io/posts/2019-08-11-customize-the-favicon/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://www.favicon-generator.org/about/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;favicons&lt;/a&gt; of &lt;a href=&#34;https://github.com/cotes2020/jekyll-theme-chirpy/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Chirpy&lt;/strong&gt;&lt;/a&gt; are placed in the directory &lt;code&gt;assets/img/favicons/&lt;/code&gt;{: .filepath}. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.&lt;/p&gt;&#xA;&lt;h2 id=&#34;generate-the-favicon&#34;&gt;&#xA;  Generate the favicon&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#generate-the-favicon&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool &lt;a href=&#34;https://realfavicongenerator.net/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Real Favicon Generator&lt;/strong&gt;&lt;/a&gt; and click the button &lt;kbd&gt;Select your Favicon image&lt;/kbd&gt; to upload your image file.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

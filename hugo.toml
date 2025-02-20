@@ -1,0 +1,32 @@
+baseURL = "https://wilfrantz.github.io/"
+languageCode = "en-us"
+title = "DEDE"
+theme = "hugo-coder"
+
+[params]
+  author = "Wilfrantz DEDE"
+  description = "A minimal blog using Hugo Coder theme"
+  keywords = ["blog", "hugo", "developer"]
+  favicon_32 = "/favicon-32x32.png"
+  favicon_16 = "/favicon-16x16.png"
+  defaultTheme = "dark"
+  forceTheme = "dark"  # 💡 Force dark mode on load
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+[markup]
+    [markup.goldmark]
+    [markup.goldmark.renderer]
+    unsafe = true
