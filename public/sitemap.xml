@@ -14,10 +14,10 @@
     <loc>http://10.152.2.2:1313/tags/hugo/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://10.152.2.2:1313/posts/newtest/</loc>
+    <loc>http://10.152.2.2:1313/projects/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://10.152.2.2:1313/posts/</loc>
+    <loc>http://10.152.2.2:1313/projects/newtest/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://10.152.2.2:1313/tags/</loc>
@@ -36,6 +36,9 @@
     <lastmod>2024-08-18T11:33:00+08:00</lastmod>
   </url><url>
     <loc>http://10.152.2.2:1313/tags/mysql/</loc>
+    <lastmod>2024-08-18T11:33:00+08:00</lastmod>
+  </url><url>
+    <loc>http://10.152.2.2:1313/posts/</loc>
     <lastmod>2024-08-18T11:33:00+08:00</lastmod>
   </url><url>
     <loc>http://10.152.2.2:1313/tags/swe/</loc>

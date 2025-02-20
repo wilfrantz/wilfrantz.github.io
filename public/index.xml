@@ -16,10 +16,10 @@
       <description>&lt;h1 id=&#34;-welcome-to-my-blog&#34;&gt;&#xA;  👋 Welcome to My Blog!&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-welcome-to-my-blog&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Hey there! I’m &lt;strong&gt;Wilfrantz&lt;/strong&gt;, a &lt;strong&gt;macOS malware analyst, reverse engineer, and systems software engineer&lt;/strong&gt;. This blog is my space to share &lt;strong&gt;findings, projects, and thoughts&lt;/strong&gt; on &lt;strong&gt;cybersecurity, Linux, software development, and automation&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I’m passionate about &lt;strong&gt;reverse engineering, C/C++, Python, and Bash scripting&lt;/strong&gt;, and I’m always optimizing workflows (yes, I swear by &lt;strong&gt;Vim&lt;/strong&gt; 😄). Beyond tech, I’m driven by the goal of &lt;strong&gt;building and automating businesses&lt;/strong&gt;, creating a &lt;strong&gt;sustainable income&lt;/strong&gt;, and enjoying &lt;strong&gt;quality time with my family&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>My First Blog Post</title>
-      <link>http://10.152.2.2:1313/posts/newtest/</link>
+      <title>Sample project</title>
+      <link>http://10.152.2.2:1313/projects/newtest/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://10.152.2.2:1313/posts/newtest/</guid>
+      <guid>http://10.152.2.2:1313/projects/newtest/</guid>
       <description></description>
     </item>
     <item>
