@@ -1,86 +1,194 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on DEDE</title><link>https://dede.dev/categories/blog/</link><description>Recent content in Blog on DEDE</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 09 Aug 2024 11:33:00 +0800</lastBuildDate><atom:link href="https://dede.dev/categories/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>MySQL Cheat Sheet</title><link>https://dede.dev/posts/2024-08-09-sql-cheatsheet/</link><pubDate>Fri, 09 Aug 2024 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2024-08-09-sql-cheatsheet/</guid><description>&lt;p>&lt;code>MySQL&lt;/code> is one of the most popular relational database management systems (&lt;code>RDBMS&lt;/code>) in the world. Whether you’re just starting out or you’re a seasoned developer, this cheat sheet will help you navigate MySQL more efficiently. This guide covers a broad spectrum of MySQL commands, functions, and tips that are essential for day-to-day database management.&lt;/p>
-&lt;h2 id="basic-mysql-commands">&lt;strong>Basic MySQL Commands&lt;/strong>&lt;/h2>
-&lt;h3 id="create-a-database">Create a Database&lt;/h3>
+&lt;h2 id="basic-mysql-commands">
+ &lt;strong>Basic MySQL Commands&lt;/strong>
+ &lt;a class="heading-link" href="#basic-mysql-commands">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h3 id="create-a-database">
+ Create a Database
+ &lt;a class="heading-link" href="#create-a-database">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">CREATE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">DATABASE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>db_name;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="select-a-database">Select a Database&lt;/h3>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="select-a-database">
+ Select a Database
+ &lt;a class="heading-link" href="#select-a-database">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>USE&lt;span style="color:#6e7681"> &lt;/span>db_name;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="show-databases">Show Databases&lt;/h3>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="show-databases">
+ Show Databases
+ &lt;a class="heading-link" href="#show-databases">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">SHOW&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>DATABASES;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="drop-a-database">Drop a Database&lt;/h3>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="drop-a-database">
+ Drop a Database
+ &lt;a class="heading-link" href="#drop-a-database">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">DROP&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">DATABASE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>db_name;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="show-tables-in-a-database">Show Tables in a Database&lt;/h3>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="show-tables-in-a-database">
+ Show Tables in a Database
+ &lt;a class="heading-link" href="#show-tables-in-a-database">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">SHOW&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>TABLES;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="describe-the-structure-of-a-table">Describe the Structure of a Table&lt;/h3>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="describe-the-structure-of-a-table">
+ Describe the Structure of a Table
+ &lt;a class="heading-link" href="#describe-the-structure-of-a-table">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">DESCRIBE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>tableName;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="table-operations">&lt;strong>Table Operations&lt;/strong>&lt;/h2>
-&lt;h3 id="create-a-table">Create a Table&lt;/h3>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="table-operations">
+ &lt;strong>Table Operations&lt;/strong>
+ &lt;a class="heading-link" href="#table-operations">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h3 id="create-a-table">
+ Create a Table
+ &lt;a class="heading-link" href="#create-a-table">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">CREATE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">TABLE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>tableName&lt;span style="color:#6e7681"> &lt;/span>(&lt;span style="color:#6e7681">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6e7681"> &lt;/span>id&lt;span style="color:#6e7681"> &lt;/span>INT&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">PRIMARY&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">KEY&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>AUTO_INCREMENT,&lt;span style="color:#6e7681">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6e7681"> &lt;/span>name&lt;span style="color:#6e7681"> &lt;/span>VARCHAR(&lt;span style="color:#a5d6ff">100&lt;/span>),&lt;span style="color:#6e7681">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6e7681"> &lt;/span>age&lt;span style="color:#6e7681"> &lt;/span>INT,&lt;span style="color:#6e7681">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6e7681"> &lt;/span>email&lt;span style="color:#6e7681"> &lt;/span>VARCHAR(&lt;span style="color:#a5d6ff">100&lt;/span>)&lt;span style="color:#6e7681">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6e7681">&lt;/span>);&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="show-the-table-schema">Show the Table Schema&lt;/h3>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="show-the-table-schema">
+ Show the Table Schema
+ &lt;a class="heading-link" href="#show-the-table-schema">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">SHOW&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">CREATE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">TABLE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>tableName;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="drop-a-table">Drop a Table&lt;/h3>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="drop-a-table">
+ Drop a Table
+ &lt;a class="heading-link" href="#drop-a-table">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">DROP&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">TABLE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>tableName;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="rename-a-table">Rename a Table&lt;/h3>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="rename-a-table">
+ Rename a Table
+ &lt;a class="heading-link" href="#rename-a-table">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff7b72">RENAME&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">TABLE&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>old_tableName&lt;span style="color:#6e7681"> &lt;/span>&lt;span style="color:#ff7b72">TO&lt;/span>&lt;span style="color:#6e7681"> &lt;/span>newTableName;&lt;span style="color:#6e7681">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="alter-a-table">Alter a Table&lt;/h3>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="alter-a-table">
+ Alter a Table
+ &lt;a class="heading-link" href="#alter-a-table">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;ul>
 &lt;li>
-&lt;p>&lt;strong>Add a column:&lt;/strong>&lt;/p></description></item><item><title>IPConverter application design document [Draft]</title><link>https://dede.dev/posts/2023-03-19-ipconverter-application-design-document/</link><pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2023-03-19-ipconverter-application-design-document/</guid><description>&lt;h2 id="table-of-contents">Table of Contents&lt;/h2>
+&lt;p>&lt;strong>Add a column:&lt;/strong>&lt;/p></description></item><item><title>IPConverter application design document [Draft]</title><link>https://dede.dev/posts/2023-03-19-ipconverter-application-design-document/</link><pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2023-03-19-ipconverter-application-design-document/</guid><description>&lt;h2 id="table-of-contents">
+ Table of Contents
+ &lt;a class="heading-link" href="#table-of-contents">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="#table-of-contents">Table of Contents&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#overview">Overview&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#features">Features&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#monetization-strategies">Monetization Strategies&lt;/a>
+&lt;li>&lt;a href="#table-of-contents" >Table of Contents&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#overview" >Overview&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#features" >Features&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#monetization-strategies" >Monetization Strategies&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="#freemium-model">Freemium Model&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#api-access">API Access&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#browser-extension-monetization">Browser Extension Monetization&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#ad-based-revenue">Ad-Based Revenue&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#white-labeling-and-licensing">White-Labeling and Licensing&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#data-analytics-and-reports">Data Analytics and Reports&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#freemium-model" >Freemium Model&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#api-access" >API Access&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#browser-extension-monetization" >Browser Extension Monetization&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#ad-based-revenue" >Ad-Based Revenue&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#white-labeling-and-licensing" >White-Labeling and Licensing&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#data-analytics-and-reports" >Data Analytics and Reports&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a href="#architecture">Architecture&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#core-classes">Core Classes&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#conclusion">Conclusion&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#architecture" >Architecture&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#core-classes" >Core Classes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#conclusion" >Conclusion&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h2 id="overview">Overview&lt;/h2>
+&lt;h2 id="overview">
+ Overview
+ &lt;a class="heading-link" href="#overview">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
 &lt;p>The IPConverter program is a comprehensive software application designed to provide users with a variety of powerful tools and features related to IP addresses. Built primarily in C++, it will leverage external libraries and APIs where necessary to expand its capabilities. This application will serve as a go-to tool for developers, network administrators, marketers, and cybersecurity professionals.&lt;/p></description></item><item><title>Creating a Bootable ISO from a Live Linux System</title><link>https://dede.dev/posts/2021-03-10-create-bootable-iso-from-live-system/</link><pubDate>Wed, 10 Mar 2021 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2021-03-10-create-bootable-iso-from-live-system/</guid><description>&lt;blockquote>
 &lt;p>⚠️ This document is still a draft. Please note that there might be mistakes or inaccuracies.
 {: .prompt-warning }&lt;/p>&lt;/blockquote>
 &lt;p>Creating a bootable ISO from a live Linux system can be a bit complex. However, if you follow the steps carefully, you can achieve your goal. Here&amp;rsquo;s a step-by-step guide:&lt;/p>
 &lt;p>Table of Contents&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="#prerequisites">Prerequisites&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#steps">Steps&lt;/a>
+&lt;li>&lt;a href="#prerequisites" >Prerequisites&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#steps" >Steps&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="#install-required-packages">Install Required Packages&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#backup-your-data">Backup your data&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#prepare-the-workspace">Prepare the Workspace&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#copy-necessary-files">Copy Necessary Files&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#prepare-the-squashfs-filesystem">Prepare the SquashFS Filesystem&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#create-iso-directory-structure">Create ISO Directory Structure&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#move-the-squashfs-filesystem-to-the-iso-directory">Move the SquashFS Filesystem to the ISO Directory&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#copy-bootloader-information">Copy Bootloader Information&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#modify-grub-configuration-if-necessary">Modify GRUB Configuration** (if necessary)&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#create-the-iso-file">Create the ISO File&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#cleanup">Cleanup&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#test-the-iso">Test the ISO&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#install-required-packages" >Install Required Packages&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#backup-your-data" >Backup your data&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#prepare-the-workspace" >Prepare the Workspace&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#copy-necessary-files" >Copy Necessary Files&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#prepare-the-squashfs-filesystem" >Prepare the SquashFS Filesystem&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#create-iso-directory-structure" >Create ISO Directory Structure&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#move-the-squashfs-filesystem-to-the-iso-directory" >Move the SquashFS Filesystem to the ISO Directory&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#copy-bootloader-information" >Copy Bootloader Information&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#modify-grub-configuration-if-necessary" >Modify GRUB Configuration** (if necessary)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#create-the-iso-file" >Create the ISO File&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#cleanup" >Cleanup&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#test-the-iso" >Test the ISO&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;h2 id="prerequisites">
+ Prerequisites
+ &lt;a class="heading-link" href="#prerequisites">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
 &lt;ul>
 &lt;li>A live system running Ubuntu or its derivative.&lt;/li>
 &lt;li>Enough storage space to hold the contents of the live system and some additional tools.&lt;/li>
 &lt;li>Root access or &lt;code>sudo&lt;/code> privileges.&lt;/li>
 &lt;/ul>
-&lt;h2 id="steps">Steps&lt;/h2>
-&lt;h3 id="install-required-packages">Install Required Packages&lt;/h3>
+&lt;h2 id="steps">
+ Steps
+ &lt;a class="heading-link" href="#steps">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h3 id="install-required-packages">
+ Install Required Packages
+ &lt;a class="heading-link" href="#install-required-packages">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;p>Open a terminal and install the required packages:&lt;/p></description></item><item><title>Mastering C/C++ Library Development and Build Management with CMake</title><link>https://dede.dev/posts/2023-12-03-building-compiled-libraries/</link><pubDate>Fri, 05 Jun 2020 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2023-12-03-building-compiled-libraries/</guid><description>&lt;p>When working on large &lt;code>C/C++&lt;/code> projects or creating reusable code, building compiled libraries is a common practice. Compiled libraries allow you to encapsulate functionality and data structures into reusable modules that can be easily linked into other programs.&lt;/p>
 &lt;p>In this blog post, we&amp;rsquo;ll walk you through the process of building a compiled library in &lt;code>C/C++&lt;/code> and show you how to prepare a &lt;code>CMakeLists.txt&lt;/code> file to manage the build process.&lt;/p>
 &lt;p>Table of Contents&lt;/p></description></item></channel></rss>

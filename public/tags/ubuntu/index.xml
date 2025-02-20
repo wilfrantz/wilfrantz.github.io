@@ -4,30 +4,48 @@
 &lt;p>Creating a bootable ISO from a live Linux system can be a bit complex. However, if you follow the steps carefully, you can achieve your goal. Here&amp;rsquo;s a step-by-step guide:&lt;/p>
 &lt;p>Table of Contents&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="#prerequisites">Prerequisites&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#steps">Steps&lt;/a>
+&lt;li>&lt;a href="#prerequisites" >Prerequisites&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#steps" >Steps&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="#install-required-packages">Install Required Packages&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#backup-your-data">Backup your data&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#prepare-the-workspace">Prepare the Workspace&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#copy-necessary-files">Copy Necessary Files&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#prepare-the-squashfs-filesystem">Prepare the SquashFS Filesystem&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#create-iso-directory-structure">Create ISO Directory Structure&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#move-the-squashfs-filesystem-to-the-iso-directory">Move the SquashFS Filesystem to the ISO Directory&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#copy-bootloader-information">Copy Bootloader Information&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#modify-grub-configuration-if-necessary">Modify GRUB Configuration** (if necessary)&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#create-the-iso-file">Create the ISO File&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#cleanup">Cleanup&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#test-the-iso">Test the ISO&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#install-required-packages" >Install Required Packages&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#backup-your-data" >Backup your data&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#prepare-the-workspace" >Prepare the Workspace&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#copy-necessary-files" >Copy Necessary Files&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#prepare-the-squashfs-filesystem" >Prepare the SquashFS Filesystem&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#create-iso-directory-structure" >Create ISO Directory Structure&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#move-the-squashfs-filesystem-to-the-iso-directory" >Move the SquashFS Filesystem to the ISO Directory&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#copy-bootloader-information" >Copy Bootloader Information&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#modify-grub-configuration-if-necessary" >Modify GRUB Configuration** (if necessary)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#create-the-iso-file" >Create the ISO File&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#cleanup" >Cleanup&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#test-the-iso" >Test the ISO&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;h2 id="prerequisites">
+ Prerequisites
+ &lt;a class="heading-link" href="#prerequisites">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
 &lt;ul>
 &lt;li>A live system running Ubuntu or its derivative.&lt;/li>
 &lt;li>Enough storage space to hold the contents of the live system and some additional tools.&lt;/li>
 &lt;li>Root access or &lt;code>sudo&lt;/code> privileges.&lt;/li>
 &lt;/ul>
-&lt;h2 id="steps">Steps&lt;/h2>
-&lt;h3 id="install-required-packages">Install Required Packages&lt;/h3>
+&lt;h2 id="steps">
+ Steps
+ &lt;a class="heading-link" href="#steps">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h3 id="install-required-packages">
+ Install Required Packages
+ &lt;a class="heading-link" href="#install-required-packages">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;p>Open a terminal and install the required packages:&lt;/p></description></item></channel></rss>

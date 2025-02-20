@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on DEDE</title><link>https://dede.dev/tags/docker/</link><description>Recent content in Docker on DEDE</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 18 May 2023 11:33:00 +0800</lastBuildDate><atom:link href="https://dede.dev/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker Cheat Sheet Tutorial</title><link>https://dede.dev/posts/2023-05-18-docker-cheatsheet/</link><pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2023-05-18-docker-cheatsheet/</guid><description>&lt;h3 id="basic-commands">&lt;strong>Basic Commands&lt;/strong>&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on DEDE</title><link>https://dede.dev/tags/docker/</link><description>Recent content in Docker on DEDE</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 18 May 2023 11:33:00 +0800</lastBuildDate><atom:link href="https://dede.dev/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker Cheat Sheet Tutorial</title><link>https://dede.dev/posts/2023-05-18-docker-cheatsheet/</link><pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate><guid>https://dede.dev/posts/2023-05-18-docker-cheatsheet/</guid><description>&lt;h3 id="basic-commands">
+ &lt;strong>Basic Commands&lt;/strong>
+ &lt;a class="heading-link" href="#basic-commands">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;ul>
 &lt;li>
 &lt;p>&lt;strong>Check Docker Version&lt;/strong>&lt;/p>
@@ -30,8 +36,4 @@
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker stop CONTAINER_ID
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;li>
-&lt;p>&lt;strong>Remove a Docker Container&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker rm CONTAINER_ID
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Remove a Docker Image&lt;/strong>&lt;/p></description></item></channel></rss>
+&lt;p>&lt;strong>Remove a Docker Container&lt;/strong>&lt;/p></description></item></channel></rss>

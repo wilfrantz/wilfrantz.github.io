@@ -1,28 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Crontab on DEDE</title><link>https://dede.dev/tags/crontab/</link><description>Recent content in Crontab on DEDE</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 11 Jun 2023 12:00:00 +0000</lastBuildDate><atom:link href="https://dede.dev/tags/crontab/index.xml" rel="self" type="application/rss+xml"/><item><title>Crontab Cheat Sheet - A Practical Guide with Examples</title><link>https://dede.dev/posts/2023-06-11-crontab-cheat-sheet/</link><pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate><guid>https://dede.dev/posts/2023-06-11-crontab-cheat-sheet/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Crontab on DEDE</title><link>https://dede.dev/tags/crontab/</link><description>Recent content in Crontab on DEDE</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 11 Jun 2023 12:00:00 +0000</lastBuildDate><atom:link href="https://dede.dev/tags/crontab/index.xml" rel="self" type="application/rss+xml"/><item><title>Crontab Cheat Sheet - A Practical Guide with Examples</title><link>https://dede.dev/posts/2023-06-11-crontab-cheat-sheet/</link><pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate><guid>https://dede.dev/posts/2023-06-11-crontab-cheat-sheet/</guid><description>&lt;h2 id="introduction">
+ Introduction
+ &lt;a class="heading-link" href="#introduction">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
 &lt;p>Crontab is a powerful utility in Unix-like operating systems that allows you to schedule and automate tasks at predefined intervals. It uses a cron daemon to execute commands or scripts according to a specified schedule. This cheat sheet provides an overview of crontab syntax and demonstrates practical examples to help you effectively schedule recurring tasks.&lt;/p>
 &lt;p>Table of Contents&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="#introduction">Introduction&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#difference-between-cron-crontab-and-cron-job">Difference between Cron, Crontab, and Cron Job&lt;/a>
+&lt;li>&lt;a href="#introduction" >Introduction&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#difference-between-cron-crontab-and-cron-job" >Difference between Cron, Crontab, and Cron Job&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="#cron">Cron&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#crontab">Crontab&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#cron-job">Cron Job&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#cron" >Cron&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#crontab" >Crontab&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#cron-job" >Cron Job&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a href="#crontab-syntax">Crontab Syntax&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#practical-examples">Practical Examples&lt;/a>
+&lt;li>&lt;a href="#crontab-syntax" >Crontab Syntax&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#practical-examples" >Practical Examples&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="#example-1-running-a-script-every-hour">Example 1: Running a Script Every Hour&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#example-2-running-a-script-every-day-at-a-specific-time">Example 2: Running a Script Every Day at a Specific Time&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#example-3-running-a-script-on-specific-days-of-the-week">Example 3: Running a Script on Specific Days of the Week&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#example-4-running-a-script-every-month">Example 4: Running a Script Every Month&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#example-5-running-a-script-at-regular-intervals">Example 5: Running a Script at Regular Intervals&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-1-running-a-script-every-hour" >Example 1: Running a Script Every Hour&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-2-running-a-script-every-day-at-a-specific-time" >Example 2: Running a Script Every Day at a Specific Time&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-3-running-a-script-on-specific-days-of-the-week" >Example 3: Running a Script on Specific Days of the Week&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-4-running-a-script-every-month" >Example 4: Running a Script Every Month&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#example-5-running-a-script-at-regular-intervals" >Example 5: Running a Script at Regular Intervals&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a href="#managing-crontab-entries">Managing Crontab Entries&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#conclusion">Conclusion&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#resource">Resource&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#managing-crontab-entries" >Managing Crontab Entries&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#conclusion" >Conclusion&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#resource" >Resource&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h2 id="difference-between-cron-crontab-and-cron-job">Difference between Cron, Crontab, and Cron Job&lt;/h2>
+&lt;h2 id="difference-between-cron-crontab-and-cron-job">
+ Difference between Cron, Crontab, and Cron Job
+ &lt;a class="heading-link" href="#difference-between-cron-crontab-and-cron-job">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
 &lt;p>The provided table illustrates the key elements related to scheduling tasks using cron in Linux systems.&lt;/p></description></item></channel></rss>
