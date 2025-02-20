@@ -3,6 +3,7 @@ title = "DEDE"  # Your title from earlier
 theme = "hugo-coder"
 languageCode = "en-us"  # Consistent with your previous config
 defaultContentLanguage = "en"
+enableEmoji = true
 
 [pagination]
   pagerSize = 20
@@ -14,8 +15,8 @@ defaultContentLanguage = "en"
   author = "Wilfrantz DEDE"  # Your name
   info = "Systems software engineer."  # Customized for you; adjust as needed
   description = "Wilfrantz DEDE's personal website"  # Your description
+  # avatarURL = "images/avatar.png"  # Matches your earlier config
   keywords = "blog, developer, personal"  # Adjusted keywords
-  # avatarURL = "/avatar.jpg"  # Matches your earlier config (adjust if filename differs)
   gravatar = "contact@dede.dev"  # Uncomment and add your email if you prefer Gravatar
 
   faviconSVG = "/img/favicon.svg"  # Optional; add this file to static/img/ if you have it
@@ -27,7 +28,7 @@ defaultContentLanguage = "en"
   enableTwemoji = true
 
   colorScheme = "dark"  # Matches your earlier forceTheme = "dark"
-  hideColorSchemeToggle = true  # Hides toggle since you’re forcing dark mode
+  hideColorSchemeToggle = false # Hides toggle since you’re forcing dark mode
 
   # customCSS = ["css/custom.css"]  # Uncomment if you add custom CSS
   # customSCSS = ["scss/custom.scss"]  # Uncomment if you add custom SCSS
