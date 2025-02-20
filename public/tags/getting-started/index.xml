@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Getting Started on DEDE</title>
-    <link>https://wilfrantz.github.io/tags/getting-started/</link>
+    <link>http://10.152.2.2:1313/tags/getting-started/</link>
     <description>Recent content in Getting Started on DEDE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Aug 2019 20:55:00 +0800</lastBuildDate>
-    <atom:link href="https://wilfrantz.github.io/tags/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://10.152.2.2:1313/tags/getting-started/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting Started</title>
-      <link>https://wilfrantz.github.io/posts/2019-08-09-getting-started/</link>
+      <link>http://10.152.2.2:1313/posts/2019-08-09-getting-started/</link>
       <pubDate>Fri, 09 Aug 2019 20:55:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/posts/2019-08-09-getting-started/</guid>
+      <guid>http://10.152.2.2:1313/posts/2019-08-09-getting-started/</guid>
       <description>&lt;h2 id=&#34;prerequisites&#34;&gt;&#xA;  Prerequisites&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#prerequisites&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Follow the instructions in the &lt;a href=&#34;https://jekyllrb.com/docs/installation/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jekyll Docs&lt;/a&gt; to complete the installation of the basic environment. &lt;a href=&#34;https://git-scm.com/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Git&lt;/a&gt; also needs to be installed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;installation&#34;&gt;&#xA;  Installation&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#installation&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;creating-a-new-site&#34;&gt;&#xA;  Creating a New Site&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#creating-a-new-site&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;There are two ways to create a new repository for this theme:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#option-1-using-the-chirpy-starter&#34; &gt;&lt;strong&gt;Using the Chirpy Starter&lt;/strong&gt;&lt;/a&gt; - Easy to upgrade, isolates irrelevant project files so you can focus on writing.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#option-2-github-fork&#34; &gt;&lt;strong&gt;GitHub Fork&lt;/strong&gt;&lt;/a&gt; - Convenient for custom development, but difficult to upgrade. Unless you are familiar with Jekyll and are determined to tweak or contribute to this project, this approach is not recommended.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;option-1-using-the-chirpy-starter&#34;&gt;&#xA;  Option 1. Using the Chirpy Starter&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#option-1-using-the-chirpy-starter&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h4&gt;&#xA;&lt;p&gt;Sign in to GitHub and browse to &lt;a href=&#34;https://github.com/cotes2020/chirpy-starter&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Chirpy Starter&lt;/strong&gt;&lt;/a&gt;, click the button &lt;kbd&gt;Use this template&lt;/kbd&gt; &amp;gt; &lt;kbd&gt;Create a new repository&lt;/kbd&gt;, and name the new repository &lt;code&gt;USERNAME.github.io&lt;/code&gt;, where &lt;code&gt;USERNAME&lt;/code&gt; represents your GitHub username.&lt;/p&gt;</description>
     </item>
   </channel>

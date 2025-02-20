@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   MySQL Cheat Sheet · DEDE
 </title>
@@ -123,7 +123,7 @@ RENAME TABLE old_tableName TO newTableName;
 
 
 Add a column:">
-<meta name="keywords" content="[blog hugo developer]">
+<meta name="keywords" content="blog, developer, hugo, personal">
 
 
 
@@ -132,7 +132,7 @@ Add a column:">
   <meta name="twitter:description" content="MySQL is one of the most popular relational database management systems (RDBMS) in the world. Whether you’re just starting out or you’re a seasoned developer, this cheat sheet will help you navigate MySQL more efficiently. This guide covers a broad spectrum of MySQL commands, functions, and tips that are essential for day-to-day database management.
 Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DATABASE db_name; Select a Database Link to heading USE db_name; Show Databases Link to heading SHOW DATABASES; Drop a Database Link to heading DROP DATABASE db_name; Show Tables in a Database Link to heading SHOW TABLES; Describe the Structure of a Table Link to heading DESCRIBE tableName; Table Operations Link to heading Create a Table Link to heading CREATE TABLE tableName ( id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), age INT, email VARCHAR(100) ); Show the Table Schema Link to heading SHOW CREATE TABLE tableName; Drop a Table Link to heading DROP TABLE tableName; Rename a Table Link to heading RENAME TABLE old_tableName TO newTableName; Alter a Table Link to heading Add a column:">
 
-<meta property="og:url" content="https://wilfrantz.github.io/posts/2024-08-09-sql-cheatsheet/">
+<meta property="og:url" content="http://10.152.2.2:1313/posts/2024-08-09-sql-cheatsheet/">
   <meta property="og:site_name" content="DEDE">
   <meta property="og:title" content="MySQL Cheat Sheet">
   <meta property="og:description" content="MySQL is one of the most popular relational database management systems (RDBMS) in the world. Whether you’re just starting out or you’re a seasoned developer, this cheat sheet will help you navigate MySQL more efficiently. This guide covers a broad spectrum of MySQL commands, functions, and tips that are essential for day-to-day database management.
@@ -149,7 +149,7 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 
 
 
-<link rel="canonical" href="https://wilfrantz.github.io/posts/2024-08-09-sql-cheatsheet/">
+<link rel="canonical" href="http://10.152.2.2:1313/posts/2024-08-09-sql-cheatsheet/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -159,12 +159,18 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
 
 
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
 
 
 
@@ -173,7 +179,7 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
@@ -196,20 +202,16 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 
 
 
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
 
+
+<body class="preload-transitions colorscheme-dark">
+  
 
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://wilfrantz.github.io/">
+    <a class="navigation-title" href="http://10.152.2.2:1313/">
       DEDE
     </a>
     
@@ -226,11 +228,19 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Posts</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="mailto:contact@dede.dev">Contact Me</a>
             </li>
           
         
@@ -248,7 +258,7 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://wilfrantz.github.io/posts/2024-08-09-sql-cheatsheet/">
+            <a class="title-link" href="http://10.152.2.2:1313/posts/2024-08-09-sql-cheatsheet/">
               MySQL Cheat Sheet
             </a>
           </h1>
@@ -307,48 +317,48 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> db_name;
-</span></span></code></pre></div><h3 id="select-a-database">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">DATABASE</span><span style="color:#6e7681"> </span>db_name;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="select-a-database">
   Select a Database
   <a class="heading-link" href="#select-a-database">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>USE db_name;
-</span></span></code></pre></div><h3 id="show-databases">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>USE<span style="color:#6e7681"> </span>db_name;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="show-databases">
   Show Databases
   <a class="heading-link" href="#show-databases">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SHOW</span> DATABASES;
-</span></span></code></pre></div><h3 id="drop-a-database">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SHOW</span><span style="color:#6e7681"> </span>DATABASES;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="drop-a-database">
   Drop a Database
   <a class="heading-link" href="#drop-a-database">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">DATABASE</span> db_name;
-</span></span></code></pre></div><h3 id="show-tables-in-a-database">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DROP</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">DATABASE</span><span style="color:#6e7681"> </span>db_name;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="show-tables-in-a-database">
   Show Tables in a Database
   <a class="heading-link" href="#show-tables-in-a-database">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SHOW</span> TABLES;
-</span></span></code></pre></div><h3 id="describe-the-structure-of-a-table">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SHOW</span><span style="color:#6e7681"> </span>TABLES;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="describe-the-structure-of-a-table">
   Describe the Structure of a Table
   <a class="heading-link" href="#describe-the-structure-of-a-table">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DESCRIBE</span> tableName;
-</span></span></code></pre></div><h2 id="table-operations">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DESCRIBE</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="table-operations">
   <strong>Table Operations</strong>
   <a class="heading-link" href="#table-operations">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -362,37 +372,37 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> tableName (
-</span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> AUTO_INCREMENT,
-</span></span><span style="display:flex;"><span>    name VARCHAR(<span style="color:#ae81ff">100</span>),
-</span></span><span style="display:flex;"><span>    age INT,
-</span></span><span style="display:flex;"><span>    email VARCHAR(<span style="color:#ae81ff">100</span>)
-</span></span><span style="display:flex;"><span>);
-</span></span></code></pre></div><h3 id="show-the-table-schema">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span>(<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>id<span style="color:#6e7681"> </span>INT<span style="color:#6e7681"> </span><span style="color:#ff7b72">PRIMARY</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">KEY</span><span style="color:#6e7681"> </span>AUTO_INCREMENT,<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>name<span style="color:#6e7681"> </span>VARCHAR(<span style="color:#a5d6ff">100</span>),<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>age<span style="color:#6e7681"> </span>INT,<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span>email<span style="color:#6e7681"> </span>VARCHAR(<span style="color:#a5d6ff">100</span>)<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>);<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="show-the-table-schema">
   Show the Table Schema
   <a class="heading-link" href="#show-the-table-schema">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SHOW</span> <span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> tableName;
-</span></span></code></pre></div><h3 id="drop-a-table">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SHOW</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="drop-a-table">
   Drop a Table
   <a class="heading-link" href="#drop-a-table">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> tableName;
-</span></span></code></pre></div><h3 id="rename-a-table">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DROP</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="rename-a-table">
   Rename a Table
   <a class="heading-link" href="#rename-a-table">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">RENAME</span> <span style="color:#66d9ef">TABLE</span> old_tableName <span style="color:#66d9ef">TO</span> newTableName;
-</span></span></code></pre></div><h3 id="alter-a-table">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">RENAME</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>old_tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">TO</span><span style="color:#6e7681"> </span>newTableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="alter-a-table">
   Alter a Table
   <a class="heading-link" href="#alter-a-table">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -402,20 +412,20 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 <ul>
 <li>
 <p><strong>Add a column:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tableName <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">COLUMN</span> columnName data_type;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">ALTER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">ADD</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">COLUMN</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span>data_type;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Rename a column:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tableName <span style="color:#66d9ef">RENAME</span> <span style="color:#66d9ef">COLUMN</span> oldcolumnName <span style="color:#66d9ef">TO</span> newcolumnName;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">ALTER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">RENAME</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">COLUMN</span><span style="color:#6e7681"> </span>oldcolumnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">TO</span><span style="color:#6e7681"> </span>newcolumnName;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Modify a column:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tableName <span style="color:#66d9ef">MODIFY</span> <span style="color:#66d9ef">COLUMN</span> columnName new_data_type;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">ALTER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">MODIFY</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">COLUMN</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span>new_data_type;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Drop a column:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tableName <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">COLUMN</span> columnName;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">ALTER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">DROP</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">COLUMN</span><span style="color:#6e7681"> </span>columnName;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 </ul>
 <h3 id="truncate-a-table">
   Truncate a Table
@@ -424,8 +434,8 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">TRUNCATE</span> <span style="color:#66d9ef">TABLE</span> tableName;
-</span></span></code></pre></div><h2 id="crud-operations">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">TRUNCATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="crud-operations">
   <strong>CRUD Operations</strong>
   <a class="heading-link" href="#crud-operations">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -441,19 +451,19 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tableName (column1, column2, column3) <span style="color:#66d9ef">VALUES</span> (value1, value2, value3);
-</span></span></code></pre></div><h3 id="insert-multiple-rows">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">INSERT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">INTO</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span>(column1,<span style="color:#6e7681"> </span>column2,<span style="color:#6e7681"> </span>column3)<span style="color:#6e7681"> </span><span style="color:#ff7b72">VALUES</span><span style="color:#6e7681"> </span>(value1,<span style="color:#6e7681"> </span>value2,<span style="color:#6e7681"> </span>value3);<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="insert-multiple-rows">
   Insert Multiple Rows
   <a class="heading-link" href="#insert-multiple-rows">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tableName (column1, column2) <span style="color:#66d9ef">VALUES</span> 
-</span></span><span style="display:flex;"><span>(value1_1, value2_1),
-</span></span><span style="display:flex;"><span>(value1_2, value2_2),
-</span></span><span style="display:flex;"><span>(value1_3, value2_3);
-</span></span></code></pre></div><h3 id="select-data">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">INSERT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">INTO</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span>(column1,<span style="color:#6e7681"> </span>column2)<span style="color:#6e7681"> </span><span style="color:#ff7b72">VALUES</span><span style="color:#6e7681"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>(value1_1,<span style="color:#6e7681"> </span>value2_1),<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>(value1_2,<span style="color:#6e7681"> </span>value2_2),<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>(value1_3,<span style="color:#6e7681"> </span>value2_3);<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="select-data">
   Select Data
   <a class="heading-link" href="#select-data">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -463,12 +473,12 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 <ul>
 <li>
 <p><strong>Select all columns:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tableName;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Select specific columns:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> column1, column2 <span style="color:#66d9ef">FROM</span> tableName;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>column1,<span style="color:#6e7681"> </span>column2<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 </ul>
 <h3 id="update-data">
   Update Data
@@ -477,16 +487,16 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> tableName <span style="color:#66d9ef">SET</span> column1 <span style="color:#f92672">=</span> value1, column2 <span style="color:#f92672">=</span> value2 <span style="color:#66d9ef">WHERE</span> condition;
-</span></span></code></pre></div><h3 id="delete-data">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">UPDATE</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">SET</span><span style="color:#6e7681"> </span>column1<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#6e7681"> </span>value1,<span style="color:#6e7681"> </span>column2<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#6e7681"> </span>value2<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>condition;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="delete-data">
   Delete Data
   <a class="heading-link" href="#delete-data">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">WHERE</span> condition;
-</span></span></code></pre></div><h2 id="querying-data">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DELETE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>condition;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="querying-data">
   <strong>Querying Data</strong>
   <a class="heading-link" href="#querying-data">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -500,41 +510,41 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">WHERE</span> columnName <span style="color:#f92672">=</span> value;
-</span></span></code></pre></div><h3 id="and-or-not">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#6e7681"> </span>value;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="and-or-not">
   AND, OR, NOT
   <a class="heading-link" href="#and-or-not">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">WHERE</span> column1 <span style="color:#f92672">=</span> value1 <span style="color:#66d9ef">AND</span> (column2 <span style="color:#f92672">=</span> value2 <span style="color:#66d9ef">OR</span> column3 <span style="color:#f92672">=</span> value3);
-</span></span></code></pre></div><h3 id="order-by-clause">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>column1<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#6e7681"> </span>value1<span style="color:#6e7681"> </span><span style="color:#ff7b72">AND</span><span style="color:#6e7681"> </span>(column2<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#6e7681"> </span>value2<span style="color:#6e7681"> </span><span style="color:#ff7b72">OR</span><span style="color:#6e7681"> </span>column3<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#6e7681"> </span>value3);<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="order-by-clause">
   ORDER BY Clause
   <a class="heading-link" href="#order-by-clause">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> columnName <span style="color:#66d9ef">ASC</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> columnName <span style="color:#66d9ef">DESC</span>;
-</span></span></code></pre></div><h3 id="limit-clause">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">ORDER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">BY</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">ASC</span>;<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">ORDER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">BY</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">DESC</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="limit-clause">
   LIMIT Clause
   <a class="heading-link" href="#limit-clause">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">LIMIT</span> number_of_rows;
-</span></span></code></pre></div><h3 id="between-clause">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">LIMIT</span><span style="color:#6e7681"> </span>number_of_rows;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="between-clause">
   BETWEEN Clause
   <a class="heading-link" href="#between-clause">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">WHERE</span> columnName <span style="color:#66d9ef">BETWEEN</span> value1 <span style="color:#66d9ef">AND</span> value2;
-</span></span></code></pre></div><h3 id="like-and-wildcards">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">BETWEEN</span><span style="color:#6e7681"> </span>value1<span style="color:#6e7681"> </span><span style="color:#ff7b72">AND</span><span style="color:#6e7681"> </span>value2;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="like-and-wildcards">
   LIKE and Wildcards
   <a class="heading-link" href="#like-and-wildcards">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -544,16 +554,16 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 <ul>
 <li>
 <p><strong>Find values that start with &lsquo;a&rsquo;:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">WHERE</span> columnName <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;a%&#39;</span>;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">LIKE</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;a%&#39;</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Find values that end with &lsquo;a&rsquo;:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">WHERE</span> columnName <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%a&#39;</span>;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">LIKE</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;%a&#39;</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Find values that contain &lsquo;a&rsquo;:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">WHERE</span> columnName <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%a%&#39;</span>;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">LIKE</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;%a%&#39;</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 </ul>
 <h3 id="in-clause">
   IN Clause
@@ -562,16 +572,16 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">WHERE</span> columnName <span style="color:#66d9ef">IN</span> (value1, value2, value3);
-</span></span></code></pre></div><h3 id="distinct-clause">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">IN</span><span style="color:#6e7681"> </span>(value1,<span style="color:#6e7681"> </span>value2,<span style="color:#6e7681"> </span>value3);<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="distinct-clause">
   DISTINCT Clause
   <a class="heading-link" href="#distinct-clause">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> columnName <span style="color:#66d9ef">FROM</span> tableName;
-</span></span></code></pre></div><h2 id="advanced-mysql-queries">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">DISTINCT</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="advanced-mysql-queries">
   <strong>Advanced MySQL Queries</strong>
   <a class="heading-link" href="#advanced-mysql-queries">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -588,19 +598,19 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 <ul>
 <li>
 <p><strong>Inner Join:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> columns <span style="color:#66d9ef">FROM</span> table1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> table2 <span style="color:#66d9ef">ON</span> table1.<span style="color:#66d9ef">column</span> <span style="color:#f92672">=</span> table2.<span style="color:#66d9ef">column</span>;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columns<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>table1<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">INNER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">JOIN</span><span style="color:#6e7681"> </span>table2<span style="color:#6e7681"> </span><span style="color:#ff7b72">ON</span><span style="color:#6e7681"> </span>table1.<span style="color:#ff7b72">column</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#6e7681"> </span>table2.<span style="color:#ff7b72">column</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Left Join:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> columns <span style="color:#66d9ef">FROM</span> table1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> table2 <span style="color:#66d9ef">ON</span> table1.<span style="color:#66d9ef">column</span> <span style="color:#f92672">=</span> table2.<span style="color:#66d9ef">column</span>;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columns<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>table1<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">LEFT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">JOIN</span><span style="color:#6e7681"> </span>table2<span style="color:#6e7681"> </span><span style="color:#ff7b72">ON</span><span style="color:#6e7681"> </span>table1.<span style="color:#ff7b72">column</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#6e7681"> </span>table2.<span style="color:#ff7b72">column</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Right Join:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> columns <span style="color:#66d9ef">FROM</span> table1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">RIGHT</span> <span style="color:#66d9ef">JOIN</span> table2 <span style="color:#66d9ef">ON</span> table1.<span style="color:#66d9ef">column</span> <span style="color:#f92672">=</span> table2.<span style="color:#66d9ef">column</span>;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columns<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>table1<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">RIGHT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">JOIN</span><span style="color:#6e7681"> </span>table2<span style="color:#6e7681"> </span><span style="color:#ff7b72">ON</span><span style="color:#6e7681"> </span>table1.<span style="color:#ff7b72">column</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#6e7681"> </span>table2.<span style="color:#ff7b72">column</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 </ul>
 <h3 id="group-by">
   GROUP BY
@@ -609,19 +619,19 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> columnName, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span> tableName
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> columnName;
-</span></span></code></pre></div><h3 id="having-clause">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columnName,<span style="color:#6e7681"> </span><span style="color:#ff7b72">COUNT</span>(<span style="color:#ff7b72;font-weight:bold">*</span>)<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">GROUP</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">BY</span><span style="color:#6e7681"> </span>columnName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="having-clause">
   HAVING Clause
   <a class="heading-link" href="#having-clause">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> columnName, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span> tableName
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> columnName
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>;
-</span></span></code></pre></div><h3 id="subqueries">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columnName,<span style="color:#6e7681"> </span><span style="color:#ff7b72">COUNT</span>(<span style="color:#ff7b72;font-weight:bold">*</span>)<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">GROUP</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">BY</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">HAVING</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">COUNT</span>(<span style="color:#ff7b72;font-weight:bold">*</span>)<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">&gt;</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">1</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="subqueries">
   Subqueries
   <a class="heading-link" href="#subqueries">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -631,14 +641,14 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 <ul>
 <li>
 <p><strong>Subquery in SELECT:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> columnName, (<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span> another_table <span style="color:#66d9ef">WHERE</span> condition) 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> tableName;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columnName,<span style="color:#6e7681"> </span>(<span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">COUNT</span>(<span style="color:#ff7b72;font-weight:bold">*</span>)<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>another_table<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>condition)<span style="color:#6e7681"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Subquery in WHERE:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> columnName <span style="color:#66d9ef">FROM</span> tableName
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> columnName <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> columnName <span style="color:#66d9ef">FROM</span> another_table <span style="color:#66d9ef">WHERE</span> condition);
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">IN</span><span style="color:#6e7681"> </span>(<span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>another_table<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>condition);<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 </ul>
 <h3 id="union">
   UNION
@@ -647,10 +657,10 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> columnName <span style="color:#66d9ef">FROM</span> table1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> columnName <span style="color:#66d9ef">FROM</span> table2;
-</span></span></code></pre></div><h2 id="indexes-and-keys">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>table1<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">UNION</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>table2;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="indexes-and-keys">
   <strong>Indexes and Keys</strong>
   <a class="heading-link" href="#indexes-and-keys">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -664,41 +674,41 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> index_name <span style="color:#66d9ef">ON</span> tableName (columnName);
-</span></span></code></pre></div><h3 id="drop-an-index">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">INDEX</span><span style="color:#6e7681"> </span>index_name<span style="color:#6e7681"> </span><span style="color:#ff7b72">ON</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span>(columnName);<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="drop-an-index">
   Drop an Index
   <a class="heading-link" href="#drop-an-index">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">INDEX</span> index_name <span style="color:#66d9ef">ON</span> tableName;
-</span></span></code></pre></div><h3 id="unique-index">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DROP</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">INDEX</span><span style="color:#6e7681"> </span>index_name<span style="color:#6e7681"> </span><span style="color:#ff7b72">ON</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="unique-index">
   Unique Index
   <a class="heading-link" href="#unique-index">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">INDEX</span> index_name <span style="color:#66d9ef">ON</span> tableName (columnName);
-</span></span></code></pre></div><h3 id="primary-key">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">UNIQUE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">INDEX</span><span style="color:#6e7681"> </span>index_name<span style="color:#6e7681"> </span><span style="color:#ff7b72">ON</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span>(columnName);<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="primary-key">
   Primary Key
   <a class="heading-link" href="#primary-key">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tableName <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (columnName);
-</span></span></code></pre></div><h3 id="foreign-key">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">ALTER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">ADD</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">PRIMARY</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">KEY</span><span style="color:#6e7681"> </span>(columnName);<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="foreign-key">
   Foreign Key
   <a class="heading-link" href="#foreign-key">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tableName
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> fk_name <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (columnName) <span style="color:#66d9ef">REFERENCES</span> other_table(columnName);
-</span></span></code></pre></div><h2 id="transactions">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">ALTER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">ADD</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">CONSTRAINT</span><span style="color:#6e7681"> </span>fk_name<span style="color:#6e7681"> </span><span style="color:#ff7b72">FOREIGN</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">KEY</span><span style="color:#6e7681"> </span>(columnName)<span style="color:#6e7681"> </span><span style="color:#ff7b72">REFERENCES</span><span style="color:#6e7681"> </span>other_table(columnName);<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="transactions">
   <strong>Transactions</strong>
   <a class="heading-link" href="#transactions">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -712,33 +722,33 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">START</span> <span style="color:#66d9ef">TRANSACTION</span>;
-</span></span></code></pre></div><h3 id="commit-a-transaction">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">START</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TRANSACTION</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="commit-a-transaction">
   Commit a Transaction
   <a class="heading-link" href="#commit-a-transaction">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">COMMIT</span>;
-</span></span></code></pre></div><h3 id="rollback-a-transaction">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">COMMIT</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="rollback-a-transaction">
   Rollback a Transaction
   <a class="heading-link" href="#rollback-a-transaction">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ROLLBACK</span>;
-</span></span></code></pre></div><h3 id="savepoints">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">ROLLBACK</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="savepoints">
   Savepoints
   <a class="heading-link" href="#savepoints">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>SAVEPOINT savepoint_name;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ROLLBACK</span> <span style="color:#66d9ef">TO</span> savepoint_name;
-</span></span></code></pre></div><h2 id="user-management-and-security">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>SAVEPOINT<span style="color:#6e7681"> </span>savepoint_name;<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">ROLLBACK</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TO</span><span style="color:#6e7681"> </span>savepoint_name;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="user-management-and-security">
   <strong>User Management and Security</strong>
   <a class="heading-link" href="#user-management-and-security">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -752,48 +762,48 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">USER</span> <span style="color:#e6db74">&#39;username&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;host&#39;</span> IDENTIFIED <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;password&#39;</span>;
-</span></span></code></pre></div><h3 id="grant-privileges">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">USER</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;username&#39;</span><span style="color:#ff7b72;font-weight:bold">@</span><span style="color:#a5d6ff">&#39;host&#39;</span><span style="color:#6e7681"> </span>IDENTIFIED<span style="color:#6e7681"> </span><span style="color:#ff7b72">BY</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;password&#39;</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="grant-privileges">
   Grant Privileges
   <a class="heading-link" href="#grant-privileges">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">PRIVILEGES</span> <span style="color:#66d9ef">ON</span> database_name.<span style="color:#f92672">*</span> <span style="color:#66d9ef">TO</span> <span style="color:#e6db74">&#39;username&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;host&#39;</span>;
-</span></span></code></pre></div><h3 id="show-grants">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">GRANT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">ALL</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">PRIVILEGES</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">ON</span><span style="color:#6e7681"> </span>database_name.<span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TO</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;username&#39;</span><span style="color:#ff7b72;font-weight:bold">@</span><span style="color:#a5d6ff">&#39;host&#39;</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="show-grants">
   Show Grants
   <a class="heading-link" href="#show-grants">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SHOW</span> GRANTS <span style="color:#66d9ef">FOR</span> <span style="color:#e6db74">&#39;username&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;host&#39;</span>;
-</span></span></code></pre></div><h3 id="revoke-privileges">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SHOW</span><span style="color:#6e7681"> </span>GRANTS<span style="color:#6e7681"> </span><span style="color:#ff7b72">FOR</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;username&#39;</span><span style="color:#ff7b72;font-weight:bold">@</span><span style="color:#a5d6ff">&#39;host&#39;</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="revoke-privileges">
   Revoke Privileges
   <a class="heading-link" href="#revoke-privileges">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">REVOKE</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">PRIVILEGES</span> <span style="color:#66d9ef">ON</span> database_name.<span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#39;username&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;host&#39;</span>;
-</span></span></code></pre></div><h3 id="drop-a-user">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">REVOKE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">ALL</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">PRIVILEGES</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">ON</span><span style="color:#6e7681"> </span>database_name.<span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;username&#39;</span><span style="color:#ff7b72;font-weight:bold">@</span><span style="color:#a5d6ff">&#39;host&#39;</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="drop-a-user">
   Drop a User
   <a class="heading-link" href="#drop-a-user">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">USER</span> <span style="color:#e6db74">&#39;username&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;host&#39;</span>;
-</span></span></code></pre></div><h3 id="change-user-password">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DROP</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">USER</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;username&#39;</span><span style="color:#ff7b72;font-weight:bold">@</span><span style="color:#a5d6ff">&#39;host&#39;</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="change-user-password">
   Change User Password
   <a class="heading-link" href="#change-user-password">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">USER</span> <span style="color:#e6db74">&#39;username&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;host&#39;</span> IDENTIFIED <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;new_password&#39;</span>;
-</span></span></code></pre></div><h2 id="backup-and-restore">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">ALTER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">USER</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;username&#39;</span><span style="color:#ff7b72;font-weight:bold">@</span><span style="color:#a5d6ff">&#39;host&#39;</span><span style="color:#6e7681"> </span>IDENTIFIED<span style="color:#6e7681"> </span><span style="color:#ff7b72">BY</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;new_password&#39;</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="backup-and-restore">
   <strong>Backup and Restore</strong>
   <a class="heading-link" href="#backup-and-restore">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -807,7 +817,7 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysqldump -u username -p database_name &gt; backup.sql
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysqldump -u username -p database_name &gt; backup.sql
 </span></span></code></pre></div><h3 id="restore-a-database">
   Restore a Database
   <a class="heading-link" href="#restore-a-database">
@@ -815,7 +825,7 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql -u username -p database_name &lt; backup.sql
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql -u username -p database_name &lt; backup.sql
 </span></span></code></pre></div><h3 id="backup-specific-tables">
   Backup Specific Tables
   <a class="heading-link" href="#backup-specific-tables">
@@ -823,7 +833,7 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysqldump -u username -p database_name table1 table2 &gt; backup.sql
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysqldump -u username -p database_name table1 table2 &gt; backup.sql
 </span></span></code></pre></div><h3 id="backup-all-databases">
   Backup All Databases
   <a class="heading-link" href="#backup-all-databases">
@@ -831,7 +841,7 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysqldump -u username -p --all-databases &gt; all_databases_backup.sql
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysqldump -u username -p --all-databases &gt; all_databases_backup.sql
 </span></span></code></pre></div><h2 id="optimization-and-maintenance">
   <strong>Optimization and Maintenance</strong>
   <a class="heading-link" href="#optimization-and-maintenance">
@@ -846,48 +856,48 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CHECK</span> <span style="color:#66d9ef">TABLE</span> tableName;
-</span></span></code></pre></div><h3 id="repair-a-table">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CHECK</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="repair-a-table">
   Repair a Table
   <a class="heading-link" href="#repair-a-table">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>REPAIR <span style="color:#66d9ef">TABLE</span> tableName;
-</span></span></code></pre></div><h3 id="optimize-a-table">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>REPAIR<span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="optimize-a-table">
   Optimize a Table
   <a class="heading-link" href="#optimize-a-table">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>OPTIMIZE <span style="color:#66d9ef">TABLE</span> tableName;
-</span></span></code></pre></div><h3 id="analyze-a-table">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>OPTIMIZE<span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="analyze-a-table">
   Analyze a Table
   <a class="heading-link" href="#analyze-a-table">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ANALYZE</span> <span style="color:#66d9ef">TABLE</span> tableName;
-</span></span></code></pre></div><h3 id="viewing-server-status">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">ANALYZE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="viewing-server-status">
   Viewing Server Status
   <a class="heading-link" href="#viewing-server-status">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SHOW</span> STATUS;
-</span></span></code></pre></div><h3 id="show-current-users">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SHOW</span><span style="color:#6e7681"> </span>STATUS;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="show-current-users">
   Show Current Users
   <a class="heading-link" href="#show-current-users">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">user</span>, <span style="color:#66d9ef">host</span> <span style="color:#66d9ef">FROM</span> mysql.<span style="color:#66d9ef">user</span>;
-</span></span></code></pre></div><h2 id="mysql-functions">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">user</span>,<span style="color:#6e7681"> </span><span style="color:#ff7b72">host</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>mysql.<span style="color:#ff7b72">user</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="mysql-functions">
   <strong>MySQL Functions</strong>
   <a class="heading-link" href="#mysql-functions">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -904,16 +914,16 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 <ul>
 <li>
 <p><strong>Concatenate Strings:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> CONCAT(<span style="color:#e6db74">&#39;Hello&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>, <span style="color:#e6db74">&#39;World!&#39;</span>);
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>CONCAT(<span style="color:#a5d6ff">&#39;Hello&#39;</span>,<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39; &#39;</span>,<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;World!&#39;</span>);<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Length of a String:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">LENGTH</span>(<span style="color:#e6db74">&#39;Hello World!&#39;</span>);
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">LENGTH</span>(<span style="color:#a5d6ff">&#39;Hello World!&#39;</span>);<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Substring:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">SUBSTRING</span>(<span style="color:#e6db74">&#39;Hello World!&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>);
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">SUBSTRING</span>(<span style="color:#a5d6ff">&#39;Hello World!&#39;</span>,<span style="color:#6e7681"> </span><span style="color:#a5d6ff">1</span>,<span style="color:#6e7681"> </span><span style="color:#a5d6ff">5</span>);<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 </ul>
 <h3 id="date-functions">
   Date Functions
@@ -925,16 +935,16 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 <ul>
 <li>
 <p><strong>Current Date:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> CURDATE();
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>CURDATE();<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Current Time:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> CURTIME();
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>CURTIME();<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Add Date:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> DATE_ADD(<span style="color:#e6db74">&#39;2024-08-10&#39;</span>, INTERVAL <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">DAY</span>);
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>DATE_ADD(<span style="color:#a5d6ff">&#39;2024-08-10&#39;</span>,<span style="color:#6e7681"> </span>INTERVAL<span style="color:#6e7681"> </span><span style="color:#a5d6ff">10</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">DAY</span>);<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 </ul>
 <h3 id="aggregate-functions">
   Aggregate Functions
@@ -946,28 +956,28 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 <ul>
 <li>
 <p><strong>COUNT:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span> tableName;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">COUNT</span>(<span style="color:#ff7b72;font-weight:bold">*</span>)<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>SUM:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">SUM</span>(columnName)
-</span></span></code></pre></div><p>Continuing from where we left off:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">SUM</span>(columnName)<span style="color:#6e7681">
+</span></span></span></code></pre></div><p>Continuing from where we left off:</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">SUM</span>(columnName) <span style="color:#66d9ef">FROM</span> tableName;
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">SUM</span>(columnName)<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div><ul>
 <li>
 <p><strong>AVG:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">AVG</span>(columnName) <span style="color:#66d9ef">FROM</span> tableName;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">AVG</span>(columnName)<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>MIN:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MIN</span>(columnName) <span style="color:#66d9ef">FROM</span> tableName;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">MIN</span>(columnName)<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>MAX:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MAX</span>(columnName) <span style="color:#66d9ef">FROM</span> tableName;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">MAX</span>(columnName)<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 </ul>
 <h2 id="stored-procedures-and-functions">
   <strong>Stored Procedures and Functions</strong>
@@ -983,53 +993,53 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELIMITER</span> <span style="color:#f92672">//</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">PROCEDURE</span> procedure_name (<span style="color:#66d9ef">IN</span> param1 datatype, <span style="color:#66d9ef">OUT</span> param2 datatype)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- SQL statements
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">SELECT</span> columnName <span style="color:#66d9ef">INTO</span> param2 <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">WHERE</span> condition;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> <span style="color:#f92672">//</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DELIMITER</span> ;
-</span></span></code></pre></div><h3 id="executing-a-stored-procedure">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DELIMITER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">//</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">PROCEDURE</span><span style="color:#6e7681"> </span>procedure_name<span style="color:#6e7681"> </span>(<span style="color:#ff7b72">IN</span><span style="color:#6e7681"> </span>param1<span style="color:#6e7681"> </span>datatype,<span style="color:#6e7681"> </span><span style="color:#ff7b72">OUT</span><span style="color:#6e7681"> </span>param2<span style="color:#6e7681"> </span>datatype)<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">BEGIN</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">-- SQL statements
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#6e7681">    </span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columnName<span style="color:#6e7681"> </span><span style="color:#ff7b72">INTO</span><span style="color:#6e7681"> </span>param2<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>condition;<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">END</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">//</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">DELIMITER</span><span style="color:#6e7681"> </span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="executing-a-stored-procedure">
   Executing a Stored Procedure
   <a class="heading-link" href="#executing-a-stored-procedure">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CALL</span> procedure_name(param1, <span style="color:#f92672">@</span>param2);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">@</span>param2;
-</span></span></code></pre></div><h3 id="dropping-a-stored-procedure">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CALL</span><span style="color:#6e7681"> </span>procedure_name(param1,<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">@</span>param2);<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">@</span>param2;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="dropping-a-stored-procedure">
   Dropping a Stored Procedure
   <a class="heading-link" href="#dropping-a-stored-procedure">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">PROCEDURE</span> procedure_name;
-</span></span></code></pre></div><h3 id="creating-a-stored-function">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DROP</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">PROCEDURE</span><span style="color:#6e7681"> </span>procedure_name;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="creating-a-stored-function">
   Creating a Stored Function
   <a class="heading-link" href="#creating-a-stored-function">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELIMITER</span> <span style="color:#f92672">//</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">FUNCTION</span> function_name (param1 datatype) <span style="color:#66d9ef">RETURNS</span> datatype
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- SQL statements
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">RETURN</span> expression;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span> <span style="color:#f92672">//</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DELIMITER</span> ;
-</span></span></code></pre></div><h3 id="dropping-a-stored-function">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DELIMITER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">//</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FUNCTION</span><span style="color:#6e7681"> </span>function_name<span style="color:#6e7681"> </span>(param1<span style="color:#6e7681"> </span>datatype)<span style="color:#6e7681"> </span><span style="color:#ff7b72">RETURNS</span><span style="color:#6e7681"> </span>datatype<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">BEGIN</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">-- SQL statements
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#6e7681">    </span><span style="color:#ff7b72">RETURN</span><span style="color:#6e7681"> </span>expression;<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">END</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">//</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">DELIMITER</span><span style="color:#6e7681"> </span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="dropping-a-stored-function">
   Dropping a Stored Function
   <a class="heading-link" href="#dropping-a-stored-function">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">FUNCTION</span> function_name;
-</span></span></code></pre></div><h2 id="triggers">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DROP</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FUNCTION</span><span style="color:#6e7681"> </span>function_name;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="triggers">
   <strong>Triggers</strong>
   <a class="heading-link" href="#triggers">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -1043,21 +1053,21 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TRIGGER</span> <span style="color:#66d9ef">trigger_name</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEFORE</span><span style="color:#f92672">/</span><span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">INSERT</span><span style="color:#f92672">/</span><span style="color:#66d9ef">UPDATE</span><span style="color:#f92672">/</span><span style="color:#66d9ef">DELETE</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ON</span> tableName <span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- SQL statements
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">END</span>;
-</span></span></code></pre></div><h3 id="dropping-a-trigger">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TRIGGER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">trigger_name</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">BEFORE</span><span style="color:#ff7b72;font-weight:bold">/</span><span style="color:#ff7b72">AFTER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">INSERT</span><span style="color:#ff7b72;font-weight:bold">/</span><span style="color:#ff7b72">UPDATE</span><span style="color:#ff7b72;font-weight:bold">/</span><span style="color:#ff7b72">DELETE</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">ON</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">FOR</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">EACH</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">ROW</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">BEGIN</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">-- SQL statements
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">END</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="dropping-a-trigger">
   Dropping a Trigger
   <a class="heading-link" href="#dropping-a-trigger">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TRIGGER</span> <span style="color:#66d9ef">trigger_name</span>;
-</span></span></code></pre></div><h2 id="views">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DROP</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TRIGGER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">trigger_name</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="views">
   <strong>Views</strong>
   <a class="heading-link" href="#views">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -1071,25 +1081,25 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">VIEW</span> view_name <span style="color:#66d9ef">AS</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> columns <span style="color:#66d9ef">FROM</span> tableName <span style="color:#66d9ef">WHERE</span> condition;
-</span></span></code></pre></div><h3 id="selecting-from-a-view">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">VIEW</span><span style="color:#6e7681"> </span>view_name<span style="color:#6e7681"> </span><span style="color:#ff7b72">AS</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span>columns<span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>tableName<span style="color:#6e7681"> </span><span style="color:#ff7b72">WHERE</span><span style="color:#6e7681"> </span>condition;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="selecting-from-a-view">
   Selecting from a View
   <a class="heading-link" href="#selecting-from-a-view">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> view_name;
-</span></span></code></pre></div><h3 id="dropping-a-view">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SELECT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">FROM</span><span style="color:#6e7681"> </span>view_name;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="dropping-a-view">
   Dropping a View
   <a class="heading-link" href="#dropping-a-view">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">VIEW</span> view_name;
-</span></span></code></pre></div><h2 id="replication-and-high-availability">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">DROP</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">VIEW</span><span style="color:#6e7681"> </span>view_name;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="replication-and-high-availability">
   <strong>Replication and High Availability</strong>
   <a class="heading-link" href="#replication-and-high-availability">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -1109,23 +1119,23 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 <ul>
 <li>
 <p><strong>Edit the MySQL configuration file</strong> (usually <code>my.cnf</code> or <code>my.ini</code>):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>mysqld<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>server-id<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>log-bin<span style="color:#f92672">=</span>mysql-bin
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>mysqld<span style="color:#ff7b72;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>server-id<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span>log-bin<span style="color:#ff7b72;font-weight:bold">=</span>mysql-bin
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Restart the MySQL server:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl restart mysql
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl restart mysql
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Grant Replication Privileges:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> REPLICATION SLAVE <span style="color:#66d9ef">ON</span> <span style="color:#f92672">*</span>.<span style="color:#f92672">*</span> <span style="color:#66d9ef">TO</span> <span style="color:#e6db74">&#39;replica_user&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;%&#39;</span> IDENTIFIED <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;password&#39;</span>;
-</span></span><span style="display:flex;"><span>FLUSH <span style="color:#66d9ef">PRIVILEGES</span>;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">GRANT</span><span style="color:#6e7681"> </span>REPLICATION<span style="color:#6e7681"> </span>SLAVE<span style="color:#6e7681"> </span><span style="color:#ff7b72">ON</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">*</span>.<span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TO</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;replica_user&#39;</span><span style="color:#ff7b72;font-weight:bold">@</span><span style="color:#a5d6ff">&#39;%&#39;</span><span style="color:#6e7681"> </span>IDENTIFIED<span style="color:#6e7681"> </span><span style="color:#ff7b72">BY</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;password&#39;</span>;<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>FLUSH<span style="color:#6e7681"> </span><span style="color:#ff7b72">PRIVILEGES</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Get the binary log file and position:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SHOW</span> MASTER STATUS;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SHOW</span><span style="color:#6e7681"> </span>MASTER<span style="color:#6e7681"> </span>STATUS;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -1133,26 +1143,26 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 <ul>
 <li>
 <p><strong>Edit the MySQL configuration file:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>mysqld<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>server-id<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>mysqld<span style="color:#ff7b72;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>server-id<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">2</span>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Restart the MySQL server:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl restart mysql
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl restart mysql
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Configure the Slave:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>CHANGE MASTER <span style="color:#66d9ef">TO</span>
-</span></span><span style="display:flex;"><span>MASTER_HOST<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;master_ip&#39;</span>,
-</span></span><span style="display:flex;"><span>MASTER_USER<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;replica_user&#39;</span>,
-</span></span><span style="display:flex;"><span>MASTER_PASSWORD<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;password&#39;</span>,
-</span></span><span style="display:flex;"><span>MASTER_LOG_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mysql-bin.000001&#39;</span>,
-</span></span><span style="display:flex;"><span>MASTER_LOG_POS<span style="color:#f92672">=</span><span style="color:#ae81ff">12345</span>;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>CHANGE<span style="color:#6e7681"> </span>MASTER<span style="color:#6e7681"> </span><span style="color:#ff7b72">TO</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>MASTER_HOST<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#39;master_ip&#39;</span>,<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>MASTER_USER<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#39;replica_user&#39;</span>,<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>MASTER_PASSWORD<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#39;password&#39;</span>,<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>MASTER_LOG_FILE<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#39;mysql-bin.000001&#39;</span>,<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>MASTER_LOG_POS<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">12345</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Start the Slave:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">START</span> SLAVE;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">START</span><span style="color:#6e7681"> </span>SLAVE;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 </ul>
 </li>
 </ol>
@@ -1163,8 +1173,8 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SHOW</span> SLAVE STATUS<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#66d9ef">G</span>;
-</span></span></code></pre></div><h3 id="stopping-and-starting-replication">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">SHOW</span><span style="color:#6e7681"> </span>SLAVE<span style="color:#6e7681"> </span>STATUS<span style="color:#f85149">\</span><span style="color:#ff7b72">G</span>;<span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="stopping-and-starting-replication">
   Stopping and Starting Replication
   <a class="heading-link" href="#stopping-and-starting-replication">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -1174,12 +1184,12 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 <ul>
 <li>
 <p><strong>Stop the Slave:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>STOP SLAVE;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>STOP<span style="color:#6e7681"> </span>SLAVE;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 <li>
 <p><strong>Start the Slave:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">START</span> SLAVE;
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">START</span><span style="color:#6e7681"> </span>SLAVE;<span style="color:#6e7681">
+</span></span></span></code></pre></div></li>
 </ul>
 <h2 id="mysql-best-practices">
   <strong>MySQL Best Practices</strong>
@@ -1309,6 +1319,8 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
   <section class="container">
     ©
     
+      2021 -
+    
     2025
      Wilfrantz DEDE 
     ·
@@ -1324,7 +1336,7 @@ Basic MySQL Commands Link to heading Create a Database Link to heading CREATE DA
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   

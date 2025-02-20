@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   LLDB Cheat Sheet · DEDE
 </title>
@@ -39,7 +39,7 @@ Conclusion
 
 
 Start LLDB and load a program">
-<meta name="keywords" content="[blog hugo developer]">
+<meta name="keywords" content="blog, developer, hugo, personal">
 
 
 
@@ -49,7 +49,7 @@ Start LLDB and load a program">
 Table of contents
 Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspection Expressions Advanced Commands Register Commands Scripting Tips and Tricks Conclusion Starting LLDB Link to heading Start LLDB and load a program">
 
-<meta property="og:url" content="https://wilfrantz.github.io/posts/2023-09-05-lldb-cheat-sheet/">
+<meta property="og:url" content="http://10.152.2.2:1313/posts/2023-09-05-lldb-cheat-sheet/">
   <meta property="og:site_name" content="DEDE">
   <meta property="og:title" content="LLDB Cheat Sheet">
   <meta property="og:description" content="LLDB is the debugger that comes with Xcode and is part of the LLVM project. It is used for debugging programs written in C, C&#43;&#43;, Objective-C, and Swift. Here’s a cheat sheet to help you get started with LLDB:
@@ -67,7 +67,7 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 
 
 
-<link rel="canonical" href="https://wilfrantz.github.io/posts/2023-09-05-lldb-cheat-sheet/">
+<link rel="canonical" href="http://10.152.2.2:1313/posts/2023-09-05-lldb-cheat-sheet/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -77,12 +77,18 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
 
 
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
 
 
 
@@ -91,7 +97,7 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
@@ -114,20 +120,16 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 
 
 
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
 
+
+<body class="preload-transitions colorscheme-dark">
+  
 
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://wilfrantz.github.io/">
+    <a class="navigation-title" href="http://10.152.2.2:1313/">
       DEDE
     </a>
     
@@ -144,11 +146,19 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Posts</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="mailto:contact@dede.dev">Contact Me</a>
             </li>
           
         
@@ -166,7 +176,7 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://wilfrantz.github.io/posts/2023-09-05-lldb-cheat-sheet/">
+            <a class="title-link" href="http://10.152.2.2:1313/posts/2023-09-05-lldb-cheat-sheet/">
               LLDB Cheat Sheet
             </a>
           </h1>
@@ -236,17 +246,17 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 <ol>
 <li>
 <p><strong>Start LLDB and load a program</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>lldb &lt;program&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>lldb &lt;program&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Attach to a running process</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>lldb -p &lt;pid&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>lldb -p &lt;pid&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Start LLDB and run a program</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>lldb
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>lldb<span style="color:#f92672">)</span> target create &lt;program&gt;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>lldb<span style="color:#f92672">)</span> run
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>lldb
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">(</span>lldb<span style="color:#ff7b72;font-weight:bold">)</span> target create &lt;program&gt;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">(</span>lldb<span style="color:#ff7b72;font-weight:bold">)</span> run
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="basic-commands">
@@ -259,15 +269,15 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 <ol>
 <li>
 <p><strong>Run the program</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>run
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>run
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Continue execution</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#66d9ef">continue</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#ff7b72">continue</span>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Quit LLDB</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>quit
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>quit
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="breakpoints">
@@ -280,27 +290,27 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 <ol>
 <li>
 <p><strong>Set a breakpoint at a specific line</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint set --file &lt;file&gt; --line &lt;line&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint set --file &lt;file&gt; --line &lt;line&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Set a breakpoint at a function</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint set --name &lt;<span style="color:#66d9ef">function</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint set --name &lt;<span style="color:#ff7b72">function</span>&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>List all breakpoints</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint list
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint list
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Delete a breakpoint</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint delete &lt;breakpoint-id&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint delete &lt;breakpoint-id&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Conditional Breakpoints</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint set --name &lt;<span style="color:#66d9ef">function</span>&gt; --condition <span style="color:#e6db74">&#34;&lt;condition&gt;&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint set --name &lt;<span style="color:#ff7b72">function</span>&gt; --condition <span style="color:#a5d6ff">&#34;&lt;condition&gt;&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Breakpoints with Commands</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint command add &lt;breakpoint-id&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint command add &lt;breakpoint-id&gt;
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="stepping">
@@ -313,19 +323,19 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 <ol>
 <li>
 <p><strong>Step over a line of code</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>next
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>next
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Step into a function</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>step
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>step
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Step out of a function</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>finish
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>finish
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Step by Instruction</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>nexti
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>nexti
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="examining-state">
@@ -338,19 +348,19 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 <ol>
 <li>
 <p><strong>Print the value of a variable</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>print &lt;variable&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>print &lt;variable&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Print the call stack</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>backtrace
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>backtrace
 </span></span></code></pre></div></li>
 <li>
 <p><strong>List local variables</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>frame variable
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>frame variable
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Select a frame</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>frame <span style="color:#66d9ef">select</span> &lt;frame-index&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>frame <span style="color:#ff7b72">select</span> &lt;frame-index&gt;
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="memory-inspection">
@@ -363,15 +373,15 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 <ol>
 <li>
 <p><strong>Read memory at a specific address</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>memory read &lt;address&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>memory read &lt;address&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Write memory at a specific address</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>memory write &lt;address&gt; &lt;value&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>memory write &lt;address&gt; &lt;value&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Memory Region Info</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>memory region &lt;address&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>memory region &lt;address&gt;
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="expressions">
@@ -384,15 +394,15 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 <ol>
 <li>
 <p><strong>Evaluate an expression</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>expr &lt;expression&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>expr &lt;expression&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Call a function</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>expr <span style="color:#f92672">(</span>void<span style="color:#f92672">)</span> &lt;<span style="color:#66d9ef">function</span>&gt;<span style="color:#f92672">()</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>expr <span style="color:#ff7b72;font-weight:bold">(</span>void<span style="color:#ff7b72;font-weight:bold">)</span> &lt;<span style="color:#ff7b72">function</span>&gt;<span style="color:#ff7b72;font-weight:bold">()</span>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Modify a variable</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>expr &lt;variable&gt; <span style="color:#f92672">=</span> &lt;value&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>expr &lt;variable&gt; <span style="color:#ff7b72;font-weight:bold">=</span> &lt;value&gt;
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="advanced-commands">
@@ -405,27 +415,27 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 <ol>
 <li>
 <p><strong>Disassemble a function</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>disassemble --name &lt;<span style="color:#66d9ef">function</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>disassemble --name &lt;<span style="color:#ff7b72">function</span>&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Set a watchpoint</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>watchpoint set variable &lt;variable&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>watchpoint set variable &lt;variable&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>List all watchpoints</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>watchpoint list
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>watchpoint list
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Delete a watchpoint</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>watchpoint delete &lt;watchpoint-id&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>watchpoint delete &lt;watchpoint-id&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Trace Function Calls</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>trace start --function &lt;<span style="color:#66d9ef">function</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>trace start --function &lt;<span style="color:#ff7b72">function</span>&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Stop Tracing</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>trace stop
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>trace stop
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="register-commands">
@@ -438,23 +448,23 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 <ol>
 <li>
 <p><strong>View all registers</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>register read
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>register read
 </span></span></code></pre></div></li>
 <li>
 <p><strong>View a specific register</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>register read &lt;register-name&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>register read &lt;register-name&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Modify a register value</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>register write &lt;register-name&gt; &lt;value&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>register write &lt;register-name&gt; &lt;value&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Save register state to a file</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>register save &lt;file&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>register save &lt;file&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Restore register state from a file</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>register restore &lt;file&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>register restore &lt;file&gt;
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="scripting">
@@ -467,15 +477,15 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 <ol>
 <li>
 <p><strong>Run a Script</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>command script import &lt;script.py&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>command script import &lt;script.py&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Define a Custom Command</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>command script add -f &lt;script.function&gt; &lt;command-name&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>command script add -f &lt;script.function&gt; &lt;command-name&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>List Custom Commands</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>command script list
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>command script list
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="tips-and-tricks">
@@ -488,23 +498,23 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 <ol>
 <li>
 <p><strong>Persistent Variables</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>expr int $myvar <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>expr int <span style="color:#79c0ff">$myvar</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">10</span>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Format Specifiers</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>print &lt;variable&gt; --format &lt;format&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>print &lt;variable&gt; --format &lt;format&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Set Environment Variables</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>settings set target.env-vars &lt;VAR&gt;<span style="color:#f92672">=</span>&lt;value&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>settings set target.env-vars &lt;VAR&gt;<span style="color:#ff7b72;font-weight:bold">=</span>&lt;value&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Save Breakpoints</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint write &lt;file&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint write &lt;file&gt;
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Load Breakpoints</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint read &lt;file&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>breakpoint read &lt;file&gt;
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="conclusion">
@@ -558,6 +568,8 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
   <section class="container">
     ©
     
+      2021 -
+    
     2025
      Wilfrantz DEDE 
     ·
@@ -573,7 +585,7 @@ Starting LLDB Basic Commands Breakpoints Stepping Examining State Memory Inspect
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   

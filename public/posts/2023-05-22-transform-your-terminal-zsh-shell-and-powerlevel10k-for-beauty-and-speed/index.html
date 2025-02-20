@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   ZSH and PowerLevel10K for Beauty and Speed on MacOS &amp; Debian Systems · DEDE
 </title>
@@ -17,7 +17,7 @@
 Before proceeding with the installation, please ensure that Git is installed on your system. To install Git using homebrew{: target=&quot;_blank&quot;} on macOS, run the following command:
 brew install git
 For Linux users, you can install Git with homebrew or your Linux distro&rsquo;s default package manager, on debian systems simply run the following command:">
-<meta name="keywords" content="[blog hugo developer]">
+<meta name="keywords" content="blog, developer, hugo, personal">
 
 
 
@@ -27,7 +27,7 @@ For Linux users, you can install Git with homebrew or your Linux distro&rsquo;s 
 Before proceeding with the installation, please ensure that Git is installed on your system. To install Git using homebrew{: target=&#34;_blank&#34;} on macOS, run the following command:
 brew install git For Linux users, you can install Git with homebrew or your Linux distro’s default package manager, on debian systems simply run the following command:">
 
-<meta property="og:url" content="https://wilfrantz.github.io/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/">
+<meta property="og:url" content="http://10.152.2.2:1313/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/">
   <meta property="og:site_name" content="DEDE">
   <meta property="og:title" content="ZSH and PowerLevel10K for Beauty and Speed on MacOS & Debian Systems">
   <meta property="og:description" content="In this comprehensive tutorial, I’ll guide you through the process of installing/configuring ZSH shell both on MacOS and Debian systems, personalize it with the ohmyzsh framework and elevate your experience with the stunning PowerLeve10K theme.
@@ -48,7 +48,7 @@ brew install git For Linux users, you can install Git with homebrew or your Linu
 
 
 
-<link rel="canonical" href="https://wilfrantz.github.io/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/">
+<link rel="canonical" href="http://10.152.2.2:1313/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -58,12 +58,18 @@ brew install git For Linux users, you can install Git with homebrew or your Linu
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
 
 
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
 
 
 
@@ -72,7 +78,7 @@ brew install git For Linux users, you can install Git with homebrew or your Linu
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
@@ -95,20 +101,16 @@ brew install git For Linux users, you can install Git with homebrew or your Linu
 
 
 
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
 
+
+<body class="preload-transitions colorscheme-dark">
+  
 
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://wilfrantz.github.io/">
+    <a class="navigation-title" href="http://10.152.2.2:1313/">
       DEDE
     </a>
     
@@ -125,11 +127,19 @@ brew install git For Linux users, you can install Git with homebrew or your Linu
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Posts</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="mailto:contact@dede.dev">Contact Me</a>
             </li>
           
         
@@ -147,7 +157,7 @@ brew install git For Linux users, you can install Git with homebrew or your Linu
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://wilfrantz.github.io/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/">
+            <a class="title-link" href="http://10.152.2.2:1313/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/">
               ZSH and PowerLevel10K for Beauty and Speed on MacOS &amp; Debian Systems
             </a>
           </h1>
@@ -209,14 +219,14 @@ brew install git For Linux users, you can install Git with homebrew or your Linu
         
         <p>In this comprehensive tutorial, I&rsquo;ll guide you through the process of installing/configuring <code>ZSH</code> shell both on <code>MacOS</code> and <code>Debian</code> systems, personalize it with the <code>ohmyzsh</code> framework and elevate your experience with the stunning <code>PowerLeve10K</code> theme.</p>
 <p>Before proceeding with the installation, please ensure that <code>Git</code> is installed on your system. To install <code>Git</code> using <a href="https://brew.sh"  class="external-link" target="_blank" rel="noopener">homebrew</a>{: target=&quot;_blank&quot;} on <code>macOS</code>, run the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>brew install git
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>brew install git
 </span></span></code></pre></div><p>For Linux users, you can install Git with homebrew or your Linux distro&rsquo;s default package manager, on debian systems simply run the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt install git -y
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt install git -y
 </span></span></code></pre></div><p>Having Git installed is essential for the successful completion of the installation process. Make sure to execute the appropriate command for your operating system to ensure Git is properly set up.</p>
 <p>For Mac users, I highly recommend <code>Homebrew</code> as a package manager. You can easily install it by running the following command in your terminal:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/bin/bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/bin/bash -c <span style="color:#a5d6ff">&#34;</span><span style="color:#ff7b72">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#ff7b72">)</span><span style="color:#a5d6ff">&#34;</span>
 </span></span></code></pre></div><p>Additionally, I suggest using <code>iTerm2</code> as an alternative to the default macOS terminal. You can swiftly install iTerm2 using Homebrew with the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>brew install --cask iterm2
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>brew install --cask iterm2
 </span></span></code></pre></div><p>You have now gained access to a powerful package manager and an enhanced terminal experience on your Mac system. Get ready to unlock the potential of your command-line interface and embark on a journey of enhanced productivity and visual aesthetics.</p>
 <p>Let&rsquo;s dive in!</p>
 <p>Table of Contents</p>
@@ -255,9 +265,9 @@ brew install git For Linux users, you can install Git with homebrew or your Linu
 </h3>
 <p>Open your terminal, copy and paste the following commands</p>
 <p>On Debian systems:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install zsh
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install zsh
 </span></span></code></pre></div><p>On MacOS <code>zsh</code> is the default shell environment, but you could install it with the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install zsh
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install zsh
 </span></span></code></pre></div><h3 id="step-2-change-your-default-shell-to-zsh">
   Step 2: Change your default shell to <code>ZSH</code>
   <a class="heading-link" href="#step-2-change-your-default-shell-to-zsh">
@@ -272,7 +282,7 @@ brew install git For Linux users, you can install Git with homebrew or your Linu
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo $SHELL
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#79c0ff">$SHELL</span>
 </span></span></code></pre></div><h4 id="step-22-make-sure-it-is-set-to-zsh">
   Step 2.2: Make sure it is set to <code>zsh</code>
   <a class="heading-link" href="#step-22-make-sure-it-is-set-to-zsh">
@@ -280,7 +290,7 @@ brew install git For Linux users, you can install Git with homebrew or your Linu
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chsh -s <span style="color:#66d9ef">$(</span>which zsh<span style="color:#66d9ef">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chsh -s <span style="color:#ff7b72">$(</span>which zsh<span style="color:#ff7b72">)</span>
 </span></span></code></pre></div><h3 id="step-3-restart-your-terminal">
   Step 3: Restart your terminal
   <a class="heading-link" href="#step-3-restart-your-terminal">
@@ -298,7 +308,7 @@ Then type <code>echo $SHELL</code> at the prompt to verify the shell, it should 
   </a>
 </h3>
 <p>Paste this command in your terminal and hit enter to install <code>Oh-My-Zsh</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh -c <span style="color:#a5d6ff">&#34;</span><span style="color:#ff7b72">$(</span>curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span style="color:#ff7b72">)</span><span style="color:#a5d6ff">&#34;</span>
 </span></span></code></pre></div><h3 id="step-5-install-powerleve10k-theme">
   Step 5: Install PowerLeve10K theme
   <a class="heading-link" href="#step-5-install-powerleve10k-theme">
@@ -307,7 +317,7 @@ Then type <code>echo $SHELL</code> at the prompt to verify the shell, it should 
   </a>
 </h3>
 <p>Clone the repository into the custom theme directory.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/romkatv/powerlevel10k.git <span style="color:#79c0ff">$ZSH_CUSTOM</span>/themes/powerlevel10k
 </span></span></code></pre></div><h3 id="step-6-download-and-install-nerd-patched-fonts">
   Step 6: Download and install Nerd Patched fonts
   <a class="heading-link" href="#step-6-download-and-install-nerd-patched-fonts">
@@ -323,9 +333,9 @@ Then type <code>echo $SHELL</code> at the prompt to verify the shell, it should 
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/zsh-users/zsh-autosuggestions.git <span style="color:#79c0ff">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions
 </span></span></code></pre></div><p>and <code>syntax highlighting</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span style="color:#79c0ff">$ZSH_CUSTOM</span>/plugins/zsh-syntax-highlighting
 </span></span></code></pre></div><h3 id="step-8-edit-your-zshrc-file">
   Step 8: Edit your <code>~/zshrc</code> file
   <a class="heading-link" href="#step-8-edit-your-zshrc-file">
@@ -336,17 +346,17 @@ Then type <code>echo $SHELL</code> at the prompt to verify the shell, it should 
 <ul>
 <li>Use vim/nano editor to edit your <code>~/.zshrc</code> file to use the <code>PowerLeve10K</code> theme, <code>Awesome Patched</code> font, <code>Autocorrection</code>, <code>Autosuggestion</code> and <code>Syntax highlighting</code>.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim ~/.zshrc
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim ~/.zshrc
 </span></span></code></pre></div><p>Find the <code>ZSH_THME</code> line and replace it with</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ZSH_THEME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;powerlevel10k/powerlevel10k&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#79c0ff">ZSH_THEME</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;powerlevel10k/powerlevel10k&#34;</span>
 </span></span></code></pre></div><p>Also add the below line to use <code>Nerd Patched fonts</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>POWERLEVEL9K_MODE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nerdfont-complete&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#79c0ff">POWERLEVEL9K_MODE</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;nerdfont-complete&#34;</span>
 </span></span></code></pre></div><p>To enable auto correction uncomment the line by removing the <code>#</code> from</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#ENABLE_CORRECTION=&#34;true&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#ENABLE_CORRECTION=&#34;true&#34;</span>
 </span></span></code></pre></div><p>it should now look like this</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ENABLE_CORRECTION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#79c0ff">ENABLE_CORRECTION</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;true&#34;</span>
 </span></span></code></pre></div><p>Now we will add plugins so scroll down a little until you find <code>plugins=(git)</code>, or just search for it, add the plugins we just downloaded, like this</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>plugins<span style="color:#f92672">=(</span>git zsh-autosuggestions zsh-syntax-highlighting<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#79c0ff">plugins</span><span style="color:#ff7b72;font-weight:bold">=(</span>git zsh-autosuggestions zsh-syntax-highlighting<span style="color:#ff7b72;font-weight:bold">)</span>
 </span></span></code></pre></div><p>that&rsquo;s it, save and exit the editor.</p>
 <h3 id="step-9-change-your-terminal-font-from-preferences">
   Step 9: Change your terminal font from preferences
@@ -373,7 +383,7 @@ Then type <code>echo $SHELL</code> at the prompt to verify the shell, it should 
   </a>
 </h3>
 <p>Run <code>p10k configure</code> command to setup your terminal looks.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>p10k configure
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>p10k configure
 </span></span></code></pre></div><p>Follow the instructions on the on screen. In the last step select option 3 which is verbose and then hit <code>Y</code>.</p>
 <p><img src="/images/p10kconfigure.gif" alt="p10k configure"></p>
 <h3 id="bonus">
@@ -428,20 +438,20 @@ Example: <code>&quot;terminal.integrated.fontFamily&quot;: &quot;FuraMono Nerd F
   </a>
 </h4>
 <p>If you encounter a permission issue in <code>ZSH</code>, it can be resolved by addressing insecure directory permissions and ownership. When such issues arise, <code>ZSH</code> may disable completions for safety reasons.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>oh-my-zsh<span style="color:#f92672">]</span> Insecure completion-dependent directories detected:
-</span></span><span style="display:flex;"><span>lrwxr-xr-x  <span style="color:#ae81ff">1</span> rafael  admin  <span style="color:#ae81ff">88</span> Apr <span style="color:#ae81ff">28</span> 15:51 /usr/local/share/zsh/site-functions/_brew_services -&gt; ../../../Homebrew/Library/Taps/homebrew/homebrew-services/completions/zsh/_brew_services
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>oh-my-zsh<span style="color:#f92672">]</span> For safety, completions will be disabled <span style="color:#66d9ef">until</span> you manually fix all
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>oh-my-zsh<span style="color:#f92672">]</span> insecure directory permissions and ownership and restart oh-my-zsh.
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>oh-my-zsh<span style="color:#f92672">]</span> See the above list <span style="color:#66d9ef">for</span> directories with group or other writability.
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>oh-my-zsh<span style="color:#ff7b72;font-weight:bold">]</span> Insecure completion-dependent directories detected:
+</span></span><span style="display:flex;"><span>lrwxr-xr-x  <span style="color:#a5d6ff">1</span> rafael  admin  <span style="color:#a5d6ff">88</span> Apr <span style="color:#a5d6ff">28</span> 15:51 /usr/local/share/zsh/site-functions/_brew_services -&gt; ../../../Homebrew/Library/Taps/homebrew/homebrew-services/completions/zsh/_brew_services
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>oh-my-zsh<span style="color:#ff7b72;font-weight:bold">]</span> For safety, completions will be disabled <span style="color:#ff7b72">until</span> you manually fix all
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>oh-my-zsh<span style="color:#ff7b72;font-weight:bold">]</span> insecure directory permissions and ownership and restart oh-my-zsh.
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>oh-my-zsh<span style="color:#ff7b72;font-weight:bold">]</span> See the above list <span style="color:#ff7b72">for</span> directories with group or other writability.
 </span></span></code></pre></div><p>To fix this, you need to manually rectify the directory permissions mentioned in the provided error message. By ensuring secure permissions and ownership, you can reinstate the completions functionality. After making the necessary adjustments, remember to restart <code>oh-my-zsh</code> to apply the changes. By taking these steps, you can resolve permission-related problems and restore the full functionality of ZSH.</p>
 <p>Open your <code>.zshrc</code> file in your editor of choice, I personally like neovim</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim ~/.zshrc
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim ~/.zshrc
 </span></span></code></pre></div><p>and add this line before the <code># Path to your oh-my-zsh installation.</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ZSH_DISABLE_COMPFIX<span style="color:#f92672">=</span>true
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#79c0ff">ZSH_DISABLE_COMPFIX</span><span style="color:#ff7b72;font-weight:bold">=</span>true
 </span></span></code></pre></div><p>it should now look like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Path to your oh-my-zsh installation.</span>
-</span></span><span style="display:flex;"><span>ZSH_DISABLE_COMPFIX<span style="color:#f92672">=</span>true
-</span></span><span style="display:flex;"><span>export ZSH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/Users/&#34;</span>YourUserName<span style="color:#e6db74">&#34;/.oh-my-zsh&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Path to your oh-my-zsh installation.</span>
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">ZSH_DISABLE_COMPFIX</span><span style="color:#ff7b72;font-weight:bold">=</span>true
+</span></span><span style="display:flex;"><span>export <span style="color:#79c0ff">ZSH</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;/Users/&#34;</span>YourUserName<span style="color:#a5d6ff">&#34;/.oh-my-zsh&#34;</span>
 </span></span></code></pre></div><p>Restart your terminal and everything should work fine.</p>
 <h4 id="websearch-with-google-from-the-terminal">
   WebSearch with google from the terminal
@@ -452,13 +462,13 @@ Example: <code>&quot;terminal.integrated.fontFamily&quot;: &quot;FuraMono Nerd F
 </h4>
 <p>Performing a Google search directly from the terminal is a nifty trick that can save you time. Follow these steps to set it up:</p>
 <p>1- Open your favorite editor and access your <code>.zshrc</code> file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>vim ~/.zshrc
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>vim ~/.zshrc
 </span></span></code></pre></div><p>2- Locate the line containing the plugins and add <code>web-search</code> as shown below:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>plugins<span style="color:#f92672">=(</span>git zsh-autosuggestions zsh-syntax-highlighting web-search<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#79c0ff">plugins</span><span style="color:#ff7b72;font-weight:bold">=(</span>git zsh-autosuggestions zsh-syntax-highlighting web-search<span style="color:#ff7b72;font-weight:bold">)</span>
 </span></span></code></pre></div><p>3- Save the changes and exit the editor. Then, reload your environment by running:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>source ~/.zshrc
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>source ~/.zshrc
 </span></span></code></pre></div><p>4- You are now ready to launch Google searches directly from your terminal. For example, to search for &ldquo;cat memes&rdquo;, type the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>google cat memes
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>google cat memes
 </span></span></code></pre></div><p>You are now able to quickly search Google without leaving the comfort of your terminal.</p>
 <h3 id="summary">
   <ins>Summary</ins>
@@ -525,6 +535,8 @@ Example: <code>&quot;terminal.integrated.fontFamily&quot;: &quot;FuraMono Nerd F
   <section class="container">
     ©
     
+      2021 -
+    
     2025
      Wilfrantz DEDE 
     ·
@@ -540,7 +552,7 @@ Example: <code>&quot;terminal.integrated.fontFamily&quot;: &quot;FuraMono Nerd F
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   

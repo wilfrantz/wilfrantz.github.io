@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogging on DEDE</title>
-    <link>https://wilfrantz.github.io/tags/blogging/</link>
+    <link>http://10.152.2.2:1313/tags/blogging/</link>
     <description>Recent content in Blogging on DEDE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wilfrantz.github.io/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://10.152.2.2:1313/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Blog Post</title>
-      <link>https://wilfrantz.github.io/posts/newtest/</link>
+      <link>http://10.152.2.2:1313/posts/newtest/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://wilfrantz.github.io/posts/newtest/</guid>
+      <guid>http://10.152.2.2:1313/posts/newtest/</guid>
       <description></description>
     </item>
   </channel>

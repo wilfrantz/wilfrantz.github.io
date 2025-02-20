@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   IPConverter application design document [Draft] · DEDE
 </title>
@@ -46,7 +46,7 @@ Conclusion
   
 
 The IPConverter program is a comprehensive software application designed to provide users with a variety of powerful tools and features related to IP addresses. Built primarily in C&#43;&#43;, it will leverage external libraries and APIs where necessary to expand its capabilities. This application will serve as a go-to tool for developers, network administrators, marketers, and cybersecurity professionals.">
-<meta name="keywords" content="[blog hugo developer]">
+<meta name="keywords" content="blog, developer, hugo, personal">
 
 
 
@@ -54,7 +54,7 @@ The IPConverter program is a comprehensive software application designed to prov
   <meta name="twitter:title" content="IPConverter application design document [Draft]">
   <meta name="twitter:description" content="Table of Contents Link to heading Table of Contents Overview Features Monetization Strategies Freemium Model API Access Browser Extension Monetization Ad-Based Revenue White-Labeling and Licensing Data Analytics and Reports Architecture Core Classes Conclusion Overview Link to heading The IPConverter program is a comprehensive software application designed to provide users with a variety of powerful tools and features related to IP addresses. Built primarily in C&#43;&#43;, it will leverage external libraries and APIs where necessary to expand its capabilities. This application will serve as a go-to tool for developers, network administrators, marketers, and cybersecurity professionals.">
 
-<meta property="og:url" content="https://wilfrantz.github.io/posts/2023-03-19-ipconverter-application-design-document/">
+<meta property="og:url" content="http://10.152.2.2:1313/posts/2023-03-19-ipconverter-application-design-document/">
   <meta property="og:site_name" content="DEDE">
   <meta property="og:title" content="IPConverter application design document [Draft]">
   <meta property="og:description" content="Table of Contents Link to heading Table of Contents Overview Features Monetization Strategies Freemium Model API Access Browser Extension Monetization Ad-Based Revenue White-Labeling and Licensing Data Analytics and Reports Architecture Core Classes Conclusion Overview Link to heading The IPConverter program is a comprehensive software application designed to provide users with a variety of powerful tools and features related to IP addresses. Built primarily in C&#43;&#43;, it will leverage external libraries and APIs where necessary to expand its capabilities. This application will serve as a go-to tool for developers, network administrators, marketers, and cybersecurity professionals.">
@@ -70,7 +70,7 @@ The IPConverter program is a comprehensive software application designed to prov
 
 
 
-<link rel="canonical" href="https://wilfrantz.github.io/posts/2023-03-19-ipconverter-application-design-document/">
+<link rel="canonical" href="http://10.152.2.2:1313/posts/2023-03-19-ipconverter-application-design-document/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -80,12 +80,18 @@ The IPConverter program is a comprehensive software application designed to prov
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
 
 
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
 
 
 
@@ -94,7 +100,7 @@ The IPConverter program is a comprehensive software application designed to prov
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
@@ -117,20 +123,16 @@ The IPConverter program is a comprehensive software application designed to prov
 
 
 
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
 
+
+<body class="preload-transitions colorscheme-dark">
+  
 
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://wilfrantz.github.io/">
+    <a class="navigation-title" href="http://10.152.2.2:1313/">
       DEDE
     </a>
     
@@ -147,11 +149,19 @@ The IPConverter program is a comprehensive software application designed to prov
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Posts</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="mailto:contact@dede.dev">Contact Me</a>
             </li>
           
         
@@ -169,7 +179,7 @@ The IPConverter program is a comprehensive software application designed to prov
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://wilfrantz.github.io/posts/2023-03-19-ipconverter-application-design-document/">
+            <a class="title-link" href="http://10.152.2.2:1313/posts/2023-03-19-ipconverter-application-design-document/">
               IPConverter application design document [Draft]
             </a>
           </h1>
@@ -664,6 +674,8 @@ A class for performing WHOIS lookups on domain names and IP addresses, returning
   <section class="container">
     ©
     
+      2021 -
+    
     2025
      Wilfrantz DEDE 
     ·
@@ -679,7 +691,7 @@ A class for performing WHOIS lookups on domain names and IP addresses, returning
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   

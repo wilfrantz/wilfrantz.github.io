@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Crontab on DEDE</title>
-    <link>https://wilfrantz.github.io/tags/crontab/</link>
+    <link>http://10.152.2.2:1313/tags/crontab/</link>
     <description>Recent content in Crontab on DEDE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Jun 2023 12:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wilfrantz.github.io/tags/crontab/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://10.152.2.2:1313/tags/crontab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Crontab Cheat Sheet - A Practical Guide with Examples</title>
-      <link>https://wilfrantz.github.io/posts/2023-06-11-crontab-cheat-sheet/</link>
+      <link>http://10.152.2.2:1313/posts/2023-06-11-crontab-cheat-sheet/</link>
       <pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate>
-      <guid>https://wilfrantz.github.io/posts/2023-06-11-crontab-cheat-sheet/</guid>
+      <guid>http://10.152.2.2:1313/posts/2023-06-11-crontab-cheat-sheet/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Crontab is a powerful utility in Unix-like operating systems that allows you to schedule and automate tasks at predefined intervals. It uses a cron daemon to execute commands or scripts according to a specified schedule. This cheat sheet provides an overview of crontab syntax and demonstrates practical examples to help you effectively schedule recurring tasks.&lt;/p&gt;&#xA;&lt;p&gt;Table of Contents&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#introduction&#34; &gt;Introduction&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#difference-between-cron-crontab-and-cron-job&#34; &gt;Difference between Cron, Crontab, and Cron Job&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#cron&#34; &gt;Cron&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#crontab&#34; &gt;Crontab&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#cron-job&#34; &gt;Cron Job&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#crontab-syntax&#34; &gt;Crontab Syntax&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#practical-examples&#34; &gt;Practical Examples&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#example-1-running-a-script-every-hour&#34; &gt;Example 1: Running a Script Every Hour&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#example-2-running-a-script-every-day-at-a-specific-time&#34; &gt;Example 2: Running a Script Every Day at a Specific Time&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#example-3-running-a-script-on-specific-days-of-the-week&#34; &gt;Example 3: Running a Script on Specific Days of the Week&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#example-4-running-a-script-every-month&#34; &gt;Example 4: Running a Script Every Month&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#example-5-running-a-script-at-regular-intervals&#34; &gt;Example 5: Running a Script at Regular Intervals&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#managing-crontab-entries&#34; &gt;Managing Crontab Entries&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#conclusion&#34; &gt;Conclusion&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#resource&#34; &gt;Resource&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;difference-between-cron-crontab-and-cron-job&#34;&gt;&#xA;  Difference between Cron, Crontab, and Cron Job&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#difference-between-cron-crontab-and-cron-job&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The provided table illustrates the key elements related to scheduling tasks using cron in Linux systems.&lt;/p&gt;</description>
     </item>
   </channel>

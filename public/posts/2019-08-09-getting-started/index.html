@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   Getting Started · DEDE
 </title>
@@ -48,7 +48,7 @@ GitHub Fork - Convenient for custom development, but difficult to upgrade. Unles
   
 
 Sign in to GitHub and browse to Chirpy Starter, click the button Use this template &gt; Create a new repository, and name the new repository USERNAME.github.io, where USERNAME represents your GitHub username.">
-<meta name="keywords" content="[blog hugo developer]">
+<meta name="keywords" content="blog, developer, hugo, personal">
 
 
 
@@ -58,7 +58,7 @@ Sign in to GitHub and browse to Chirpy Starter, click the button Use this templa
 Installation Link to heading Creating a New Site Link to heading There are two ways to create a new repository for this theme:
 Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so you can focus on writing. GitHub Fork - Convenient for custom development, but difficult to upgrade. Unless you are familiar with Jekyll and are determined to tweak or contribute to this project, this approach is not recommended. Option 1. Using the Chirpy Starter Link to heading Sign in to GitHub and browse to Chirpy Starter, click the button Use this template &gt; Create a new repository, and name the new repository USERNAME.github.io, where USERNAME represents your GitHub username.">
 
-<meta property="og:url" content="https://wilfrantz.github.io/posts/2019-08-09-getting-started/">
+<meta property="og:url" content="http://10.152.2.2:1313/posts/2019-08-09-getting-started/">
   <meta property="og:site_name" content="DEDE">
   <meta property="og:title" content="Getting Started">
   <meta property="og:description" content="Prerequisites Link to heading Follow the instructions in the Jekyll Docs to complete the installation of the basic environment. Git also needs to be installed.
@@ -74,7 +74,7 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
 
 
 
-<link rel="canonical" href="https://wilfrantz.github.io/posts/2019-08-09-getting-started/">
+<link rel="canonical" href="http://10.152.2.2:1313/posts/2019-08-09-getting-started/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -84,12 +84,18 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
 
 
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
 
 
 
@@ -98,7 +104,7 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
@@ -121,20 +127,16 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
 
 
 
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
 
+
+<body class="preload-transitions colorscheme-dark">
+  
 
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://wilfrantz.github.io/">
+    <a class="navigation-title" href="http://10.152.2.2:1313/">
       DEDE
     </a>
     
@@ -151,11 +153,19 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Posts</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="mailto:contact@dede.dev">Contact Me</a>
             </li>
           
         
@@ -173,7 +183,7 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://wilfrantz.github.io/posts/2019-08-09-getting-started/">
+            <a class="title-link" href="http://10.152.2.2:1313/posts/2019-08-09-getting-started/">
               Getting Started
             </a>
           </h1>
@@ -253,7 +263,7 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
 </h4>
 <p>Sign in to GitHub to <a href="https://github.com/cotes2020/jekyll-theme-chirpy/fork"  class="external-link" target="_blank" rel="noopener">fork <strong>Chirpy</strong></a>, and then rename it to <code>USERNAME.github.io</code> (<code>USERNAME</code> means your username).</p>
 <p>Next, clone your site to local machine. In order to build JavaScript files later, we need to install <a href="https://nodejs.org/"  class="external-link" target="_blank" rel="noopener">Node.js</a>, and then run the tool:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ bash tools/init
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8b949e">$</span> bash tools/init
 </span></span></code></pre></div><blockquote>
 <p>If you don&rsquo;t want to deploy your site on GitHub Pages, append option <code>--no-gh</code> at the end of the above command.
 {: .prompt-info }</p></blockquote>
@@ -272,7 +282,7 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
   </a>
 </h3>
 <p>Before running local server for the first time, go to the root directory of your site and run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ bundle
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8b949e">$</span> bundle
 </span></span></code></pre></div><h2 id="usage">
   Usage
   <a class="heading-link" href="#usage">
@@ -320,13 +330,13 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
   </a>
 </h3>
 <p>You may want to preview the site contents before publishing, so just run it by:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ bundle exec jekyll s
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8b949e">$</span> bundle exec jekyll s
 </span></span></code></pre></div><p>Or run the site on Docker with the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ docker run -it --rm <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --volume=&#34;$PWD:/srv/jekyll&#34; \
-</span></span><span style="display:flex;"><span>    -p 4000:4000 jekyll/jekyll \
-</span></span><span style="display:flex;"><span>    jekyll serve
-</span></span></code></pre></div><p>After a few seconds, the local service will be published at <em><a href="http://127.0.0.1:4000"  class="external-link" target="_blank" rel="noopener">http://127.0.0.1:4000</a></em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8b949e">$</span> docker run -it --rm <span style="color:#79c0ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff"></span><span style="color:#8b949e">    --volume=&#34;$PWD:/srv/jekyll&#34; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e">    -p 4000:4000 jekyll/jekyll \
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e">    jekyll serve
+</span></span></span></code></pre></div><p>After a few seconds, the local service will be published at <em><a href="http://127.0.0.1:4000"  class="external-link" target="_blank" rel="noopener">http://127.0.0.1:4000</a></em>.</p>
 <h2 id="deployment">
   Deployment
   <a class="heading-link" href="#deployment">
@@ -350,7 +360,7 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
 </li>
 <li>
 <p>If you have committed <code>Gemfile.lock</code>{: .filepath} to the repository, and your local machine is not running Linux, go the the root of your site and update the platform list of the lock-file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ bundle lock --add-platform x86_64-linux
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8b949e">$</span> bundle lock --add-platform x86_64-linux
 </span></span></code></pre></div></li>
 </ul>
 <p>Next, configure the <em>Pages</em> service.</p>
@@ -372,14 +382,14 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
 </h3>
 <p>On self-hosted servers, you cannot enjoy the convenience of <strong>GitHub Actions</strong>. Therefore, you should build the site on your local machine and then upload the site files to the server.</p>
 <p>Go to the root of the source project, and build your site as follows:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ JEKYLL_ENV<span style="color:#f92672">=</span>production bundle exec jekyll b
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8b949e">$</span> <span style="color:#79c0ff">JEKYLL_ENV</span><span style="color:#ff7b72;font-weight:bold">=</span>production bundle exec jekyll b
 </span></span></code></pre></div><p>Or build the site on Docker:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ docker run -it --rm <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --env JEKYLL_ENV=production \
-</span></span><span style="display:flex;"><span>    --volume=&#34;$PWD:/srv/jekyll&#34; \
-</span></span><span style="display:flex;"><span>    jekyll/jekyll \
-</span></span><span style="display:flex;"><span>    jekyll build
-</span></span></code></pre></div><p>Unless you specified the output path, the generated site files will be placed in folder <code>_site</code>{: .filepath} of the project&rsquo;s root directory. Now you should upload those files to the target server.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span><span style="color:#8b949e">$</span> docker run -it --rm <span style="color:#79c0ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff"></span><span style="color:#8b949e">    --env JEKYLL_ENV=production \
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e">    --volume=&#34;$PWD:/srv/jekyll&#34; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e">    jekyll/jekyll \
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e">    jekyll build
+</span></span></span></code></pre></div><p>Unless you specified the output path, the generated site files will be placed in folder <code>_site</code>{: .filepath} of the project&rsquo;s root directory. Now you should upload those files to the target server.</p>
 
       </div>
 
@@ -407,6 +417,8 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
   <section class="container">
     ©
     
+      2021 -
+    
     2025
      Wilfrantz DEDE 
     ·
@@ -422,7 +434,7 @@ Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   

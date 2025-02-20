@@ -2,255 +2,255 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on DEDE</title>
-    <link>https://wilfrantz.github.io/tags/</link>
+    <link>http://10.152.2.2:1313/tags/</link>
     <description>Recent content in Tags on DEDE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wilfrantz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://10.152.2.2:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blogging</title>
-      <link>https://wilfrantz.github.io/tags/blogging/</link>
+      <link>http://10.152.2.2:1313/tags/blogging/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://wilfrantz.github.io/tags/blogging/</guid>
+      <guid>http://10.152.2.2:1313/tags/blogging/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>https://wilfrantz.github.io/tags/hugo/</link>
+      <link>http://10.152.2.2:1313/tags/hugo/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://wilfrantz.github.io/tags/hugo/</guid>
+      <guid>http://10.152.2.2:1313/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>C&#43;&#43;</title>
-      <link>https://wilfrantz.github.io/tags/c&#43;&#43;/</link>
+      <link>http://10.152.2.2:1313/tags/c&#43;&#43;/</link>
       <pubDate>Sun, 18 Aug 2024 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/c&#43;&#43;/</guid>
+      <guid>http://10.152.2.2:1313/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     <item>
       <title>MySQL</title>
-      <link>https://wilfrantz.github.io/tags/mysql/</link>
+      <link>http://10.152.2.2:1313/tags/mysql/</link>
       <pubDate>Sun, 18 Aug 2024 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/mysql/</guid>
+      <guid>http://10.152.2.2:1313/tags/mysql/</guid>
       <description></description>
     </item>
     <item>
       <title>SWE</title>
-      <link>https://wilfrantz.github.io/tags/swe/</link>
+      <link>http://10.152.2.2:1313/tags/swe/</link>
       <pubDate>Sun, 18 Aug 2024 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/swe/</guid>
+      <guid>http://10.152.2.2:1313/tags/swe/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL</title>
-      <link>https://wilfrantz.github.io/tags/sql/</link>
+      <link>http://10.152.2.2:1313/tags/sql/</link>
       <pubDate>Fri, 09 Aug 2024 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/sql/</guid>
+      <guid>http://10.152.2.2:1313/tags/sql/</guid>
       <description></description>
     </item>
     <item>
       <title>Debugging</title>
-      <link>https://wilfrantz.github.io/tags/debugging/</link>
+      <link>http://10.152.2.2:1313/tags/debugging/</link>
       <pubDate>Tue, 05 Sep 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/debugging/</guid>
+      <guid>http://10.152.2.2:1313/tags/debugging/</guid>
       <description></description>
     </item>
     <item>
       <title>LLDB</title>
-      <link>https://wilfrantz.github.io/tags/lldb/</link>
+      <link>http://10.152.2.2:1313/tags/lldb/</link>
       <pubDate>Tue, 05 Sep 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/lldb/</guid>
+      <guid>http://10.152.2.2:1313/tags/lldb/</guid>
       <description></description>
     </item>
     <item>
       <title>MacOS</title>
-      <link>https://wilfrantz.github.io/tags/macos/</link>
+      <link>http://10.152.2.2:1313/tags/macos/</link>
       <pubDate>Tue, 05 Sep 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/macos/</guid>
+      <guid>http://10.152.2.2:1313/tags/macos/</guid>
       <description></description>
     </item>
     <item>
       <title>Cli</title>
-      <link>https://wilfrantz.github.io/tags/cli/</link>
+      <link>http://10.152.2.2:1313/tags/cli/</link>
       <pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate>
-      <guid>https://wilfrantz.github.io/tags/cli/</guid>
+      <guid>http://10.152.2.2:1313/tags/cli/</guid>
       <description></description>
     </item>
     <item>
       <title>Crontab</title>
-      <link>https://wilfrantz.github.io/tags/crontab/</link>
+      <link>http://10.152.2.2:1313/tags/crontab/</link>
       <pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate>
-      <guid>https://wilfrantz.github.io/tags/crontab/</guid>
+      <guid>http://10.152.2.2:1313/tags/crontab/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://wilfrantz.github.io/tags/linux/</link>
+      <link>http://10.152.2.2:1313/tags/linux/</link>
       <pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate>
-      <guid>https://wilfrantz.github.io/tags/linux/</guid>
+      <guid>http://10.152.2.2:1313/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Vim</title>
-      <link>https://wilfrantz.github.io/tags/vim/</link>
+      <link>http://10.152.2.2:1313/tags/vim/</link>
       <pubDate>Sat, 03 Jun 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/vim/</guid>
+      <guid>http://10.152.2.2:1313/tags/vim/</guid>
       <description></description>
     </item>
     <item>
       <title>Darwin</title>
-      <link>https://wilfrantz.github.io/tags/darwin/</link>
+      <link>http://10.152.2.2:1313/tags/darwin/</link>
       <pubDate>Mon, 22 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/darwin/</guid>
+      <guid>http://10.152.2.2:1313/tags/darwin/</guid>
       <description></description>
     </item>
     <item>
       <title>Debian</title>
-      <link>https://wilfrantz.github.io/tags/debian/</link>
+      <link>http://10.152.2.2:1313/tags/debian/</link>
       <pubDate>Mon, 22 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/debian/</guid>
+      <guid>http://10.152.2.2:1313/tags/debian/</guid>
       <description></description>
     </item>
     <item>
       <title>UNIX</title>
-      <link>https://wilfrantz.github.io/tags/unix/</link>
+      <link>http://10.152.2.2:1313/tags/unix/</link>
       <pubDate>Mon, 22 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/unix/</guid>
+      <guid>http://10.152.2.2:1313/tags/unix/</guid>
       <description></description>
     </item>
     <item>
       <title>Zsh</title>
-      <link>https://wilfrantz.github.io/tags/zsh/</link>
+      <link>http://10.152.2.2:1313/tags/zsh/</link>
       <pubDate>Mon, 22 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/zsh/</guid>
+      <guid>http://10.152.2.2:1313/tags/zsh/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://wilfrantz.github.io/tags/docker/</link>
+      <link>http://10.152.2.2:1313/tags/docker/</link>
       <pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/docker/</guid>
+      <guid>http://10.152.2.2:1313/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Draft</title>
-      <link>https://wilfrantz.github.io/tags/draft/</link>
+      <link>http://10.152.2.2:1313/tags/draft/</link>
       <pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/draft/</guid>
+      <guid>http://10.152.2.2:1313/tags/draft/</guid>
       <description></description>
     </item>
     <item>
       <title>IP</title>
-      <link>https://wilfrantz.github.io/tags/ip/</link>
+      <link>http://10.152.2.2:1313/tags/ip/</link>
       <pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/ip/</guid>
+      <guid>http://10.152.2.2:1313/tags/ip/</guid>
       <description></description>
     </item>
     <item>
       <title>IT</title>
-      <link>https://wilfrantz.github.io/tags/it/</link>
+      <link>http://10.152.2.2:1313/tags/it/</link>
       <pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/it/</guid>
+      <guid>http://10.152.2.2:1313/tags/it/</guid>
       <description></description>
     </item>
     <item>
       <title>Shell</title>
-      <link>https://wilfrantz.github.io/tags/shell/</link>
+      <link>http://10.152.2.2:1313/tags/shell/</link>
       <pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/shell/</guid>
+      <guid>http://10.152.2.2:1313/tags/shell/</guid>
       <description></description>
     </item>
     <item>
       <title>Json</title>
-      <link>https://wilfrantz.github.io/tags/json/</link>
+      <link>http://10.152.2.2:1313/tags/json/</link>
       <pubDate>Mon, 15 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/json/</guid>
+      <guid>http://10.152.2.2:1313/tags/json/</guid>
       <description></description>
     </item>
     <item>
       <title>RESTApi</title>
-      <link>https://wilfrantz.github.io/tags/restapi/</link>
+      <link>http://10.152.2.2:1313/tags/restapi/</link>
       <pubDate>Mon, 15 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/restapi/</guid>
+      <guid>http://10.152.2.2:1313/tags/restapi/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>https://wilfrantz.github.io/tags/git/</link>
+      <link>http://10.152.2.2:1313/tags/git/</link>
       <pubDate>Wed, 17 Aug 2022 01:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/git/</guid>
+      <guid>http://10.152.2.2:1313/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>SysAdmin</title>
-      <link>https://wilfrantz.github.io/tags/sysadmin/</link>
+      <link>http://10.152.2.2:1313/tags/sysadmin/</link>
       <pubDate>Fri, 20 May 2022 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/sysadmin/</guid>
+      <guid>http://10.152.2.2:1313/tags/sysadmin/</guid>
       <description></description>
     </item>
     <item>
       <title>Ubuntu</title>
-      <link>https://wilfrantz.github.io/tags/ubuntu/</link>
+      <link>http://10.152.2.2:1313/tags/ubuntu/</link>
       <pubDate>Wed, 10 Mar 2021 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/ubuntu/</guid>
+      <guid>http://10.152.2.2:1313/tags/ubuntu/</guid>
       <description></description>
     </item>
     <item>
       <title>Library</title>
-      <link>https://wilfrantz.github.io/tags/library/</link>
+      <link>http://10.152.2.2:1313/tags/library/</link>
       <pubDate>Fri, 05 Jun 2020 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/library/</guid>
+      <guid>http://10.152.2.2:1313/tags/library/</guid>
       <description></description>
     </item>
     <item>
       <title>Favicon</title>
-      <link>https://wilfrantz.github.io/tags/favicon/</link>
+      <link>http://10.152.2.2:1313/tags/favicon/</link>
       <pubDate>Sun, 11 Aug 2019 00:34:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/favicon/</guid>
+      <guid>http://10.152.2.2:1313/tags/favicon/</guid>
       <description></description>
     </item>
     <item>
       <title>Getting Started</title>
-      <link>https://wilfrantz.github.io/tags/getting-started/</link>
+      <link>http://10.152.2.2:1313/tags/getting-started/</link>
       <pubDate>Fri, 09 Aug 2019 20:55:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/getting-started/</guid>
+      <guid>http://10.152.2.2:1313/tags/getting-started/</guid>
       <description></description>
     </item>
     <item>
       <title>Writing</title>
-      <link>https://wilfrantz.github.io/tags/writing/</link>
+      <link>http://10.152.2.2:1313/tags/writing/</link>
       <pubDate>Thu, 08 Aug 2019 14:10:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/writing/</guid>
+      <guid>http://10.152.2.2:1313/tags/writing/</guid>
       <description></description>
     </item>
     <item>
       <title>Typography</title>
-      <link>https://wilfrantz.github.io/tags/typography/</link>
+      <link>http://10.152.2.2:1313/tags/typography/</link>
       <pubDate>Thu, 08 Aug 2019 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/typography/</guid>
+      <guid>http://10.152.2.2:1313/tags/typography/</guid>
       <description></description>
     </item>
     <item>
       <title>Domain</title>
-      <link>https://wilfrantz.github.io/tags/domain/</link>
+      <link>http://10.152.2.2:1313/tags/domain/</link>
       <pubDate>Sun, 09 Oct 2016 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/domain/</guid>
+      <guid>http://10.152.2.2:1313/tags/domain/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>https://wilfrantz.github.io/tags/software/</link>
+      <link>http://10.152.2.2:1313/tags/software/</link>
       <pubDate>Sun, 09 Oct 2016 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/software/</guid>
+      <guid>http://10.152.2.2:1313/tags/software/</guid>
       <description></description>
     </item>
     <item>
       <title>CMake</title>
-      <link>https://wilfrantz.github.io/tags/cmake/</link>
+      <link>http://10.152.2.2:1313/tags/cmake/</link>
       <pubDate>Wed, 15 Jul 2015 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/tags/cmake/</guid>
+      <guid>http://10.152.2.2:1313/tags/cmake/</guid>
       <description></description>
     </item>
   </channel>

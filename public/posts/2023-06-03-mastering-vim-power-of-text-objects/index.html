@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   Master the Power of Text Objects in Vim · DEDE
 </title>
@@ -15,7 +15,7 @@
 <meta name="author" content="Wilfrantz DEDE">
 <meta name="description" content="Vim, the popular text editor known for its efficiency and versatility, offers a multitude of features that can significantly speed up your editing workflow. One such feature is the clever utilization of text objects.
 By leveraging text objects, you can manipulate text inside surrounding characters, making editing tasks a breeze. In this blog post, we&rsquo;ll explore the concept of text objects and their associated mnemonics, unlocking the true potential of Vim&rsquo;s efficiency.">
-<meta name="keywords" content="[blog hugo developer]">
+<meta name="keywords" content="blog, developer, hugo, personal">
 
 
 
@@ -24,7 +24,7 @@ By leveraging text objects, you can manipulate text inside surrounding character
   <meta name="twitter:description" content="Vim, the popular text editor known for its efficiency and versatility, offers a multitude of features that can significantly speed up your editing workflow. One such feature is the clever utilization of text objects.
 By leveraging text objects, you can manipulate text inside surrounding characters, making editing tasks a breeze. In this blog post, we’ll explore the concept of text objects and their associated mnemonics, unlocking the true potential of Vim’s efficiency.">
 
-<meta property="og:url" content="https://wilfrantz.github.io/posts/2023-06-03-mastering-vim-power-of-text-objects/">
+<meta property="og:url" content="http://10.152.2.2:1313/posts/2023-06-03-mastering-vim-power-of-text-objects/">
   <meta property="og:site_name" content="DEDE">
   <meta property="og:title" content="Master the Power of Text Objects in Vim">
   <meta property="og:description" content="Vim, the popular text editor known for its efficiency and versatility, offers a multitude of features that can significantly speed up your editing workflow. One such feature is the clever utilization of text objects.
@@ -40,7 +40,7 @@ By leveraging text objects, you can manipulate text inside surrounding character
 
 
 
-<link rel="canonical" href="https://wilfrantz.github.io/posts/2023-06-03-mastering-vim-power-of-text-objects/">
+<link rel="canonical" href="http://10.152.2.2:1313/posts/2023-06-03-mastering-vim-power-of-text-objects/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -50,12 +50,18 @@ By leveraging text objects, you can manipulate text inside surrounding character
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
 
 
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
 
 
 
@@ -64,7 +70,7 @@ By leveraging text objects, you can manipulate text inside surrounding character
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
@@ -87,20 +93,16 @@ By leveraging text objects, you can manipulate text inside surrounding character
 
 
 
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
 
+
+<body class="preload-transitions colorscheme-dark">
+  
 
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://wilfrantz.github.io/">
+    <a class="navigation-title" href="http://10.152.2.2:1313/">
       DEDE
     </a>
     
@@ -117,11 +119,19 @@ By leveraging text objects, you can manipulate text inside surrounding character
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Posts</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="mailto:contact@dede.dev">Contact Me</a>
             </li>
           
         
@@ -139,7 +149,7 @@ By leveraging text objects, you can manipulate text inside surrounding character
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://wilfrantz.github.io/posts/2023-06-03-mastering-vim-power-of-text-objects/">
+            <a class="title-link" href="http://10.152.2.2:1313/posts/2023-06-03-mastering-vim-power-of-text-objects/">
               Master the Power of Text Objects in Vim
             </a>
           </h1>
@@ -197,7 +207,7 @@ By leveraging text objects, you can manipulate text inside surrounding character
   </a>
 </h3>
 <p>Let&rsquo;s dive into a few practical examples to illustrate the power of <code>text objects</code>. Imagine you have the following line of code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>some_method<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Some nifty string&#34;</span><span style="color:#f92672">)</span>;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>some_method<span style="color:#ff7b72;font-weight:bold">(</span><span style="color:#a5d6ff">&#34;Some nifty string&#34;</span><span style="color:#ff7b72;font-weight:bold">)</span>;
 </span></span></code></pre></div><p>To replace the static string with a variable, you could use the traditional approach of manually deleting the characters between the quotes and entering insert mode. However, Vim offers a more efficient alternative.</p>
 <p>By placing the cursor anywhere inside the double quotes and typing <code>ci&quot;</code>, Vim will instantly remove the existing string and position the cursor in insert mode, ready for you to enter the replacement variable. This approach saves valuable keystrokes and enhances your editing speed.</p>
 <h3 id="expanding-your-toolkit">
@@ -288,6 +298,8 @@ By leveraging text objects, you can manipulate text inside surrounding character
   <section class="container">
     ©
     
+      2021 -
+    
     2025
      Wilfrantz DEDE 
     ·
@@ -303,7 +315,7 @@ By leveraging text objects, you can manipulate text inside surrounding character
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   

@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on DEDE</title>
-    <link>https://wilfrantz.github.io/categories/</link>
+    <link>http://10.152.2.2:1313/categories/</link>
     <description>Recent content in Categories on DEDE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Aug 2024 11:33:00 +0800</lastBuildDate>
-    <atom:link href="https://wilfrantz.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://10.152.2.2:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blogging</title>
-      <link>https://wilfrantz.github.io/categories/blogging/</link>
+      <link>http://10.152.2.2:1313/categories/blogging/</link>
       <pubDate>Sun, 18 Aug 2024 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/categories/blogging/</guid>
+      <guid>http://10.152.2.2:1313/categories/blogging/</guid>
       <description></description>
     </item>
     <item>
       <title>Tutorial</title>
-      <link>https://wilfrantz.github.io/categories/tutorial/</link>
+      <link>http://10.152.2.2:1313/categories/tutorial/</link>
       <pubDate>Sun, 18 Aug 2024 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/categories/tutorial/</guid>
+      <guid>http://10.152.2.2:1313/categories/tutorial/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog</title>
-      <link>https://wilfrantz.github.io/categories/blog/</link>
+      <link>http://10.152.2.2:1313/categories/blog/</link>
       <pubDate>Fri, 09 Aug 2024 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/categories/blog/</guid>
+      <guid>http://10.152.2.2:1313/categories/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Doc</title>
-      <link>https://wilfrantz.github.io/categories/doc/</link>
+      <link>http://10.152.2.2:1313/categories/doc/</link>
       <pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate>
-      <guid>https://wilfrantz.github.io/categories/doc/</guid>
+      <guid>http://10.152.2.2:1313/categories/doc/</guid>
       <description></description>
     </item>
     <item>
       <title>Document</title>
-      <link>https://wilfrantz.github.io/categories/document/</link>
+      <link>http://10.152.2.2:1313/categories/document/</link>
       <pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/categories/document/</guid>
+      <guid>http://10.152.2.2:1313/categories/document/</guid>
       <description></description>
     </item>
     <item>
       <title>Draft</title>
-      <link>https://wilfrantz.github.io/categories/draft/</link>
+      <link>http://10.152.2.2:1313/categories/draft/</link>
       <pubDate>Fri, 20 May 2022 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/categories/draft/</guid>
+      <guid>http://10.152.2.2:1313/categories/draft/</guid>
       <description></description>
     </item>
     <item>
       <title>Demo</title>
-      <link>https://wilfrantz.github.io/categories/demo/</link>
+      <link>http://10.152.2.2:1313/categories/demo/</link>
       <pubDate>Thu, 08 Aug 2019 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/categories/demo/</guid>
+      <guid>http://10.152.2.2:1313/categories/demo/</guid>
       <description></description>
     </item>
   </channel>

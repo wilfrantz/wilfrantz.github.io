@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   My Dotfiles and Shell Environment Documentation [Draft] · DEDE
 </title>
@@ -18,7 +18,7 @@
 {: .prompt-warning }
 This documentation provides an overview and detailed information about the my dotfiles  shell environment. The dotfiles repository contains a collection of configuration files and scripts used to customize and personalize my development environment over the years.
 By utilizing these dotfiles, you can quickly set up and synchronize your preferred settings across different machines.">
-<meta name="keywords" content="[blog hugo developer]">
+<meta name="keywords" content="blog, developer, hugo, personal">
 
 
 
@@ -28,7 +28,7 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
 This documentation provides an overview and detailed information about the my dotfiles shell environment. The dotfiles repository contains a collection of configuration files and scripts used to customize and personalize my development environment over the years.
 By utilizing these dotfiles, you can quickly set up and synchronize your preferred settings across different machines.">
 
-<meta property="og:url" content="https://wilfrantz.github.io/posts/2012-03-11-dotfiles-and-shell-environment-documentation/">
+<meta property="og:url" content="http://10.152.2.2:1313/posts/2012-03-11-dotfiles-and-shell-environment-documentation/">
   <meta property="og:site_name" content="DEDE">
   <meta property="og:title" content="My Dotfiles and Shell Environment Documentation [Draft]">
   <meta property="og:description" content="⚠️ This document is still a draft. Please note that there might be mistakes or inaccuracies. {: .prompt-warning }
@@ -48,7 +48,7 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
 
 
 
-<link rel="canonical" href="https://wilfrantz.github.io/posts/2012-03-11-dotfiles-and-shell-environment-documentation/">
+<link rel="canonical" href="http://10.152.2.2:1313/posts/2012-03-11-dotfiles-and-shell-environment-documentation/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -58,12 +58,18 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
 
 
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
 
 
 
@@ -72,7 +78,7 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
@@ -95,20 +101,16 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
 
 
 
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
 
+
+<body class="preload-transitions colorscheme-dark">
+  
 
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://wilfrantz.github.io/">
+    <a class="navigation-title" href="http://10.152.2.2:1313/">
       DEDE
     </a>
     
@@ -125,11 +127,19 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Posts</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="mailto:contact@dede.dev">Contact Me</a>
             </li>
           
         
@@ -147,7 +157,7 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://wilfrantz.github.io/posts/2012-03-11-dotfiles-and-shell-environment-documentation/">
+            <a class="title-link" href="http://10.152.2.2:1313/posts/2012-03-11-dotfiles-and-shell-environment-documentation/">
               My Dotfiles and Shell Environment Documentation [Draft]
             </a>
           </h1>
@@ -279,21 +289,21 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
 <ol>
 <li>
 <p>Clone the dotfiles repository to your local machine:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/wilfrantz/dotfiles.git
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/wilfrantz/dotfiles.git
 </span></span></code></pre></div></li>
 <li>
 <p>Change into the dotfiles directory:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd dotfiles
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd dotfiles
 </span></span></code></pre></div></li>
 <li>
 <p>Make the installation script executable:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod +x install.sh
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod +x install.sh
 </span></span></code></pre></div></li>
 <li>
 <p>Run the installation script with the desired options. The available options are explained in the <a href="#usage" >Usage</a> section.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./install.sh &lt;options&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./install.sh &lt;options&gt;
 </span></span></code></pre></div><p>Example usage:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./install.sh all
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./install.sh all
 </span></span></code></pre></div><p>This command will execute all the available steps in the installation script.</p>
 <p><strong>Note:</strong> It&rsquo;s essential to review and modify the installation script according to your preferences and requirements.</p>
 </li>
@@ -324,7 +334,7 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
 <li><code>all</code>: Executes all the steps mentioned above.</li>
 </ul>
 <p>You can pass one or more options to the installation script to perform the desired actions. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./install.sh backup link git
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./install.sh backup link git
 </span></span></code></pre></div><p>This command will create backups, set up symlinks, and configure Git.</p>
 <h2 id="customization">
   Customization
@@ -400,6 +410,8 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
   <section class="container">
     ©
     
+      2021 -
+    
     2025
      Wilfrantz DEDE 
     ·
@@ -415,7 +427,7 @@ By utilizing these dotfiles, you can quickly set up and synchronize your preferr
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   

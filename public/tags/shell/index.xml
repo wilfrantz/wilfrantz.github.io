@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shell on DEDE</title>
-    <link>https://wilfrantz.github.io/tags/shell/</link>
+    <link>http://10.152.2.2:1313/tags/shell/</link>
     <description>Recent content in Shell on DEDE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 May 2023 11:33:00 +0800</lastBuildDate>
-    <atom:link href="https://wilfrantz.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://10.152.2.2:1313/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Dotfiles and Shell Environment Documentation [Draft]</title>
-      <link>https://wilfrantz.github.io/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</link>
+      <link>http://10.152.2.2:1313/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</link>
       <pubDate>Thu, 18 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</guid>
+      <guid>http://10.152.2.2:1313/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;⚠️ &lt;strong&gt;This document is still a draft. Please note that there might be mistakes or inaccuracies.&lt;/strong&gt;&#xA;{: .prompt-warning }&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;This documentation provides an overview and detailed information about the my dotfiles  shell environment. The dotfiles repository contains a collection of configuration files and scripts used to customize and personalize my development environment over the years.&lt;/p&gt;&#xA;&lt;p&gt;By utilizing these dotfiles, you can quickly set up and synchronize your preferred settings across different machines.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,32 +1,89 @@
-baseURL = "https://wilfrantz.github.io/"
-languageCode = "en-us"
-title = "DEDE"
+baseURL = "https://wilfrantz.github.io/"  # Your GitHub Pages URL
+title = "DEDE"  # Your title from earlier
 theme = "hugo-coder"
+languageCode = "en-us"  # Consistent with your previous config
+defaultContentLanguage = "en"
+
+[pagination]
+  pagerSize = 20
+
+[markup.highlight]
+  style = "github-dark"
 
 [params]
-  author = "Wilfrantz DEDE"
-  description = "A minimal blog using Hugo Coder theme"
-  keywords = ["blog", "hugo", "developer"]
-  favicon_32 = "/favicon-32x32.png"
-  favicon_16 = "/favicon-16x16.png"
-  defaultTheme = "dark"
-  forceTheme = "dark"  # 💡 Force dark mode on load
+  author = "Wilfrantz DEDE"  # Your name
+  info = "Systems software engineer."  # Customized for you; adjust as needed
+  description = "Wilfrantz DEDE's personal website"  # Your description
+  keywords = "blog, developer, hugo, personal"  # Adjusted keywords
+  # avatarURL = "/avatar.jpg"  # Matches your earlier config (adjust if filename differs)
+  gravatar = "contact@dede.dev"  # Uncomment and add your email if you prefer Gravatar
 
-[menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
-    weight = 2
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 3
+  faviconSVG = "/img/favicon.svg"  # Optional; add this file to static/img/ if you have it
+  favicon_32 = "/favicon-32x32.png"  # Matches your earlier config
+  favicon_16 = "/favicon-16x16.png"  # Matches your earlier config
+
+  since = 2021  # Assuming you started recently; adjust to your start year
+
+  enableTwemoji = true
+
+  colorScheme = "dark"  # Matches your earlier forceTheme = "dark"
+  hideColorSchemeToggle = true  # Hides toggle since you’re forcing dark mode
+
+  # customCSS = ["css/custom.css"]  # Uncomment if you add custom CSS
+  # customSCSS = ["scss/custom.scss"]  # Uncomment if you add custom SCSS
+  # customJS = ["js/custom.js"]  # Uncomment if you add custom JS
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links (using your provided links)
+[[params.social]]
+  name = "GitHub"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/wilfrantz"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa-brands fa-x-twitter fa-2x"
+  weight = 2
+  url = "https://twitter.com/byteASM"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa-brands fa-linkedin fa-2x"  # Updated icon for LinkedIn
+  weight = 3
+  url = "https://www.linkedin.com/in/wilfrantz-dede-9b9020276/"
+[[params.social]]
+  name = "Mail"
+  icon = "fa-solid fa-envelope fa-2x"  # Font Awesome icon for email
+  weight = 4
+  url = "mailto:contact@dede.dev"
+
+# Menu links (matches your earlier config)
+[[menu.main]]
+  name = "Home"
+  weight = 1
+  url = "/"
+[[menu.main]]
+  name = "Blog"  # Changed to "Blog" to match example, but could revert to "Posts"
+  weight = 2
+  url = "posts/"
+[[menu.main]]
+  name = "About"
+  weight = 3
+  url = "about/"
+[[menu.main]]
+  name = "Projects"
+  weight = 4
+  url = "projects/"
+[[menu.main]]
+  name = "Contact Me"
+  weight = 5
+  url = "mailto:contact@dede.dev"
 
 [markup]
-    [markup.goldmark]
+  [markup.goldmark]
     [markup.goldmark.renderer]
-    unsafe = true
+      unsafe = true

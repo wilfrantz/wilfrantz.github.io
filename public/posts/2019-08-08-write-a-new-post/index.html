@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   Writing a New Post · DEDE
 </title>
@@ -22,7 +22,7 @@
   
 
 Create a new file named YYYY-MM-DD-TITLE.EXTENSION{: .filepath} and put it in the _posts{: .filepath} of the root directory. Please note that the EXTENSION{: .filepath} must be one of md{: .filepath} and markdown{: .filepath}. If you want to save time of creating files, please consider using the plugin Jekyll-Compose to accomplish this.">
-<meta name="keywords" content="[blog hugo developer]">
+<meta name="keywords" content="blog, developer, hugo, personal">
 
 
 
@@ -31,7 +31,7 @@ Create a new file named YYYY-MM-DD-TITLE.EXTENSION{: .filepath} and put it in th
   <meta name="twitter:description" content="This tutorial will guide you how to write a post in the Chirpy template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.
 Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSION{: .filepath} and put it in the _posts{: .filepath} of the root directory. Please note that the EXTENSION{: .filepath} must be one of md{: .filepath} and markdown{: .filepath}. If you want to save time of creating files, please consider using the plugin Jekyll-Compose to accomplish this.">
 
-<meta property="og:url" content="https://wilfrantz.github.io/posts/2019-08-08-write-a-new-post/">
+<meta property="og:url" content="http://10.152.2.2:1313/posts/2019-08-08-write-a-new-post/">
   <meta property="og:site_name" content="DEDE">
   <meta property="og:title" content="Writing a New Post">
   <meta property="og:description" content="This tutorial will guide you how to write a post in the Chirpy template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.
@@ -46,7 +46,7 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
 
 
 
-<link rel="canonical" href="https://wilfrantz.github.io/posts/2019-08-08-write-a-new-post/">
+<link rel="canonical" href="http://10.152.2.2:1313/posts/2019-08-08-write-a-new-post/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -56,12 +56,18 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
 
 
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
 
 
 
@@ -70,7 +76,7 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
@@ -93,20 +99,16 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
 
 
 
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
 
+
+<body class="preload-transitions colorscheme-dark">
+  
 
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://wilfrantz.github.io/">
+    <a class="navigation-title" href="http://10.152.2.2:1313/">
       DEDE
     </a>
     
@@ -123,11 +125,19 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Posts</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="mailto:contact@dede.dev">Contact Me</a>
             </li>
           
         
@@ -145,7 +155,7 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://wilfrantz.github.io/posts/2019-08-08-write-a-new-post/">
+            <a class="title-link" href="http://10.152.2.2:1313/posts/2019-08-08-write-a-new-post/">
               Writing a New Post
             </a>
           </h1>
@@ -198,13 +208,13 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h2>
 <p>Basically, you need to fill the <a href="https://jekyllrb.com/docs/front-matter/"  class="external-link" target="_blank" rel="noopener">Front Matter</a> as below at the top of the post:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">TITLE</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#ae81ff">YYYY-MM-DD HH:MM:SS +/-TTTT</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#ae81ff">TOP_CATEGORIE, SUB_CATEGORIE]</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#ae81ff">TAG]    </span> <span style="color:#75715e"># TAG names should always be lowercase</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">title</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">TITLE</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">date</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">YYYY-MM-DD HH:MM:SS +/-TTTT</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">categories</span>:<span style="color:#6e7681"> </span>[<span style="color:#a5d6ff">TOP_CATEGORIE, SUB_CATEGORIE]</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">tags</span>:<span style="color:#6e7681"> </span>[<span style="color:#a5d6ff">TAG]    </span><span style="color:#6e7681"> </span><span style="color:#8b949e;font-style:italic"># TAG names should always be lowercase</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><blockquote>
 <p>The posts&rsquo; <em>layout</em> has been set to <code>post</code> by default, so there is no need to add the variable <em>layout</em> in the Front Matter block.
 {: .prompt-tip }</p></blockquote>
 <h3 id="timezone-of-date">
@@ -223,11 +233,11 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h3>
 <p>The <code>categories</code> of each post are designed to contain up to two elements, and the number of elements in <code>tags</code> can be zero to infinity. For instance:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#ae81ff">Animal, Insect]</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#ae81ff">bee]</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><h3 id="author-information">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">categories</span>:<span style="color:#6e7681"> </span>[<span style="color:#a5d6ff">Animal, Insect]</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">tags</span>:<span style="color:#6e7681"> </span>[<span style="color:#a5d6ff">bee]</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="author-information">
   Author Information
   <a class="heading-link" href="#author-information">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -236,18 +246,18 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
 </h3>
 <p>The author information of the post usually does not need to be filled in the <em>Front Matter</em> , they will be obtained from variables <code>social.name</code> and the first entry of <code>social.links</code> of the configuration file by default. But you can also override it as follows:</p>
 <p>Adding author information in <code>_data/authors.yml</code> (If your website doesn&rsquo;t have this file, don&rsquo;t hesitate to create one).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">&lt;author_id&gt;</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">&lt;full name&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">twitter</span>: <span style="color:#ae81ff">&lt;twitter_of_author&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">url</span>: <span style="color:#ae81ff">&lt;homepage_of_author&gt;</span>
-</span></span></code></pre></div><p>{: file=&quot;_data/authors.yml&quot; }</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;author_id&gt;</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&lt;full name&gt;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">twitter</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&lt;twitter_of_author&gt;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">url</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&lt;homepage_of_author&gt;</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><p>{: file=&quot;_data/authors.yml&quot; }</p>
 <p>And then use <code>author</code> to specify a single entry or <code>authors</code> to specify multiple entries:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">author</span>: <span style="color:#ae81ff">&lt;author_id&gt;                    </span> <span style="color:#75715e"># for single entry</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># or</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">authors</span>: [<span style="color:#ae81ff">&lt;author1_id&gt;, &lt;author2_id&gt;]  </span> <span style="color:#75715e"># for multiple entries</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><p>Having said that, the key <code>author</code> can also identify multiple entries.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">author</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&lt;author_id&gt;                    </span><span style="color:#6e7681"> </span><span style="color:#8b949e;font-style:italic"># for single entry</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#8b949e;font-style:italic"># or</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">authors</span>:<span style="color:#6e7681"> </span>[<span style="color:#a5d6ff">&lt;author1_id&gt;, &lt;author2_id&gt;]  </span><span style="color:#6e7681"> </span><span style="color:#8b949e;font-style:italic"># for multiple entries</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><p>Having said that, the key <code>author</code> can also identify multiple entries.</p>
 <blockquote>
 <p>The benefit of reading the author information from the file <code>_data/authors.yml</code>{: .filepath } is that the page will have the meta tag <code>twitter:creator</code>, which enriches the <a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#card-and-content-attribution"  class="external-link" target="_blank" rel="noopener">Twitter Cards</a> and is good for SEO.
 {: .prompt-info }</p></blockquote>
@@ -259,10 +269,10 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h2>
 <p>By default, the <strong>T</strong>able <strong>o</strong>f <strong>C</strong>ontents (TOC) is displayed on the right panel of the post. If you want to turn it off globally, go to <code>_config.yml</code>{: .filepath} and set the value of variable <code>toc</code> to <code>false</code>. If you want to turn off TOC for a specific post, add the following to the post&rsquo;s <a href="https://jekyllrb.com/docs/front-matter/"  class="external-link" target="_blank" rel="noopener">Front Matter</a>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><h2 id="comments">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">toc</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">false</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="comments">
   Comments
   <a class="heading-link" href="#comments">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -271,10 +281,10 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
 </h2>
 <p>The global switch of comments is defined by variable <code>comments.active</code> in the file <code>_config.yml</code>{: .filepath}. After selecting a comment system for this variable, comments will be turned on for all posts.</p>
 <p>If you want to close the comment for a specific post, add the following to the <strong>Front Matter</strong> of the post:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">comments</span>: <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><h2 id="mathematics">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">comments</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">false</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="mathematics">
   Mathematics
   <a class="heading-link" href="#mathematics">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -282,10 +292,10 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h2>
 <p>For website performance reasons, the mathematical feature won&rsquo;t be loaded by default. But it can be enabled by:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">math</span>: <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><h2 id="mermaid">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">math</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">true</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="mermaid">
   Mermaid
   <a class="heading-link" href="#mermaid">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -293,10 +303,10 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h2>
 <p><a href="https://github.com/mermaid-js/mermaid"  class="external-link" target="_blank" rel="noopener"><strong>Mermaid</strong></a> is a great diagrams generation tool. To enable it on your post, add the following to the YAML block:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">mermaid</span>: <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><p>Then you can use it like other markdown languages: surround the graph code with <code>```mermaid</code> and <code>```</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">mermaid</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">true</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><p>Then you can use it like other markdown languages: surround the graph code with <code>```mermaid</code> and <code>```</code>.</p>
 <h2 id="images">
   Images
   <a class="heading-link" href="#images">
@@ -312,7 +322,7 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h3>
 <p>Add italics to the next line of an image，then it will become the caption and appear at the bottom of the image:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">img-description</span>](<span style="color:#a6e22e">/path/to/image</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">img-description</span>](/path/to/image)
 </span></span><span style="display:flex;"><span><span style="font-style:italic">_Image Caption_</span>
 </span></span></code></pre></div><p>{: .nolineno}</p>
 <h3 id="size">
@@ -323,13 +333,13 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h3>
 <p>In order to prevent the page content layout from shifting when the image is loaded, we should set the width and height for each image.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Desktop View</span>](<span style="color:#a6e22e">/assets/img/sample/mockup.png</span>){: width=&#34;700&#34; height=&#34;400&#34; }
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">Desktop View</span>](/assets/img/sample/mockup.png){: width=&#34;700&#34; height=&#34;400&#34; }
 </span></span></code></pre></div><p>{: .nolineno}</p>
 <blockquote>
 <p>For an SVG, you have to at least specify its <em>width</em>, otherwise it won&rsquo;t be rendered.
 {: .prompt-info }</p></blockquote>
 <p>Starting from <em>Chirpy v5.0.0</em>, <code>height</code> and <code>width</code> support abbreviations (<code>height</code> → <code>h</code>, <code>width</code> → <code>w</code>). The following example has the same effect as the above:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Desktop View</span>](<span style="color:#a6e22e">/assets/img/sample/mockup.png</span>){: w=&#34;700&#34; h=&#34;400&#34; }
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">Desktop View</span>](/assets/img/sample/mockup.png){: w=&#34;700&#34; h=&#34;400&#34; }
 </span></span></code></pre></div><p>{: .nolineno}</p>
 <h3 id="position">
   Position
@@ -346,17 +356,17 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
 <li>
 <p><strong>Normal position</strong></p>
 <p>Image will be left aligned in below sample:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Desktop View</span>](<span style="color:#a6e22e">/assets/img/sample/mockup.png</span>){: .normal }
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">Desktop View</span>](/assets/img/sample/mockup.png){: .normal }
 </span></span></code></pre></div><p>{: .nolineno}</p>
 </li>
 <li>
 <p><strong>Float to the left</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Desktop View</span>](<span style="color:#a6e22e">/assets/img/sample/mockup.png</span>){: .left }
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">Desktop View</span>](/assets/img/sample/mockup.png){: .left }
 </span></span></code></pre></div><p>{: .nolineno}</p>
 </li>
 <li>
 <p><strong>Float to the right</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Desktop View</span>](<span style="color:#a6e22e">/assets/img/sample/mockup.png</span>){: .right }
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">Desktop View</span>](/assets/img/sample/mockup.png){: .right }
 </span></span></code></pre></div><p>{: .nolineno}</p>
 </li>
 </ul>
@@ -368,8 +378,8 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h3>
 <p>You can make images follow theme preferences in dark/light mode. This requires you to prepare two images, one for dark mode and one for light mode, and then assign them a specific class (<code>dark</code> or <code>light</code>):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Light mode only</span>](<span style="color:#a6e22e">/path/to/light-mode.png</span>){: .light }
-</span></span><span style="display:flex;"><span>![<span style="color:#f92672">Dark mode only</span>](<span style="color:#a6e22e">/path/to/dark-mode.png</span>){: .dark }
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">Light mode only</span>](/path/to/light-mode.png){: .light }
+</span></span><span style="display:flex;"><span>![<span style="color:#7ee787">Dark mode only</span>](/path/to/dark-mode.png){: .dark }
 </span></span></code></pre></div><h3 id="shadow">
   Shadow
   <a class="heading-link" href="#shadow">
@@ -378,7 +388,7 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h3>
 <p>The screenshots of the program window can be considered to show the shadow effect:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Desktop View</span>](<span style="color:#a6e22e">/assets/img/sample/mockup.png</span>){: .shadow }
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">Desktop View</span>](/assets/img/sample/mockup.png){: .shadow }
 </span></span></code></pre></div><p>{: .nolineno}</p>
 <h3 id="cdn-url">
   CDN URL
@@ -388,14 +398,14 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h3>
 <p>If you host the images on the CDN, you can save the time of repeatedly writing the CDN URL by assigning the variable <code>img_cdn</code> of <code>_config.yml</code>{: .filepath} file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">img_cdn</span>: <span style="color:#ae81ff">https://cdn.com</span>
-</span></span></code></pre></div><p>{: file=&rsquo;_config.yml&rsquo; .nolineno}</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">img_cdn</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">https://cdn.com</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><p>{: file=&rsquo;_config.yml&rsquo; .nolineno}</p>
 <p>Once <code>img_cdn</code> is assigned, the CDN URL will be added to the path of all images (images of site avatar and posts) starting with <code>/</code>.</p>
 <p>For instance, when using images:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">The flower</span>](<span style="color:#a6e22e">/path/to/flower.png</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">The flower</span>](/path/to/flower.png)
 </span></span></code></pre></div><p>{: .nolineno}</p>
 <p>The parsing result will automatically add the CDN prefix <code>https://cdn.com</code> before the image path:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.com/path/to/flower.png&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;The flower&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">img</span> src<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;https://cdn.com/path/to/flower.png&#34;</span> alt<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;The flower&#34;</span>&gt;
 </span></span></code></pre></div><p>{: .nolineno }</p>
 <h3 id="image-path">
   Image Path
@@ -405,14 +415,14 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h3>
 <p>When a post contains many images, it will be a time-consuming task to repeatedly define the path of the images. To solve this, we can define this path in the YAML block of the post:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">img_path</span>: <span style="color:#ae81ff">/img/path/</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><p>And then, the image source of Markdown can write the file name directly:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>![<span style="color:#f92672">The flower</span>](<span style="color:#a6e22e">flower.png</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">img_path</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">/img/path/</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><p>And then, the image source of Markdown can write the file name directly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>![<span style="color:#7ee787">The flower</span>](flower.png)
 </span></span></code></pre></div><p>{: .nolineno }</p>
 <p>The output will be:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/img/path/flower.png&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;The flower&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">img</span> src<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;/img/path/flower.png&#34;</span> alt<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;The flower&#34;</span>&gt;
 </span></span></code></pre></div><p>{: .nolineno }</p>
 <h3 id="preview-image">
   Preview Image
@@ -423,17 +433,17 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
 </h3>
 <p>If you want to add an image at the top of the post, please provide an image with a resolution of <code>1200 x 630</code>. Please note that if the image aspect ratio does not meet <code>1.91 : 1</code>, the image will be scaled and cropped.</p>
 <p>Knowing these prerequisites, you can start setting the image&rsquo;s attribute:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">image</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/path/to/image</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">alt</span>: <span style="color:#ae81ff">image alternative text</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><p>Note that the <a href="#image-path" ><code>img_path</code></a> can also be passed to the preview image, that is, when it has been set, the  attribute <code>path</code> only needs the image file name.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">image</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">path</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">/path/to/image</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">alt</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">image alternative text</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><p>Note that the <a href="#image-path" ><code>img_path</code></a> can also be passed to the preview image, that is, when it has been set, the  attribute <code>path</code> only needs the image file name.</p>
 <p>For simple use, you can also just use <code>image</code> to define the path.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">image</span>: <span style="color:#ae81ff">/path/to/image</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><h3 id="lqip">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">image</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">/path/to/image</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="lqip">
   LQIP
   <a class="heading-link" href="#lqip">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -441,14 +451,14 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h3>
 <p>For preview images:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">image</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">lqip</span>: <span style="color:#ae81ff">/path/to/lqip-file</span> <span style="color:#75715e"># or base64 URI</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">image</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">lqip</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">/path/to/lqip-file</span><span style="color:#6e7681"> </span><span style="color:#8b949e;font-style:italic"># or base64 URI</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><blockquote>
 <p>You can observe LQIP in the preview image of post <a href="/posts/markdown-cheat-sheet/" ><em>Text and Typography</em></a>.</p></blockquote>
 <p>For normal images:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Image description</span>](<span style="color:#a6e22e">/path/to/image</span>){: lqip=&#34;/path/to/lqip-file&#34; }
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">Image description</span>](/path/to/image){: lqip=&#34;/path/to/lqip-file&#34; }
 </span></span></code></pre></div><p>{: .nolineno }</p>
 <h2 id="pinned-posts">
   Pinned Posts
@@ -458,10 +468,10 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h2>
 <p>You can pin one or more posts to the top of the home page, and the fixed posts are sorted in reverse order according to their release date. Enable by:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">pin</span>: <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><h2 id="prompts">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">pin</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">true</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">---</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><h2 id="prompts">
   Prompts
   <a class="heading-link" href="#prompts">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -469,7 +479,7 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h2>
 <p>There are several types of prompts: <code>tip</code>, <code>info</code>, <code>warning</code>, and <code>danger</code>. They can be generated by adding the class <code>prompt-{type}</code> to the blockquote. For example, define a prompt of type <code>info</code> as follows:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">Example line for prompt.
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#ff7b72">&gt; </span><span style="font-style:italic">Example line for prompt.
 </span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>{: .prompt-info }
 </span></span></code></pre></div><p>{: .nolineno }</p>
 <h2 id="syntax">
@@ -486,7 +496,7 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#e6db74">`inline code part`</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#a5d6ff">`inline code part`</span>
 </span></span></code></pre></div><p>{: .nolineno }</p>
 <h3 id="filepath-hightlight">
   Filepath Hightlight
@@ -495,7 +505,7 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#e6db74">`/path/to/a/file.extend`</span>{: .filepath}
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#a5d6ff">`/path/to/a/file.extend`</span>{: .filepath}
 </span></span></code></pre></div><p>{: .nolineno }</p>
 <h3 id="code-block">
   Code Block
@@ -505,9 +515,9 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h3>
 <p>Markdown symbols <code>```</code> can easily create a code block as follows:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#e6db74">```
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span>This is a plaintext code snippet.
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#a5d6ff">```
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span>This is a plaintext code snippet.
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">```</span>
 </span></span></code></pre></div><h4 id="specifying-language">
   Specifying Language
   <a class="heading-link" href="#specifying-language">
@@ -516,9 +526,9 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h4>
 <p>Using <code>```{language}</code> you will get a code block with syntax highlight:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#e6db74">```yaml
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#f92672">key</span>: <span style="color:#ae81ff">value</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#a5d6ff">```yaml
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span><span style="color:#7ee787">key</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">value</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#a5d6ff">```</span>
 </span></span></code></pre></div><blockquote>
 <p>The Jekyll tag <code>{% highlight %}</code> is not compatible with this theme.
 {: .prompt-danger }</p></blockquote>
@@ -530,9 +540,9 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h4>
 <p>By default, all languages except <code>plaintext</code>, <code>console</code>, and <code>terminal</code> will display line numbers. When you want to hide the line number of a code block, add the class <code>nolineno</code> to it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#e6db74">```shell
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span>echo <span style="color:#e6db74">&#39;No more line numbers!&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#a5d6ff">```shell
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span>echo <span style="color:#a5d6ff">&#39;No more line numbers!&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">```</span>
 </span></span><span style="display:flex;"><span>{: .nolineno }
 </span></span></code></pre></div><h4 id="specifying-the-filename">
   Specifying the Filename
@@ -542,9 +552,9 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h4>
 <p>You may have noticed that the code language will be displayed at the top of the code block. If you want to replace it with the file name, you can add the attribute <code>file</code> to achieve this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#e6db74">```shell
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#75715e"># content</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#a5d6ff">```shell
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span><span style="color:#8b949e;font-style:italic"># content</span>
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">```</span>
 </span></span><span style="display:flex;"><span>{: file=&#34;path/to/file&#34; }
 </span></span></code></pre></div><h4 id="liquid-codes">
   Liquid Codes
@@ -554,12 +564,12 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   </a>
 </h4>
 <p>If you want to display the <strong>Liquid</strong> snippet, surround the liquid code with <code>{% raw %}</code> and <code>{% endraw %}</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{% raw %}
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">```liquid
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span>{% if product.title contains &#39;Pack&#39; %}
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{% raw %}
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">```liquid
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span>{% if product.title contains &#39;Pack&#39; %}
 </span></span><span style="display:flex;"><span>  This product&#39;s title contains the word Pack.
 </span></span><span style="display:flex;"><span>{% endif %}
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">```</span>
 </span></span><span style="display:flex;"><span>{% endraw %}
 </span></span></code></pre></div><p>Or adding <code>render_with_liquid: false</code> (Requires Jekyll 4.0 or higher) to the post&rsquo;s YAML block.</p>
 <h2 id="videos">
@@ -629,6 +639,8 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
   <section class="container">
     ©
     
+      2021 -
+    
     2025
      Wilfrantz DEDE 
     ·
@@ -644,7 +656,7 @@ Naming and Path Link to heading Create a new file named YYYY-MM-DD-TITLE.EXTENSI
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   

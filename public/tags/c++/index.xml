@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C&#43;&#43; on DEDE</title>
-    <link>https://wilfrantz.github.io/tags/c&#43;&#43;/</link>
+    <link>http://10.152.2.2:1313/tags/c&#43;&#43;/</link>
     <description>Recent content in C&#43;&#43; on DEDE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Aug 2024 11:33:00 +0800</lastBuildDate>
-    <atom:link href="https://wilfrantz.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://10.152.2.2:1313/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Domain Engine SQL Database schema</title>
-      <link>https://wilfrantz.github.io/posts/2024-08-17-domain-engine-sql-database/</link>
+      <link>http://10.152.2.2:1313/posts/2024-08-17-domain-engine-sql-database/</link>
       <pubDate>Sun, 18 Aug 2024 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/posts/2024-08-17-domain-engine-sql-database/</guid>
+      <guid>http://10.152.2.2:1313/posts/2024-08-17-domain-engine-sql-database/</guid>
       <description>&lt;h3 id=&#34;1-database-schema-design&#34;&gt;&#xA;  1. &lt;strong&gt;Database Schema Design&lt;/strong&gt;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-database-schema-design&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Create several tables to handle the different components of the JSON data. The main tables could be:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;domains&lt;/code&gt;&lt;/strong&gt;: Store basic information about the domain.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;appraisal&lt;/code&gt;&lt;/strong&gt;: Store appraisal values and related data.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;keyword_stats&lt;/code&gt;&lt;/strong&gt;: Store keyword statistics.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;sales_history&lt;/code&gt;&lt;/strong&gt;: Store historical sales data.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;trademarks&lt;/code&gt;&lt;/strong&gt;: Store trademark information.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;web&lt;/code&gt;&lt;/strong&gt;: Store web-related statistics.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;whois&lt;/code&gt;&lt;/strong&gt;: Store WHOIS-related data.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-table-definitions&#34;&gt;&#xA;  2. &lt;strong&gt;Table Definitions&lt;/strong&gt;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#2-table-definitions&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Here’s how the tables in MySQL could be define:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Seamless JSON config files integration with EasyJsonCpp</title>
-      <link>https://wilfrantz.github.io/posts/2023-05-15-flexible-config-file-structure-for-seamless-integration/</link>
+      <link>http://10.152.2.2:1313/posts/2023-05-15-flexible-config-file-structure-for-seamless-integration/</link>
       <pubDate>Mon, 15 May 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/posts/2023-05-15-flexible-config-file-structure-for-seamless-integration/</guid>
+      <guid>http://10.152.2.2:1313/posts/2023-05-15-flexible-config-file-structure-for-seamless-integration/</guid>
       <description>&lt;p&gt;As a Backend Engineer, ensuring confidentiality and security is paramount in my work, especially when handling sensitive data like API key and private configuration elements that require strict confidentiality.&lt;/p&gt;&#xA;&lt;p&gt;While I strive to contribute to the open-source community, I am mindful of safeguarding my own privacy and security by avoiding any inadvertent disclosure of sensitive information. Consequently, I have adopted a simple technique which consists of loading configuration data from a JSON config file into a map or multiple maps (Or any data structure of choice) to enable seamless and efficient data retrieval only when and where needed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mastering C/C&#43;&#43; Library Development and Build Management with CMake</title>
-      <link>https://wilfrantz.github.io/posts/2023-12-03-building-compiled-libraries/</link>
+      <link>http://10.152.2.2:1313/posts/2023-12-03-building-compiled-libraries/</link>
       <pubDate>Fri, 05 Jun 2020 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/posts/2023-12-03-building-compiled-libraries/</guid>
+      <guid>http://10.152.2.2:1313/posts/2023-12-03-building-compiled-libraries/</guid>
       <description>&lt;p&gt;When working on large &lt;code&gt;C/C++&lt;/code&gt; projects or creating reusable code, building compiled libraries is a common practice. Compiled libraries allow you to encapsulate functionality and data structures into reusable modules that can be easily linked into other programs.&lt;/p&gt;&#xA;&lt;p&gt;In this blog post, we&amp;rsquo;ll walk you through the process of building a compiled library in &lt;code&gt;C/C++&lt;/code&gt; and show you how to prepare a &lt;code&gt;CMakeLists.txt&lt;/code&gt; file to manage the build process.&lt;/p&gt;&#xA;&lt;p&gt;Table of Contents&lt;/p&gt;</description>
     </item>
   </channel>

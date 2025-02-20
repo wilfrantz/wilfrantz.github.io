@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Debugging on DEDE</title>
-    <link>https://wilfrantz.github.io/tags/debugging/</link>
+    <link>http://10.152.2.2:1313/tags/debugging/</link>
     <description>Recent content in Debugging on DEDE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Sep 2023 11:33:00 +0800</lastBuildDate>
-    <atom:link href="https://wilfrantz.github.io/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://10.152.2.2:1313/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LLDB Cheat Sheet</title>
-      <link>https://wilfrantz.github.io/posts/2023-09-05-lldb-cheat-sheet/</link>
+      <link>http://10.152.2.2:1313/posts/2023-09-05-lldb-cheat-sheet/</link>
       <pubDate>Tue, 05 Sep 2023 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/posts/2023-09-05-lldb-cheat-sheet/</guid>
+      <guid>http://10.152.2.2:1313/posts/2023-09-05-lldb-cheat-sheet/</guid>
       <description>&lt;p&gt;LLDB is the debugger that comes with Xcode and is part of the LLVM project. It is used for debugging programs written in C, C++, Objective-C, and Swift. Here’s a cheat sheet to help you get started with LLDB:&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Table of contents&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#starting-lldb&#34; &gt;Starting LLDB&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#basic-commands&#34; &gt;Basic Commands&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#breakpoints&#34; &gt;Breakpoints&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#stepping&#34; &gt;Stepping&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#examining-state&#34; &gt;Examining State&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#memory-inspection&#34; &gt;Memory Inspection&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#expressions&#34; &gt;Expressions&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#advanced-commands&#34; &gt;Advanced Commands&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#register-commands&#34; &gt;Register Commands&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#scripting&#34; &gt;Scripting&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#tips-and-tricks&#34; &gt;Tips and Tricks&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#conclusion&#34; &gt;Conclusion&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;starting-lldb&#34;&gt;&#xA;  Starting LLDB&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#starting-lldb&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Start LLDB and load a program&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>

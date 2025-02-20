@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   DomainEngine - CMake Configuration · DEDE
 </title>
@@ -29,7 +29,7 @@ This document outlines the CMake configuration for the domainEngine project, whi
   
 
 The following sections provide a breakdown of the CMake configuration based on the provided code snippet.">
-<meta name="keywords" content="[blog hugo developer]">
+<meta name="keywords" content="blog, developer, hugo, personal">
 
 
 
@@ -38,7 +38,7 @@ The following sections provide a breakdown of the CMake configuration based on t
   <meta name="twitter:description" content="Introduction Link to heading This document outlines the CMake configuration for the domainEngine project, which is version 1.0.2. The project is implemented in C&#43;&#43; and relies on various libraries and packages. The document provides an overview of the CMake configuration, including minimum required versions, project details, package dependencies, compilation options, and target linkage.
 CMake Configuration Details Link to heading The following sections provide a breakdown of the CMake configuration based on the provided code snippet.">
 
-<meta property="og:url" content="https://wilfrantz.github.io/posts/2015-07-15-domainengine-cmake-configuration/">
+<meta property="og:url" content="http://10.152.2.2:1313/posts/2015-07-15-domainengine-cmake-configuration/">
   <meta property="og:site_name" content="DEDE">
   <meta property="og:title" content="DomainEngine - CMake Configuration">
   <meta property="og:description" content="Introduction Link to heading This document outlines the CMake configuration for the domainEngine project, which is version 1.0.2. The project is implemented in C&#43;&#43; and relies on various libraries and packages. The document provides an overview of the CMake configuration, including minimum required versions, project details, package dependencies, compilation options, and target linkage.
@@ -55,7 +55,7 @@ CMake Configuration Details Link to heading The following sections provide a bre
 
 
 
-<link rel="canonical" href="https://wilfrantz.github.io/posts/2015-07-15-domainengine-cmake-configuration/">
+<link rel="canonical" href="http://10.152.2.2:1313/posts/2015-07-15-domainengine-cmake-configuration/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -65,12 +65,18 @@ CMake Configuration Details Link to heading The following sections provide a bre
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
 
 
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
 
 
 
@@ -79,7 +85,7 @@ CMake Configuration Details Link to heading The following sections provide a bre
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
@@ -102,20 +108,16 @@ CMake Configuration Details Link to heading The following sections provide a bre
 
 
 
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
 
+
+<body class="preload-transitions colorscheme-dark">
+  
 
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://wilfrantz.github.io/">
+    <a class="navigation-title" href="http://10.152.2.2:1313/">
       DEDE
     </a>
     
@@ -132,11 +134,19 @@ CMake Configuration Details Link to heading The following sections provide a bre
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Posts</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="mailto:contact@dede.dev">Contact Me</a>
             </li>
           
         
@@ -154,7 +164,7 @@ CMake Configuration Details Link to heading The following sections provide a bre
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://wilfrantz.github.io/posts/2015-07-15-domainengine-cmake-configuration/">
+            <a class="title-link" href="http://10.152.2.2:1313/posts/2015-07-15-domainengine-cmake-configuration/">
               DomainEngine - CMake Configuration
             </a>
           </h1>
@@ -222,7 +232,7 @@ CMake Configuration Details Link to heading The following sections provide a bre
   </a>
 </h3>
 <p>The CMake configuration specifies the minimum required version of CMake to be between 3.10 and 3.20.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>cmake_minimum_required(<span style="color:#e6db74">VERSION</span> <span style="color:#e6db74">3.10...3.20</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>cmake_minimum_required(<span style="color:#a5d6ff">VERSION</span> <span style="color:#a5d6ff">3.10...3.20</span>)<span style="color:#f85149">
 </span></span></span></code></pre></div><h3 id="project-details">
   Project Details
   <a class="heading-link" href="#project-details">
@@ -231,7 +241,7 @@ CMake Configuration Details Link to heading The following sections provide a bre
   </a>
 </h3>
 <p>The project is implemented using C++.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>project(<span style="color:#e6db74">domain</span> <span style="color:#e6db74">VERSION</span> <span style="color:#e6db74">1.0.2</span> <span style="color:#e6db74">LANGUAGES</span> <span style="color:#e6db74">CXX</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>project(<span style="color:#a5d6ff">domain</span> <span style="color:#a5d6ff">VERSION</span> <span style="color:#a5d6ff">1.0.2</span> <span style="color:#a5d6ff">LANGUAGES</span> <span style="color:#a5d6ff">CXX</span>)<span style="color:#f85149">
 </span></span></span></code></pre></div><h3 id="c-standard">
   C++ Standard
   <a class="heading-link" href="#c-standard">
@@ -240,7 +250,7 @@ CMake Configuration Details Link to heading The following sections provide a bre
   </a>
 </h3>
 <p>The CMake configuration sets the C++ standard to 17.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>set(<span style="color:#e6db74">CMAKE_CXX_STANDARD</span> <span style="color:#e6db74">17</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>set(<span style="color:#a5d6ff">CMAKE_CXX_STANDARD</span> <span style="color:#a5d6ff">17</span>)<span style="color:#f85149">
 </span></span></span></code></pre></div><h3 id="package-dependencies">
   Package Dependencies
   <a class="heading-link" href="#package-dependencies">
@@ -249,11 +259,11 @@ CMake Configuration Details Link to heading The following sections provide a bre
   </a>
 </h3>
 <p>The project depends on several external packages, which are found using the <code>find_package()</code> command.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>find_package(<span style="color:#e6db74">fmt</span> <span style="color:#e6db74">REQUIRED</span>)<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>find_package(<span style="color:#e6db74">spdlog</span> <span style="color:#e6db74">REQUIRED</span>)<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>find_package(<span style="color:#e6db74">CURL</span> <span style="color:#e6db74">REQUIRED</span>)<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>find_library(<span style="color:#e6db74">JSONCPP_LIBRARIES</span> <span style="color:#e6db74">NAMES</span> <span style="color:#e6db74">jsoncpp</span>)<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>find_package(<span style="color:#e6db74">Boost</span> <span style="color:#e6db74">REQUIRED</span> <span style="color:#e6db74">COMPONENTS</span> <span style="color:#e6db74">system</span> <span style="color:#e6db74">thread</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>find_package(<span style="color:#a5d6ff">fmt</span> <span style="color:#a5d6ff">REQUIRED</span>)<span style="color:#f85149">
+</span></span></span><span style="display:flex;"><span><span style="color:#f85149"></span>find_package(<span style="color:#a5d6ff">spdlog</span> <span style="color:#a5d6ff">REQUIRED</span>)<span style="color:#f85149">
+</span></span></span><span style="display:flex;"><span><span style="color:#f85149"></span>find_package(<span style="color:#a5d6ff">CURL</span> <span style="color:#a5d6ff">REQUIRED</span>)<span style="color:#f85149">
+</span></span></span><span style="display:flex;"><span><span style="color:#f85149"></span>find_library(<span style="color:#a5d6ff">JSONCPP_LIBRARIES</span> <span style="color:#a5d6ff">NAMES</span> <span style="color:#a5d6ff">jsoncpp</span>)<span style="color:#f85149">
+</span></span></span><span style="display:flex;"><span><span style="color:#f85149"></span>find_package(<span style="color:#a5d6ff">Boost</span> <span style="color:#a5d6ff">REQUIRED</span> <span style="color:#a5d6ff">COMPONENTS</span> <span style="color:#a5d6ff">system</span> <span style="color:#a5d6ff">thread</span>)<span style="color:#f85149">
 </span></span></span></code></pre></div><h3 id="compilation-options">
   Compilation Options
   <a class="heading-link" href="#compilation-options">
@@ -262,9 +272,9 @@ CMake Configuration Details Link to heading The following sections provide a bre
   </a>
 </h3>
 <p>The CMake configuration defines several options that affect the compilation process. These options can be enabled or disabled during the build.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>OPTION(<span style="color:#e6db74">CMAKE_VERBOSE_MAKEFILE</span> <span style="color:#e6db74">&#34;Enable verbose output from Makefile builds&#34;</span> <span style="color:#e6db74">OFF</span>)<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>OPTION(<span style="color:#e6db74">BUILD_TESTS</span> <span style="color:#e6db74">&#34;Build tests&#34;</span> <span style="color:#e6db74">ON</span>)<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>OPTION(<span style="color:#e6db74">CMAKE_VERBOSE_MAKEFILE</span> <span style="color:#e6db74">&#34;Verbose Makefile&#34;</span> <span style="color:#e6db74">ON</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>OPTION(<span style="color:#a5d6ff">CMAKE_VERBOSE_MAKEFILE</span> <span style="color:#a5d6ff">&#34;Enable verbose output from Makefile builds&#34;</span> <span style="color:#a5d6ff">OFF</span>)<span style="color:#f85149">
+</span></span></span><span style="display:flex;"><span><span style="color:#f85149"></span>OPTION(<span style="color:#a5d6ff">BUILD_TESTS</span> <span style="color:#a5d6ff">&#34;Build tests&#34;</span> <span style="color:#a5d6ff">ON</span>)<span style="color:#f85149">
+</span></span></span><span style="display:flex;"><span><span style="color:#f85149"></span>OPTION(<span style="color:#a5d6ff">CMAKE_VERBOSE_MAKEFILE</span> <span style="color:#a5d6ff">&#34;Verbose Makefile&#34;</span> <span style="color:#a5d6ff">ON</span>)<span style="color:#f85149">
 </span></span></span></code></pre></div><h3 id="compilation-definitions">
   Compilation Definitions
   <a class="heading-link" href="#compilation-definitions">
@@ -273,7 +283,7 @@ CMake Configuration Details Link to heading The following sections provide a bre
   </a>
 </h3>
 <p>A compile definition is added to the project, specifying the version of the engine as the project version.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>add_compile_definitions(<span style="color:#e6db74">ENGINE_VERSION=</span><span style="color:#e6db74">&#34;${PROJECT_VERSION}&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>add_compile_definitions(<span style="color:#a5d6ff">ENGINE_VERSION=</span><span style="color:#a5d6ff">&#34;${PROJECT_VERSION}&#34;</span>)<span style="color:#f85149">
 </span></span></span></code></pre></div><h3 id="project-sources">
   Project Sources
   <a class="heading-link" href="#project-sources">
@@ -282,13 +292,13 @@ CMake Configuration Details Link to heading The following sections provide a bre
   </a>
 </h3>
 <p>The project sources are defined using the <code>ADD_EXECUTABLE()</code> command, listing the relevant source files.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>ADD_EXECUTABLE(<span style="color:#f92672">${</span>PROJECT_NAME<span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">src/main.cpp</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">src/domain.cpp</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">src/dynadot.cpp</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">src/keywords.cpp</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">src/misc.cpp</span>
-</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>ADD_EXECUTABLE(<span style="color:#ff7b72;font-weight:bold">${</span><span style="color:#79c0ff">PROJECT_NAME</span><span style="color:#ff7b72;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">src/main.cpp</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">src/domain.cpp</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">src/dynadot.cpp</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">src/keywords.cpp</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">src/misc.cpp</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#f85149">
 </span></span></span></code></pre></div><h3 id="macos-specific-configuration">
   macOS Specific Configuration
   <a class="heading-link" href="#macos-specific-configuration">
@@ -297,7 +307,7 @@ CMake Configuration Details Link to heading The following sections provide a bre
   </a>
 </h3>
 <p>For macOS, the CMake configuration sets the macOS SDK version to be used.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>set(<span style="color:#e6db74">CMAKE_OSX_SYSROOT</span> <span style="color:#e6db74">/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk</span>)<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>set(<span style="color:#a5d6ff">CMAKE_OSX_SYSROOT</span> <span style="color:#a5d6ff">/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk</span>)<span style="color:#f85149">
 </span></span></span></code></pre></div><h3 id="target-linkage">
   Target Linkage
   <a class="heading-link" href="#target-linkage">
@@ -306,27 +316,27 @@ CMake Configuration Details Link to heading The following sections provide a bre
   </a>
 </h3>
 <p>The target linkage specifies the libraries to be linked with the executable based on the platform.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>if (<span style="color:#e6db74">UNIX</span> <span style="color:#e6db74">AND</span> <span style="color:#e6db74">NOT</span> <span style="color:#e6db74">APPLE</span>)<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    target_link_libraries(<span style="color:#f92672">${</span>PROJECT_NAME<span style="color:#f92672">}</span> <span style="color:#e6db74">PRIVATE</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">tdjson</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">jsoncpp</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">fmt::fmt</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">spdlog::spdlog</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">Boost::system</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">Boost::thread</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">CURL::libcurl</span>
-</span></span><span style="display:flex;"><span>    )<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>else(<span style="color:#e6db74">APPLE</span>)<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    target_link_libraries(<span style="color:#f92672">${</span>PROJECT_NAME<span style="color:#f92672">}</span> <span style="color:#e6db74">PRIVATE</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">fmt::fmt</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">spdlog::spdlog</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">Boost::system</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">Boost::thread</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">CURL::libcurl</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">${</span>TDJSON_LIBRARIES<span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">/usr/local/Cellar/jsoncpp/1.9.5/lib/libjsoncpp.dylib</span>
-</span></span><span style="display:flex;"><span>    )<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>endif()<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>if (<span style="color:#a5d6ff">UNIX</span> <span style="color:#a5d6ff">AND</span> <span style="color:#a5d6ff">NOT</span> <span style="color:#a5d6ff">APPLE</span>)<span style="color:#f85149">
+</span></span></span><span style="display:flex;"><span><span style="color:#f85149"></span>    target_link_libraries(<span style="color:#ff7b72;font-weight:bold">${</span><span style="color:#79c0ff">PROJECT_NAME</span><span style="color:#ff7b72;font-weight:bold">}</span> <span style="color:#a5d6ff">PRIVATE</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">tdjson</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">jsoncpp</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">fmt::fmt</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">spdlog::spdlog</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">Boost::system</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">Boost::thread</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">CURL::libcurl</span>
+</span></span><span style="display:flex;"><span>    )<span style="color:#f85149">
+</span></span></span><span style="display:flex;"><span><span style="color:#f85149"></span>else(<span style="color:#a5d6ff">APPLE</span>)<span style="color:#f85149">
+</span></span></span><span style="display:flex;"><span><span style="color:#f85149"></span>    target_link_libraries(<span style="color:#ff7b72;font-weight:bold">${</span><span style="color:#79c0ff">PROJECT_NAME</span><span style="color:#ff7b72;font-weight:bold">}</span> <span style="color:#a5d6ff">PRIVATE</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">fmt::fmt</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">spdlog::spdlog</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">Boost::system</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">Boost::thread</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">CURL::libcurl</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72;font-weight:bold">${</span><span style="color:#79c0ff">TDJSON_LIBRARIES</span><span style="color:#ff7b72;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">/usr/local/Cellar/jsoncpp/1.9.5/lib/libjsoncpp.dylib</span>
+</span></span><span style="display:flex;"><span>    )<span style="color:#f85149">
+</span></span></span><span style="display:flex;"><span><span style="color:#f85149"></span>endif()<span style="color:#f85149">
 </span></span></span></code></pre></div><h3 id="testing-commented-out">
   Testing (Commented Out)
   <a class="heading-link" href="#testing-commented-out">
@@ -335,12 +345,12 @@ CMake Configuration Details Link to heading The following sections provide a bre
   </a>
 </h3>
 <p>The CMake configuration includes a section for building tests if the <code>BUILD_TESTS</code> option is enabled. However, this section is currently disabled.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span><span style="color:#75715e"># if (BUILD_TESTS)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   message(STATUS &#34;Building tests ...&#34;)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   enable_testing()
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   add_subdirectory(test)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   add_test(NAME ${PROJECT_NAME}_tests COMMAND test/${PROJECT_NAME}_test)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># endif (BUILD_TESTS)
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># if (BUILD_TESTS)
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#   message(STATUS &#34;Building tests ...&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#   enable_testing()
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#   add_subdirectory(test)
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#   add_test(NAME ${PROJECT_NAME}_tests COMMAND test/${PROJECT_NAME}_test)
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># endif (BUILD_TESTS)
 </span></span></span></code></pre></div><h2 id="conclusion">
   Conclusion
   <a class="heading-link" href="#conclusion">
@@ -393,6 +403,8 @@ CMake Configuration Details Link to heading The following sections provide a bre
   <section class="container">
     ©
     
+      2021 -
+    
     2025
      Wilfrantz DEDE 
     ·
@@ -408,7 +420,7 @@ CMake Configuration Details Link to heading The following sections provide a bre
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   

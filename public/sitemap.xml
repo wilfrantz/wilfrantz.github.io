@@ -2,213 +2,217 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wilfrantz.github.io/about/</loc>
+    <loc>http://10.152.2.2:1313/about/</loc>
     <lastmod>2025-02-20T01:22:31-05:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/</loc>
+    <loc>http://10.152.2.2:1313/</loc>
     <lastmod>2025-02-20T01:22:31-05:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/blogging/</loc>
+    <loc>http://10.152.2.2:1313/tags/blogging/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/hugo/</loc>
+    <loc>http://10.152.2.2:1313/tags/hugo/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/newtest/</loc>
+    <loc>http://10.152.2.2:1313/posts/newtest/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/</loc>
+    <loc>http://10.152.2.2:1313/posts/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/</loc>
+    <loc>http://10.152.2.2:1313/tags/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/categories/blogging/</loc>
+    <loc>http://10.152.2.2:1313/categories/blogging/</loc>
     <lastmod>2024-08-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/c&#43;&#43;/</loc>
+    <loc>http://10.152.2.2:1313/tags/c&#43;&#43;/</loc>
     <lastmod>2024-08-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/categories/</loc>
+    <loc>http://10.152.2.2:1313/categories/</loc>
     <lastmod>2024-08-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2024-08-17-domain-engine-sql-database/</loc>
+    <loc>http://10.152.2.2:1313/posts/2024-08-17-domain-engine-sql-database/</loc>
     <lastmod>2024-08-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/mysql/</loc>
+    <loc>http://10.152.2.2:1313/tags/mysql/</loc>
     <lastmod>2024-08-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/swe/</loc>
+    <loc>http://10.152.2.2:1313/tags/swe/</loc>
     <lastmod>2024-08-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/categories/tutorial/</loc>
+    <loc>http://10.152.2.2:1313/categories/tutorial/</loc>
     <lastmod>2024-08-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/categories/blog/</loc>
+    <loc>http://10.152.2.2:1313/categories/blog/</loc>
     <lastmod>2024-08-09T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2024-08-09-sql-cheatsheet/</loc>
+    <loc>http://10.152.2.2:1313/posts/2024-08-09-sql-cheatsheet/</loc>
     <lastmod>2024-08-09T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/sql/</loc>
+    <loc>http://10.152.2.2:1313/tags/sql/</loc>
     <lastmod>2024-08-09T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/debugging/</loc>
+    <loc>http://10.152.2.2:1313/tags/debugging/</loc>
     <lastmod>2023-09-05T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/lldb/</loc>
+    <loc>http://10.152.2.2:1313/tags/lldb/</loc>
     <lastmod>2023-09-05T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2023-09-05-lldb-cheat-sheet/</loc>
+    <loc>http://10.152.2.2:1313/posts/2023-09-05-lldb-cheat-sheet/</loc>
     <lastmod>2023-09-05T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/macos/</loc>
+    <loc>http://10.152.2.2:1313/tags/macos/</loc>
     <lastmod>2023-09-05T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/cli/</loc>
+    <loc>http://10.152.2.2:1313/tags/cli/</loc>
     <lastmod>2023-06-11T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/crontab/</loc>
+    <loc>http://10.152.2.2:1313/tags/crontab/</loc>
     <lastmod>2023-06-11T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2023-06-11-crontab-cheat-sheet/</loc>
+    <loc>http://10.152.2.2:1313/posts/2023-06-11-crontab-cheat-sheet/</loc>
     <lastmod>2023-06-11T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/categories/doc/</loc>
+    <loc>http://10.152.2.2:1313/categories/doc/</loc>
     <lastmod>2023-06-11T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/linux/</loc>
+    <loc>http://10.152.2.2:1313/tags/linux/</loc>
     <lastmod>2023-06-11T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2023-06-03-mastering-vim-power-of-text-objects/</loc>
+    <loc>http://10.152.2.2:1313/posts/2023-06-03-mastering-vim-power-of-text-objects/</loc>
     <lastmod>2023-06-03T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/vim/</loc>
+    <loc>http://10.152.2.2:1313/tags/vim/</loc>
     <lastmod>2023-06-03T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/darwin/</loc>
+    <loc>http://10.152.2.2:1313/tags/darwin/</loc>
     <lastmod>2023-05-22T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/debian/</loc>
+    <loc>http://10.152.2.2:1313/tags/debian/</loc>
     <lastmod>2023-05-22T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/unix/</loc>
+    <loc>http://10.152.2.2:1313/tags/unix/</loc>
     <lastmod>2023-05-22T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/zsh/</loc>
+    <loc>http://10.152.2.2:1313/tags/zsh/</loc>
     <lastmod>2023-05-22T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</loc>
+    <loc>http://10.152.2.2:1313/posts/2023-05-22-transform-your-terminal-zsh-shell-and-powerlevel10k-for-beauty-and-speed/</loc>
     <lastmod>2023-05-22T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/docker/</loc>
+    <loc>http://10.152.2.2:1313/tags/docker/</loc>
     <lastmod>2023-05-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2023-05-18-docker-cheatsheet/</loc>
+    <loc>http://10.152.2.2:1313/posts/2023-05-18-docker-cheatsheet/</loc>
     <lastmod>2023-05-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/categories/document/</loc>
+    <loc>http://10.152.2.2:1313/categories/document/</loc>
     <lastmod>2023-05-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/draft/</loc>
+    <loc>http://10.152.2.2:1313/tags/draft/</loc>
     <lastmod>2023-05-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/ip/</loc>
+    <loc>http://10.152.2.2:1313/tags/ip/</loc>
     <lastmod>2023-05-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2023-03-19-ipconverter-application-design-document/</loc>
+    <loc>http://10.152.2.2:1313/posts/2023-03-19-ipconverter-application-design-document/</loc>
     <lastmod>2023-05-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/it/</loc>
+    <loc>http://10.152.2.2:1313/tags/it/</loc>
     <lastmod>2023-05-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</loc>
+    <loc>http://10.152.2.2:1313/posts/2012-03-11-dotfiles-and-shell-environment-documentation/</loc>
     <lastmod>2023-05-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/shell/</loc>
+    <loc>http://10.152.2.2:1313/tags/shell/</loc>
     <lastmod>2023-05-18T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/json/</loc>
+    <loc>http://10.152.2.2:1313/tags/json/</loc>
     <lastmod>2023-05-15T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/restapi/</loc>
+    <loc>http://10.152.2.2:1313/tags/restapi/</loc>
     <lastmod>2023-05-15T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2023-05-15-flexible-config-file-structure-for-seamless-integration/</loc>
+    <loc>http://10.152.2.2:1313/posts/2023-05-15-flexible-config-file-structure-for-seamless-integration/</loc>
     <lastmod>2023-05-15T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/git/</loc>
+    <loc>http://10.152.2.2:1313/tags/git/</loc>
     <lastmod>2022-08-17T01:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2022-08-17-merge-git-branches-to-avoid-conflicts/</loc>
+    <loc>http://10.152.2.2:1313/posts/2022-08-17-merge-git-branches-to-avoid-conflicts/</loc>
     <lastmod>2022-08-17T01:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/categories/draft/</loc>
+    <loc>http://10.152.2.2:1313/categories/draft/</loc>
     <lastmod>2022-05-20T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2023-05-20-linux-system-hardening/</loc>
+    <loc>http://10.152.2.2:1313/posts/2023-05-20-linux-system-hardening/</loc>
     <lastmod>2022-05-20T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/sysadmin/</loc>
+    <loc>http://10.152.2.2:1313/tags/sysadmin/</loc>
     <lastmod>2022-05-20T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2021-03-10-create-bootable-iso-from-live-system/</loc>
+    <loc>http://10.152.2.2:1313/posts/2021-03-10-create-bootable-iso-from-live-system/</loc>
     <lastmod>2021-03-10T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/ubuntu/</loc>
+    <loc>http://10.152.2.2:1313/tags/ubuntu/</loc>
     <lastmod>2021-03-10T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/library/</loc>
+    <loc>http://10.152.2.2:1313/tags/library/</loc>
     <lastmod>2020-06-05T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2023-12-03-building-compiled-libraries/</loc>
+    <loc>http://10.152.2.2:1313/posts/2023-12-03-building-compiled-libraries/</loc>
     <lastmod>2020-06-05T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2019-08-11-customize-the-favicon/</loc>
+    <loc>http://10.152.2.2:1313/posts/2019-08-11-customize-the-favicon/</loc>
     <lastmod>2019-08-11T00:34:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/favicon/</loc>
+    <loc>http://10.152.2.2:1313/tags/favicon/</loc>
     <lastmod>2019-08-11T00:34:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/getting-started/</loc>
+    <loc>http://10.152.2.2:1313/tags/getting-started/</loc>
     <lastmod>2019-08-09T20:55:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2019-08-09-getting-started/</loc>
+    <loc>http://10.152.2.2:1313/posts/2019-08-09-getting-started/</loc>
     <lastmod>2019-08-09T20:55:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/writing/</loc>
+    <loc>http://10.152.2.2:1313/tags/writing/</loc>
     <lastmod>2019-08-08T14:10:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2019-08-08-write-a-new-post/</loc>
+    <loc>http://10.152.2.2:1313/posts/2019-08-08-write-a-new-post/</loc>
     <lastmod>2019-08-08T14:10:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/categories/demo/</loc>
+    <loc>http://10.152.2.2:1313/categories/demo/</loc>
     <lastmod>2019-08-08T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2019-08-08-text-and-typography/</loc>
+    <loc>http://10.152.2.2:1313/posts/2019-08-08-text-and-typography/</loc>
     <lastmod>2019-08-08T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/typography/</loc>
+    <loc>http://10.152.2.2:1313/tags/typography/</loc>
     <lastmod>2019-08-08T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2019-08-08-markdown-cheat-sheet/</loc>
+    <loc>http://10.152.2.2:1313/posts/2019-08-08-markdown-cheat-sheet/</loc>
     <lastmod>2019-08-08T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2015-07-15-domain-names-backorder-program/</loc>
+    <loc>http://10.152.2.2:1313/posts/2015-07-15-domain-names-backorder-program/</loc>
     <lastmod>2016-10-09T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/domain/</loc>
+    <loc>http://10.152.2.2:1313/tags/domain/</loc>
     <lastmod>2016-10-09T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/software/</loc>
+    <loc>http://10.152.2.2:1313/tags/software/</loc>
     <lastmod>2016-10-09T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/tags/cmake/</loc>
+    <loc>http://10.152.2.2:1313/tags/cmake/</loc>
     <lastmod>2015-07-15T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2015-07-15-domainengine-cmake-configuration/</loc>
+    <loc>http://10.152.2.2:1313/posts/2015-07-15-domainengine-cmake-configuration/</loc>
     <lastmod>2015-07-15T11:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://wilfrantz.github.io/posts/2021-10-11-github-token-generation/</loc>
+    <loc>http://10.152.2.2:1313/posts/2021-10-11-github-token-generation/</loc>
+  </url><url>
+    <loc>http://10.152.2.2:1313/authors/</loc>
+  </url><url>
+    <loc>http://10.152.2.2:1313/series/</loc>
   </url>
 </urlset>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   Creating a Bootable ISO from a Live Linux System · DEDE
 </title>
@@ -64,7 +64,7 @@ Root access or sudo privileges.
   
 
 Open a terminal and install the required packages:">
-<meta name="keywords" content="[blog hugo developer]">
+<meta name="keywords" content="blog, developer, hugo, personal">
 
 
 
@@ -75,7 +75,7 @@ Creating a bootable ISO from a live Linux system can be a bit complex. However, 
 Table of Contents
 Prerequisites Steps Install Required Packages Backup your data Prepare the Workspace Copy Necessary Files Prepare the SquashFS Filesystem Create ISO Directory Structure Move the SquashFS Filesystem to the ISO Directory Copy Bootloader Information Modify GRUB Configuration** (if necessary) Create the ISO File Cleanup Test the ISO Prerequisites Link to heading A live system running Ubuntu or its derivative. Enough storage space to hold the contents of the live system and some additional tools. Root access or sudo privileges. Steps Link to heading Install Required Packages Link to heading Open a terminal and install the required packages:">
 
-<meta property="og:url" content="https://wilfrantz.github.io/posts/2021-03-10-create-bootable-iso-from-live-system/">
+<meta property="og:url" content="http://10.152.2.2:1313/posts/2021-03-10-create-bootable-iso-from-live-system/">
   <meta property="og:site_name" content="DEDE">
   <meta property="og:title" content="Creating a Bootable ISO from a Live Linux System">
   <meta property="og:description" content="⚠️ This document is still a draft. Please note that there might be mistakes or inaccuracies. {: .prompt-warning }
@@ -93,7 +93,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
 
 
 
-<link rel="canonical" href="https://wilfrantz.github.io/posts/2021-03-10-create-bootable-iso-from-live-system/">
+<link rel="canonical" href="http://10.152.2.2:1313/posts/2021-03-10-create-bootable-iso-from-live-system/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -103,12 +103,18 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css" integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm&#43;MTzNJdv80k&#43;n0=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
 
 
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
 
 
 
@@ -117,7 +123,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 
@@ -140,20 +146,16 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
 
 
 
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
 
+
+<body class="preload-transitions colorscheme-dark">
+  
 
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://wilfrantz.github.io/">
+    <a class="navigation-title" href="http://10.152.2.2:1313/">
       DEDE
     </a>
     
@@ -170,11 +172,19 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Posts</a>
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="mailto:contact@dede.dev">Contact Me</a>
             </li>
           
         
@@ -192,7 +202,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://wilfrantz.github.io/posts/2021-03-10-create-bootable-iso-from-live-system/">
+            <a class="title-link" href="http://10.152.2.2:1313/posts/2021-03-10-create-bootable-iso-from-live-system/">
               Creating a Bootable ISO from a Live Linux System
             </a>
           </h1>
@@ -281,7 +291,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
   </a>
 </h3>
 <p>Open a terminal and install the required packages:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
 </span></span><span style="display:flex;"><span>sudo apt install squashfs-tools genisoimage
 </span></span></code></pre></div><h3 id="backup-your-data">
   Backup your data
@@ -299,7 +309,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
   </a>
 </h3>
 <p>Create a workspace to hold necessary files:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir ~/livecdtmp
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir ~/livecdtmp
 </span></span></code></pre></div><h3 id="copy-necessary-files">
   Copy Necessary Files
   <a class="heading-link" href="#copy-necessary-files">
@@ -308,7 +318,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
   </a>
 </h3>
 <p>Copy the necessary files from your live system to the workspace:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync --exclude<span style="color:#f92672">=</span>/proc/ --exclude<span style="color:#f92672">=</span>/tmp/ --exclude<span style="color:#f92672">=</span>/sys/ --exclude<span style="color:#f92672">=</span>/mnt/ --exclude<span style="color:#f92672">=</span>/dev/ --exclude<span style="color:#f92672">=</span>/home/ --exclude<span style="color:#f92672">=</span>/root/livecdtmp / ~/livecdtmp
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync --exclude<span style="color:#ff7b72;font-weight:bold">=</span>/proc/ --exclude<span style="color:#ff7b72;font-weight:bold">=</span>/tmp/ --exclude<span style="color:#ff7b72;font-weight:bold">=</span>/sys/ --exclude<span style="color:#ff7b72;font-weight:bold">=</span>/mnt/ --exclude<span style="color:#ff7b72;font-weight:bold">=</span>/dev/ --exclude<span style="color:#ff7b72;font-weight:bold">=</span>/home/ --exclude<span style="color:#ff7b72;font-weight:bold">=</span>/root/livecdtmp / ~/livecdtmp
 </span></span></code></pre></div><p>This command excludes directories that contain runtime system information or personal data.</p>
 <h3 id="prepare-the-squashfs-filesystem">
   Prepare the SquashFS Filesystem
@@ -318,7 +328,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
   </a>
 </h3>
 <p>SquashFS is a compressed read-only file system. We&rsquo;ll create a SquashFS image of the live system:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mksquashfs ~/livecdtmp/livefilesystem.squashfs ~/livecdtmp/
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mksquashfs ~/livecdtmp/livefilesystem.squashfs ~/livecdtmp/
 </span></span></code></pre></div><h3 id="create-iso-directory-structure">
   Create ISO Directory Structure
   <a class="heading-link" href="#create-iso-directory-structure">
@@ -326,7 +336,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p ~/livecdtmp/ISO/casper
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p ~/livecdtmp/ISO/casper
 </span></span></code></pre></div><h3 id="move-the-squashfs-filesystem-to-the-iso-directory">
   Move the SquashFS Filesystem to the ISO Directory
   <a class="heading-link" href="#move-the-squashfs-filesystem-to-the-iso-directory">
@@ -334,7 +344,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv ~/livecdtmp/livefilesystem.squashfs ~/livecdtmp/ISO/casper/
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv ~/livecdtmp/livefilesystem.squashfs ~/livecdtmp/ISO/casper/
 </span></span></code></pre></div><h3 id="copy-bootloader-information">
   Copy Bootloader Information
   <a class="heading-link" href="#copy-bootloader-information">
@@ -343,7 +353,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
   </a>
 </h3>
 <p>This step will vary based on your bootloader. Assuming you are using GRUB:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp /boot/grub/grub.cfg ~/livecdtmp/ISO/boot/grub
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp /boot/grub/grub.cfg ~/livecdtmp/ISO/boot/grub
 </span></span></code></pre></div><h3 id="modify-grub-configuration-if-necessary">
   Modify GRUB Configuration** (if necessary)
   <a class="heading-link" href="#modify-grub-configuration-if-necessary">
@@ -360,9 +370,9 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
   </a>
 </h3>
 <p>Navigate to the ISO directory:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/livecdtmp/ISO/
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/livecdtmp/ISO/
 </span></span></code></pre></div><p>Now, use <code>genisoimage</code> to create the ISO:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo genisoimage -r -V <span style="color:#e6db74">&#34;LiveSystem&#34;</span> -cache-inodes -J -l -b boot/grub/grub.cfg -c boot/grub/boot.cat -no-emul-boot -boot-load-size <span style="color:#ae81ff">4</span> -boot-info-table -o ../livesystem.iso .
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo genisoimage -r -V <span style="color:#a5d6ff">&#34;LiveSystem&#34;</span> -cache-inodes -J -l -b boot/grub/grub.cfg -c boot/grub/boot.cat -no-emul-boot -boot-load-size <span style="color:#a5d6ff">4</span> -boot-info-table -o ../livesystem.iso .
 </span></span></code></pre></div><p>This command will create an ISO named &ldquo;livesystem.iso&rdquo; in the <code>~/livecdtmp</code> directory.</p>
 <h3 id="cleanup">
   Cleanup
@@ -372,7 +382,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
   </a>
 </h3>
 <p>Remove the temporary directory:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -rf ~/livecdtmp
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -rf ~/livecdtmp
 </span></span></code></pre></div><h3 id="test-the-iso">
   Test the ISO
   <a class="heading-link" href="#test-the-iso">
@@ -426,6 +436,8 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
   <section class="container">
     ©
     
+      2021 -
+    
     2025
      Wilfrantz DEDE 
     ·
@@ -441,7 +453,7 @@ Prerequisites Steps Install Required Packages Backup your data Prepare the Works
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CMake on DEDE</title>
-    <link>https://wilfrantz.github.io/tags/cmake/</link>
+    <link>http://10.152.2.2:1313/tags/cmake/</link>
     <description>Recent content in CMake on DEDE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Jul 2015 11:33:00 +0800</lastBuildDate>
-    <atom:link href="https://wilfrantz.github.io/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://10.152.2.2:1313/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DomainEngine - CMake Configuration</title>
-      <link>https://wilfrantz.github.io/posts/2015-07-15-domainengine-cmake-configuration/</link>
+      <link>http://10.152.2.2:1313/posts/2015-07-15-domainengine-cmake-configuration/</link>
       <pubDate>Wed, 15 Jul 2015 11:33:00 +0800</pubDate>
-      <guid>https://wilfrantz.github.io/posts/2015-07-15-domainengine-cmake-configuration/</guid>
+      <guid>http://10.152.2.2:1313/posts/2015-07-15-domainengine-cmake-configuration/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This document outlines the CMake configuration for the &lt;code&gt;domainEngine&lt;/code&gt; project, which is version 1.0.2. The project is implemented in C++ and relies on various libraries and packages. The document provides an overview of the CMake configuration, including minimum required versions, project details, package dependencies, compilation options, and target linkage.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cmake-configuration-details&#34;&gt;&#xA;  CMake Configuration Details&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#cmake-configuration-details&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The following sections provide a breakdown of the CMake configuration based on the provided code snippet.&lt;/p&gt;</description>
     </item>
   </channel>
