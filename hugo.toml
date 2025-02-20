@@ -1,4 +1,4 @@
-baseURL = "https://wilfrantz.github.io/"  # Your GitHub Pages URL
+baseURL = "https://dede.dev"  # Your GitHub Pages URL
 title = "DEDE"  # Your title from earlier
 theme = "hugo-coder"
 languageCode = "en-us"  # Consistent with your previous config
