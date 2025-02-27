@@ -4,10 +4,11 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-### Hey there
 
-I'm Wilfrantz, and I'm excited to have you here on my portfolio, documentation, and personal blog! As a Systems Software engineer, I dive into some really cool stuff like Cyber Security, Linux Systems Administration, C/C++, Python, and Bash scripting. Oh, and let me tell you, I'm totally hooked on vim—it's just too efficient and versatile to resist! 😄
+Hey there! I’m Wilfrantz, and I’m excited to have you here on my portfolio, documentation, and personal blog! As a Systems Software Engineer and macOS Malware Analyst, I dive deep into cybersecurity, reverse engineering, Linux systems administration, and low-level systems programming using C/C++, Python, and Bash scripting.
 
-One thing that drives me is the desire to build and automate businesses. I'm on a mission to create a sustainable income that allows me to enjoy quality time with my family. That's where digital investments and business development come into play. It's a world that ignites my entrepreneurial spirit and keeps my ambition fueled!
+I’m passionate about understanding how software works at its core, from analyzing Mach-O binaries and bypassing malware detection to optimizing system performance and automating workflows. Whether it’s digging into ARM64 assembly, writing shellcode, or exploring Linux internals, I love uncovering the deeper mechanics of operating systems. Oh, and let’s not forget—I’m a Vim enthusiast through and through. Efficiency is key! 😄
 
-So, buckle up and join me on this exciting journey! We're going to delve into the captivating realms of software engineering, exploring the latest developments in systems programming, cybersecurity, scripting, and more. Together, we'll enhance our skills, broaden our knowledge, and make a positive impact in the tech world. Trust me, it's going to be an awesome ride!
+Beyond tech, I’m also driven by the desire to build and automate businesses. My goal is to create sustainable income streams that give me the freedom to enjoy quality time with my family. That’s why I explore digital investments, web development (Jekyll), and data-driven business models, combining my passion for technology with entrepreneurship.
+
+So, buckle up and join me on this journey! Here, we’ll delve into systems programming, cybersecurity research, scripting, and more, sharing insights, tackling complex problems, and continuously pushing the boundaries of what’s possible in tech. Let’s build, break, and innovate together! 🚀

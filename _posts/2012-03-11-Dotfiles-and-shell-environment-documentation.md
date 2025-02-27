@@ -1,15 +1,11 @@
 ---
-title: My Dotfiles and Shell Environment Documentation [Draft]
+title: My Dotfiles and Shell Environment.
 date: 2023-05-18 11:33:00 +0800
-categories: [Blogging, Document]
+categories: [doc]
 tags: [Linux, Shell, cli, zsh, vim]
-pin: false 
-math: true
-mermaid: true
-image: 
 ---
 
-> ⚠️ **This document is still a draft. Please note that there might be mistakes or inaccuracies.**
+> ⚠️ **Please note that there might be mistakes or inaccuracies.**
 {: .prompt-warning }
 
 This documentation provides an overview and detailed information about the my dotfiles  shell environment. The dotfiles repository contains a collection of configuration files and scripts used to customize and personalize my development environment over the years.
