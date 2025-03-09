@@ -1,15 +1,15 @@
 ---
-title: EasyJsonCpp - configuration file integration library
+title: Config File Integration Library
 date: 2023-05-15 11:33:00 +0800
 categories: [doc]
-tags: [C++, RESTApi, Json]
+tags: [c++, restApi, json]
 ---
 
 As a Backend Engineer, ensuring confidentiality and security is paramount in my work, especially when handling sensitive data like API keys and private configuration elements that require strict confidentiality.
 
 While I strive to contribute to the open-source community, I am mindful of safeguarding my own privacy and security by avoiding any inadvertent disclosure of sensitive information. Consequently, I have adopted a simple technique which consists of loading configuration data from a JSON config file into a map or multiple maps (Or any data structure of choice) to enable seamless and efficient data retrieval only when and where needed.
 
-This document presents an illustration of a C++ class, `SomeClass`, and utilizes its methods to demonstrate the core concepts of how to keep sensitive data like API keys secure and private.
+This document will present an illustration of a `C++` class, `SomeClass`, and utilizes its methods to demonstrate the core concepts of how I keep sensitive data like API keys secure and private.
 
 ```markdown
 EasyJsonCPP/
@@ -39,7 +39,7 @@ Table of content
 
 ### Configuration File Structure
 
-I follow a naming convention for my config files, which involves naming them as `PROJECT_config.json` where "PROJECT" represents the project name. These config files follow a `JSON array of objects` structure where each element or section holds specific data for various components.
+We will follow a simple naming convention for the config files, which involves naming them as `PROJECT_config.json` where "PROJECT" represents the project name. These config files follow a `JSON array of objects` structure where each element or section holds specific data for various components.
 
 This format allows compact organization and easy data retrieval, with simple Json object iteration. Which simplify the process of extracting required information for each component.
 

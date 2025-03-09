@@ -1,8 +1,8 @@
 ---
-title: C++ Domain Names Backorder Application 
+title: Domain Names Backorder Application 
 date: 2016-10-09 11:33:00 +0800
 categories: [doc]
-tags: [domain]
+tags: [domain, c++]
 ---
 
 ## Introduction
@@ -89,4 +89,4 @@ This design document provides an overview of the `domainEngine` project, its pur
 
 ## Notes
 
-- Access the [source code](https://github.com/wilfrantz/DomainEngine){:target="_blank} on GitHub for further exploration.
+- Access the [source code](https://github.com/wilfrantz/DomainEngine){:target="_blank"} on GitHub for further exploration.
