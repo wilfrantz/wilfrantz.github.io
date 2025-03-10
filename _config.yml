@@ -14,7 +14,7 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Wilfrantz Dede # the main title
+title: Dede # the main title
 
 tagline: Systems Software Engineer. # it will display as the subtitle
 
@@ -34,7 +34,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Wilfrantz Dede
+  name: Dede
   email: contact@dede.dev # change to your email address
   links:
     # The first element serves as the copyright owner's link
@@ -170,6 +170,9 @@ collections:
   tabs:
     output: true
     sort_by: order
+  projects:
+    output: true
+    sort_by: order
 
 defaults:
   - scope:
@@ -182,6 +185,14 @@ defaults:
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
       permalink: /posts/:title/
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+      toc: false
+      permalink: /projects/:title/
   - scope:
       path: _drafts
     values:
@@ -217,10 +228,12 @@ exclude:
   - "package*.json"
 
 jekyll-archives:
-  enabled: [categories, tags]
+  enabled: [categories, tags, projects]
   layouts:
     category: category
     tag: tag
+    project: project
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+    project: /projects/:title/
