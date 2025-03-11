@@ -2,16 +2,105 @@
 title: MachXplorer
 date: 2025-03-10
 layout: post
+mermaid: true
 description: Mach-O Binary Loader & Analyzer.
 ---
 
-### Mach-O Binary Analyzer for macOS
-
-
- CLI tool for deep analysis of Mach-O binaries on macOS, offering reverse engineers and security researchers insights into ARM64 executables through header inspection, disassembly, and obfuscation detection.
+Analyze Mach-O binaries using otool as core engine, with a specific focus on `macOS` malware analysis and obfuscation detection.
 
 [![GitHub Stars](https://img.shields.io/github/stars/wilfrantz/MachXplorer?style=flat-square)](https://github.com/wilfrantz/MachXplorer){:target="_blank"}
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT){:target="_blank"}
+
+---
+
+table of content
+
+- [Architecture Overview](#architecture-overview)
+- [🗺 Roadmap](#-roadmap)
+  - [🚧 In Progress](#-in-progress)
+  - [⏳ Upcoming](#-upcoming)
+  - [🔮 Future Vision](#-future-vision)
+- [🛠 Features](#-features)
+- [📦 Installation](#-installation)
+  - [Prerequisites](#prerequisites)
+- [🚀 Usage](#-usage)
+- [🔍 Resource Guide](#-resource-guide)
+  - [Key macOS Headers](#key-macos-headers)
+- [🤝 Contributing](#-contributing)
+- [Source Code](#source-code)
+
+---
+
+## Architecture Overview
+
+```mermaid
+graph TD
+    A[Mach-O Binary] --> B(otool)
+    B --> C[otool Integration]
+    B --> D[Obfuscation Detector]
+    B --> E[Disassembler]
+    B --> F[Symbol Resolver]
+    
+    C --> G[Header Parser]
+    C --> H[Segment Analyzer]
+    
+    D --> I[String Obfuscation Detection]
+    D --> J[Control Flow Obfuscation Detection]
+    D --> K[Anti-Disassembly Detection]
+    
+    E --> L[ARM64 Disassembly]
+    E --> M[x86_64 Disassembly]
+    
+    F --> N[Symbol Table Analysis]
+    
+    G --> O[Report Generator]
+    H --> O
+    I --> O
+    J --> O
+    K --> O
+    L --> O
+    M --> O
+    N --> O
+    
+    O --> P[HTML/JSON/CSV Reports]
+```
+
+---
+
+## 🗺 Roadmap
+
+- [x] Mach-O header analysis (`-h, --header`)  
+- [x] Segment/section inspection (`-s, --segment`)  
+- [x] Basic symbol analysis (`-y, --symbol`)  
+- [x] Hex dump & string extraction (`-x, --hex`)  
+- [x] Binary comparison (`-c, --compare`)  
+- [x] CMake build system  
+
+### 🚧 In Progress
+
+- [ ] ARM64 disassembly module (`-d, --disassembly`)  
+- [ ] `otool` integration pipeline  
+- [ ] Obfuscation detection framework (`-o, --obfuscation`)  
+- [ ] HTML report generation  
+
+### ⏳ Upcoming  
+
+- [ ] Universal binary (fat Mach-O) support  
+- [ ] Entitlements analysis module  
+- [ ] JSON/CSV export options  
+- [ ] IDA Pro integration plugin  
+
+### 🔮 Future Vision
+
+- [ ] Dyld shared cache analysis  
+- [ ] Automated anti-debugging detection  
+- [ ] Machine learning anomaly scoring  
+- [ ] Cross-platform (Windows/Linux) support  
+
+- [ ] Universal binary support
+- [ ] Automated suspicious pattern detection
+- [ ] IDA Pro integration plugin
+- [ ] Entitlements analysis module
 
 ---
 
@@ -35,28 +124,14 @@ description: Mach-O Binary Loader & Analyzer.
 - Xcode Command Line Tools
 - `otool` and `llvm-objdump` (install via [Homebrew](https://brew.sh/)):
 
-  ```sh
-  brew install llvm
-  ```
-
-### Build from Source
-
-```sh
-git clone https://github.com/wilfrantz/MachXplorer.git
-cd MachXplorer
-mkdir build && cd build
-cmake ..
-cmake --build . --config Release
-```
-
 ## 🚀 Usage
 
 ```sh
 # Basic header inspection
-./MachXplorer -h suspicious_binary.macho
+./MachXplorer -h suspiciousBinary.macho
 
 # Full analysis workflow
-./MachXplorer -hsydo complex_binary.macho
+./MachXplorer -hsydo complexBinary.macho
 
 # Compare two versions
 ./MachXplorer -c original.macho modified.macho
@@ -66,28 +141,22 @@ cmake --build . --config Release
 
 ### Key macOS Headers
 
-```sh
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach-o/
-```
+- `/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach-o/`
 
-| Header File | Purpose                        |
-| ----------- | ------------------------------ |
-| `loader.h`  | Mach-O load command structures |
-| `nlist.h`   | Symbol table entry definitions |
-| `fat.h`     | Universal binary format        |
-
-## 🗺 Roadmap
-
-- [ ] Universal binary support
-- [ ] Automated suspicious pattern detection
-- [ ] IDA Pro integration plugin
-- [ ] Entitlements analysis module
+  | Header File | Purpose                        |
+  | ----------- | ------------------------------ |
+  | `loader.h`  | Mach-O load command structures |
+  | `nlist.h`   | Symbol table entry definitions |
+  | `fat.h`     | Universal binary format        |
 
 ## 🤝 Contributing
 
-We welcome contributions through:
+I am open to contributions:
 
 - Issue reporting
 - Pull requests
 - Feature proposals
 
+## Source Code
+
+- [Source code](https://github.com/wilfrantz/MachXplorer){:target="_blank"} on GitHub.
