@@ -1,18 +1,22 @@
 # Jekyll Development Environment with Docker
 
-This repository contains a Jekyll website and a Dockerfile for setting up a local development environment.
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Docker Build Status](https://img.shields.io/docker/build/yourusername/jekyll-local?style=flat-square)](https://hub.docker.com/r/yourusername/jekyll-local)
+[![GitHub Pages Status](https://img.shields.io/badge/GitHub%20Pages-Active-brightgreen.svg?style=flat-square)](https://<your-github-username>.github.io/<your-repo-name>/)
+
+This repository provides a Dockerized Jekyll development environment for local testing and previewing your site before deploying to GitHub Pages.
 
 ## Purpose
 
-This setup allows developers to easily run and test a Jekyll site within a Docker container, ensuring a consistent development environment. The site is hosted live on GitHub Pages, and this local setup is purely for development and testing purposes.
+This setup enables a consistent and isolated environment for developing and testing your Jekyll site using Docker. It's designed for local development, with the live site hosted on GitHub Pages.
 
 ## Theme
 
-This site uses the **Chirpy** theme, a feature-rich theme designed for a smooth out-of-the-box experience.
+This site uses the **Chirpy** theme, a clean and modern theme designed for a smooth out-of-the-box experience.
 
-**Credit:** The Chirpy theme is developed and maintained by the Chirpy team. For more information, please visit the [theme's documentation](https://chirpy.cotes.page/).
+**Credit:** The Chirpy theme is developed and maintained by **Cotes Chung**. For more information, please visit the [theme's documentation](https://chirpy.cotes.page/).
 
-**Note:** To fully utilize all features of the Chirpy theme, this repository includes critical files and configurations extracted from the theme's gem, as recommended by the theme's authors. This ensures a complete and functional development environment.
+**Note:** To ensure full functionality, this repository includes critical files and configurations extracted from the Chirpy theme's gem, as recommended by the author, ensuring a complete development environment.
 
 ## AI Assistance
 
@@ -20,8 +24,8 @@ This project was developed with the assistance of **Gemini AI**, which provided 
 
 ## Prerequisites
 
-* Docker installed on your development machine.
-* Git installed.
+* [Docker](https://www.docker.com/get-started) installed on your development machine.
+* [Git](https://git-scm.com/downloads) installed.
 
 ## Getting Started
 
@@ -118,9 +122,8 @@ CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
 
 ## Contributing
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/cotes2020/jekyll-theme-chirpy).
+This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository](https://github.com/cotes2020/jekyll-theme-chirpy).
 
 ## License
 
 This work is published under the **MIT License**.
-
