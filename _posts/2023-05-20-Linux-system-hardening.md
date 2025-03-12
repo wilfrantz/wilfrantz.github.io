@@ -3,62 +3,12 @@ title: Practical Guide to Linux System Hardening
 date: 2022-05-20 11:33:00 +0800
 categories: [doc]
 tags: [Linux]
+toc: true
 ---
 
 In an era of rising cyber threats, securing your Linux system is crucial to protect sensitive data and prevent unauthorized access. This comprehensive guide focuses on Debian-based (Ubuntu) systems and offers practical insights and best practices to fortify your system's defenses.
 
 From secure authentication and user privilege management to firewall configuration and system log monitoring, this guide provides the knowledge and tools necessary to effectively harden your Linux environment.
-
-***Table of contents***:
-
-- [Keep Your System Up to Date](#keep-your-system-up-to-date)
-  - [Enable automatic updates](#enable-automatic-updates)
-  - [Set up a schedule for manual updates](#set-up-a-schedule-for-manual-updates)
-- [Secure User Accounts](#secure-user-accounts)
-  - [Create a strong password policy](#create-a-strong-password-policy)
-  - [Enforce regular password changes](#enforce-regular-password-changes)
-  - [Remove or disable unnecessary user accounts](#remove-or-disable-unnecessary-user-accounts)
-  - [Implement multi-factor authentication (MFA) for privileged accounts](#implement-multi-factor-authentication-mfa-for-privileged-accounts)
-- [Secure SSH Access](#secure-ssh-access)
-  - [Limit Root Access](#limit-root-access)
-  - [Use SSH keys for authentication](#use-ssh-keys-for-authentication)
-  - [Disable direct root login via SSH](#disable-direct-root-login-via-ssh)
-  - [Restrict `SSH` access to specific IP addresses or ranges](#restrict-ssh-access-to-specific-ip-addresses-or-ranges)
-  - [Use strong encryption algorithms](#use-strong-encryption-algorithms)
-  - [Change the default SSH port](#change-the-default-ssh-port)
-- [Firewall Configuration](#firewall-configuration)
-  - [Choose a Firewall Tool](#choose-a-firewall-tool)
-  - [Install the Firewall Tool](#install-the-firewall-tool)
-  - [Enable the Firewall](#enable-the-firewall)
-  - [Define Default Policies](#define-default-policies)
-  - [Allow Specific Services and Ports](#allow-specific-services-and-ports)
-  - [Review and Update Firewall Rules](#review-and-update-firewall-rules)
-- [File System Hardening](#file-system-hardening)
-  - [Utilize File System Encryption (e.g., `dm-crypt`, `LUKS`)](#utilize-file-system-encryption-eg-dm-crypt-luks)
-  - [Set Appropriate File Permissions and Restrict Access](#set-appropriate-file-permissions-and-restrict-access)
-  - [Implement File Integrity Monitoring Tools (e.g., `AIDE`, `Tripwire`)](#implement-file-integrity-monitoring-tools-eg-aide-tripwire)
-- [Network Services](#network-services)
-  - [Disable unnecessary network services](#disable-unnecessary-network-services)
-  - [Regularly update and patch the software](#regularly-update-and-patch-the-software)
-  - [Utilize secure protocols for remote management and data transfer](#utilize-secure-protocols-for-remote-management-and-data-transfer)
-- [Logging and Auditing](#logging-and-auditing)
-  - [Enabling Comprehensive System Logging](#enabling-comprehensive-system-logging)
-  - [Securing Log Files](#securing-log-files)
-  - [Review Logs for Suspicious Activities](#review-logs-for-suspicious-activities)
-  - [Implement Centralized Log Management](#implement-centralized-log-management)
-    - [Install Logstash](#install-logstash)
-    - [Install Graylog](#install-graylog)
-- [Set up Regular Backups](#set-up-regular-backups)
-  - [Determine Critical Data](#determine-critical-data)
-  - [Choose a Backup Tool](#choose-a-backup-tool)
-  - [Automate Backups](#automate-backups)
-  - [Secure Backup Storage](#secure-backup-storage)
-  - [Offsite Storage](#offsite-storage)
-  - [Test Restoration](#test-restoration)
-  - [Review and Adjust](#review-and-adjust)
-- [Continuous Monitoring](#continuous-monitoring)
-- [Resources](#resources)
-- [Footnote](#footnote)
 
 ## Keep Your System Up to Date
 
