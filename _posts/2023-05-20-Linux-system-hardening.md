@@ -188,6 +188,7 @@ This guide provides practical insights and best practices to harden Debian-based
         * Change `Port` (e.g., to 2222).
         * Restart SSH.
         * **Remember:** Allow the new port through the firewall.
+---
 
 ## Firewall Configuration
 
@@ -238,6 +239,7 @@ This guide provides practical insights and best practices to harden Debian-based
             ```bash
             sudo ufw reload
             ```
+---
 
 ## File System Hardening
 
@@ -304,6 +306,7 @@ This guide provides practical insights and best practices to harden Debian-based
             ```
             0 0 * * * /usr/sbin/aide --check
             ```
+---
 
 ## Network Services
 
@@ -343,6 +346,7 @@ This guide provides practical insights and best practices to harden Debian-based
     * **Use Secure Protocols:**
 
         * Use `HTTPS` for web management, `SFTP` for file transfer, `SSH` instead of `Telnet`.
+---
 
 ## Logging and Auditing
 
@@ -462,6 +466,7 @@ This guide provides practical insights and best practices to harden Debian-based
                 ```
 
             * Access web interface: `http://your_server_ip:9000`
+---
 
 ## Regular Backups
 
@@ -509,12 +514,15 @@ This guide provides practical insights and best practices to harden Debian-based
 
         * Regularly review backup content.
         * Adjust schedules/storage as needed.
+---
 
 ## Continuous Monitoring
 
     * Intrusion Detection Systems (IDS)/Intrusion Prevention Systems (IPS).
     * Security Information and Event Management (SIEM) tools.
      
+---
+
 ## Resources
 
 - [Limit SSH access to specific clients by IP address](https://unix.stackexchange.com/questions/406245/limit-ssh-access-to-specific-clients-by-ip-address){:target="\_blank"}
