@@ -3,6 +3,7 @@ title: Practical Guide to Linux System Hardening
 date: 2022-05-20 11:33:00 +0800
 categories: [doc]
 tags: [Linux]
+toc: true
 ---
 
 In an era of rising cyber threats, securing your Linux system is crucial to protect sensitive data and prevent unauthorized access. This comprehensive guide focuses on Debian-based (Ubuntu) systems and offers practical insights and best practices to fortify your system's defenses.
