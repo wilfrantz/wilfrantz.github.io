@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Docker Build Status](https://img.shields.io/docker/build/yourusername/jekyll-local?style=flat-square)](https://hub.docker.com/r/yourusername/jekyll-local)
-[![GitHub Pages Status](https://img.shields.io/badge/GitHub%20Pages-Active-brightgreen.svg?style=flat-square)](https://<your-github-username>.github.io/<your-repo-name>/)
+[![GitHub Pages Status](https://img.shields.io/badge/GitHub%20Pages-Active-brightgreen.svg?style=flat-square)](https://github.com/wilfrantz/wilfrantz.github.io)
 
 This repository provides a Dockerized Jekyll development environment for local testing and previewing your site before deploying to GitHub Pages.
 
