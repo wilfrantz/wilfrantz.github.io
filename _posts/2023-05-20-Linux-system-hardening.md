@@ -8,531 +8,495 @@ toc: true
 
 This guide provides practical insights and best practices to harden Debian-based (Ubuntu) Linux systems against cyber threats, focusing on the core security goals of the CIA Triad:
 
-* **Confidentiality:** Protecting data access to authorized users.
-* **Integrity:** Ensuring data remains unchanged and uncorrupted.
-* **Availability:** Maintaining reliable access to resources.
+| **Security Goal** | **Description** |
+|-------------------|-----------------|
+| **Confidentiality** | Protecting data access to authorized users. |
+| **Integrity** | Ensuring data remains unchanged and uncorrupted. |
+| **Availability** | Maintaining reliable access to resources. |
 
 ## System Maintenance
 
-### Keep Your System Up to Date
+Apply security patches and updates regularly:
 
-    * Apply security patches and updates regularly:
+```bash
+sudo apt update && sudo apt upgrade
+```
 
-        ```bash
-        sudo apt update && sudo apt upgrade
-        ```
+**Automatic Updates:**
 
-    * **Automatic Updates:**
+- Install `unattended-upgrades`:
 
-        * Install `unattended-upgrades`:
+```bash
+sudo apt install unattended-upgrades
+```
 
-            ```bash
-            sudo apt install unattended-upgrades
-            ```
+- Configure `/etc/apt/apt.conf.d/50unattended-upgrades` (e.g., enable automatic reboots by uncommenting `//Unattended-Upgrade::Automatic-Reboot`).
 
-        * Configure `/etc/apt/apt.conf.d/50unattended-upgrades` (e.g., enable automatic reboots by uncommenting `//Unattended-Upgrade::Automatic-Reboot`).
-        * Enable the service:
+- Enable the service:
 
-            ```bash
-            sudo dpkg-reconfigure --priority=low unattended-upgrades
-            ```
+```bash
+sudo dpkg-reconfigure --priority=low unattended-upgrades
+```
 
-    * **Manual Updates (Cron):**
+- Manual Updates (Cron):
 
-        * Schedule updates using `cron` (e.g., daily at 2:00 AM):
+Schedule updates using `cron` (e.g., daily at 2:00 AM):
 
-            ```bash
-            0 2 * * * apt update && apt upgrade -y
-            ```
+```bash
+0 2 * * * apt update && apt upgrade -y
+```
 
-        * **Caution:** Schedule updates carefully to avoid disruption.
+> Caution: Schedule updates carefully to avoid disruption.
+{: .prompt-warning }
+
+---
 
 ## User Account Security
 
-    * **Strong Password Policy:**
+Strong Password Policy:
 
-        * Edit `/etc/pam.d/common-password` (e.g., using `pam_pwquality.so`):
+Edit `/etc/pam.d/common-password` (e.g., using `pam_pwquality.so`):
 
-            ```bash
-            sudo vi /etc/pam.d/common-password
-            ```
+```bash
+sudo vi /etc/pam.d/common-password
+```
 
-        * Example:
+Example:
 
-            ```
-            password    requisite    pam_pwquality.so retry=3 minlen=8 ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1
-            ```
+```sh
+password    requisite    pam_pwquality.so retry=3 minlen=8 ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1
+```
 
-    * **Enforce Regular Password Changes:**
+Enforce Regular Password Changes:
 
-        * Edit `/etc/login.defs`:
+Edit `/etc/login.defs`:
 
-            ```bash
-            sudo vi /etc/login.defs
-            ```
+```bash
+sudo vi /etc/login.defs
+```
 
-        * Example:
+Example:
 
-            ```
-            PASS_MAX_DAYS   90
-            ```
+```
+PASS_MAX_DAYS   90
+```
 
-    * **Remove/Disable Unnecessary User Accounts:**
+Remove/Disable Unnecessary User Accounts:
 
-        * List accounts:
+List accounts:
 
-            ```bash
-            cat /etc/passwd
-            ```
+```bash
+cat /etc/passwd
+```
 
-        * Disable account (e.g., "user1"):
+Disable account (e.g., "user1"):
 
-            ```bash
-            sudo passwd --lock user1
-            ```
+```bash
+sudo passwd --lock user1
+```
 
-    * **Multi-Factor Authentication (MFA) for Privileged Accounts:**
+Multi-Factor Authentication (MFA) for Privileged Accounts:
 
-        * Install MFA software (e.g., `Google Authenticator`).
-        * Configure MFA (e.g., `google-authenticator`).
-        * Edit `/etc/ssh/sshd_config`:
+Install MFA software (e.g., `Google Authenticator`).
+Configure MFA (e.g., `google-authenticator`).
+Edit `/etc/ssh/sshd_config`:
 
-            ```bash
-            sudo vi /etc/ssh/sshd_config
-            ```
+```bash
+sudo vi /etc/ssh/sshd_config
+```
 
-        * Set `ChallengeResponseAuthentication` to `yes`.
-        * Restart SSH:
+Set `ChallengeResponseAuthentication` to `yes`.
+Restart SSH:
 
-            ```bash
-            sudo service sshd restart
-            ```
+```bash
+sudo service sshd restart
+```
 ---
 
 ## Secure SSH Access
 
-    * **Limit Root Access:**
+Limit Root Access:
 
-        * Add non-root user to `sudoers` using `visudo`:
+Add non-root user to `sudoers` using `visudo`:
 
-            ```bash
-            visudo
-            ```
+```bash
+visudo
+```
 
-        * Example:
+Example:
 
-            ```
-            dede ALL=(ALL:ALL) ALL
-            ```
+```
+dede ALL=(ALL:ALL) ALL
+```
 
-    * **Use SSH Keys for Authentication:**
+### Use SSH Keys for Authentication:
 
-        * Generate key pair (e.g., ED25519):
+Generate key pair (e.g., ED25519):
 
-            ```bash
-            ssh-keygen -t ed25519 -C "yourEmail@example.com"
-            ```
+```bash
+ssh-keygen -t ed25519 -C "yourEmail@example.com"
+```
 
-        * Copy public key:
+Copy public key:
 
-            ```bash
-            ssh-copy-id -i path/to/certificate username@remote_host
-            ```
+```bash
+ssh-copy-id -i path/to/certificate username@remote_host
+```
 
-        * Disable password authentication in `/etc/ssh/sshd_config`:
+Disable password authentication in `/etc/ssh/sshd_config`:
 
-            ```bash
-            PasswordAuthentication no
-            ```
+```bash
+PasswordAuthentication no
+```
 
-        * Restart SSH:
+Restart SSH:
 
-            ```bash
-            sudo service ssh restart
-            ```
+```bash
+sudo service ssh restart
+```
 
-    * **Disable Direct Root Login:**
+### Disable Direct Root Login:
 
-        * Edit `/etc/ssh/sshd_config`:
+Edit `/etc/ssh/sshd_config`:
 
-            ```bash
-            sudo vi /etc/ssh/sshd_config
-            ```
+```bash
+sudo vi /etc/ssh/sshd_config
+```
 
-        * Set `PermitRootLogin` to `no`.
-        * Restart SSH:
+Set `PermitRootLogin` to `no`.
 
-            ```bash
-            sudo service sshd restart
-            ```
+Restart SSH:
 
-    * **Restrict SSH Access by IP:**
+```bash
+sudo service sshd restart
+```
 
-        * Edit `/etc/ssh/sshd_config`.
-        * Example:
+### Restrict SSH Access by IP:
 
-            ```
-            AllowUsers your_username@trusted_ip
-            ```
+Edit `/etc/ssh/sshd_config`.
 
-        * Restart SSH.
+Example:
 
-    * **Use Strong Encryption Algorithms:**
+```
+AllowUsers your_username@trusted_ip
+```
 
-        * Edit `/etc/ssh/sshd_config`.
-        * Ensure `Ciphers` and `MACs` include strong algorithms (e.g., AES, ChaCha20-Poly1305, Diffie-Hellman, ECC, SHA-2).
-        * Restart SSH.
+Restart SSH.
 
-    * **Change Default SSH Port:**
+### Use Strong Encryption Algorithms:
 
-        * Edit `/etc/ssh/sshd_config`.
-        * Change `Port` (e.g., to 2222).
-        * Restart SSH.
-        * **Remember:** Allow the new port through the firewall.
+Edit `/etc/ssh/sshd_config`.
+Ensure `Ciphers` and `MACs` include strong algorithms (e.g., AES[^footnote], ChaCha20-Poly1305[^fn-nth-2], Diffie-Hellman[^fn-nth-3], ECC[^fn-nth-4], SHA-2[^fn-nth-5]).
+Restart SSH.
+
+### Change Default SSH Port:
+
+- Edit `/etc/ssh/sshd_config`. 
+- Change `Port` (e.g., to 2222).
+- Restart SSH.
+
+> Remember: Allow the new port through the firewall.
+{: .prompt-tip }
+
 ---
 
-## Firewall Configuration
+## Firewall Configuration (UFW)
 
-    * **Choose a Firewall Tool** (e.g., `iptables`, `UFW`).
-    * **Install** (if needed):
+Choose a Firewall Tool (e.g., `iptables`, `UFW` [^fn-nth-6]).
 
-        ```bash
-        sudo apt update
-        sudo apt install ufw
-        ```
+```bash
+sudo apt update
+sudo apt install ufw
+```
 
-    * **Enable:**
+- Enable:
 
-        ```bash
-        sudo ufw enable
-        ```
+```bash
+sudo ufw enable
+```
 
-    * **Default Policies:**
+- Default Policies:
 
-        ```bash
-        sudo ufw default deny incoming
-        sudo ufw default allow outgoing
-        ```
+```bash
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+```
 
-    * **Allow Specific Services/Ports** (e.g., SSH):
+- Allow Specific Services/Ports (e.g., SSH):
 
-        ```bash
-        sudo ufw allow ssh
-        ```
+```bash
+sudo ufw allow ssh
+```
 
-    * **Review/Update Rules** (UFW):
+- Review/Update Rules (UFW):
 
-        * List rules:
+- List rules:
 
-            ```bash
-            sudo ufw status numbered
-            ```
+```bash
+sudo ufw status numbered
+```
 
-        * Modify/delete:
+- Modify/delete:
 
-            ```bash
-            sudo ufw delete [rule_number]
-            sudo ufw insert [rule_number] [new_rule]
-            ```
+```bash
+sudo ufw delete [rule_number]
+sudo ufw insert [rule_number] [new_rule]
+```
 
-        * Reload:
+- Reload:
 
-            ```bash
-            sudo ufw reload
-            ```
+```bash
+sudo ufw reload
+```
+
 ---
 
 ## File System Hardening
 
-    * **File System Encryption** (e.g., `dm-crypt`, `LUKS`):
+### File System Encryption (e.g., `dm-crypt`, `LUKS`):
 
-        * Install `cryptsetup`:
+Install `cryptsetup`:
 
-            ```bash
-            sudo apt-get install cryptsetup
-            ```
+```bash
+sudo apt-get install cryptsetup
+```
 
-        * Encrypt partition (e.g., `/dev/sdb1`):
+Encrypt partition (e.g., `/dev/sdb1`):
 
-            ```bash
-            sudo cryptsetup luksFormat /dev/sdb1
-            ```
+```bash
+sudo cryptsetup luksFormat /dev/sdb1
+```
 
-        * Open encrypted partition (e.g., `secure_data`):
+Open encrypted partition (e.g., `secure_data`):
 
-            ```bash
-            sudo cryptsetup open /dev/sdb1 secure_data
-            ```
+```bash
+sudo cryptsetup open /dev/sdb1 secure_data
+```
 
-        * Format (e.g., `ext4`) and mount (e.g., `/mnt/secure`):
+Format (e.g., `ext4`) and mount (e.g., `/mnt/secure`):
 
-            ```bash
-            sudo mkfs.ext4 /dev/mapper/secure_data
-            sudo mount /dev/mapper/secure_data /mnt/secure
-            ```
+```bash
+sudo mkfs.ext4 /dev/mapper/secure_data
+sudo mount /dev/mapper/secure_data /mnt/secure
+```
 
-        * Update `/etc/fstab` for automatic mounting.
+Update `/etc/fstab` for automatic mounting.
 
-    * **File Permissions/Access Restriction:**
+### File Permissions/Access Restriction:
 
-        * Identify sensitive files.
-        * Set permissions (e.g., `database.conf`):
+Identify sensitive files.
+Set permissions (e.g., `database.conf`):
 
-            ```bash
-            sudo chmod 600 /path/to/database.conf
-            ```
+```bash
+sudo chmod 600 /path/to/database.conf
+```
 
-    * **File Integrity Monitoring** (e.g., `AIDE`, `Tripwire`):
+### File Integrity Monitoring (e.g., `AIDE`, `Tripwire`):
 
-        * Install `AIDE`:
+Install `AIDE`:
 
-            ```bash
-            sudo apt-get install aide -y
-            ```
+```bash
+sudo apt-get install aide -y
+```
 
-        * Initialize database:
+Initialize database:
 
-            ```bash
-            sudo aideinit
-            ```
+```bash
+sudo aideinit
+```
 
-        * Schedule checks (e.g., daily at midnight):
+Schedule checks (e.g., daily at midnight):
 
-            ```bash
-            sudo crontab -e
-            ```
+```bash
+sudo crontab -e
+```
 
-        * Add to crontab:
+Add to crontab:
 
-            ```
-            0 0 * * * /usr/sbin/aide --check
-            ```
+```
+0 0 * * * /usr/sbin/aide --check
+```
+
 ---
 
 ## Network Services
 
-    * **Disable Unnecessary Services:**
+Disable Unnecessary Services:
 
-        * List enabled services:
+List enabled services:
 
-            ```bash
-            sudo systemctl list-unit-files --type=service | grep enabled
-            ```
+```bash
+sudo systemctl list-unit-files --type=service | grep enabled
+```
 
-        * Disable service (e.g., `avahi-daemon`, `cups`):
+Disable service (e.g., `avahi-daemon`, `cups`):
 
-            ```bash
-            sudo systemctl disable avahi-daemon.service
-            sudo systemctl disable cups.service
-            ```
+```bash
+sudo systemctl disable avahi-daemon.service
+sudo systemctl disable cups.service
+```
 
-        * **Caution:** Verify service necessity before disabling.
+> Caution: Verify service necessity before disabling.
+{: .prompt-warning }
 
-    * **Update/Patch Software:**
+Update/Patch Software:
 
-        * Debian-based:
+Debian-based:
 
-            ```bash
-            sudo apt update
-            sudo apt upgrade
-            ```
+```bash
+sudo apt update
+sudo apt upgrade
+```
 
-        * Red Hat-based:
+Red Hat-based:
 
-            ```bash
-            sudo yum update
-            sudo dnf upgrade
-            ```
+```bash
+sudo yum update
+sudo dnf upgrade
+```
 
-    * **Use Secure Protocols:**
+Use Secure Protocols:
 
-        * Use `HTTPS` for web management, `SFTP` for file transfer, `SSH` instead of `Telnet`.
+Use `HTTPS` for web management, `SFTP` for file transfer, `SSH` instead of `Telnet`.
+
 ---
 
 ## Logging and Auditing
 
-    * **Enable System Logging** (`rsyslog`):
+Enable System Logging (`rsyslog`):
 
-        * Check status:
+Check status:
 
-            ```bash
-            sudo systemctl status rsyslog
-            ```
+```bash
+sudo systemctl status rsyslog
+```
 
-        * Start:
+Start:
 
-            ```bash
-            sudo systemctl start rsyslog
-            ```
+```bash
+sudo systemctl start rsyslog
+```
 
-        * Enable on boot:
+Enable on boot:
 
-            ```bash
-            sudo systemctl enable rsyslog
-            ```
+```bash
+sudo systemctl enable rsyslog
+```
 
-    * **Secure Log Files:**
+Secure Log Files:
 
-        ```bash
-        sudo chown root:root /var/log
-        sudo chmod 0700 /var/log
-        ```
+```bash
+sudo chown root:root /var/log
+sudo chmod 0700 /var/log
+```
 
-    * **Review Logs:**
+Review Logs:
 
-        * View recent entries (`/var/log/syslog`):
+View recent entries (`/var/log/syslog`):
 
-            ```bash
-            sudo tail -f /var/log/syslog
-            ```
+```bash
+sudo tail -f /var/log/syslog
+```
 
-        * Search for patterns (e.g., `/var/log/auth.log`):
+Search for patterns (e.g., `/var/log/auth.log`):
 
-            ```bash
-            sudo cat /var/log/auth.log | grep 'Failed password'
-            ```
+```bash
+sudo cat /var/log/auth.log | grep 'Failed password'
+```
 
-        * Automate reviews (`logcheck`):
+Automate reviews (`logcheck`):
 
-            ```bash
-            sudo apt-get install logcheck
-            ```
+```bash
+sudo apt-get install logcheck
+```
+**Centralized Log Management:**
+**Logstash:**
+Install:
 
-    * **Centralized Log Management:**
+```bash
+wget -qO - [https://artifacts.elastic.co/GPG-KEY-elasticsearch](https://artifacts.elastic.co/GPG-KEY-elasticsearch) | sudo apt-key add -
+echo "deb [https://artifacts.elastic.co/packages/7.x/apt](https://artifacts.elastic.co/packages/7.x/apt) stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+sudo apt-get update && sudo apt-get install logstash
+```
 
-        * **Logstash:**
+Configure (e.g., `/etc/logstash/conf.d/01-netflow-input.conf`, `10-syslog-filter.conf`, `30-elasticsearch-output.conf`).
+Start:
 
-            * Install:
+```bash
+sudo systemctl start logstash
+```
 
-                ```bash
-                wget -qO - [https://artifacts.elastic.co/GPG-KEY-elasticsearch](https://artifacts.elastic.co/GPG-KEY-elasticsearch) | sudo apt-key add -
-                echo "deb [https://artifacts.elastic.co/packages/7.x/apt](https://artifacts.elastic.co/packages/7.x/apt) stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
-                sudo apt-get update && sudo apt-get install logstash
-                ```
+Enable on boot:
 
-            * Configure (e.g., `/etc/logstash/conf.d/01-netflow-input.conf`, `10-syslog-filter.conf`, `30-elasticsearch-output.conf`).
-            * Start:
+```bash
+sudo systemctl enable logstash
+```
 
-                ```bash
-                sudo systemctl start logstash
-                ```
+Graylog:
 
-            * Enable on boot:
+Install MongoDB:
 
-                ```bash
-                sudo systemctl enable logstash
-                ```
+```bash
+sudo apt update
+sudo apt install -y mongodb
+```
 
-        * **Graylog:**
+Install Elasticsearch:
 
-            * Install MongoDB:
+```bash
+wget -qO - [https://artifacts.elastic.co/GPG-KEY-elasticsearch](https://artifacts.elastic.co/GPG-KEY-elasticsearch) | sudo apt-key add -
+echo "deb [https://artifacts.elastic.co/packages/7.x/apt](https://artifacts.elastic.co/packages/7.x/apt) stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+sudo apt update
+sudo apt install -y elasticsearch
+sudo systemctl daemon-reload
+sudo systemctl enable elasticsearch.service
+sudo systemctl restart elasticsearch.service
+```
 
-                ```bash
-                sudo apt update
-                sudo apt install -y mongodb
-                ```
+Install Graylog:
 
-            * Install Elasticsearch:
+```bash
+wget [https://packages.graylog2.org/repo/packages/graylog-4.0-repository_latest.deb](https://packages.graylog2.org/repo/packages/graylog-4.0-repository_latest.deb)
+sudo dpkg -i graylog-4.0-repository_latest.deb
+sudo apt-get update
+sudo apt-get install graylog-server
+```
 
-                ```bash
-                wget -qO - [https://artifacts.elastic.co/GPG-KEY-elasticsearch](https://artifacts.elastic.co/GPG-KEY-elasticsearch) | sudo apt-key add -
-                echo "deb [https://artifacts.elastic.co/packages/7.x/apt](https://artifacts.elastic.co/packages/7.x/apt) stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
-                sudo apt update
-                sudo apt install -y elasticsearch
-                sudo systemctl daemon-reload
-                sudo systemctl enable elasticsearch.service
-                sudo systemctl restart elasticsearch.service
-                ```
+Configure (`/etc/graylog/server/server.conf`):
 
-            * Install Graylog:
+Set `password_secret` (e.g., using `pwgen -N 1 -s 96`).
+* Set `root_password_sha2` (e.g., using `echo -n "Enter Your Password: " | sha256sum`).
 
-                ```bash
-                wget [https://packages.graylog2.org/repo/packages/graylog-4.0-repository_latest.deb](https://packages.graylog2.org/repo/packages/graylog-4.0-repository_latest.deb)
-                sudo dpkg -i graylog-4.0-repository_latest.deb
-                sudo apt-get update
-                sudo apt-get install graylog-server
-                ```
+Start:
 
-            * Configure (`/etc/graylog/server/server.conf`):
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable graylog-server.service
+sudo systemctl start graylog-server.service
+```
 
-                * Set `password_secret` (e.g., using `pwgen -N 1 -s 96`).
-                * Set `root_password_sha2` (e.g., using `echo -n "Enter Your Password: " | sha256sum`).
+Access web interface: `http://your_server_ip:9000`
 
-            * Start:
-
-                ```bash
-                sudo systemctl daemon-reload
-                sudo systemctl enable graylog-server.service
-                sudo systemctl start graylog-server.service
-                ```
-
-            * Access web interface: `http://your_server_ip:9000`
 ---
 
-## Regular Backups
+## Conclusion
 
-    * **Determine Critical Data:**
+Securing a Linux system is an ongoing process that requires vigilance and adaptation. This guide has outlined essential hardening techniques, from basic system updates to some advanced security measures like file system encryption and centralized logging. By implementing these practices, you can significantly reduce your system's attack surface and protect sensitive data.
 
-        * System configurations (`/etc/`)
-        * User data (`/home/`)
-        * Database files
-        * Custom applications/configurations
-
-    * **Choose a Backup Tool:**
-
-        * `rsync`
-        * `tar`
-        * `duplicity`
-        * `BorgBackup`
-
-    * **Automate Backups** (e.g., `cron`):
-
-        * Example (rsync, daily at 2 AM):
-
-            ```bash
-            0 2 * * * rsync -a /home/ /path/to/backup/location/
-            ```
-
-    * **Secure Backup Storage:**
-
-        * Dedicated backup server/drive (on-site).
-        * Encrypt backups (e.g., `duplicity`, `BorgBackup`).
-        * Cloud storage (with encryption).
-        * Rotate backups/retention policies.
-
-    * **Offsite Storage:**
-
-        * Cloud storage (secure).
-        * Physical media (secure transport).
-
-    * **Test Restoration:**
-
-        * Periodically test in a test environment.
-        * Document the restoration process.
-        * Securely store decryption keys (if used).
-
-    * **Review and Adjust:**
-
-        * Regularly review backup content.
-        * Adjust schedules/storage as needed.
----
-
-## Continuous Monitoring
-
-    * Intrusion Detection Systems (IDS)/Intrusion Prevention Systems (IPS).
-    * Security Information and Event Management (SIEM) tools.
-     
----
+Remember that staying informed about the latest security threats and regularly reviewing your security posture are crucial for maintaining a robust defense. As technology evolves and new vulnerabilities emerge, continuous learning and adaptation are key to ensuring the long-term security of your Linux environment.
 
 ## Resources
 
 - [Limit SSH access to specific clients by IP address](https://unix.stackexchange.com/questions/406245/limit-ssh-access-to-specific-clients-by-ip-address){:target="\_blank"}
 - [How To Secure A Linux Server by imthenachoman](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server?utm_source=pocket_saves){:target="\_blank"}
 - [40 Linux Server Hardening Security Tips \[2023 edition\]](https://www.cyberciti.biz/tips/linux-security.html){:target="\_blank"}
-- [Linux Security and Hardening, The Practical Security Guide by Jason Cannon](https://www.udemy.com/course/linux-security/learn/lecture/4624500?start=0#overview){:target="\_blank"}
-- **Gemini AI**
+- [Linux Security and Hardening, The Practical Security Guide by Jason Cannon](https://www.udemy.com/course/linux-security/){:target="\_blank"}
+- [Gemini AI](https://blog.google/technology/ai/google-gemini-ai/){:target="\_blank"}
+- [CompTIA Linux+ (XK0-005) Certification Study Guide](https://www.comptia.org/training/books/linux-xk0-005-study-guide){:target="\_blank"}
 
-## Footnote
+---
+
+## Reverse Footnote
 
 [^footnote]: **AES (Advanced Encryption Standard):** AES is a widely used symmetric encryption algorithm that provides strong security. It supports key sizes of 128, 192, and 256 bits.
 [^fn-nth-2]: **ChaCha20-Poly1305:** This is a modern symmetric encryption algorithm that offers high security and performance. It is often considered as an alternative to AES.
