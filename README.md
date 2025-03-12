@@ -1,43 +1,126 @@
-# Chirpy Starter
+# Jekyll Development Environment with Docker
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+This repository contains a Jekyll website and a Dockerfile for setting up a local development environment.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+## Purpose
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+This setup allows developers to easily run and test a Jekyll site within a Docker container, ensuring a consistent development environment. The site is hosted live on GitHub Pages, and this local setup is purely for development and testing purposes.
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+## Theme
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+This site uses the **Chirpy** theme, a feature-rich theme designed for a smooth out-of-the-box experience.
+
+**Credit:** The Chirpy theme is developed and maintained by the Chirpy team. For more information, please visit the [theme's documentation](https://chirpy.cotes.page/).
+
+**Note:** To fully utilize all features of the Chirpy theme, this repository includes critical files and configurations extracted from the theme's gem, as recommended by the theme's authors. This ensures a complete and functional development environment.
+
+## AI Assistance
+
+This project was developed with the assistance of **Gemini AI**, which provided guidance and code suggestions throughout the setup and documentation process.
+
+## Prerequisites
+
+* Docker installed on your development machine.
+* Git installed.
+
+## Getting Started
+
+1.  **Clone the Repository:**
+
+    ```bash
+    git clone <repository_url>
+    cd <repository_name>
+    ```
+
+    Replace `<repository_url>` with the URL of this repository.
+
+2.  **Build the Docker Image:**
+
+    ```bash
+    sudo docker build -t jekyll-local .
+    ```
+
+3.  **Run the Docker Container:**
+
+    ```bash
+    sudo docker run -p 4000:4000 -v "$PWD:/site" jekyll-local
+    ```
+
+4.  **Access the Site:**
+
+    Open your web browser and go to `http://<your_machine_ip>:4000`.
+
+    Replace `<your_machine_ip>` with the IP address of your machine.
+
+## Development Workflow
+
+1.  **Make Changes:**
+
+    Modify the Jekyll site files in your local repository.
+
+2.  **Preview Changes:**
+
+    The changes will be reflected immediately in your browser, as the Docker container mounts your local directory.
+
+3.  **Test Thoroughly:**
+
+    Ensure all features and pages are working correctly.
+
+4.  **Commit and Push:**
+
+    ```bash
+    git add .
+    git commit -m "Describe your changes"
+    git push origin <your_branch>
+    ```
+
+    Replace `<your_branch>` with your branch name.
+
+5.  **GitHub Pages Deployment:**
+
+    GitHub Pages will automatically deploy the updated site.
+
+## Dockerfile Explanation
+
+The `Dockerfile` sets up an Ubuntu-based environment with Ruby, Jekyll, and necessary dependencies.
+
+```dockerfile
+FROM ubuntu:latest
+
+WORKDIR /site
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y build-essential nodejs ruby-full ruby-dev bundler git && rm -rf /var/lib/apt/lists/*
+
+# Copy only the Gemfile and Gemfile.lock (for faster builds)
+COPY Gemfile Gemfile.lock ./
+
+# Install gems
+RUN bundle install
+
+# Copy your site files
+COPY . .
+
+# Expose the Jekyll server port
+EXPOSE 4000
+
+# Start the Jekyll server
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
 ```
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
-
-## Usage
-
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+* `FROM ubuntu:latest`: Uses the latest Ubuntu image as the base.
+* `RUN apt-get ...`: Installs necessary packages, including Ruby, Jekyll, and Git.
+* `COPY Gemfile ...`: Copies gem dependencies.
+* `RUN bundle install`: Installs the Ruby gems.
+* `COPY . .`: Copies the Jekyll site files.
+* `EXPOSE 4000`: Exposes port 4000.
+* `CMD ...`: Starts the Jekyll server.
 
 ## Contributing
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/cotes2020/jekyll-theme-chirpy).
 
 ## License
 
-This work is published under [MIT][mit] License.
+This work is published under the **MIT License**.
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
