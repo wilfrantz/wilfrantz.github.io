@@ -479,11 +479,184 @@ Access web interface: `http://your_server_ip:9000`
 
 ---
 
+## System Backup With Google Drive
+
+Cloud space for system backups is increasingly becoming the norm, Google Drive is known for its flexibility, portability, and reliability. Feel free to explore other options while prioritizing security, efficiency, and automation.
+
+ *  [Rclone](https://rclone.org/){: target="_blank"}: is a command-line tool designed to manage files on cloud storage. It supports a wide range of cloud services, including Google Drive. It offers encryption, which makes it particularly well-suited for system backups.
+
+#### Installation and Configuration
+
+ * Install Rclone:
+
+    ```bash
+    sudo apt update
+    sudo apt install rclone
+    ```
+
+ * Configure Rclone for Google Drive:
+   * Run `rclone config` and follow the prompts.
+   * Choose `"n) New remote"` and give it a name (e.g., "gdriveBackup").
+   * Select `Google Drive` as the storage type.
+   * When prompted for "client_id" and "client_secret," you can leave them blank for automatic configuration. `Rclone` will open a browser window for authentication.
+   * Grant `Rclone` access to your Google Drive.
+   * Confirm the configuration.
+
+### Backup Strategy
+ * Choose What to Backup:
+   * Identify critical data: `/etc/`, `/home/`, databases, application data, etc...
+   * Consider using a combination of full and incremental backups.
+ * Encryption:
+   * Rclone supports server-side and client-side encryption. 
+
+> Client-side encryption is highly recommended for Google Drive backups.
+{: .prompt-tip }
+
+   * When configuring your backup script, use the `--crypt-server-side` flag to encrypt the data before it leaves the system.
+   * Example of creating an encrypted remote:
+
+      ```bash
+      rclone config create gdrive_encrypted crypt remote=gdrive_backup password=YOURPASSWORD password2=YOURSALTPASSWORD
+      ```
+
+   * Be sure to store your passwords in a secure location.
+ * Compression:
+   * Compress your data before uploading it to Google Drive to save space and reduce upload time.
+   * Use `tar` or `gzip` for compression.
+- Automation:
+ * Create a Backup Script:
+   * Write a shell script that performs the following:
+     * Compresses the data.
+     * Encrypts the compressed data.
+     * Uses rclone to upload the encrypted data to Google Drive.
+     * Deletes old backups (recommended).
+   * Example script:
+
+    ```bash
+    #! /usr/bin/env bash
+
+    # Configuration File (backupConfig.sh)
+    source /path/to/backupConfig.sh
+
+    # Log file location
+    logFile="/var/log/backup.log"
+
+    # Log function
+    log() {
+        echo "$(date '+%Y-%m-%d %H:%M:%S') $1" >> "$logFile"
+    }
+
+    # Validation
+    if [[ -z "$backupDir" || -z "$rcloneRemote" || -z "$dataToBackup" || -z "$rcloneCryptRemote" ]]; then
+        log "ERROR: Configuration missing. Check backupConfig.sh."
+        exit 1
+    fi
+
+    # Create Temporary Directory
+    tmpDir=$(mktemp -d /tmp/backup.XXXXXX)
+    if [[ -z "$tmpDir" ]]; then
+        log "ERROR: Failed to create temporary directory."
+        exit 1
+    fi
+
+    dateStamp=$(date +%Y%m%d%H%M)
+    fileName="serverBackup_$dateStamp.tar.gz"
+    backupFile="$tmpDir/$fileName"
+    encryptedFile="$tmpDir/$fileName.enc"
+
+    # Check if data exists
+    for dir in $dataToBackup; do
+        if [[ ! -e "$dir" ]]; then
+            log "ERROR: Directory/File '$dir' does not exist."
+            rm -rf "$tmpDir"
+            exit 1
+        fi
+    done
+
+    # Compress Data
+    log "INFO: Starting compression."
+    tar -czvf "$backupFile" $dataToBackup
+    if [[ $? -ne 0 ]]; then
+        log "ERROR: Compression failed."
+        rm -rf "$tmpDir"
+        exit 1
+    fi
+    log "INFO: Compression complete."
+
+    # Encrypt the file
+    log "INFO: Starting encryption."
+    rclone cryptcheck "$backupFile" "$rcloneCryptRemote" # Check if rclone crypt is set up correctly
+    if [[ $? -ne 0 ]]; then
+        log "ERROR: Encryption check failed. Ensure rclone crypt is configured."
+        rm -rf "$tmpDir"
+        exit 1
+    fi
+
+    rclone copy "$backupFile" "$rcloneCryptRemote" --progress
+    if [[ $? -ne 0 ]]; then
+        log "ERROR: Encryption failed."
+        rm -rf "$tmpDir"
+        exit 1
+    fi
+
+    log "INFO: Encryption complete."
+
+
+    # Upload to Google Drive
+    log "INFO: Starting upload to Google Drive."
+    rclone copy "$backupFile" "$rcloneCryptRemote" --progress
+    if [[ $? -ne 0 ]]; then
+        log "ERROR: Upload to Google Drive failed."
+        rm -rf "$tmpDir"
+        exit 1
+    fi
+    log "INFO: Upload to Google Drive complete."
+
+    # Cleanup
+    rm -rf "$tmpDir"
+    log "INFO: Backup complete."
+
+    exit 0
+    ```
+  * Configuration File (backupConfig.sh):
+
+    ```bash
+    #! /usr/bin/env bash
+
+    # Configuration Variables
+    export backupDir="/path/to/backup" 
+    export rcloneRemote="gdrive_backup:" # or "gdrive_backup:" if you do not use crypt
+    export rcloneCryptRemote="gdrive_encrypted:" # rclone encrypted remote
+    export dataToBackup="/etc /home " # Add data 
+    ```
+
+ * Schedule Backups with Cron:
+   * Run `crontab -e` and add a line like this to run the script weekly at 2:00 AM on Sundays.
+
+    ```bash
+    # Weekly @ 2:00 AM on Sundays:
+    0 2 * * 0 /path/to/backup_script.sh
+    ```
+
+#### Security Considerations
+ * Rclone Configuration:
+   Store your Rclone configuration file (`~/.config/rclone/rclone.conf`) securely. Restrict access to the backup script and Rclone configuration.
+ * Encryption Keys:
+   Protect your encryption keys and passwords, consider using a password manager.
+ * Google Account Security:
+   Enable two-factor authentication (2FA) on your Google account, use a strong, unique password for your Google account.
+
+#### Logging & Monitoring
+
+It's crucial to log backup activity, and `systemd` is very efficient for monitoring backup services. It is equally important to test restores to verify integrity and functionality of backups.
+
+---
+
 ## Conclusion
 
-Securing a Linux system is an ongoing process that requires vigilance and adaptation. This guide has outlined essential hardening techniques, from basic system updates to some advanced security measures like file system encryption and centralized logging. By implementing these practices, you can significantly reduce your system's attack surface and protect sensitive data.
+Securing a Linux system is an ongoing process that requires vigilance and adaptation. This guide outlined essential hardening techniques, from basic system updates to some advanced security measures. These practices can significantly reduce attack surface and protect sensitive data.
 
-Remember that staying informed about the latest security threats and regularly reviewing your security posture are crucial for maintaining a robust defense. As technology evolves and new vulnerabilities emerge, continuous learning and adaptation are key to ensuring the long-term security of your Linux environment.
+Remember that staying informed about the latest security threats and regularly reviewing security posture are crucial for maintaining a robust defense. As technology evolves and new vulnerabilities emerge, continuous learning and adaptation are key to ensuring the long-term security of your Linux environment.
 
 ## Resources
 
@@ -492,7 +665,6 @@ Remember that staying informed about the latest security threats and regularly r
 - [40 Linux Server Hardening Security Tips \[2023 edition\]](https://www.cyberciti.biz/tips/linux-security.html){:target="\_blank"}
 - [Linux Security and Hardening, The Practical Security Guide by Jason Cannon](https://www.udemy.com/course/linux-security/){:target="\_blank"}
 - [Gemini AI](https://blog.google/technology/ai/google-gemini-ai/){:target="\_blank"}
-- [CompTIA Linux+ (XK0-005) Certification Study Guide](https://www.comptia.org/training/books/linux-xk0-005-study-guide){:target="\_blank"}
 
 ---
 

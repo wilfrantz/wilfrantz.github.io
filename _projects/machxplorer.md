@@ -3,35 +3,9 @@ title: MachXplorer
 date: 2025-03-10
 layout: post
 mermaid: true
+toc: true
 description: Mach-O Binary Loader & Analyzer.
 ---
-
-Analyze Mach-O binaries using otool as core engine, with a specific focus on `macOS` malware analysis and obfuscation detection.
-
-[![GitHub Stars](https://img.shields.io/github/stars/wilfrantz/MachXplorer?style=flat-square)](https://github.com/wilfrantz/MachXplorer){:target="_blank"}
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT){:target="_blank"}
-
----
-
-table of content
-
-- [Architecture Overview](#architecture-overview)
-- [🗺 Roadmap](#-roadmap)
-  - [🚧 In Progress](#-in-progress)
-  - [⏳ Upcoming](#-upcoming)
-  - [🔮 Future Vision](#-future-vision)
-- [🛠 Features](#-features)
-- [📦 Installation](#-installation)
-  - [Prerequisites](#prerequisites)
-- [🚀 Usage](#-usage)
-- [🔍 Resource Guide](#-resource-guide)
-  - [Key macOS Headers](#key-macos-headers)
-- [🤝 Contributing](#-contributing)
-- [Source Code](#source-code)
-
----
-
-## Architecture Overview
 
 ```mermaid
 graph TD
@@ -65,7 +39,12 @@ graph TD
     O --> P[HTML/JSON/CSV Reports]
 ```
 
+[![GitHub Stars](https://img.shields.io/github/stars/wilfrantz/MachXplorer?style=flat-square)](https://github.com/wilfrantz/MachXplorer){:target="_blank"}
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT){:target="_blank"}
+
 ---
+
+Analyze Mach-O binaries using otool as core engine, with a specific focus on `macOS` malware analysis and obfuscation detection.
 
 ## 🗺 Roadmap
 

@@ -4,53 +4,13 @@ date: 2019-08-08 11:33:00 +0800
 categories: [cheatSheet]
 mermaid: true
 math: true
+toc: true
 tags: [typography]
 ---
-
-
 
 This post is a revised version of [**Chirpy**:Text and Typography](https://chirpy.cotes.page/posts/text-and-typography/){:target="_blank"} by `Cotes Chung`. It serves as a concise `Markdown` cheat sheet, that I use daily, covering a range of commonly used syntax elements. There are numerous additional features and extensions not covered here. For comprehensive information, refer to the official Markdown documentation. [official Markdown documentation](https://daringfireball.net/projects/markdown/){:target="_blank"}.
 
 Now, let's start looking at text and typography.
-
-***Table of contents***:
-
-- [Headings](#headings)
-  - [Heading 1](#heading-1)
-  - [Heading 2](#heading-2)
-  - [Heading 3](#heading-3)
-  - [Heading 4](#heading-4)
-  - [Heading 5](#heading-5)
-  - [Heading 6](#heading-6)
-  - [Headers with IDs](#headers-with-ids)
-- [Emphasis](#emphasis)
-  - [Highlight text](#highlight-text)
-- [Horizontal Rule](#horizontal-rule)
-- [Line Breaks](#line-breaks)
-- [Escaping Characters](#escaping-characters)
-- [Lists](#lists)
-  - [Ordered list](#ordered-list)
-  - [Unordered list](#unordered-list)
-  - [ToDo list](#todo-list)
-  - [Description list](#description-list)
-- [Collapsible](#collapsible)
-- [Block Quote](#block-quote)
-- [Prompts](#prompts)
-- [Tables](#tables)
-- [Links](#links)
-  - [Inline hyperlink](#inline-hyperlink)
-  - [Inline hyperlink Text](#inline-hyperlink-text)
-    - [Inline hyperlink with new tab attribute](#inline-hyperlink-with-new-tab-attribute)
-- [Inline code](#inline-code)
-- [Filepath](#filepath)
-- [Code blocks](#code-blocks)
-  - [Common](#common)
-  - [Specific Language](#specific-language)
-  - [Specific filename](#specific-filename)
-- [Mathematics](#mathematics)
-- [Mermaid SVG](#mermaid-svg)
-- [Footnote](#footnote)
-- [Reverse Footnote](#reverse-footnote)
 
 ## Headings
 

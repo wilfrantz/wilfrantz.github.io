@@ -3,6 +3,7 @@ title: Domain Names Backorder Application
 date: 2016-10-09 11:33:00 +0800
 categories: [doc]
 tags: [domain, c++]
+toc: true
 ---
 
 ## Introduction
@@ -14,17 +15,6 @@ Implemented in C++, the `domainEngine` application guarantees high performance a
 The application applies intelligent classification techniques to assess domain names based on factors such as `keyword length`, `SEO strength`, and `extension taken`. It automatically places backorders on various registrars(dropCatch, SnapNames), ensuring the timely acquisition of valuable expired domains and maximizing opportunities for users.
 
 This document provides an overview of the `domainEngine` project, its purpose, architecture, key components, and design considerations.
-
-Table of content
-
-- [Introduction](#introduction)
-- [Purpose](#purpose)
-- [Architecture](#architecture)
-- [Key Components](#key-components)
-- [Design Considerations](#design-considerations)
-- [Metrics](#metrics)
-- [Conclusion](#conclusion)
-- [Notes](#notes)
 
 ## Purpose
 

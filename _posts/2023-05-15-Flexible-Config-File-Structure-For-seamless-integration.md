@@ -2,14 +2,12 @@
 title: Config File Integration Library
 date: 2023-05-15 11:33:00 +0800
 categories: [doc]
+toc: true
 tags: [c++, restApi, json]
+description: Configuration File Management and Integration.
 ---
 
-As a Backend Engineer, ensuring confidentiality and security is paramount in my work, especially when handling sensitive data like API keys and private configuration elements that require strict confidentiality.
-
-While I strive to contribute to the open-source community, I am mindful of safeguarding my own privacy and security by avoiding any inadvertent disclosure of sensitive information. Consequently, I have adopted a simple technique which consists of loading configuration data from a JSON config file into a map or multiple maps (Or any data structure of choice) to enable seamless and efficient data retrieval only when and where needed.
-
-This document will present an illustration of a `C++` class, `SomeClass`, and utilizes its methods to demonstrate the core concepts of how I keep sensitive data like API keys secure and private.
+---
 
 ```markdown
 EasyJsonCPP/
@@ -26,16 +24,13 @@ EasyJsonCPP/
 └── CMakeLists.txt (or another build script)
 ```
 
-Table of content
+---
 
-- [Configuration File Structure](#configuration-file-structure)
-- [Load Configuration Data Efficiently](#load-configuration-data-efficiently)
-  - [Iterates over the key-value pairs](#iterates-over-the-key-value-pairs)
-  - [Process value by type](#process-value-by-type)
-    - [- If the value is an array](#--if-the-value-is-an-array)
-    - [If the value is a string](#if-the-value-is-a-string)
-- [Retrieve data from a map](#retrieve-data-from-a-map)
-- [Conclusion](#conclusion)
+As a Backend Engineer, ensuring confidentiality and security is paramount in my work, especially when handling sensitive data like API keys and private configuration elements that require strict confidentiality.
+
+While I strive to contribute to the open-source community, I am mindful of safeguarding my own privacy and security by avoiding any inadvertent disclosure of sensitive information. Consequently, I have adopted a simple technique which consists of loading configuration data from a JSON config file into a map or multiple maps (Or any data structure of choice) to enable seamless and efficient data retrieval only when and where needed.
+
+This document will present an illustration of a `C++` class, `SomeClass`, and utilizes its methods to demonstrate the core concepts of how I keep sensitive data like API keys secure and private.
 
 ### Configuration File Structure
 
