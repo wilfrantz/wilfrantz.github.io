@@ -1,5 +1,5 @@
 ---
-title: Practical Guide to Linux System Hardening
+title: My Go-To Guide for Linux System Hardening 
 date: 2022-05-20 11:33:00 +0800
 categories: [doc]
 tags: [Linux]
@@ -348,13 +348,6 @@ sudo apt update
 sudo apt upgrade
 ```
 
-Red Hat-based:
-
-```bash
-sudo yum update
-sudo dnf upgrade
-```
-
 Use Secure Protocols:
 
 Use `HTTPS` for web management, `SFTP` for file transfer, `SSH` instead of `Telnet`.
@@ -479,11 +472,13 @@ Access web interface: `http://your_server_ip:9000`
 
 ---
 
-## System Backup With Google Drive
+## Backup Strategy: Rclone & Google Drive
 
-Cloud space for system backups is increasingly becoming the norm, Google Drive is known for its flexibility, portability, and reliability. Feel free to explore other options while prioritizing security, efficiency, and automation.
+The transition from on-premises to cloud-based backup solutions is driven by scalability, flexibility, cost-effectiveness, and global accessibility. 
 
- *  [Rclone](https://rclone.org/){: target="_blank"}: is a command-line tool designed to manage files on cloud storage. It supports a wide range of cloud services, including Google Drive. It offers encryption, which makes it particularly well-suited for system backups.
+[Rclone](https://rclone.org/){: target="_blank"} is a command-line tool designed to manage files on cloud storage, it offers encryption, which makes it particularly well-suited for backups. It supports a wide range of cloud services, including Google Drive. 
+
+Google Drive is known for its flexibility, portability, and reliability. 
 
 #### Installation and Configuration
 
@@ -502,8 +497,7 @@ Cloud space for system backups is increasingly becoming the norm, Google Drive i
    * Grant `Rclone` access to your Google Drive.
    * Confirm the configuration.
 
-### Backup Strategy
- * Choose What to Backup:
+### What to Backup
    * Identify critical data: `/etc/`, `/home/`, databases, application data, etc...
    * Consider using a combination of full and incremental backups.
  * Encryption:
@@ -664,6 +658,7 @@ Remember that staying informed about the latest security threats and regularly r
 - [How To Secure A Linux Server by imthenachoman](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server?utm_source=pocket_saves){:target="\_blank"}
 - [40 Linux Server Hardening Security Tips \[2023 edition\]](https://www.cyberciti.biz/tips/linux-security.html){:target="\_blank"}
 - [Linux Security and Hardening, The Practical Security Guide by Jason Cannon](https://www.udemy.com/course/linux-security/){:target="\_blank"}
+- [The Future of Cloud Backup: a Multi-Cloud Perspective](https://n2ws.com/blog/future-of-cloud){:target="\_blank"}
 - [Gemini AI](https://blog.google/technology/ai/google-gemini-ai/){:target="\_blank"}
 
 ---
