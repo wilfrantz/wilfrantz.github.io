@@ -2,30 +2,13 @@
 title: Crontab CheatSheet
 date: 2023-06-11 10:14:00 +8000
 categories: [doc]
+toc: true
 tags: [cheatSheet]
 ---
 
 ## Introduction
 
 Crontab is a powerful utility in Unix-like operating systems that allows you to schedule and automate tasks at predefined intervals. It uses a cron daemon to execute commands or scripts according to a specified schedule. This cheat sheet provides an overview of crontab syntax and demonstrates practical examples to help you effectively schedule recurring tasks.
-
-Table of Contents
-
-- [Introduction](#introduction)
-- [Difference between Cron, Crontab, and Cron Job](#difference-between-cron-crontab-and-cron-job)
-  - [Cron](#cron)
-  - [Crontab](#crontab)
-  - [Cron Job](#cron-job)
-- [Crontab Syntax](#crontab-syntax)
-- [Practical Examples](#practical-examples)
-  - [Example 1: Running a Script Every Hour](#example-1-running-a-script-every-hour)
-  - [Example 2: Running a Script Every Day at a Specific Time](#example-2-running-a-script-every-day-at-a-specific-time)
-  - [Example 3: Running a Script on Specific Days of the Week](#example-3-running-a-script-on-specific-days-of-the-week)
-  - [Example 4: Running a Script Every Month](#example-4-running-a-script-every-month)
-  - [Example 5: Running a Script at Regular Intervals](#example-5-running-a-script-at-regular-intervals)
-- [Managing Crontab Entries](#managing-crontab-entries)
-- [Conclusion](#conclusion)
-- [Resource](#resource)
 
 ## Difference between Cron, Crontab, and Cron Job
 
