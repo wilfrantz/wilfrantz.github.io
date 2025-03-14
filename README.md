@@ -1,26 +1,17 @@
-# Jekyll Development Environment with Docker
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Docker Build Status](https://img.shields.io/docker/build/yourusername/jekyll-local?style=flat-square)](https://hub.docker.com/r/yourusername/jekyll-local)
 [![GitHub Pages Status](https://img.shields.io/badge/GitHub%20Pages-Active-brightgreen.svg?style=flat-square)](https://github.com/wilfrantz/wilfrantz.github.io)
 
-This repository provides a Dockerized Jekyll development environment for local testing and previewing your site before deploying to GitHub Pages.
-
-## Purpose
-
-This setup enables a consistent and isolated environment for developing and testing your Jekyll site using Docker. It's designed for local development, with the live site hosted on GitHub Pages.
+This repository is a Dockerized deployment of `Chirpy` on a Debian-based environment.
 
 ## Theme
 
-This site uses the **Chirpy** theme, a clean and modern theme designed for a smooth out-of-the-box experience.
-
-**Credit:** The Chirpy theme is developed and maintained by **Cotes Chung**. For more information, please visit the [theme's documentation](https://chirpy.cotes.page/).
-
-**Note:** To ensure full functionality, this repository includes critical files and configurations extracted from the Chirpy theme's gem, as recommended by the author, ensuring a complete development environment.
+**Chirpy** is a clean and modern theme designed for a smooth out-of-the-box experience. It is developed and maintained by **Cotes Chung**. For more information, please visit the [theme's documentation](https://chirpy.cotes.page/).
 
 ## AI Assistance
 
-This project was developed with the assistance of **Gemini AI**, which provided guidance and code suggestions throughout the setup and documentation process.
+This project was developed with the assistance of **Gemini AI**.
 
 ## Prerequisites
 
@@ -32,11 +23,10 @@ This project was developed with the assistance of **Gemini AI**, which provided 
 1.  **Clone the Repository:**
 
     ```bash
-    git clone <repository_url>
-    cd <repository_name>
+    git clone https://github.com/rbenv/ruby-build.git
     ```
 
-    Replace `<repository_url>` with the URL of this repository.
+    Replace `https://github.com/rbenv/ruby-build.git` with the URL of this repository.
 
 2.  **Build the Docker Image:**
 
@@ -87,38 +77,6 @@ This project was developed with the assistance of **Gemini AI**, which provided 
 ## Dockerfile Explanation
 
 The `Dockerfile` sets up an Ubuntu-based environment with Ruby, Jekyll, and necessary dependencies.
-
-```dockerfile
-FROM ubuntu:latest
-
-WORKDIR /site
-
-# Install necessary packages
-RUN apt-get update && apt-get install -y build-essential nodejs ruby-full ruby-dev bundler git && rm -rf /var/lib/apt/lists/*
-
-# Copy only the Gemfile and Gemfile.lock (for faster builds)
-COPY Gemfile Gemfile.lock ./
-
-# Install gems
-RUN bundle install
-
-# Copy your site files
-COPY . .
-
-# Expose the Jekyll server port
-EXPOSE 4000
-
-# Start the Jekyll server
-CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
-```
-
-* `FROM ubuntu:latest`: Uses the latest Ubuntu image as the base.
-* `RUN apt-get ...`: Installs necessary packages, including Ruby, Jekyll, and Git.
-* `COPY Gemfile ...`: Copies gem dependencies.
-* `RUN bundle install`: Installs the Ruby gems.
-* `COPY . .`: Copies the Jekyll site files.
-* `EXPOSE 4000`: Exposes port 4000.
-* `CMD ...`: Starts the Jekyll server.
 
 ## Contributing
 

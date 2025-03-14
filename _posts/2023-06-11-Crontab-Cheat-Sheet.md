@@ -1,9 +1,9 @@
 ---
-title: Crontab CheatSheet
+title: Crontab Cheat Sheet
 date: 2023-06-11 10:14:00 +8000
 categories: [doc]
 toc: true
-tags: [cheatSheet]
+tags: [cheat Sheet]
 ---
 
 ## Introduction
