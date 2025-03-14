@@ -3,7 +3,7 @@ title: My Go-To Guide for Linux System Hardening
 date: 2022-05-20 11:33:00 +0800
 categories: [doc]
 toc: true
-tag: [Linux]
+tag: [linux]
 ---
 
 This guide provides practical insights and best practices to harden Debian-based (Ubuntu) Linux systems against cyber threats, focusing on the core security goals of the CIA Triad:
@@ -662,6 +662,132 @@ Google Drive is known for its flexibility, portability, and reliability.
 #### Logging & Monitoring
 
 It's crucial to log backup activity, and `systemd` is very efficient for monitoring backup services. It is equally important to test restores to verify integrity and functionality of backups.
+
+## Reverse Proxy with Traefik
+
+Setting up a reverse proxy with Traefik for Linux hardening can significantly enhance your server's security by adding layers of protection and control. 
+
+**2. Installation and Configuration**
+
+* **Install Docker and Docker Compose (Recommended):** Traefik is typically run as a Docker container, so you'll need Docker installed on your Linux server.
+    * Example for Ubuntu/Debian:
+        ```bash
+        sudo apt update
+        sudo apt install docker.io docker-compose
+        ```
+
+* **Create a `traefik.yml` Configuration File:**
+    * This file defines the Traefik configuration.
+    * Example:
+
+        ```yaml
+        version: "3.9"
+
+        services:
+          traefik:
+            image: "traefik:v2.10"
+            command:
+              - "--api.insecure=true"
+              - "--providers.docker=true"
+              - "--providers.docker.exposedbydefault=false"
+              - "--entrypoints.web.address=:80"
+              - "--entrypoints.websecure.address=:443"
+              - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+              - "--certificatesresolvers.myresolver.acme.email=your_email@example.com"
+              - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+            ports:
+              - "80:80"
+              - "443:443"
+              - "8080:8080" # Traefik dashboard (insecure, for testing)
+            volumes:
+              - "./letsencrypt:/letsencrypt"
+              - "/var/run/docker.sock:/var/run/docker.sock:ro"
+        ```
+
+    * **Explanation:**
+        * `--api.insecure=true`: Enables the Traefik dashboard (for testing). **Disable this in production!**
+        * `--providers.docker=true`: Enables Docker provider.
+        * `--providers.docker.exposedbydefault=false`: Prevents all Docker containers from being exposed by default.
+        * `--entrypoints.web.address=:80` and `--entrypoints.websecure.address=:443`: Defines the HTTP and HTTPS entry points.
+        * `--certificatesresolvers.myresolver.acme.tlschallenge=true`: Enables ACME TLS challenge for Let's Encrypt.
+        * `--certificatesresolvers.myresolver.acme.email=your_email@example.com`: Your email address for Let's Encrypt.
+        * `--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json`: Location to store Let's Encrypt certificates.
+        * `volumes`: Mounts the Let's Encrypt storage and the Docker socket.
+
+* **Start Traefik:**
+    * Navigate to the directory containing your `traefik.yml` file.
+    * Run: `docker-compose up -d`
+
+**3. Configuring Backend Services**
+
+* **Add Traefik Labels to Your Docker Services:**
+    * For each service you want to expose through Traefik, add labels to its Docker Compose configuration.
+    * Example:
+
+        ```yaml
+        version: "3.9"
+
+        services:
+          your_service:
+            image: "your_service_image"
+            labels:
+              - "traefik.enable=true"
+              - "traefik.http.routers.your_service.rule=Host(`your_domain.com`)"
+              - "traefik.http.routers.your_service.entrypoints=websecure"
+              - "traefik.http.routers.your_service.tls.certresolver=myresolver"
+        ```
+
+    * **Explanation:**
+        * `traefik.enable=true`: Enables Traefik for this service.
+        * `traefik.http.routers.your_service.rule=Host(\`your_domain.com\`)`: Defines the domain name for the service.
+        * `traefik.http.routers.your_service.entrypoints=websecure`: Uses the HTTPS entry point.
+        * `traefik.http.routers.your_service.tls.certresolver=myresolver`: Uses the Let's Encrypt certificate resolver.
+
+**4. Implementing Security Middleware**
+
+* **Add Security Headers:**
+    * Example labels:
+
+        ```yaml
+        labels:
+          - "traefik.http.middlewares.securityHeaders.headers.customresponseheaders.X-Robots-Tag=noindex,nofollow,nosnippet,noarchive,notranslate,noimageindex"
+          - "traefik.http.middlewares.securityHeaders.headers.customresponseheaders.X-Frame-Options=DENY"
+          - "traefik.http.middlewares.securityHeaders.headers.customresponseheaders.X-Content-Type-Options=nosniff"
+          - "traefik.http.middlewares.securityHeaders.headers.customresponseheaders.Referrer-Policy=same-origin"
+          - "traefik.http.middlewares.securityHeaders.headers.customresponseheaders.Permissions-Policy=geolocation=(), microphone=(), camera=()"
+          - "traefik.http.middlewares.securityHeaders.headers.customresponseheaders.Strict-Transport-Security=max-age=31536000;includeSubDomains"
+          - "traefik.http.routers.your_service.middlewares=securityHeaders"
+        ```
+
+* **Rate Limiting:**
+    * Example labels:
+
+        ```yaml
+        labels:
+          - "traefik.http.middlewares.rateLimit.rateLimit.average=100"
+          - "traefik.http.middlewares.rateLimit.rateLimit.burst=200"
+          - "traefik.http.routers.your_service.middlewares=securityHeaders,rateLimit"
+        ```
+
+* **Authentication:**
+    * Traefik supports various authentication methods (e.g., BasicAuth, ForwardAuth).
+    * Refer to the Traefik documentation for details.
+
+**5. Hardening Traefik**
+
+* **Disable Insecure API:** Remove `--api.insecure=true` from your Traefik configuration in production.
+* **Use Secure Dashboard:** Configure a secure dashboard with authentication.
+* **Restrict Access to Docker Socket:** Limit access to the Docker socket.
+* **Keep Traefik Updated:** Regularly update Traefik to the latest version.
+
+**Important Notes:**
+
+* Replace placeholders (e.g., `your_email@example.com`, `your_domain.com`, `your_service_image`) with your actual values.
+* Refer to the Traefik documentation for detailed information on configuration options and middleware.
+* Test your configuration thoroughly before deploying it to production.
+* Consider using a dedicated security scanner to identify potential vulnerabilities.
+
+
 
 ---
 

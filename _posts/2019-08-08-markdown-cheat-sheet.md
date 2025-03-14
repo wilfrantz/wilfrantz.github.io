@@ -4,7 +4,8 @@ date: 2019-08-08 11:33:00 +0800
 mermaid: true
 math: true
 toc: true
-categories: [cheatSheet]
+categories: [doc]
+tag: [markdown]
 ---
 
 This post is a revised version of [**Chirpy**:Text and Typography](https://chirpy.cotes.page/posts/text-and-typography/){:target="_blank"} by `Cotes Chung`. It serves as a concise `Markdown` cheat sheet, that I use daily, covering a range of commonly used syntax elements. There are numerous additional features and extensions not covered here. For comprehensive information, refer to the official Markdown documentation. [official Markdown documentation](https://daringfireball.net/projects/markdown/){:target="_blank"}.
