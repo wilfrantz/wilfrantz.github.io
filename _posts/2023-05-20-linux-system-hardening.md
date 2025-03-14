@@ -32,6 +32,10 @@ sudo apt install unattended-upgrades
 
 - Configure `/etc/apt/apt.conf.d/50unattended-upgrades` (e.g., enable automatic reboots by uncommenting `//Unattended-Upgrade::Automatic-Reboot`).
 
+```bash
+sudo vim /etc/apt/apt.conf.d/50unattended-upgrades
+```
+
 - Enable the service:
 
 ```bash
@@ -41,6 +45,10 @@ sudo dpkg-reconfigure --priority=low unattended-upgrades
 - Manual Updates (Cron):
 
 Schedule updates using `cron` (e.g., daily at 2:00 AM):
+
+```bash
+crontab -e
+```
 
 ```bash
 0 2 * * * apt update && apt upgrade -y
@@ -58,7 +66,7 @@ Strong Password Policy:
 Edit `/etc/pam.d/common-password` (e.g., using `pam_pwquality.so`):
 
 ```bash
-sudo vi /etc/pam.d/common-password
+sudo vim /etc/pam.d/common-password
 ```
 
 Example:
@@ -72,7 +80,7 @@ Enforce Regular Password Changes:
 Edit `/etc/login.defs`:
 
 ```bash
-sudo vi /etc/login.defs
+sudo vim /etc/login.defs
 ```
 
 Example:
@@ -97,15 +105,17 @@ sudo passwd --lock user1
 
 Multi-Factor Authentication (MFA) for Privileged Accounts:
 
-Install MFA software (e.g., `Google Authenticator`).
-Configure MFA (e.g., `google-authenticator`).
+- Install MFA software (e.g., `Google Authenticator`).
+- Configure MFA (e.g., `google-authenticator`).
+
 Edit `/etc/ssh/sshd_config`:
 
 ```bash
-sudo vi /etc/ssh/sshd_config
+sudo vim /etc/ssh/sshd_config
 ```
 
 Set `ChallengeResponseAuthentication` to `yes`.
+
 Restart SSH:
 
 ```bash
@@ -120,7 +130,7 @@ Limit Root Access:
 Add non-root user to `sudoers` using `visudo`:
 
 ```bash
-visudo
+sudo visudo
 ```
 
 Example:
@@ -134,7 +144,7 @@ dede ALL=(ALL:ALL) ALL
 Generate key pair (e.g., ED25519):
 
 ```bash
-ssh-keygen -t ed25519 -C "yourEmail@example.com"
+ssh-keygen -t ed25519 -C "contact@dede.dev"
 ```
 
 Copy public key:
@@ -143,7 +153,11 @@ Copy public key:
 ssh-copy-id -i path/to/certificate username@remote_host
 ```
 
-Disable password authentication in `/etc/ssh/sshd_config`:
+Disable password authentication:
+
+```bash 
+vim /etc/ssh/sshd_config
+```
 
 ```bash
 PasswordAuthentication no
@@ -159,8 +173,8 @@ sudo service ssh restart
 
 Edit `/etc/ssh/sshd_config`:
 
-```bash
-sudo vi /etc/ssh/sshd_config
+``` bash
+sudo vim /etc/ssh/sshd_config
 ```
 
 Set `PermitRootLogin` to `no`.
@@ -186,14 +200,24 @@ Restart SSH.
 ### Use Strong Encryption Algorithms:
 
 Edit `/etc/ssh/sshd_config`.
+
 Ensure `Ciphers` and `MACs` include strong algorithms (e.g., AES[^footnote], ChaCha20-Poly1305[^fn-nth-2], Diffie-Hellman[^fn-nth-3], ECC[^fn-nth-4], SHA-2[^fn-nth-5]).
 Restart SSH.
 
 ### Change Default SSH Port:
 
 - Edit `/etc/ssh/sshd_config`. 
+
+```bash
+sudo vim /etc/ssh/sshd_config
+```
 - Change `Port` (e.g., to 2222).
+
 - Restart SSH.
+
+```bash
+sudo service sshd restart
+```
 
 > Remember: Allow the new port through the firewall.
 {: .prompt-tip }
@@ -229,8 +253,6 @@ sudo ufw allow ssh
 ```
 
 - Review/Update Rules (UFW):
-
-- List rules:
 
 ```bash
 sudo ufw status numbered
@@ -321,15 +343,13 @@ Add to crontab:
 
 ## Network Services
 
-Disable Unnecessary Services:
-
 List enabled services:
 
 ```bash
 sudo systemctl list-unit-files --type=service | grep enabled
 ```
 
-Disable service (e.g., `avahi-daemon`, `cups`):
+Disable Unnecessary Services (e.g., `avahi-daemon`, `cups`):
 
 ```bash
 sudo systemctl disable avahi-daemon.service
@@ -340,8 +360,6 @@ sudo systemctl disable cups.service
 {: .prompt-warning }
 
 Update/Patch Software:
-
-Debian-based:
 
 ```bash
 sudo apt update
@@ -493,7 +511,8 @@ Google Drive is known for its flexibility, portability, and reliability.
    * Run `rclone config` and follow the prompts.
    * Choose `"n) New remote"` and give it a name (e.g., "gdriveBackup").
    * Select `Google Drive` as the storage type.
-   * When prompted for "client_id" and "client_secret," you can leave them blank for automatic configuration. `Rclone` will open a browser window for authentication.
+   * When prompted for "client_id" and "client_secret," you can leave them blank for automatic configuration. 
+     `Rclone` will open a browser window for authentication. On headless systems, please follow the prompt.
    * Grant `Rclone` access to your Google Drive.
    * Confirm the configuration.
 
@@ -619,7 +638,7 @@ Google Drive is known for its flexibility, portability, and reliability.
 
     # Configuration Variables
     export backupDir="/path/to/backup" 
-    export rcloneRemote="gdrive_backup:" # or "gdrive_backup:" if you do not use crypt
+    export rcloneRemote="gdriveBackup:" # or "gdrive_backup:" if you do not use crypt
     export rcloneCryptRemote="gdrive_encrypted:" # rclone encrypted remote
     export dataToBackup="/etc /home " # Add data 
     ```
