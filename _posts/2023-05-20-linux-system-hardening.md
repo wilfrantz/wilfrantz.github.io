@@ -2,8 +2,8 @@
 title: My Go-To Guide for Linux System Hardening 
 date: 2022-05-20 11:33:00 +0800
 categories: [doc]
-tags: [Linux]
 toc: true
+tag: [Linux]
 ---
 
 This guide provides practical insights and best practices to harden Debian-based (Ubuntu) Linux systems against cyber threats, focusing on the core security goals of the CIA Triad:
