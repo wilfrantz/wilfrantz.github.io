@@ -352,3 +352,8 @@ Docker has revolutionized software development and deployment by providing a str
     ```bash
     docker update --memory=<limit> --cpus=<limit> <container_name|container_id>
     ```
+
+  ## Ressources
+
+  - [Docker Crash Course for Absolute Beginners by TechWorld with Nana](https://youtu.be/pg19Z8LL06w?si=-M2F7KZGzVd7P1t4){: target="\_blank"}
+  - [you need to learn Docker RIGHT NOW!! // Docker Containers 101](https://youtu.be/eGz9DS-aIeY?si=V8u2IoETkW23g3vt){:target="\_blank"}
