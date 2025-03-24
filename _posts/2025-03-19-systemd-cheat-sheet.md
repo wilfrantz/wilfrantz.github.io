@@ -1,7 +1,7 @@
 ---
 title: Systemd Cheat Sheet
 date: 2025-03-19 11:33:00 +0800
-categories: [cheat Sheet]
+categories: [cheatSheet]
 toc: true
 tag: [linux]
 ---

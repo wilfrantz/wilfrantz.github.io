@@ -2,7 +2,7 @@
 title: rClone Cheat Sheet
 date: 2025-03-12 11:33:00 +0800
 toc: true
-categories: [cheat sheet]
+categories: [cheatSheet]
 tag: [linux]
 ---
 

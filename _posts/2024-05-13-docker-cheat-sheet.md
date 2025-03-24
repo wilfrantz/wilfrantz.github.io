@@ -2,7 +2,7 @@
 title: My Docker Cheat Sheet
 date: 2024-05-13 11:33:00 +0800
 toc: true
-categories: [cheat Sheet]
+categories: [cheatSheet]
 ---
 
 Docker has revolutionized software development and deployment by providing a streamlined approach to containerization. This cheat sheet enhance my Docker workflow with some advanced commands, best practices, and troubleshooting tips.
