@@ -1,5 +1,5 @@
 ---
-title: Deploying This Portfolio in a Docker Container.
+title: Dockerizing this Chirpy-Themed Jekyll Site Step by Step
 date: 2025-03-07 11:33:00 +0800
 mermaid: true
 toc: true
