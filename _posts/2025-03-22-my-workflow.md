@@ -1,5 +1,5 @@
 ---
-title: My SSH-based Development workflow
+title: My SSH-based Development Workflow
 date: 2025-03-22 11:33:00 +0800
 categories: [doc]
 toc: true
@@ -8,6 +8,8 @@ tag: [linux]
 ---
 
 This document outlines my approach to accessing remote systems, emphasizing the use of SSH for secure connections. It focuses on using SSH agent forwarding to avoid the hassle and security risks of storing my private SSH key on every system I use.
+
+I am aware of the security risks associated with SSH agent forwarding. However, as a seasoned Linux professional, I am confident in my ability to implement and adhere to best practices to effectively mitigate those risks.
 
 ```mermaid
 graph LR
@@ -108,7 +110,7 @@ ForwardAgent yes
 
 ## Troubleshooting
 
-### Permission Denied Errors:
+### Permission Denied Errors
 
 I always make sure to refer to this guide 😂, especially when I’m setting up new SSH connections. I ensure that my local public key (id_rsa.pub or id_ed25519.pub), is properly authorized on the remote system, usually found in the `~/.ssh/authorized_keys` file.
 
@@ -123,3 +125,10 @@ Regularly updating my local machine and remote systems with the latest security 
 ## Conclusion
 
 This document describes my SSH-based remote system access workflow, a vital skill for back-end development. By leveraging SSH agent forwarding, I ensure secure and efficient connection management. I adapt this workflow to suit various projects and environments.
+
+## Reference
+
+- [SSH Agent Explained - Smallstep](https://smallstep.com/blog/ssh-agent-explained/)
+- [Understanding OpenSSH's Agent Forwarding CVE-2023-38408: A Comprehensive Guide](https://phoenix.security/openssh-agent-38408/)
+- [SSH Agent Forwarding considered harmful - Johannes 'heipei' Gilger](https://heipei.github.io/2015/02/26/SSH-Agent-Forwarding-considered-harmful/)
+- [Using SSH agent forwarding - GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/using-ssh-agent-forwarding)
