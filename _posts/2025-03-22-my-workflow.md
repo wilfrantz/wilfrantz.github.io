@@ -128,7 +128,7 @@ This document describes my SSH-based remote system access workflow, a vital skil
 
 ## Reference
 
--   [SSH Agent Explained - Smallstep](https://smallstep.com/blog/ssh-agent-explained/){target="_blank"}
--   [Understanding OpenSSH's Agent Forwarding CVE-2023-38408: A Comprehensive Guide](https://phoenix.security/openssh-agent-38408/){target="_blank"}
--   [SSH Agent Forwarding considered harmful - Johannes 'heipei' Gilger](https://heipei.github.io/2015/02/26/SSH-Agent-Forwarding-considered-harmful/){target="_blank"}
--   [Using SSH agent forwarding - GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/using-ssh-agent-forwarding){target="_blank"}
+-   [SSH Agent Explained - Smallstep](https://smallstep.com/blog/ssh-agent-explained/){:target="_blank"}
+-   [Understanding OpenSSH's Agent Forwarding CVE-2023-38408: A Comprehensive Guide](https://phoenix.security/openssh-agent-38408/){:target="_blank"}
+-   [SSH Agent Forwarding considered harmful - Johannes 'heipei' Gilger](https://heipei.github.io/2015/02/26/SSH-Agent-Forwarding-considered-harmful/){:target="_blank"}
+-   [Using SSH agent forwarding - GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/using-ssh-agent-forwarding){:target="_blank"}
