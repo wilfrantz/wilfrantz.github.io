@@ -567,7 +567,11 @@ It's crucial to log backup activity, and `systemd` is very efficient for monitor
 
 ## Reverse Proxy with Traefik
 
-Setting up a reverse proxy with Traefik for Linux hardening can significantly enhance your server's security by adding layers of protection and control. 
+A proxy server acts as an intermediary between a client (like your web browser) and another server. A reverse proxy also acts as an intermediary, but in a "reverse" way. It sits in front of one or more backend servers and receives requests from clients. 
+
+It then forwards those requests to the appropriate backend server. The response from the backend server goes back to the reverse proxy, which then sends it to the client.
+
+Setting up a reverse proxy with a tool like Traefik for Linux hardening can significantly enhance your server's security by adding layers of protection and control. 
 
 **2. Installation and Configuration**
 
